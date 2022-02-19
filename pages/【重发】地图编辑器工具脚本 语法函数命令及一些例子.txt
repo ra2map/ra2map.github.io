@@ -1,0 +1,182 @@
+【重发】地图编辑器工具脚本 语法函数命令及一些例子https://tieba.baidu.com/p/1193709096
+首先这个脚本的语言类似Java或者C#
+"//"是注释
+注意结束符";"
+内部变量形式 %[String]% 中间的String没有意义写什么都行
+"" 中的部分可以有变量
+%Height%地图高度 %Width% 地图宽度 %NoSet% 允许设置 %NoAdd% 允许添加
+%IsoSize% 对角长度 %PlayerCount% 游戏者计数 %WaypointCount%路径点计数 
+%UnitCount%车辆计数 %InfantryCount%步兵计数 %StructureCount% 建筑计数
+%AircraftCount% 飞机计数 %data% 地图数据
+[String]文本包括数值
+[Integer]数值
+[Boolean]逻辑
+[Variable]变量
+[****]0和1 或者数值或者文本
+[Logical]逻辑运算 =等于 >大于 <小于 != 不等于 <=大于等于 >=小于等于
+
+【设置AI触发】
+AddAITrigger("[Integer]","[String]");
+数字 内容
+【判断】
+Is("[Variable]","[Logical]","[****]","[Variable2]");//某变量是否[Logical] [****] 当此句[Variable] 相反[Logical] [****]时 带有
+[Variable2]的语句可以执行
+Message("[String]", "[String]", "[Variable2]");//当某变量满足上面条件时执行这里的变量相当于判断
+Cancel("[Variable2]");//取消[Variable2] 作为语句执行前提
+任何函数后面加上变量 则当变量为执行前提
+
+例:
+SetVariable("Var","8");
+Is("Var","<","10","[Variable2]");
+Message("Var", "标题", "[Variable2]");//信息框显示 “8”
+Cancel("[Variable2]")
+Message("RFLZ", "标题", "[Variable2]");//这句不会显示
+
+【设置变量】
+SetVariable("[String]", "[String]");
+变量 内容
+
+【???】
+And("[Variable]","[String]");
+此返回值是0或者1 貌似是把某逻辑变量赋值给某逻辑变量的
+
+例：
+SetVariable("Var","0");
+And("Var","5");
+Var=1
+And("Var","1");
+Var=1
+And("Var","0");
+Var=0
+
+【随机数】
+GetRandom("[Variable]");为变量[Variable]赋值随机数
+这个随机数的范围很大
+
+【取余数】
+Mod("[Variable]","[String]");
+
+例：
+SetVariable("Var","8");
+Mod("Var","3");
+Var=2
+
+
+【设置标签】
+AddTag("[Integer]", "[String]");
+数字 标题
+
+【添加地形】
+AddTerrain("[String]", "[Integer]", "[Integer]");
+地形名称 X Y
+
+【允许删除】
+AllowDelete("[String]");
+这里的[String]实际无意义
+
+【只用于多人地图】
+RequiresMP();
+
+【循环】
+:[String1]://这里相当于标签
+
+循环内容
+JumpTo("[String1]");
+跳转到
+
+例:
+:Loop:
+SetVariable("Var","-1");
+Add("Var","1");
+Message("Var","标题");
+Is("Var","<","8","%TCounter%")
+JumpTo("Loop","%TCounter%");
+
+从零开始循环九次
+
+【设置自动更新】
+SetAutoUpdate("[String]");
+这里的[String]实际无意义
+
+【弹出询问窗口】
+AskContinue("[String]");
+
+
+【安全模式】
+SetSafeMode("[Boolean]","[String]");
+设定允许修改
+
+例:
+SetSafeMode("FALSE","允许修改");
+
+【获取设置】
+GetParam("[Variable]", "%data%", "0");
+目测是用变量给变量赋值
+
+【用户设置变量】
+UInputGetInteger("[Variable/Integer]","[String]","[Integer]","[Integer]");
+变量 提示 变量最小 变量最大
+
+【用户设置国家】
+UInputGetHouse("%House%","[String]");
+
+【得到INI】
+GetIniKey("[Variable]","[Section]","[Key]");//给[Variable]赋值
+
+【设置INI】
+SetIniKey("[Section]","[Key]","[String]");
+段 小节 值
+
+【显示信息框】
+Message("[String]","[String]");
+内容 标题 
+
+【打印】
+Print("[String]");//在报告栏中打印 [String] 
+
+【设置路径点】
+SetWaypoint("[WaypointID]", "[IntegerX]", "[IntegerY]");
+
+
+【运算】
+Substract("[Variable]", "[Integer]");//[Variable]减去[Integer]
+Add("[Variable]", "[Integer]");//[Variable]加上[Integer]
+Divide("[Variable]","[Integer]");除法
+Multi("[Variable]","[Integer]");乘法
+
+【改变地图】
+Resize("[Integer]","[Integer]","[Integer]","[Integer]");
+X偏移 Y偏移 高度 宽度
+
+下面两个让我十分纠结......
+
+【获取信息】
+GetInfantry("%data%","[Variable]");//步兵
+GetVehicle("%data%","[Variable]");//车辆
+GetAircraft("%data%","[Variable]");//飞机
+GetStructure("%data%","[Variable]");//建筑
+
+【添加删除】
+DeleteAircraft("%pos%");//飞机
+AddAircraft("%data%");
+DeleteInfantry("%pos%");//步兵
+AddInfantry("%data%");
+DeleteVehicle("%pos%");//车辆
+AddVehicle("%data%");
+
+
+下面这个随机添加路径点的例子用200*200的地图才可以看出来应为添加路径点的XY有些诡异……
+
+SetSafeMode("FALSE","Necessary for moving waypoints");
+
+SetVariable("X", "0");SetVariable("Y1", "0");SetVariable("%wayoint%", "-1");
+:loop:
+GetRandom("X");
+GetRandom("Y");
+Divide("X","%Height%");
+Divide("Y","%Width%");
+Add("%wayoint%", "1");
+SetWaypoint("%wayoint%", "X", "Y");
+Message("X", "Y");
+Is("%wayoint%","<","8","%TCounter%");
+JumpTo("loop","%TCounter%");

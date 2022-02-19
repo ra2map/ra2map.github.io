@@ -1,0 +1,281 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            color: unset;
+            text-decoration: unset;
+            word-wrap: break-word;
+            word-break: break-all;
+            text-overflow: ellipsis;
+        }
+/*————————————————————————链接卡片样式—————————————————————————*/
+        .cardBox {
+            height: 150px;
+            width: 660px;
+            overflow: hidden;
+            border-radius: 15px;
+            border: 1px solid rgb(230, 230, 230);
+            box-shadow: 2px 2px 30px #aaaaaa;
+            padding: 15px;
+            margin: 50px auto;
+        }
+
+        .cardInside {
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .cardText {
+            overflow: hidden;
+            width: 425px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .cardImg,
+        .cardImg img {
+            width: 160px;
+            height: 110px;
+            background-color: darkgray;
+            background-image: url('../img/noimage.png');
+        }
+
+        .cardTitle {
+            overflow: hidden;
+            width: 425px;
+            font-size: 18px;
+            line-height: 28px;
+            max-height: 56px;
+        }
+
+        .cardBrief {
+            overflow: hidden;
+            width: 425px;
+            max-height: 45px;
+            font-size: 12px;
+            color: #888888;
+            line-height: 22px;
+        }
+
+        .cardSrc {
+            overflow: hidden;
+            width: 425px;
+            font-size: 12px;
+            color: #4096e2;
+            line-height: 22px;
+            max-height: 45px;
+        }
+
+        .cardStatus {
+            overflow: hidden;
+            width: 425px;
+            font-size: 12px;
+            line-height: 22px;
+            color: #505050;
+        }
+
+        .cardStatus>span {
+            margin-right: 20px;
+        }
+
+        .cardStatus>span>span {
+            margin: 0 5px;
+        }
+/*————————————————————————链接卡片样式—————————————————————————*/
+/*————————————————————————文章卡片样式—————————————————————————*/
+.bigCardBox {
+    min-height: 400px;
+    width: 660px;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 2px 2px 30px #aaaaaa;
+    padding: 15px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.bigCardHead {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-self: stretch;
+
+}
+
+.bigCardText {
+    overflow: hidden;
+    width: 425px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.bigCardImg,
+.bigCardImg img {
+    width: 160px;
+    height: 110px;
+    background-color: darkgray;
+    background-image: url('../img/noimage.png');
+}
+
+.bigCardTitle {
+    overflow: hidden;
+    width: 425px;
+    font-size: 18px;
+    line-height: 28px;
+    max-height: 56px;
+}
+
+.bigCardBrief {
+    overflow: hidden;
+    width: 600px;
+    min-height: 100px;
+    font-size: 12px;
+    color: #505050;
+    /*code*/
+    font-family: Consolas, monospace;
+    display: block;
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 3px;
+    line-height: 1.5em;
+    margin: 0.5em;
+    padding: 1em;
+    white-space: pre-wrap;
+    text-indent: 0;
+    word-wrap: break-word;
+}
+
+.bigCardSrc {
+    overflow: hidden;
+    width: 425px;
+    font-size: 12px;
+    color: #4096e2 !important;
+    line-height: 22px;
+    max-height: 45px;
+}
+
+.bigCardStatus {
+    overflow: hidden;
+    width: 425px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #505050;
+}
+
+.bigCardStatus>span {
+    margin-right: 20px;
+}
+
+.bigCardStatus>span>span {
+    margin: 0 5px;
+}
+/*————————————————————————文章卡片样式—————————————————————————*/
+/*————————————————————————附件卡片样式—————————————————————————*/
+.attachCardBox {
+    /*min-height: 400px;*/
+    width: 660px;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 2px 2px 30px #aaaaaa;
+    padding: 15px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #505050;
+}
+.attachCardBox a{
+    color: #347ebe;
+    width: 440px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.attachCardHead {
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.attachCardContent>i{
+    font-size: 24px;
+}
+
+.attachCardTitle {
+    overflow: hidden;
+    width: 425px;
+    font-size: 20px;
+    margin-left: 30px;
+}
+.attachCardBox hr{
+    height: 1px;
+    width: 560px;
+}
+.attachCardContents {
+    overflow: hidden;
+    width: 500px;
+    min-height: 120px;
+    margin: 30px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.attachCardHead>i{
+    font-size: 36px;
+}
+.attachCardContentO {
+    overflow: hidden;
+    width: 100%;
+    margin: 6px;
+    font-size: 14px;
+    display: inline-block;
+    border-bottom: 2px solid #999999;
+}
+.attachCardContent {
+    overflow: hidden;
+    width: 480px;
+    height: 30px;
+    margin: 5px 10px;
+    font-size: 14px;
+    display: flex;
+align-items: flex-end;
+}
+
+.attachCardContentTitle {
+    overflow: hidden;
+    margin-left: 15px;
+    line-height: 22px;
+    max-height: 45px;
+}
+
+
+
+
+
+
+
+
+
+/*————————————————————————附件卡片样式—————————————————————————*/

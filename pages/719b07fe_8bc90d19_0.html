@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<style>
+			body, table{font-family: Tahoma; font-size: 10pt}
+			table{border-collapse: collapse; border: solid gray; border-width: 2px 0 2px 0;}
+			th{border: 1px solid gray; padding: 4px; background-color: #DDD;}
+			td{border: 1px solid gray; padding: 4px;}
+			tr:nth-child(2n){background-color: #f8f8f8;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">【以下内容转自 红警任务之家 】</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; "><br /></span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">原作者 zxzx695940792 </span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; "><br /></span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; color: rgb(255, 0, 0); "><u>1、总是怕大量伞兵降不下来，或者是降落点太集中，没有比较宏大的场面？</u></span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">用记事本打开地图，加入以下代码</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">[General]</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">ParaDropRadius=数据</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">原数据为1024，不建议改太大，原先的3-7倍效果比较好。</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">如果想让兵力集中，把这个数据改小就可以了。</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">如果参数越大，飞机到来的时间也会相对延后，同时也会适当偏离原先的路径点，所以把握好这个数据的值。</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; "><br /></span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; color: rgb(255, 0, 0); "><u>2、灵活运用一些效果，让任务看起来更有感觉</u></span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">这里只谈几个：</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">（1） 88 粒子动画是一个不错的选择，尤其再配上音效，效果会更好</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">比如烟气和信号弹的声音组合，再比如篝火上方的烟雾。</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">——原版RA2 暗夜一关</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">（2）49 放大视野 与 50 缩小视野</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">这两个可以集中到当前视野，并且放大（或缩小）。再配上音效SpyPlaneSnapShot，即侦察机的拍照声，可以得到侦察机拍摄的即视效果。</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">——FlyingZ 《标靶（又名聚宝盆）》</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; "><br /></span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; color: rgb(255, 0, 0); "><u>3、关于秘密科技实验室</u></span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">秘密科技实验室可以允许作战方拥有一些本没有的单位，当然这些单位也是可以修改的。</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">代码如下：</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">[General]</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">SecretInfantry=SNIPE,TERROR,DESO,YURI ;步兵单位</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">SecretUnits=TNKD,TTNK,DTRUCK ;装甲单位</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">SecretBuildings=GTGCAN ;建筑单位</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">更改之后，可以让占领实验室之后出现的单位按任务要求改变（虽然是一次性的。。。）</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">——ConColor1 《机器人**》</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; "><br /></span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; color: rgb(255, 0, 0); "><u>4、“禁飞区”</u></span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">除了进入事件之外，还有一个比较好用的事件——59 进入或飞越</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">使用方法和进入事件相同。</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">只是关联这个触发的单元标记，可以放在陆军单位不能上去的悬崖上，创造“禁飞区”的感觉。</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">当然还有一点，单位子机、运输机、侦察机进入标记也会有效。</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">比如航母里面的小飞机，比如Boris召唤的米格，再比如最普通的火箭飞行兵。</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">——FlyingZ 《西木三人组》</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; "><br /></span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; color: rgb(255, 0, 0); "><u>5、118 清除全部污染 的使用方法</u></span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">所谓污染，就是指地图上留下的焚烧效果、弹坑效果。而清除全部污染就是消除这些效果，利用这个可以做一些创造性的想法。</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">比如在地图的同一个地点、不同时间发生的任务，由于弹坑可能会影响到剧情发展或者美观性，可以利用这个触发。</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">——FlyingZ《山丘之王》</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">另外对于以上这种任务，还有一些触发是可以灵活运用的，比如(i)52 更改照明状态 (ii)125 将建筑建于 (iii)126 恢复至游戏初始科技状态（包括建筑与单位） (iv)130 恢复初始建筑（仅仅包含建筑） 等等许多触发，读者可以自行尝试。</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; "><br /></span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; color: rgb(255, 0, 0); "><u>6、关于全局变量</u></span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">这个一般在多关任务中运用，可以使得玩家的不同操作，导致游戏的不同结果。</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">在原版RA2中，体现在盟军第三关和第六关。</span></span>
+			</div>
+			<div><span style="font-size: 12pt"><span style="font-family: 宋体; ">如果玩家在第三关中摧毁了地图上的地标建筑，那么对应的建筑在第六关中将会被摧毁。</span></span>
+			</div>
+			<div><span style="font-family: 宋体; "><span style="font-size: 12pt">PS.当然，如果全局变量仅仅这样用就太浪费了，还是注重一点：玩家的不同操作，可以导致游戏的不同结果。&nbsp;</span></span>
+			</div>
+		</div>
+	
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+<script type="text/javascript" language="javascript" src="itemlink.js"></script></body>
+</html>

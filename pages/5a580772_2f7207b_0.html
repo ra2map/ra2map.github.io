@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<style>
+			body, table{font-family: Tahoma; font-size: 10pt}
+			table{border-collapse: collapse; border: solid gray; border-width: 2px 0 2px 0;}
+			th{border: 1px solid gray; padding: 4px; background-color: #DDD;}
+			td{border: 1px solid gray; padding: 4px;}
+			tr:nth-child(2n){background-color: #f8f8f8;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h3 style="margin-left: 15.0pt; line-height: 150%"><span lang="EN-US" style="font-size:12.0pt;font-family:Arial;font-weight:normal">12345123450987<o:p></o:p></span>
+			</h3>
+			<h3 style="margin-left: 15.0pt; line-height: 150%"><span style="font-size:12.0pt;
+mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:
+Arial;font-weight:normal">局部设置和全局变量设置都是用于条件判断</span><span lang="EN-US" style="font-size:12.0pt;font-family:Arial;font-weight:normal"><o:p></o:p></span>
+			</h3>
+			<h3 style="margin-left: 15.0pt; line-height: 150%"><span style="font-size:12.0pt;
+mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:
+Arial;font-weight:normal">不同的是，局部设置可以且需要在每一关中添加，但只能持续一关。而全局设置可以一直持续到后面几关，但只能使用官方原来的</span><span lang="EN-US" style="font-size:12.0pt;font-family:Arial;font-weight:normal">14</span><span style="font-size:12.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial;font-weight:normal">个，不能在地图中添加，除非你改了</span><span lang="EN-US" style="font-size:12.0pt;font-family:Arial;font-weight:normal">rules(md).ini</span><span style="font-size:12.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial;font-weight:normal">。</span><span lang="EN-US" style="font-size:12.0pt;font-family:Arial;font-weight:normal"><o:p></o:p></span>
+			</h3>
+			<h3 style="margin-left: 15.0pt; line-height: 150%"><span style="font-size:12.0pt;
+mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:
+Arial;font-weight:normal">什么是条件判断？就是通过这个变量能知道某个事件有没有发生。</span><span lang="EN-US" style="font-size:12.0pt;font-family:Arial;font-weight:normal"><o:p></o:p></span>
+			</h3>
+			<h3 style="margin-left: 15.0pt; line-height: 150%"><span style="font-size:12.0pt;
+mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:
+Arial;font-weight:normal">比如你新建一个触发，条件为某某某，事件为</span><span lang="EN-US" style="font-size:12.0pt;font-family:Arial;font-weight:normal">56</span><span style="font-size:12.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial;font-weight:normal">局部设置</span><span lang="EN-US" style="font-size:12.0pt;font-family:Arial;font-weight:normal"> 0</span><span style="font-size:12.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial;font-weight:normal">。这就是一个条件集成触发。</span><span lang="EN-US" style="font-size:12.0pt;font-family:Arial;font-weight:normal"><o:p></o:p></span>
+			</h3>
+			<h3 style="margin-left: 15.0pt; line-height: 150%"><span style="font-size:12.0pt;
+mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:
+Arial;font-weight:normal">当需要此条件来触发事件时，触发的条件添加一个</span><span lang="EN-US" style="font-size:12.0pt;font-family:Arial;font-weight:normal">36</span><span style="font-size:12.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial;font-weight:normal">局部设置开始</span><span lang="EN-US" style="font-size:12.0pt;font-family:Arial;font-weight:normal"> 0</span><span style="font-size:12.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial;font-weight:normal">，起判断作用，然后触发动作。</span><span lang="EN-US" style="font-size:12.0pt;font-family:Arial;font-weight:normal"><o:p></o:p></span>
+			</h3>
+			<h3 style="margin-left: 15.0pt; line-height: 150%"><span style="font-size:12.0pt;
+mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:
+Arial;font-weight:normal">也许你想，我直接用</span><span lang="EN-US" style="font-size:
+12.0pt;font-family:Arial;font-weight:normal">53</span><span style="font-size:
+12.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:
+Arial;font-weight:normal">允许目标触发不是更方便吗，用局部设置吃饱了没事干。这样想就错了，如果需要多条件集来触发事件或反向条件，那就要使用局部变量了。</span><span lang="EN-US" style="font-size:12.0pt;font-family:Arial;font-weight:normal"><o:p></o:p></span>
+			</h3>
+			<h3 style="margin-left: 15.0pt; line-height: 150%"><span style="font-size:12.0pt;
+mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:
+Arial;font-weight:normal">与局部变量不同的是，全局变量的判断状态可以持续到之后的关卡，除非你使用触发将其清除。在后面几关，你可以使用条件</span><span style="font-size:12.0pt;font-family:Arial;font-weight:normal"> </span><span style="font-size:12.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial;font-weight:normal">全局设置开始，来进行条件判断。比如你前面的关卡里摧毁了一个物体，在那一关全局设置</span><span lang="EN-US" style="font-size:12.0pt;font-family:Arial;font-weight:normal">1</span><span style="font-size:12.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial;font-weight:normal">，在后面的关卡你使用条件</span><span style="font-size:12.0pt;font-family:Arial;font-weight:normal"> </span><span style="font-size:12.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial;font-weight:normal">全局设置开始</span><span lang="EN-US" style="font-size:12.0pt;font-family:Arial;font-weight:normal">1</span><span style="font-size:12.0pt;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+mso-bidi-font-family:Arial;font-weight:normal">，事件获得增援部队奖励。这样就会：你在前面那一关摧毁了某建筑，在后面的关卡中就会获得部队增援。这是一个典型的全局设置的应用。</span><span lang="EN-US" style="font-size:12.0pt;font-family:Arial;font-weight:normal"><o:p></o:p></span>
+			</h3>
+		</div>
+	
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+<script type="text/javascript" language="javascript" src="itemlink.js"></script></body>
+</html>
