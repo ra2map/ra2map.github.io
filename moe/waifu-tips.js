@@ -49,8 +49,8 @@ function loadWidget(config) {
 		} else if (!userActionTimer) {
 			userActionTimer = setInterval(() => {
 				showMessage(randomSelection(messageArray), 6000, 9);
-			}, 10000);
-			//控制空闲时说话的频率，20000
+			}, 40000);
+			//20000
 		}
 	}, 1000);
 
