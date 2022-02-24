@@ -1,19 +1,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>红警地图指导 - ra2map.github.io</title>
+	<style>
+		body {
+			min-height: 100vh;
+			margin: 0;
+			display: flex;
+		}
+
+		iframe {
+			height: 100%;
+			width: 17.2vw;
+		}
+	</style>
 </head>
+
+<body>
+	<iframe name="_nav_pane" src="nav.html"></iframe>
+	<iframe name="_item_content" style="width: 64vw;" src="pages/index_page.html"></iframe>
+	<iframe name="_moe" src="moe/moe.html"></iframe>
+</body>
+
+<!--
 <frameset cols="331,*,331">
 	<frame src="nav.html" name="_nav_pane">
 		<frame src="pages/index_page.html" name="_item_content">
 			<frame src="moe/moe.html" name="_moe">
 </frameset>
-<!--
-<body>
-	<iframe name="_nav_pane" width="331px" src="nav.html"></iframe>
-	<iframe name="_item_content" width="auto" src="pages/index_page.html"></iframe>
-	<iframe name="_moe" width="331px" src="moe/moe.html"></iframe>
-</body>
 -->
+
 </html>

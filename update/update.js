@@ -6,10 +6,10 @@ $(function () {
     var box = $(".update");
     box.empty();
     if (currentVersion != latestVersion) {
-        box.append("<p style='color: #555;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您的版本：" + currentVersion + "，最新版本：" + latestVersion + "，建议访问<a href='ra2map.github.io' target='_blank'>ra2map.github.io</a>浏览新版。</p><p>更新内容：1.xxxx；2.ffff；更多内容请至上述网站查看</p><br>");
+        box.append("<p style='color: #777;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您的版本：" + currentVersion + "，最新版本：" + latestVersion + "，建议访问<a href='ra2map.github.io' target='_blank'>ra2map.github.io</a>浏览新版。</p><p>更新内容：1.xxxx；2.ffff；更多内容请至上述网站查看</p><br>");
     }
     else {
-        box.append("<p style='color: #555;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您的版本：" + currentVersion + "，已是最新版本，已成功联网检查更新！</p><br>");
+        box.append("<p style='color: #777;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您的版本：" + currentVersion + "，已是最新版本，已成功联网检查更新！</p><br>");
     }
 });
 //百度统计
