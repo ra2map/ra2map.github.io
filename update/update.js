@@ -13,17 +13,7 @@ if (typeof online == "undefined") {
         }
     });
 }
-//百度统计
-{
-    var _hmt = _hmt || [];
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?30d8663ed5998a101dba65d5b1bdab74";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-}
-    /*
+/*
 <div class="update"><p>您的版本：V1.139p1（2022.2.22），更新程序出错，<a href="javascript:alert('无法检查更新，可能的原因有\n\n1.设备未联网\n2.您的网络无法连接至ra2map.github.io/update/update.js\n\n请访问ra2map.github.io，或前往教程发布页以检查更新。')">点击查看详情</a></p><br>
 </div>
 
