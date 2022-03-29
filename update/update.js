@@ -1,12 +1,12 @@
 if (typeof online == "undefined") {
     $(function () {
-        var latestVersion = '1.139p2（2022.2.24）';
+        var latestVersion = '1.146（2022.3.28）';//1.139p2（2022.2.24）
         var currentVersion = ver || '未知';
 
         var box = $(".update");
         box.empty();
         if (currentVersion != latestVersion) {
-            box.append("<p style='color: #777;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您的版本：" + currentVersion + "，最新版本：" + latestVersion + "，建议访问<a href='ra2map.github.io' target='_blank'>ra2map.github.io</a>浏览新版。</p><p>更新内容：1.修复在此页面打开链接时的错误；更多内容请至上述网站查看</p><br>");
+            box.append("<p style='color: #777;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您的版本：" + currentVersion + "，最新版本：" + latestVersion + "，更新内容较少，您可以访问<a href='https://ra2map.github.io' target='_blank'>ra2map.github.io</a>浏览新版，也可以继续浏览本地版。</p><p>更新内容：独立出2篇Heli教程，更新目录树等。更多内容请至上述网站查看</p><br>");
         }
         else {
             box.append("<p style='color: #777;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您的版本：" + currentVersion + "，已是最新版本，已成功联网检查更新！</p><br>");

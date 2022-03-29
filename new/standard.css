@@ -3,16 +3,33 @@
             margin: 0;
             padding: 0;
         }
-
-        a:link,
-        a:visited,
-        a:hover,
-        a:active {
+        .cardBox a:link,
+        .cardBox a:visited,
+        .cardBox a:hover,
+        .cardBox a:active {
             color: unset;
             text-decoration: unset;
             word-wrap: break-word;
             word-break: break-all;
             text-overflow: ellipsis;
+        }
+
+        .bigCardBox a:link,
+        .bigCardBox a:visited,
+        .bigCardBox a:hover,
+        .bigCardBox a:active {
+            color: unset;
+            text-decoration: unset;
+            word-wrap: break-word;
+            word-break: break-all;
+            text-overflow: ellipsis;
+        }
+        .cardBox p,.bigCardBox p{
+            margin: 0!important;
+        }
+
+        .cardBox,.bigCardBox,.cardBox *,.bigCardBox *{
+            box-sizing:content-box!important;
         }
 /*————————————————————————链接卡片样式—————————————————————————*/
         .cardBox {

@@ -1,0 +1,785 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+  --title-color: #8064a9;
+  --text-color: #444444;
+  --light-text-color: #666666;
+  --link-color: #2aa899;
+  --code-color: #745fb5;
+
+  --shadow-color: #eee;
+  --purple-light: rgba(116, 95, 181, 0.2);
+  --border: #e7e7e7;
+  --shadow: 3px 3px 10px var(--shadow-color);
+
+  --side-bar-bg-color: #fafafa;
+  --control-text-color: var(var(--light-text-color));
+  --active-file-text-color: var(--title-color);
+  --active-file-bg-color: var(--shadow-color);
+  --item-hover-bg-color: var(--shadow-color);
+  --active-file-border-color: var(var(--title-color));
+
+  --base-font: "Helvetica Neue", "Noto Sans", -apple-system, Ubuntu,
+    "Microsoft YaHei", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans",
+    "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC",
+    "Source Han Sans CN", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti",
+    SimHei, "WenQuanYi Zen Hei Sharp", "Source Sans Pro", sans-serif;
+  --title-font: "EB Garamond", Georgia, "Noto Serif", "Noto Serif CJK SC",
+    "Nimbus Roman No9 L", "Songti SC", "Source Han Serif SC",
+    "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun,
+    SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN",
+    "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU,
+    "Ubuntu", "Source Sans Pro", serif;
+  --monospace: "JetBrains Mono", "Fira Code", "Cascadia Code", "Sarasa Term SC",
+    Monaco, "Deja Vu Sans Mono", Consolas, "Lucida Console", "Andale Mono",
+    "Roboto Mono", Courier, Monospace !important;
+}
+
+/* 打印 */
+@media print {
+  html {
+    font-size: 0.9rem;
+  }
+
+  table,
+  pre {
+    page-break-inside: avoid;
+  }
+
+  pre {
+    word-wrap: break-word;
+  }
+  #write {
+    max-width: 100%;
+  }
+  @page {
+    size: A3; /* PDF output size */
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: initial;
+}
+
+body {
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6rem;
+  letter-spacing: 0;
+  overflow-x: hidden;
+}
+
+/* 页边距 和 页面大小 */
+#write {
+  font-family: var(--base-font);
+  /* max-width: 914px; */
+  margin: 0 auto;
+  padding: 1rem 4rem;
+  padding-bottom: 100px;
+}
+
+#write p {
+  line-height: 1.6rem;
+  word-spacing: 0.05rem;
+}
+
+body > *:first-child {
+  margin-top: 0 !important;
+}
+
+body > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+#write a {
+  border-bottom: none;
+}
+#write a:hover {
+  border-bottom: 1px solid var(--link-color);
+  color: var(--link-color);
+  text-decoration: none;
+}
+.md-content {
+  color: var(--light-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  line-height: 1.3;
+  cursor: text;
+  color: var(--title-color);
+  font-family: var(--title-font);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.25em;
+  margin-bottom: 2rem;
+}
+h1:after {
+  content: "";
+  display: block;
+  margin: 0.2em auto 0;
+  width: 6rem;
+  height: 2px;
+  border-bottom: 2px solid var(--title-color);
+}
+
+h2 {
+  padding-left: 0.4em;
+  font-size: 1.75em;
+  border-left: 0.4em solid var(--title-color);
+  border-bottom: 1px solid var(--title-color);
+}
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.3em;
+}
+h5 {
+  font-size: 1.2em;
+}
+h6 {
+  font-size: 1.1em;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+  margin: 0.8em 0;
+}
+
+/* horizontal rule */
+hr {
+  margin: 1.5em auto;
+  border-top: 1px solid var(--border);
+}
+
+/* 列表 */
+li > ol,
+li > ul {
+  margin: 0 0;
+}
+
+li p.first {
+  display: inline-block;
+}
+
+ul,
+ol {
+  padding-left: 2rem;
+}
+
+ul:first-child,
+ol:first-child {
+  margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+  margin-bottom: 0;
+}
+
+#write ol li,
+ul li {
+  padding-left: 0.1rem;
+}
+
+/* 引用 */
+blockquote {
+  border-left: 0.2em solid var(--purple-light);
+  padding-left: 1em;
+  color: var(--light-text-color);
+  font-family: var(--base-font);
+}
+
+/* 表格 */
+table {
+  margin-bottom: 1.25rem;
+}
+table th,
+table td {
+  padding: 8px;
+  line-height: 1.25rem;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+}
+table th {
+  font-weight: bold;
+}
+table thead th {
+  vertical-align: middle;
+}
+table tr:nth-child(2n),
+thead {
+  background-color: #fcfcfc;
+}
+
+/* 粗体 */
+#write strong {
+  padding: 0 2px;
+  font-weight: bold;
+}
+
+/* inline code */
+#write code,
+tt {
+  padding: 2px 4px;
+  border-radius: 0.3rem;
+  font-family: var(--monospace);
+  font-size: 0.9rem;
+  color: var(--code-color);
+  background-color: #f4f2f9;
+  margin: 0 2px;
+}
+
+#write .md-footnote {
+  color: var(--code-color);
+  background-color: #f4f2f9;
+}
+
+/* highlight. */
+#write mark {
+  background-color: #f9f2f4;
+  border-radius: 0.3rem;
+  padding: 2px 4px;
+  margin: 0 2px;
+  color: #c7254e;
+}
+
+#write del {
+  padding: 1px 2px;
+}
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+#write pre.md-meta-block {
+  padding: 1rem;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border: 0;
+  border-radius: 3px;
+  color: #777777;
+  margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+  bottom: 0.375rem;
+}
+
+/* 图片 */
+.md-image > .md-meta {
+  border-radius: 3px;
+  font-family: var(--monospace);
+  padding: 2px 0 0 4px;
+  font-size: 0.9em;
+  color: inherit;
+}
+/* 图片靠左显示 */
+/* p .md-image:only-child {
+  width: auto;
+  text-align: left;
+  margin-left: 2rem;
+} */
+
+/* 写![shadow-...]() 显示图片阴影 */
+img[alt|="shadow"] {
+  box-shadow: var(--shadow);
+}
+
+#write a.md-toc-inner {
+  line-height: 1.6;
+  white-space: pre-line;
+  border-bottom: none;
+  font-size: 0.9rem;
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+  font-family: var(--base-font);
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+  visibility: visible;
+}
+
+.md-lang {
+  color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+  --item-hover-bg-color: #e6f0fe;
+}
+
+/* border and bg */
+.md-fences {
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: #fdfdfd !important;
+}
+/* 代码框阴影 */
+#write pre.md-fences {
+  display: block;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: var(--shadow);
+}
+
+.cm-s-inner {
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.cm-s-inner.CodeMirror,
+.cm-s-inner .CodeMirror-gutters {
+  color: #3a3432 !important;
+  border: none;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+  color: #6d8a88;
+}
+
+.cm-s-inner .CodeMirror-linenumber {
+  padding: 0 0.1rem 0 0.3rem;
+  color: #b8b5b4;
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: #a34e8f !important;
+}
+
+#fences-auto-suggest .active {
+  background: #ddd;
+}
+
+.cm-s-inner span.cm-comment {
+  color: #9daab6;
+}
+.cm-s-inner span.cm-builtin {
+  color: #0451a5;
+}
+
+/* language tip */
+#write .code-tooltip {
+  border: 1px solid var(--border);
+}
+
+.auto-suggest-container {
+  border-color: #b4b4b4;
+}
+
+.auto-suggest-container .autoComplt-hint.active {
+  background: #b4b4b4;
+  color: inherit;
+}
+
+/* task list */
+#write .md-task-list-item > input {
+  -webkit-appearance: initial;
+  display: block;
+  position: absolute;
+  border: 1px solid #b4b4b4;
+  border-radius: 0.2rem;
+  margin-top: 0.3rem;
+  height: 1rem;
+  width: 1rem;
+  transition: background 0.3s;
+}
+
+#write .md-task-list-item > input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#write .md-task-list-item > input:hover {
+  background: #ddd;
+}
+
+#write .md-task-list-item > input[checked]::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 60%;
+  width: 2px;
+  transform: rotate(40deg);
+  background: #333;
+}
+
+#write .md-task-list-item > input[checked]::after {
+  content: "";
+  position: absolute;
+  top: 46%;
+  left: 25%;
+  height: 30%;
+  width: 2px;
+  transform: rotate(-40deg);
+  background: #333;
+}
+
+#write .md-task-list-item > p {
+  transition: color 0.3s, opacity 0.3s;
+}
+
+#write .md-task-list-item.task-list-done > p {
+  color: #b4b4b4;
+  text-decoration: line-through;
+}
+
+#write .md-task-list-item.task-list-done > p > .md-emoji {
+  opacity: 0.5;
+}
+
+#write .md-task-list-item.task-list-done > p > .md-link > a {
+  opacity: 0.6;
+}
+
+/* sidebar */
+#typora-sidebar,
+.typora-node #typora-sidebar {
+  box-shadow: 3px 0px 10px var(--shadow-color);
+}
+.sidebar-content-content {
+  font-size: 0.9rem;
+}
+@import "";
+
+:root {
+  --title-color: var(--text-color);
+  --link-color: #337ab7;
+  --code-color: #0072be;
+}
+
+blockquote {
+  border-left: 0.3rem solid #eee;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style><title>局部变量教程</title>
+</head>
+<body class='typora-export os-windows typora-export-show-outline typora-export-collapse-outline'><div class='typora-export-content'>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1 outline-item-open"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#局部变量教程10">局部变量教程1.0</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#前言">前言</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#局部变量的基本属性">局部变量的基本属性</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#局部变量没有用">局部变量“没有用”</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#undefined">### 局部变量是什么？</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#如何改变局部变量的值">如何改变局部变量的值？</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#如何对局部变量的改变做出响应">如何对局部变量的改变做出响应？</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#为什么说局部变量没有用">为什么说局部变量“没有用”？</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#局部变量很有用">局部变量“很有用”</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#局部变量用于整理状态逻辑重要）">局部变量用于整理状态逻辑（重要）</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#局部变量和动作脚本的交互">局部变量和动作脚本的交互</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#一些局部变量的使用细节">一些局部变量的使用细节</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#局部变量与延时重要）">局部变量与延时（重要）</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#局部变量的复用">局部变量的复用</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#全局变量">全局变量</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#使用示例">使用示例</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#字幕队列">字幕队列</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#最简随机循环">最简随机循环</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#资源申请">资源申请</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#状态加载">状态加载</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#状态更新">状态更新</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#资源释放">资源释放</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#申请">申请</a></div><ul class="outline-children"></ul></li></ul></li></ul></li><li class="outline-item-wrapper outline-h2 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#附录局部变量在map中的存储结构">附录：局部变量在map中的存储结构</a></div><ul class="outline-children"></ul></li></ul></li></div></div><div id='write'  class=''><h1 id='局部变量教程10'><span>局部变量教程1.0</span></h1><h2 id='前言'><span>前言</span></h2><p><span>之前很多新手（不过好像其中有不少是隔壁蛋黄的人格分裂小号）和我说搞不懂</span><strong><span>局部变量</span></strong><span>有什么用，让我仔细讲讲。最近又恰好看到OPERATE一篇很老的局部变量教程被翻出来，但是那篇教程写的比较浅显，并不完善。于是我决定写一篇局部变量教程，对这个玩意做一个由浅入深的总结。</span></p><p><span>——Heli（竹蜻蜓）, 2021.12.4</span></p><p><span>本教程前置知识：至少了解了</span><strong><span>触发</span></strong><span>的基本概念。</span></p><h2 id='局部变量的基本属性'><span>局部变量的基本属性</span></h2><p><span>局部变量的编辑入口位于FinalAlert的“编辑”菜单内，在“AI触发编辑”、“AI触发允许”之下，“单人任务设置”之上。</span></p><p><span>在下拉框中选中“No name”那一项并输入你想要的名字，就相当于新建了一个局部变量了。</span></p><p><span>局部变量有且仅有3个属性：号码、值、名称。</span></p><ul><li><span>号码：一个非负整数0~99，一般按数字顺序往下编号。这个号码是访问局部变量的唯一依据。</span></li><li><span>值：0或1。可以为每个局部变量设置一个初始值（游戏开始时，它是这个值）。然而这个值可以在游戏的过程中，被</span><strong><span>触发</span></strong><span>和</span><strong><span>动作脚本</span></strong><span>改变，也可以用</span><strong><span>触发</span></strong><span>来响应这个值的改变。</span></li><li><span>名称：就是个名字，只用于制作者自己方便识别。（最多40个英文字符，且不能包含英文逗号）</span></li></ul><p><span>局部变量</span><strong><span>最多有100个</span></strong><span>，号码从0到99。</span></p><p><span>强行读取100及以上号码的局部变量的值，得到的结果始终为1不变——这都不变了，也就失去了它作为“变量”的意义。</span></p><h2 id='局部变量没有用'><span>局部变量“没有用”</span></h2><p><span>新手面对一样未知的东西，最大的疑惑经常是：这东西有什么用？</span></p><p><span>所以对局部变量也要发问一句：</span><strong><span>局部变量有什么用</span></strong><span>？</span></p><p><span>我现在给出的答案是：局部变量是触发的附属组件，用于</span><strong><span>表示状态</span></strong><span>，一般用于</span><strong><span>做逻辑联系的桥梁</span></strong><span>——在新手阶段，大部分时候，局部变量没有用，因为简单的逻辑用不上。</span></p><h3 ><span>局部变量是什么？</span></h3><p><span>每一个局部变量就是一个用于存储一个0/1值的位置，可以表示一种</span><strong><span>“是/否”</span></strong><span>、</span><strong><span>“开/关”</span></strong><span>的</span><strong><span>状态</span></strong><span>，用来配合触发——至于这种状态有何意义，还要看与它配合的触发有何意义。</span></p><p><span>一个好的局部变量使用者，应该给每一个局部变量起一个易懂的好名字，尽量完整的表达其作用，因为它可能出现在逻辑链的任何地方！</span></p><h3 id='如何改变局部变量的值'><span>如何改变局部变量的值？</span></h3><ul><li><span>触发-结果[56 局部设置]（参数：局部变量号码）：将特定号码的局部变量值设置为“1”。</span></li><li><span>触发-结果[57 局部清除]（参数：局部变量号码）：将特定号码的局部变量值设置为“0”。</span></li><li><span>动作脚本-[39 设置局部变量]（参数：局部变量号码）：将特定号码的局部变量值设置为“1”。</span></li><li><span>动作脚本-[40 清除局部变量]（参数：局部变量号码）：将特定号码的局部变量值设置为“0”。</span></li></ul><h3 id='如何对局部变量的改变做出响应'><span>如何对局部变量的改变做出响应？</span></h3><ul><li><span>触发-条件[36 局部设置开启]（参数：局部变量号码）：在特定号码的局部变量值为“1”时触发。</span></li><li><span>触发-条件[37 局部设置清除]（参数：局部变量号码）：在特定号码的局部变量值为“0”时触发。</span></li></ul><p><span>如果一个触发只有局部变量相关的条件，初始是禁止状态，在被允许之前条件已经满足，那么在被允许后，这个触发会立刻执行。</span></p><h3 id='为什么说局部变量没有用'><span>为什么说局部变量“没有用”？</span></h3><p><span>因为触发逻辑是</span><strong><span>完备</span></strong><span>的——也就是说，在制作触发逻辑时，</span><strong><span>使用局部变量能做到的逻辑，不使用局部变量（仅使用触发之间的互相允许、禁止）一样能做到</span></strong><span>。</span></p><p><span>没有它也能做到，那岂不是“没有用”？</span></p><p><span>比如说我们制作一个胜利条件：两个建筑都被摧毁时任务完成。</span></p><p><span>（</span><em><span>这里为举例方便，先假设我们不知道标记类型1，也不知道使用科技类型判断是否被摧毁——只能使用2个触发关联2个建筑，分别判定每个建筑被摧毁，然后使用后续的逻辑判断“两个建筑都被摧毁”这个“且”的关系。</span></em><span>）</span></p><p><span>使用局部变量的方法：</span></p><ul><li><p><span>设置2个局部变量：第X个建筑被摧毁，初始值“0”。</span></p></li><li><p><span>设置2个触发：第X个建筑被摧毁；</span></p><p><span>条件[29 被任何事物摧毁]；</span></p><p><span>结果[56 局部设置]，分别以上一步设置2个局部变量为参数。</span></p></li><li><p><span>把2个触发的标签分别关联到两个建筑上。</span></p></li><li><p><span>再设置1个触发：两个建筑都被摧毁，初始状态为“禁止”；</span></p><p><span>条件有2个，都是[36 局部设置开启]，参数分别填第一步设置的2个局部变量；</span></p><p><span>结果[67 宣告胜利]。</span></p></li></ul><p><span>这样就做完了。</span></p><p><span>实际上这里是使用局部变量，储存了2个建筑是否被摧毁的</span><strong><span>状态</span></strong><span>：如果某个建筑没有被摧毁，那么这个建筑对应的局部变量值是“0”；一旦它被摧毁了，它对应的局部变量值就被触发设置成了“1”。2个建筑对应的局部变量都变成了“1”，就说明：2个建筑都被摧毁啦，可以判断胜利啦。</span></p><p><span>那么不用局部变量怎么做呢？</span></p><ul><li><p><span>触发：第1个建筑被摧毁；</span></p><p><span>条件：[29 被任何事物摧毁]；</span></p><p><span>结果：[53 允许目标触发]第1个建筑被摧毁-状态存储，[22 强制触发事件]第2个建筑被摧毁-状态存储；</span></p></li><li><p><span>触发：第2个建筑被摧毁；</span></p><p><span>条件：[29 被任何事物摧毁]；</span></p><p><span>结果：[53 允许目标触发]第2个建筑被摧毁-状态存储，[22 强制触发事件]第1个建筑被摧毁-状态存储；</span></p></li><li><p><span>触发：第1个建筑被摧毁-状态存储；</span></p><p><span>初始状态：禁止；</span></p><p><span>条件：[60 科技类型存在]不填参数（用作一个永远不能被正常触发的空事件，但这个空事件可以被“[22 强制触发事件]”刷新）；</span></p><p><span>结果：[53 允许目标触发]两个建筑都被摧毁；</span></p></li><li><p><span>触发：第2个建筑被摧毁-状态存储；</span></p><p><span>初始状态：禁止；</span></p><p><span>条件：[60 科技类型存在]不填参数（同上一条）；</span></p><p><span>结果：[53 允许目标触发]两个建筑都被摧毁；</span></p></li><li><p><span>触发：两个建筑都被摧毁；</span></p><p><span>初始状态：禁止；</span></p><p><span>条件：[8 任何事件]；</span></p><p><span>结果：[67 宣告胜利]；</span></p></li></ul><p><span>可能还有别的实现方式，此写法仅供参考……emmmm还是看看就好吧，别学。</span></p><h2 id='局部变量很有用'><span>局部变量“很有用”</span></h2><p><span>上一章节我们说了局部变量“没有用”，但这一章节我们怎么又说它“很有用”了呢？且容我细细说来。</span></p><h3 id='局部变量用于整理状态逻辑重要）'><span>局部变量用于整理状态逻辑（重要）</span></h3><p><span>你可能会注意到，在上面那个“判断2个建筑都被摧毁”的例子中，不使用局部变量的触发组含义要模糊许多。如果把需要判断的条件改为“判断4个目标都被完成”，不使用局部变量的话，触发组的复杂程度又会成倍上升，复杂到几乎难以书写了！</span></p><p><span>局部变量用于表示</span><strong><span>状态</span></strong><span>具有天然的优势——它就是为了表达状态而生的！虽然没有它也可以完成完善的逻辑，但是合理使用会使触发组大大的简化，逻辑更加清晰，这便是局部变量的“有用”所在了。</span></p><p><span>当你需要一个表示“开/关”、“有/无”、“是/否”、“完成/未完成”等二元状态的工具时，尤其是你可能遇到以下的状况：</span></p><ul><li><span>某个状态可能有很多种“开/关”之间转换的条件。</span></li><li><span>某个状态的“开/关”可能产生很多影响。</span></li><li><span>若干个状态可以组成复杂的组合。</span></li></ul><p><span>这时候，</span><strong><span>请毫不犹豫的使用局部变量来简化你的逻辑</span></strong><span>！</span></p><p><span>我们举一个实战中的例子：</span></p><p><span>玩家执行一个“劫狱”任务，前半段指挥小部队渗透，后半段带领被救部队逃跑。可能有以下几种情况判定玩家“被发现”了：</span></p><ul><li><span>玩家被特定的作战方（哨塔所属的作战方）攻击。</span></li><li><span>玩家越过了最高警戒区。</span></li><li><span>有看守前往哨塔报信，玩家未成功阻拦。</span></li></ul><p><span>而“被发现”又会导致如下的后果：</span></p><ul><li><span>敌人出动部队进行追击。</span></li><li><span>监狱各大门封闭。</span></li><li><span>环境声光效果改变。</span></li></ul><p><span>“被发现”和其它状态又会产生如下的组合：</span></p><ul><li><p><span>玩家“被发现”、玩家选择从监狱西门冲出、玩家未破坏机场：敌人会对西门附近进行随机轰炸以封锁路口。</span></p></li><li><p><span>玩家“被发现”、玩家选择从监狱北门冲出、玩家未破坏重工：敌人的坦克部队会前往北门进行封锁。</span></p></li><li><p><span>玩家“被发现”、玩家选择从监狱东门冲出、玩家未破坏兵营：敌人会出动步兵含狙击手小队进行追击。</span></p></li><li><p><span>玩家“被发现”、玩家选择从监狱西门冲出、玩家联络了友军：友军会在监狱西门提供支援。</span></p></li><li><p><span>玩家“被发现”、玩家选择从监狱北门冲出、玩家联络了友军：友军会在监狱北门提供支援。</span></p></li><li><p><span>玩家“被发现”、玩家选择从监狱北门冲出、玩家联络了友军：友军会在监狱东门提供支援。</span></p><p><span>……</span></p></li></ul><p><span>这个时候，如果使用触发之间的相互允许禁止，来建立这一系列事件的逻辑，就会显得非常繁琐且难以维护：比如“玩家被发现”这一个触发的结果里面，可能需要[53 允许目标触发]一大长串，一旦和其它状态交织起来，就难以判断哪里有遗漏了。</span></p><p><span>我们把“玩家被发现”、“玩家选择从监狱X门冲出”、“玩家破坏XX”、“玩家联络了友军”都设置为局部变量如何？这样当事件状态改变的时候，就不用去因此允许/禁止大量的触发，而是直接更改相应的局部变量，各事件也都以局部变量的状态变化作为条件。这样逻辑就清晰多了。</span></p><p><span>比如上面的例子里面，组合状态的第一个事件可以用这样的触发来表示：</span></p><ul><li><p><span>触发：敌人追击小队-西门（空军）；</span></p><p><span>条件：[36 局部设置开启]玩家被发现，[36 局部设置开启]玩家选择从监狱西门冲出，[37 局部设置关闭]玩家破坏机场；</span></p><p><span>结果：（……）；</span></p></li></ul><p><span>总之，</span><strong><span>局部变量是复杂逻辑中用于表示“状态”的最佳选择</span></strong><span>。当一个“状态”对很多逻辑有影响的时候，用局部变量来表示它，绝对会让你少掉头发。</span></p><h3 id='局部变量和动作脚本的交互'><span>局部变量和动作脚本的交互</span></h3><p><span>局部变量还有一个其它模块都无法做到的功能：它可以帮助从动作脚本向触发传递信息，也就是，</span><strong><span>动作脚本引发触发</span></strong><span>。</span></p><ul><li><span>动作脚本-[39 设置局部变量]（参数：局部变量号码）：将特定号码的局部变量值设置为“1”。</span></li><li><span>动作脚本-[40 清除局部变量]（参数：局部变量号码）：将特定号码的局部变量值设置为“0”。</span></li></ul><p><span>这使得我们可以用局部变量来确认一些小队完成了动作脚本中的一项任务，准备执行下一项任务了，诸如运输船的卸载、摧毁了某个路径点上的建筑，等等。</span></p><p><span>借助脚本的其他特性（比如脚本的跳步执行）还可以做出更加复杂的逻辑。本教程的重点不是脚本，就不展开讲了。</span></p><h2 id='一些局部变量的使用细节'><span>一些局部变量的使用细节</span></h2><p><span>本章节介绍一些局部变量使用时需要注意的小细节。从这里开始进入深水区。</span></p><h3 id='局部变量与延时重要）'><span>局部变量与延时（重要）</span></h3><p><span>局部变量有一个非常细节的特性：当一个触发的条件同时包含“延时”（[13 流逝时间]、[51随机延时]）和“局部变量状态判断”（[36 局部设置开启]、[37 局部设置清除]）时，局部变量会对“延时”的行为产生干扰，具体表现为：</span><strong><span>相关的局部变量状态改变时，延时的计时会重置</span></strong><span>（从头重新开始计时）。</span></p><p><span>不妨做一个这样的试验：</span></p><ul><li><p><span>使用2个触发让局部变量A的状态在0和1之间反复变化，周期2秒。</span></p></li><li><p><span>添加一个触发：</span></p><p><span>条件：[13 流逝时间]10，[36 局部设置开启]局部变量A；</span></p><p><span>结果：[11 文本触发事件]显示一段文本；</span></p></li></ul><p><span>结果这段文本永远也不会被显示。问题出在哪里？</span></p><p><span>当然是因为局部变量A的反复重置，导致了另一个条件“[13 流逝时间]10”的10秒计时器也不停的被重置，永远也数不到10而引起触发。这种表现</span><strong><span>就像把这个触发反复禁止再允许</span></strong><span>引起的倒计时重置一样。由此我们也许可以窥见引擎内部对局部变量处理的逻辑……咳咳，扯远了，只要知道结论就好了。</span></p><p><span>这个特性有时可以被利用，但有时又是有害的，使用起来应该格外小心。</span></p><h3 id='局部变量的复用'><span>局部变量的复用</span></h3><p><span>前面就提过，局部变量在一张地图中最多100个。</span></p><p><span>别以为这是个很充裕的数字，在制作复杂的逻辑时，是有可能把这100个都用完的。为了继续发挥其作用，有时我们会被迫选择对局部变量进行复用。</span></p><p><span>复用的局部变量容易导致状态冲突，必须是两种不可能同时出现的状态才可以复用同一个局部变量，比如一个任务的多个阶段中两个不相关的逻辑。</span></p><p><span>复用局部变量时，应当起好名字、划分好阶段。在复杂的逻辑面前，还是要保护好头发和脑细胞的……</span></p><p><strong><span>复用是一种迫不得已的手段，应当先想办法尽可能地省变量，实在搞不定再去复用</span></strong><span>。</span></p><h2 id='全局变量'><span>全局变量</span></h2><p><span>全局变量是什么？它是“全局”的变量——各方面都与局部变量性质相似，但是它是在rules之中注册的（这意味着你无法在一张地图里面注册新的全局变量，而是所有任务地图共用一套全局变量），它的值也可以</span><strong><span>跨关继承</span></strong><span>：进入下一关时，全局变量的值可以保留，因此你可以用它在不同的关卡之间传递信息。</span></p><p><span>除了注册位置、最大数量（50）和跨关继承特性以外，</span><strong><span>全局变量的其余性质与局部变量完全一致</span></strong><span>，本教程就不做过多讨论了。</span></p><h2 id='使用示例'><span>使用示例</span></h2><p><span>本章节会举出我使用过的一些有趣的高级触发组，来介绍一些局部变量的使用场景。</span></p><h3 id='字幕队列'><span>字幕队列</span></h3><p><span>左上角弹出的字幕是向玩家提示的重要手段，但一瞬间弹出太多的字幕可能会让玩家应接不暇；而如果玩家同时触发了两段对话，两段对话相互穿插可能会出现前言不搭后语的窘迫状况……如何让这些弹出的字幕相互让开，自动一条一条、一段一段的弹出呢？我构建了“字幕队列”触发组来解决这一问题。</span></p><p><span>这个触发组的本质是：使用一个局部变量“字幕开启”的值为“1”来表示当前左上角有字幕正在占用玩家的阅读时间——比如，字幕弹出后12秒之内，不允许另一段无关字幕的弹出；而在这个阅读时间过后，才使用触发将这个局部变量的值设为“0”，允许下一条字幕的显示。</span></p><p><span>触发结构如下：</span></p><ul><li><p><span>一个局部变量：字幕开启。初始值为0。</span></p></li><li><p><span>一个触发：字幕计时重置</span></p><p><span>触发类型“2”（重复），初始为禁止状态；</span></p><p><span>条件：[13 流逝时间]12秒（占用玩家的阅读时间）；</span></p><p><span>结果：[57 局部清除]字幕开启，[54 禁止目标触发]自身；</span></p></li><li><p><span>对于每一条字幕触发，使用如下结构：</span></p><p><span>条件：[37 局部设置关闭]字幕开启；</span></p><p><span>结果：[56 局部设置]字幕开启，[53 允许目标触发]字幕计时重置，[11 文本触发事件]（你需要的字幕），还有其它结果……</span></p><p><span>注意</span><strong><span>条件里面不能带有延时</span></strong><span>。如果这条字幕是延时触发的，则需要用另一个专门负责延时的触发来允许它，否则会因为局部变量导致的计时重置引发时序问题。</span></p></li><li><p><span>如果是一连串的字幕（比如一段对话），使用如下结构：</span></p><p><span>第1条触发的条件：[37 局部设置关闭]字幕开启</span></p><p><span>所有触发的结果带上：[56 局部设置]字幕开启，[53 允许目标触发]字幕计时重置，[11 文本触发事件]（你需要的字幕），还有其它结果……</span></p><p><span>其余按照正常的延时事件链制作即可（但是</span><strong><span>事件链的延时时间要小于字幕计时重置触发的延时时间</span></strong><span>，否则会导致字幕开启的状态中途结束）。这样保证整段字幕连续放出，且不会被其余的字幕打断。</span></p></li></ul><p><span>这个触发组结构相当简单，对于一些需要密集文本提示的场景的优化也十分有效。尤其是可以有效的防止一些循环出现的提示粗暴的插入到重要的对话中。</span></p><p><span>不过对于这个触发组而言，“局部变量重置计时”的特性是有害的，需要时刻提防——由于“字幕开启”这个局部变量的状态可能一直在改变，较长的延时根本来不及触发就被重置，甚至会出现某些字幕永远也显示不出来的状况。这就是在这个触发组中需要把延时和局部变量分开成两个触发的原因。</span></p><p><span>触发结果[53 允许目标触发]也会重置延时时间。这就是连串字幕中每一个触发的结果都要带上“[53 允许目标触发]字幕计时重置”的原因，为的就是不断重置它，等这一连串字幕结束后才让它正常运行。</span></p><h3 id='最简随机循环'><span>最简随机循环</span></h3><p><span>这应该说是一个非常漂亮且简洁实用的触发组……写出它的时候，我自己都被它的简洁程度惊到了。</span></p><p><span>这个触发组起到了这样的作用：</span><strong><span>每次随机延时X秒以后，随机发生N个事件的其中一种，循环执行</span></strong><span>。比如：敌人会随机在N个位置中选1个随机空降伞兵。</span></p><p><span>猜猜需要几个触发？</span></p><p><strong><span>只需要N个触发，和随机事件的数量相等</span></strong><span>。加之其触发结构也极其简单易拓展，因此我称其为“</span><strong><span>最简随机循环</span></strong><span>”。</span></p><p><span>触发结构如下：</span></p><ul><li><p><span>一个局部变量：随机事件组A。其初始值决定了这个触发组的开关状态，“0”为关，“1”为开。</span></p></li><li><p><span>每个随机事件对应1个触发。</span></p></li><li><p><span>每个的触发的参数是这样的：</span></p><p><span>类型“2”（重复）；</span></p><p><span>条件：[51 随机延时]X秒，[36 局部设置开启]随机事件组A；</span></p><p><span>结果：[57 局部清除]随机事件组A，[56 局部设置]随机事件组A（“局部设置”必须在“局部清除”后面），然后加上这个事件你想要的其它结果。</span></p></li><li><p><span>想要打开这个循环，就把局部变量“随机事件组A”设为“1”；想要关掉，就设为“0”。</span></p></li></ul><p><span>这个触发组主要利用了“局部变量状态更新会重置计时器”的特性，各触发之间也没有复杂的关联，而是通过一个局部变量，把若干触发编为一组，一个触发执行就会重置其余几个触发的计时器，开启下一轮循环。</span></p><p><span>虽然</span><strong><span>在随机延时较短的时候，各事件的概率会出现偏差</span></strong><span>（我打算专门出一篇教程来做相关的数学计算），但只要随机的时间足够长，各事件出现的概率基本一致，也是基本满足了实用要求。</span></p><h3 id='资源申请'><span>资源申请</span></h3><p><span>这个触发组在「林德拉克计划2：命运之瞳」的 尤里06-铁幕降临 中使用。情况是这样的：敌人拥有4座铁幕装置，都按照CD时间进行计时；在特定条件下，会动用已经就绪了的铁幕向地图上的一些防御建筑物释放，以给玩家推进带来阻碍；如果没有已经就绪了的铁幕，则不会释放。</span></p><p><span>我们可以把它抽象成这样的逻辑：有若干个资源（铁幕）可能为“可用”或“不可用”状态，其它触发可能需要申请使用这些资源。触发组要做到从中寻找可用的资源并释放。我把这个触发组叫做“资源申请”。</span></p><p><span>触发组分为4部分：状态加载、状态更新、资源释放、申请</span></p><h4 id='状态加载'><span>状态加载</span></h4><p><span>用于判定各资源何时可用的触发组。比如说对于铁幕，我们可以简单的认为它经过CD以后就进入了可用状态：</span></p><ul><li><p><span>局部变量：铁幕X就绪，初始状态“0”；</span></p></li><li><p><span>触发：铁幕X就绪；</span></p><p><span>触发类型：2（重复）；</span></p><p><span>事件：[13 流逝时间]300；</span></p><p><span>结果：[56 局部设置]铁幕X就绪，[54 禁止目标触发]自身，[53 设置局部变量]状态更新；</span></p></li><li><p><span>触发：铁幕X被摧毁；</span></p><p><span>事件：[29 被任何事物摧毁]；</span></p><p><span>结果：[57 局部清除]铁幕X就绪，[12 摧毁触发事件]铁幕X就绪；</span></p></li></ul><h4 id='状态更新'><span>状态更新</span></h4><p><span>主动进行状态更新，通过所有铁幕的状态来判断当前是否至少有一座铁幕可用——这决定着是申请成功还是申请失败。</span></p><ul><li><p><span>局部变量：有铁幕可用，初始状态“0”；</span></p></li><li><p><span>局部变量：状态更新，初始状态“0”；</span></p></li><li><p><span>触发：状态更新X；</span></p><p><span>触发类型：2（重复）；</span></p><p><span>事件：[36 局部设置开启]状态更新，[36 局部设置开启]铁幕X就绪；</span></p><p><span>结果：[57 局部清除]状态更新，[56 局部设置]有铁幕可用；</span></p></li><li><p><span>触发：状态更新-全否；</span></p><p><span>触发类型：2（重复）；</span></p><p><span>事件：[36 局部设置开启]状态更新，[36 局部设置关闭]铁幕1就绪，[36 局部设置关闭]铁幕2就绪，……，[36 局部设置关闭]铁幕X就绪；</span></p><p><span>结果：[57 局部清除]状态更新，[57 局部清除]有铁幕可用；</span></p></li></ul><h4 id='资源释放'><span>资源释放</span></h4><p><span>这个触发组决定了有铁幕可用的时候，释放哪一个。按顺序申请铁幕，一个不行就下一个。</span></p><ul><li><p><span>触发：申请铁幕</span></p><p><span>触发类型：2（重复）；初始状态为“禁止”；</span></p><p><span>事件：[8 任何事件]；</span></p><p><span>结果：[53 允许目标触发]申请铁幕1成功，[53 允许目标触发]申请铁幕1失败，[54 禁止目标触发]自身；</span></p></li><li><p><span>触发：申请铁幕X成功</span></p><p><span>触发类型：2（重复）；初始状态为“禁止”；</span></p><p><span>事件：[36 局部设置开启]铁幕X就绪；</span></p><p><span>结果：[54 禁止目标触发]申请铁幕X成功，[54 禁止目标触发]申请铁幕X失败，[57 局部清除]铁幕X就绪，[53 允许目标触发]铁幕X就绪，[53 设置局部变量]状态更新，[134 超级武器复位]对应的铁幕超武，[21 播放语音]EVA_IronCurtainActivated</span></p></li><li><p><span>触发：申请铁幕X失败</span></p><p><span>触发类型：2（重复）；初始状态为“禁止”；</span></p><p><span>事件：[37 局部设置关闭]铁幕X就绪；</span></p><p><span>结果：[53 允许目标触发]申请铁幕X+1成功，[53 允许目标触发]申请铁幕X+1失败（最后一个就无需X+1了），[54 禁止目标触发]申请铁幕X成功，[54 禁止目标触发]申请铁幕X失败；</span></p></li></ul><h4 id='申请'><span>申请</span></h4><p><span>每一个铁幕的申请位置由两个触发组成：</span></p><ul><li><p><span>触发：铁幕位置N申请成功；</span></p><p><span>关联触发：铁幕位置N申请失败；（如果涉及到了关联单位的属性的话）</span></p><p><span>条件：[36 局部设置开启]有铁幕可用，和其它你想要的铁幕申请条件；</span></p><p><span>结果：[109 铁幕装置作用于]你想要的路径点，[53 允许目标触发]申请铁幕；</span></p></li><li><p><span>触发：铁幕位置N申请失败；</span></p><p><span>条件：[37 局部设置关闭]有铁幕可用，和其它你想要的铁幕申请条件（和上面的相同）；</span></p><p><span>结果：[54 禁止目标触发]铁幕位置N申请成功；（如果涉及到了关联单位的属性的话，结果甚至可以留空）</span></p></li></ul><p><span>其实就是使用局部变量判定此刻有无可用的铁幕，如果有就申请成功，没有就申请失败。</span></p><h2 id='附录局部变量在map中的存储结构'><span>附录：局部变量在map中的存储结构</span></h2><p><span>局部变量在map中的存储结构如下：</span></p><pre class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" spellcheck="false" lang="INI"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="ini"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 14.4971px; left: 31.9922px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 24px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style="text-rendering: auto;"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -23.9974px; width: 24px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -23.9974px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 17px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header">[VariableNames]</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -23.9974px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 17px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header">[号码]</span>=<span class="cm-quote">[名称],[初始状态]</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -23.9974px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 17px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header">[号码]</span>=<span class="cm-quote">[名称],[初始状态]</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -23.9974px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 17px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">......</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 100px;"></div><div class="CodeMirror-gutters" style="height: 100px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 24px;"></div></div></div></div></pre><p>&nbsp;</p></div></div>
+
+<script>(function(){var e=document.body.parentElement,t=[],n=null,i=document.body.classList.contains("typora-export-collapse-outline"),r=function(e,t,n){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var i=e.target;i&&i!=this;i=i.parentNode)if(i.matches(t)){!1===n.call(i,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)};function o(){return e.scrollTop}r("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),d(),!1}),r("click",".outline-item",function(e){var t=this.querySelector(".outline-label");if(location.hash="#"+t.getAttribute("href"),i){var n=this.closest(".outline-item-wrapper").classList;n.contains("outline-item-open")||n.add("outline-item-open"),c(),n.add("outline-item-active")}});var a,s,l=function(){var e=o();n=null;for(var i=0;i<t.length&&t[i][1]-e<60;i++)n=t[i]},c=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},d=function(){if(n){c();var e=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(n[0]):n[0])+'"]');if(e)if(i){var t=e.closest(".outline-item-open>ul>.outline-item-wrapper");if(t)t.classList.add("outline-item-active");else{for(var r=(e=e.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");r;)r=(e=r).parentElement.closest(".outline-item-wrapper");e.classList.add("outline-item-active")}}else e.closest(".outline-item-wrapper").classList.add("outline-item-active")}};window.addEventListener("scroll",function(e){a&&clearTimeout(a),a=setTimeout(function(){l(),d()},300)});var u=function(){s=setTimeout(function(){!function(){t=[];var e=o();document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(n=>{var i=n.getAttribute("id");t.push([i,e+n.getBoundingClientRect().y])})}(),l(),d()},300)};window.addEventListener("resize",function(e){s&&clearTimeout(s),u()}),u()})();</script></body>
+</html>
