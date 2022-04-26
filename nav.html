@@ -3,6 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <!--红警地图指导V1.96 By轻稚  bbs.ra2diy.com@旌旌葳琰 2020/2/23-->
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -135,6 +136,46 @@
 </head>
 
 <body>
+	<script type="text/javascript" language="javascript" src="new/jquery-3.6.0.min.js"></script>
+	<script>
+		$(function () {
+
+			$('#ID_Workspace img').click(function () {
+				var btn = $(this);
+				var ul = btn.siblings('ul');
+				var sImg = btn.attr('src');
+
+				if (sImg.match(/plus/i)) {
+					ul.show();
+					btn.attr('src', sImg.replace(/plus/i, 'minus'));
+				} else {
+					ul.hide();
+					btn.attr('src', sImg.replace(/minus/i, 'plus'));
+				}
+			});
+			//开始时接收
+			var pastHash = decodeURI(parent.location.hash).substr(1);
+			if (pastHash != '') {
+				var pastHref = 'pages/' + pastHash + '.html';
+				var cf = parent.document.getElementById('_item_content');
+				$(cf).attr('src', pastHref);
+			}
+			//点击时添加
+			$("#ID_Workspace a").on("click", function () {
+				var nowHash = $(this).attr('href');
+				if (nowHash.substr(0, 6) == 'pages/') {
+					nowHash = encodeURI(nowHash.slice(6, -5));
+					parent.location.href = 'https://' + parent.location.host + "/#" + nowHash;
+					//上线时将'http:'改为'https:'
+				}
+
+			});/*
+					console.log(parent.location.href);
+					console.log(parent.location.host);
+					console.log('222');*/
+		});
+	</script>
+
 	<!--红警地图指导V1.96 By轻稚  bbs.ra2diy.com@旌旌葳琰 2020/2/23-->
 
 	<div id='ID_AppSafeFrame'>
@@ -147,8 +188,8 @@
 				<li><img src="icon_minus.gif"><a href="pages/3e280638_7d550d23_0.html" target="_item_content"
 						class="CLS_Indent1">地图思想与忠告</a>
 					<ul>
-						<li><a href="pages/rm.html" target="_item_content"
-								class="hui CLS_Indent2">地图制作入门引导（待修改）</a></li>
+						<li><a href="pages/rm.html" target="_item_content" class="hui CLS_Indent2">地图制作入门引导（待修改）</a>
+						</li>
 						<li><a href="pages/5b1507b4_b4750fca_0.html" target="_item_content"
 								class="hui CLS_Indent2">mapper核心思维引导</a></li>
 						<li><a href="pages/4b270697_4f581582_0.html" target="_item_content"
@@ -162,7 +203,7 @@
 						<li><a href="pages/zqt.html" target="_item_content" class="hui CLS_Indent2">战略任务设计四原则</a>
 						</li>
 						<li><a href="pages/4b290698_7ba10cfd_0.html" target="_item_content"
-								class="hui CLS_Indent2">十类最差任务（已失效）</a></li>
+								class="hui CLS_Indent2">十类最差任务（已恢复）</a></li>
 					</ul>
 				</li>
 				<li><img src="icon_minus.gif"><a href="pages/3e2c063a_37fe0885_0.html" target="_item_content"
@@ -215,7 +256,7 @@
 								class="red CLS_Indent2">竹蜻蜓（Heli）系列教程收集</a></li>
 					</ul>
 				</li>
-				<li><img src="icon_minus.gif"><a href="javascript:alert('如何改善地图的直观视听效果。');"  class="CLS_Indent1">美化进阶</a>
+				<li><img src="icon_minus.gif"><a href="javascript:alert('如何改善地图的直观视听效果。');" class="CLS_Indent1">美化进阶</a>
 					<ul>
 						<li><a href="pages/how2h.html" target="_item_content"
 								class="gre CLS_Indent2">在两个小时内做一张好看的红警地图</a></li>
@@ -236,10 +277,8 @@
 								class="gre CLS_Indent2">某斯内克的城市图经验谈</a></li>
 						<li><a href="pages/520706ce_dc5c115f_0.html" target="_item_content"
 								class="gre CLS_Indent2">关于进阶地表美化</a></li>
-						<li><a href="pages/useTX.html" target="_item_content"
-								class="gre CLS_Indent2">使用TX地形</a></li>
-						<li><a href="javascript:;"
-								class="gre CLS_Indent2">地图光照效果与局部灯光的控制（待修改）</a></li>
+						<li><a href="pages/useTX.html" target="_item_content" class="gre CLS_Indent2">使用TX地形</a></li>
+						<li><a href="javascript:;" class="gre CLS_Indent2">地图光照效果与局部灯光的控制（待修改）</a></li>
 						<li><a href="pages/520906ce_a5b10f12_0.html" target="_item_content"
 								class="gre CLS_Indent2">灯光建筑的使用</a></li>
 						<li><a href="pages/5b0b07aa_9b5e0da7_0.html" target="_item_content"
@@ -267,7 +306,8 @@
 					</ul>
 				</li>
 
-				<li><img src="icon_minus.gif"><a href="javascript:alert('如何做出稍复杂的触发（组）和作战小队。');"  class="CLS_Indent1">触发与小队进阶</a>
+				<li><img src="icon_minus.gif"><a href="javascript:alert('如何做出稍复杂的触发（组）和作战小队。');"
+						class="CLS_Indent1">触发与小队进阶</a>
 					<ul>
 						<li><a href="pages/4b35069b_3acd1bc4_0.html" target="_item_content"
 								class="red CLS_Indent2">触发教程1：菜鸟初学者必看！</a></li>
@@ -275,8 +315,8 @@
 								class="pop CLS_Indent2">触发教程2：局部变量</a></li>
 						<li><a href="pages/4b39069d_19191363_0.html" target="_item_content"
 								class="pop CLS_Indent2">触发教程3：手动改图</a></li>
-						<li><a href="pages/zzxd.html" target="_item_content"
-								class="red CLS_Indent2">特遣脚本小队AI触发全教程</a></li>
+						<li><a href="pages/zzxd.html" target="_item_content" class="red CLS_Indent2">特遣脚本小队AI触发全教程</a>
+						</li>
 						<li><a href="pages/5aae0776_772035_0.html" target="_item_content"
 								class="red CLS_Indent2">小队：作战小队附加属性 相关说明</a></li>
 						<li><a href="pages/520606cd_527e2227_0.html" target="_item_content"
@@ -337,7 +377,7 @@
 				</li>
 
 				<li><img src="icon_minus.gif"><a href="javascript:alert('这里有关于地图其他部分（如局部变量）的教程，也有关于ini、TX地形、新增素材的教程。
-					更多教程请前往相关贴吧、RA2DIY地图区以及在B站搜索相关内容');"  class="CLS_Indent1">其他教程</a>
+					更多教程请前往相关贴吧、RA2DIY地图区以及在B站搜索相关内容');" class="CLS_Indent1">其他教程</a>
 					<ul>
 						<li><a href="pages/591e0706_560d15bc_0.html" target="_item_content"
 								class="red CLS_Indent2">给任务添加评分板评语</a></li>
@@ -353,8 +393,7 @@
 								class="pop CLS_Indent2">平台差异:载具离开地图时内容物的摧毁判定</a></li>
 						<li><a href="pages/5ae30787_d7ca1103_0.html" target="_item_content"
 								class="pop CLS_Indent2">零碎内容、未添加教程（待修改）</a></li>
-						<li><img src="icon_plus.gif"><a href="javascript:;" 
-								class="yel CLS_Indent1">任务细节与优化解惑（待修改）</a>
+						<li><img src="icon_plus.gif"><a href="javascript:;" class="yel CLS_Indent1">任务细节与优化解惑（待修改）</a>
 							<ul style="display: none;">
 								<li><a href="pages/719507fb_8bc80d18_0.html" target="_item_content"
 										class="yel CLS_Indent2">任务制作细节1</a></li>
@@ -386,8 +425,7 @@
 								class="CLS_Indent2">详细的隧道教程</a>
 						</li>
 
-						<li><img src="icon_plus.gif"><a href="javascript:;" 
-								class="pop CLS_Indent1">AI触发等（待修改）</a>
+						<li><img src="icon_plus.gif"><a href="javascript:;" class="pop CLS_Indent1">AI触发等（待修改）</a>
 							<ul style="display: none;">
 								<li><a href="pages/734e083f_469b0928_0.html" target="_item_content"
 										class="pop CLS_Indent2">地图AI教程</a></li>
@@ -398,21 +436,21 @@
 
 							</ul>
 						</li>
-						<li><a href="javascript:;"
-								class="bro CLS_Indent2">从地图到mod——mod向任务的制作（待修改）</a>
-						</li>						
+						<li><a href="javascript:;" class="bro CLS_Indent2">从地图到mod——mod向任务的制作（待修改）</a>
+						</li>
 						<li><a href="pages/clb2.html" target="_item_content"
 								class="bro CLS_Indent2">ChaleB专栏文集:红色警戒2美工设计入门指引</a>
 						</li>
 						<li><a href="pages/4b3b069c_e3801144_0.html" target="_item_content"
 								class="bro CLS_Indent2">修改地形，地形对象，覆盖图等</a></li>
-						<li><img src="icon_plus.gif"><a href="javascript:;" 
+						<li><img src="icon_plus.gif"><a href="javascript:;"
 								class="bro CLS_Indent1">如何修改INI代码以及用新素材（待修改）</a>
 							<ul style="display: none;">
 								<li><a href="pages/mk.html" target="_item_content"
 										class="bro CLS_Indent2">MK2019年版教程附最新版代码词典</a>
 								</li>
-								<li><a href="pages/7c8a08d6_7b880ca0_0.html" target="_item_content" class="bro CLS_Indent2">将代码内置进地图、部分代码示例</a></li>
+								<li><a href="pages/7c8a08d6_7b880ca0_0.html" target="_item_content"
+										class="bro CLS_Indent2">将代码内置进地图、部分代码示例</a></li>
 								<li><a href="pages/7d7f0915_965c1e5e_0.html" target="_item_content"
 										class="bro CLS_Indent2">改磁电弹头实现永久瘫痪等效果</a></li>
 								<li><a href="pages/7cf608d9_8f41172d_0.html" target="_item_content"
@@ -436,7 +474,7 @@
 						</li>
 					</ul>
 				</li>
-				<li><img src="icon_minus.gif"><a href="javascript:;"  class="CLS_Indent1">拓展内容（待修改）</a>
+				<li><img src="icon_minus.gif"><a href="javascript:;" class="CLS_Indent1">拓展内容（待修改）</a>
 
 
 				</li>
@@ -468,23 +506,23 @@
 					<ul>
 						<li><a href="pages/78860801_ldlk_0.html" target="_item_content"
 								class="lig CLS_Indent2">林德拉克计划16关任务</a></li>
-						<li><a href="pages/ry2.html" target="_item_content"
-								class="lig CLS_Indent2">林德拉克计划2：命运之瞳</a></li>
+						<li><a href="pages/ry2.html" target="_item_content" class="lig CLS_Indent2">林德拉克计划2：命运之瞳</a>
+						</li>
 						<li><a href="pages/78860801_mhsj_0.html" target="_item_content"
 								class="lig CLS_Indent2">RA2XP系列梦幻世界多关任务</a></li>
 						<li><a href="pages/59b30735_aaf01861_0.html" target="_item_content"
-								class="lig CLS_Indent2">歧途15关任务（不用下载）</a></li>
+								class="lig CLS_Indent2">歧途15关任务</a></li>
 						<li><a href="pages/ltw.html" target="_item_content" class="lig CLS_Indent2">单关任务巨制
 								| 命运的莱特湾</a>
 						</li>
 						<li><a href="pages/5b4507b9_c19e0fbd_0.html" target="_item_content"
 								class="lig CLS_Indent2">时空游戏14关任务</a></li>
 						<li><a href="pages/4b37069b_44b71c4a_0.html" target="_item_content"
-								class="lig CLS_Indent2">美苏联军10集任务（不用下载）</a></li>
+								class="lig CLS_Indent2">美苏联军10集任务</a></li>
 						<li><a href="pages/5a490778_98231ec6_0.html" target="_item_content"
-								class="lig CLS_Indent2">异形危机系列任务（不用下载）</a></li>
+								class="lig CLS_Indent2">异形危机系列任务</a></li>
 						<li><a href="pages/5a380774_bde924ab_0.html" target="_item_content"
-								class="lig CLS_Indent2">百夫长战记等共六关（部分不用下载）</a></li>
+								class="lig CLS_Indent2">百夫长战记等共六关</a></li>
 						<li><a href="pages/sw.html" target="_item_content" class="lig CLS_Indent2">忠诚或死亡系列任务</a></li>
 						<li><a href="pages/520c06cf_5b40158c_0.html" target="_item_content"
 								class="lig CLS_Indent2">猩球崛起I：野性的呼唤</a></li>
@@ -492,10 +530,9 @@
 						</li>
 						<li><a href="pages/5ab3077c_97e01e84_0.html" target="_item_content" class="lig CLS_Indent2">红色军团
 								再度雄起（不用下载）</a></li>
-						<li><a href="pages/ql.html" target="_item_content"
-								class="lig CLS_Indent2">桥梁争夺战</a></li>
+						<li><a href="pages/ql.html" target="_item_content" class="lig CLS_Indent2">桥梁争夺战</a></li>
 						<li><a href="pages/5a700778_3b7008df_0.html" target="_item_content"
-								class="lig CLS_Indent2">深山突袭（不用下载）</a></li>
+								class="lig CLS_Indent2">深山突袭</a></li>
 						<li><a href="pages/5b4e07bd_35f9082d_0.html" target="_item_content"
 								class="lig CLS_Indent2">惊险假期</a>
 						</li>
@@ -515,7 +552,7 @@
 						<li><a href="pages/521006d1_a11e0e52_0.html" target="_item_content"
 								class="lig CLS_Indent2">颤抖的最后珊瑚</a></li>
 						<li><a href="pages/5a24074a_526815d8_0.html" target="_item_content"
-								class="lig CLS_Indent2">自由祭坛（不用下载）</a></li>
+								class="lig CLS_Indent2">自由祭坛</a></li>
 						<li><a href="pages/5b3707b3_38750858_0.html" target="_item_content"
 								class="lig CLS_Indent2">黎明觉醒</a>
 						</li>
@@ -531,7 +568,7 @@
 						<li><a href="pages/4b4506a2_dcb4197c_0.html" target="_item_content"
 								class="lig CLS_Indent2">大灾变第一曲——异乱之战</a></li>
 						<li><a href="pages/5b3207b5_c7a824e7_0.html" target="_item_content"
-								class="lig CLS_Indent2">指挥官的噩梦（8关带解析，不用下载）</a></li>
+								class="lig CLS_Indent2">指挥官的噩梦</a></li>
 						<li><a href="pages/520606cc_fbb0462_0.html" target="_item_content"
 								class="lig CLS_Indent2">围剿</a>
 						</li>
@@ -584,23 +621,5 @@
 	</div>
 
 </body>
-
-<script type="text/javascript" language="javascript" src="new/jquery-3.6.0.min.js"></script>
-<script>
-	$('#ID_Workspace img').click(function () {
-		var btn = $(this);
-		var ul = btn.siblings('ul');
-		var sImg = btn.attr('src');
-
-		if (sImg.match(/plus/i)) {
-			ul.show();
-			btn.attr('src', sImg.replace(/plus/i, 'minus'));
-		} else {
-			ul.hide();
-			btn.attr('src', sImg.replace(/minus/i, 'plus'));
-		}
-	});
-
-</script>
 
 </html>
