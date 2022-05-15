@@ -1,6 +1,6 @@
 if (typeof online == "undefined") {
     $(function () {
-        var latestVersion = '1.173（2022.4.26）';//1.139p2（2022.2.24），1.146（2022.3.28）
+        var latestVersion = '1.184（2022.5.15）';//1.139p2（2022.2.24）1.146（2022.3.28）1.173（2022.4.26）
         var currentVersion = ver || '未知';
 
         var box = $(".update");
