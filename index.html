@@ -3,6 +3,9 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="红色警戒2地图教程大全。收集红警地图制作相关的各种工具，教程等内容。通过精选的工具与教程，逐渐帮你掌握地图制作技法，让你能够制作出好玩的地图，体验到创作的乐趣!">
+	<meta name="keywords" content="红色警戒，红色警戒2，红警，红警地图，红警地图制作，任务地图，红警地图指导，红警地图教程，ra2map，轻稚">
+	<meta name="author" content="轻稚">
 	<title>红警地图指导 - ra2map.github.io</title>
 	<style>
 		body {
@@ -22,7 +25,7 @@
 
 
 		.tackle {
-			width: 330px;
+			width: 200px;
 			height: 330px;
 			position: fixed;
 			top: 23%;
@@ -38,7 +41,7 @@
 		}
 
 
-		.tBigCicle {
+		.tBigCircle {
 			width: 80px;
 			height: 80px;
 			border-radius: 40px;
@@ -50,7 +53,7 @@
 			transform: rotate(0deg);
 		}
 
-		.tSmaCicle {
+		.tSmaCircle {
 			width: 60px;
 			height: 60px;
 			border-radius: 30px;
@@ -94,10 +97,10 @@
 			left: 0;
 			top: 0;
 			width: 20vw;
+			min-width: 300px;
 			overflow: hidden;
 			background-color: #fff;
 			border-radius: 30px;
-			border: 1px solid rgb(230, 230, 230);
 			box-shadow: 2px 2px 30px #aaaaaa;
 			padding: 3vw;
 			margin: 15vh 37vw;
@@ -105,8 +108,23 @@
 			justify-content: center;
 			display: flex;
 		}
-		p{
+
+		p {
 			line-height: 24px;
+		}
+
+		.tBigCircle:hover,
+		.tSmaCircle:hover {
+			transform: scale(1.15);
+			transition: 0.5s;
+		}
+
+		.tbc {
+			transform: rotate(45deg);
+		}
+
+		.tbc:hover {
+			transform: rotate(45deg) scale(1.15);
 		}
 	</style>
 	<script type="text/javascript" language="javascript" src="new/jquery-3.6.0.min.js"></script>
@@ -122,12 +140,12 @@
 			})();
 		}
 		function sq() {
-			$(".tBigCicle").css({ transform: "rotate(45deg)" }).parent().attr({ href: 'javascript:zk();', title: "展开" });
-			$(".tSmaCicle").parent().fadeOut();
+			$(".tBigCircle").toggleClass("tbc").parent().attr({ href: 'javascript:zk();', title: "展开" });
+			$(".tSmaCircle").parent().fadeOut();
 		}
 		function zk() {
-			$(".tBigCicle").css({ transform: "rotate(0deg)" }).parent().attr({ href: 'javascript:sq();', title: "收起" });
-			$(".tSmaCicle").parent().fadeIn();
+			$(".tBigCircle").toggleClass("tbc").parent().attr({ href: 'javascript:sq();', title: "收起" });
+			$(".tSmaCircle").parent().fadeIn();
 		}
 		$(function () {
 			$('.tsc8').click(function () {
@@ -139,13 +157,6 @@
 				$('.zcw').fadeOut();
 			})
 		});
-		/*
-				$('.lock').css('display', 'block');
-				$('.zcw').css('display', 'flex');
-				$('.lock').css('display', 'none');
-				$('.zcw').css('display', 'none');
-		
-		*/
 	</script>
 </head>
 
@@ -157,24 +168,24 @@
 	<div class="tackle">
 		<div class="tCenter">
 			<a href="javascript:sq();" title="收起">
-				<img class="tBigCicle"
+				<img class="tBigCircle"
 					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAACmklEQVR4nO3asYpTQRTG8Ulik6TaPIEJSoIsIiESFexEbBYVsbYQFCzExsInsLARC0HBwlpExUbETlgNBsuQKKhPEKvYqieQLubOnG/OzDV8/27JcGfvj2T33nNT+f03x9RVc/8C/3sEBCMgGAHBCAhGQDACghEQjIBgBAQjIBgBwQgIRkAwAoIREIyAYAQEIyAYAcEICHYg1Ubz+U83Gn92tVrVHeq0Xad9MNqxv33/4SbTL65Rr7tjR3ddq7UT7dhFJQF8v//RPXrydIkoNZsNd/PGNXf61Ikox37w8LFbLH4tfxa861evRDm2TxXr58Jygnfv3V/72p3bt6ATtTy2b6Z/A+Uj+68TlOQ1QdC0CW91bNnfOlPAN2/fFa7RIBbhheyPZvsO/OT3DghB9MUL2R/JFPBIr+u91gcxBE/qdQ97r9VmCnjpwl7Q+k2IoXjS5Yvng9ZrMgU8ORws/xuGtA5Rgyf7yv7Wmd+JyKUEgqjF25rrwFVaiDLjSckAJQ1iSKnxpKTDBM3H2bcceFLyaYwFYi48Kcs4KyZiTjwp2zwwBmJuPCnrQBVBLAOexIk0WFZA5LIGGYXFLBtgjGvCMiBmAYx5QZ0bMTmgxd1ITsSkgJa3crkQkwFqhwkh5UBMAoiMpMqOaA6IzvPKjmgK+GE0jjLP0yLK/taZAj5/+Tpo/abbMw3isxevgtZrMgWcTGfea33ubUMRp7Ov3mu1mQIOj/e91oUMBkIQffdHMgU8d/ZM4RrNVMUX0Wd/NNt34KC/8USRkVQRorwm+1uX5KESv94WoW39gmXSx5rbGCfSYAQEIyAYAcEICEZAMAKCERCMgGAEBCMgGAHBCAhGQDACghEQjIBgBAQjIBgBwQgIRkAwAoL9AabKVCYCFDNtAAAAAElFTkSuQmCC">
 			</a>
 			<a href="javascript:;" title="未定义按钮">
-				<img class="tSmaCicle tsc1"
+				<img class="tSmaCircle tsc1"
 					src="data:image/png;base64,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">
 			</a>
 			<a href="javascript:;" title="未定义按钮">
-				<img class="tSmaCicle tsc2"
+				<img class="tSmaCircle tsc2"
 					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAFWUlEQVR4nO2bfUyVVRjAH/E2c6lcQCXTVoki4kdGSFr5ASJhIl+CNWmyomVf2NZYa85sVrO1NdukmWnk8GsmCIgYJngVrTQkMuTjqtknZKhwr6BbLqLu8266e4PrPe/7PKd773Z+2/2De855zsPv3ve+73Pe8w74xwEoDBPg7QT8HSWQiBJIRAkkogQSUQKJKIFElEAiSiARJZCIEkhECSSiBBJRAomYvJ1Af/T29oLNfgVsNrv2d1CQGYLMgRAQ4Huft88ILNlbAce+PqFJu9zRqUl0BuUNDwnWZM56eAakpyR5KVNXBvjKgurjaU/q6v956S5JmejD944JP0MJJKIEElECiXhdYGOzFd54613d43AMjvXETz//YiQtYaSdhRubWuC1VWsgfHwYJC1IgPjYOS7t9acaYP+BKjj+zUnSPDMfmg4LE+dD1LSpLu9XH66BisqDcPbceXjnzZV92rmQIvDqtWuQ9/pq+LW17eZ790+ZBDnZWTAubCzkb/wEKr+oZp1zwWPxkPv8s/DD+R+hoHAHfH+66Wbbfffeo0nEi3FupAj8IH8jVFmO9NsWOGwYXOnq4p7SY+y4ubMg75WX2Odk/w0sLd/vVh4iS56n2JYjx2BPWQX7nKwC8fDZvGUbZ0hWCgq3azlywiqw8uAhznBS4M6RTWD7xUt+IxBz5YJNIK6m+AucubKchf/q6YGUzKc48tEYMTwExoy+S3shrW2/a69LlzvY5thbtB1uM9FX81jWA1usZznCaDyzbClkpCX321ZcWg6fbt3JMg/mPHVyJDkOyyGMiSTEx5LjrH9/rVt5CLZhHyqYK4c8hPVC+uS330Fx2T443dise+yWj/MhdOQIob54Enh6ea7uOaY4pGWkLoLpDz6ge6w7pFQih49+CVt37ob29otC/V/NfQHi4+Z47uhEtaUG1uV/JNQ3NHQkLFu6BGJnP6prDhGkrMZgoncMHizUF+9z6JWH4BgcKwLmIkMeIm05q6v7qlC/UaPuNDyH6FjRXIwgTWB3d7dQv7vHjDY8h+hY0VyM4PUF1YGEe72UsVxIy2Do0CFC/fAC2SiiY0VzMYI8gUN8SKBgLkaQIvCr47Xw5/XrQn2xPMMKQy84RrS0w1wwJxmwXgc2tVihqKQcauvqdY/FCgOX+0XANb0VeSt1zxETHQWZ6ckwaWKE7rHuYBO4fsMmOFBlIcUQqUaMViHOJM6PgxUvPkeKcQOWQ7jBUbpR5SEoBisMd2AbVR6CuTYYKDf7g+Ub2NPzNyRnZnHko4EVBl4k37jO+621DS5c+EPbtcVFya5CuH3QIHIcluUsk2kgZD2RATs+K+YIp4nCl5FFCRHwPjWHPITtLJyYMI8rlHSM1N7uYBMYEhwE6SkLucJJA5eywseFscVjvQ6cN3c2Zzgp4O5WTlgF4haKnGy+eyPc4O4EzsMXYa9EFqcmaYm6IyRYbA3PCLeKjR+uX2ztQPBbiAk788jMGNj04TrYVrABsrP07YcWAWNibJwD5/ov7729mn1ORNr2Nty+tmrNWoiMmAAZaYtgRky0Szvu7du9pwzq6k+R5omOmgZLFqfC5EjX8uxEbZ2jXt4HzdYzuspEvUjdpW89cw4iJoy/ZR/8R4tKy3XfGp0YEQ6Zacl9PhgjOVBQjzkQ8f6Srp+jBBJRAokogUR85mHDl5fnQJWlBjpsNujstPV52BDBBw2DzWaPZ97/E585CzuD8jptdrDZ7QCO7MzmQG2HvYlhOxo3PinQn1C/gUSUQCJKIBElkIgSSEQJJKIEElECiSiBRJRAIkogESWQiBJIRAkkogQSUQKJ/Av2etzBxwmpdwAAAABJRU5ErkJggg==">
 			</a>
 			<a href="javascript:;" title="支持我">
-				<img class="tSmaCicle tsc8"
+				<img class="tSmaCircle tsc8"
 					src="data:image/png;base64,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">
 			</a>
 			<a href="javascript:var c=document.getElementById('_item_content').contentWindow.document;$(c).scrollTop(0);"
 				title="回到顶部">
-				<img class="tSmaCicle tsc9"
+				<img class="tSmaCircle tsc9"
 					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAACM0lEQVR4nO3ZXytDcRzH8d/kfh4ALsWV5EZqjUWp1UopypPYzS54AFy48SQWslwo5UKLFi0lubJxhwdgj4CdE7+0zs7OOZ/T9/edPu9a7O85e9XQR+arm2GJG3F9AsMeAcEICEZAMAKCERCMgGAEBCMgGAHBCAhGQDACghEQjIBgBAQjIBgBwQgIRkCwUdcn0K/PTsfUrxv+94WlnBnLZh2fUXAZjf+Ve3v/MHsHh/5Xr8mJcbNbKftftaXuI9yL1+82LakCDIPSiqgGMAqQRkQVgHFgtCE6B0wCognRKSACoQXRGWAaABoQnQCm+cZdI4oDxnnD25sb/iXN10w7UcDYeFs/F8WIYoBJ8Ox1xYgigAievV0pogjg0ekZhGfvj4HoHVMiEcBW+3XgYwbh2cdFRIxyzDQSASwV10Lvj4pnHx8BcdAx00oEcL1UNLnFhcD74uLZ54UgesfyjimR6KC63/3h3rhr2utheFEX6epxzVRPava6h7dTKad41uGJL9LnF5fmufViVgp5Mz83G/iYuIv0bfPef93V5bz/upKpm/T7/RmiddZ3Pmf9jYs0EBdpIC7SQFykgbhIA3GRBuIiDcRFGoiLNBAXaSAu0mBcpMG4SINxkQb7z4u02G9hbyXuRUyKZ58fgMhFOkEPj0/mqn5jZqanxD66v6lbpIct53PWsEdAMAKCERCMgGAEBCMgGAHBCAhGQDACghEQjIBgBAQjIBgBwQgIRkAwAoIREOwbOjkTvHWlw6EAAAAASUVORK5CYII=">
 			</a>
 		</div>
@@ -184,10 +195,11 @@
 	</div>
 	<div class="zcw" style="display: none;">
 		<h2>帮助编写</h2>
-		<p>您可以在此教程的发布页进行评论，或前往</span><a
-			href='https://github.com/ra2map/ra2map.github.io' target="_blank">在线版GitHub存储库</a>提交问题以及协助开发，或发邮件至qzqz7@qq.com。<br>如果您有地图制作经验，您可以编写一些文章并通知我转载，详见前文链接。</p>
-		<h2>金钱打赏</h2>
-		<p>因为此项目涉及了过多的作者而无法分配利益，以及此项目的非商用性质，故不接受金钱支持，即使是无偿自愿的。<br>但您可以根据作者信息，单独去打赏您喜欢的作者。如果您想打赏我，可前往我的<a href="https://qtqz.github.io" target="_blank">个人主页</a>。
+		<p>您可以在此教程的发布页进行评论，或前往</span><a href='https://github.com/ra2map/ra2map.github.io'
+				target="_blank">在线版GitHub存储库</a>提交问题以及协助开发，或发邮件至qzqz7@qq.com。<br>如果您有地图制作经验，您可以编写一些文章并通知我转载，详见前文链接。</p>
+		<h2>金钱支持</h2>
+		<p>因为此项目涉及了过多的作者而无法分配利益，以及此项目的非商用性质，故不接受金钱支持，即使是无偿自愿的。<br>但您可以根据作者信息，单独去打赏您喜欢的作者。如果您想打赏我，可前往我的<a
+				href="https://qtqz.github.io" target="_blank">个人主页</a>。
 		</p>
 	</div>
 

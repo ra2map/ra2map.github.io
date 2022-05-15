@@ -37,7 +37,6 @@
             width: 660px;
             overflow: hidden;
             border-radius: 15px;
-            border: 1px solid rgb(230, 230, 230);
             box-shadow: 2px 2px 30px #aaaaaa;
             padding: 15px;
             margin: 50px auto;
@@ -116,7 +115,6 @@
     width: 660px;
     overflow: hidden;
     border-radius: 15px;
-    border: 1px solid rgb(230, 230, 230);
     box-shadow: 2px 2px 30px #aaaaaa;
     padding: 15px;
     margin: 50px auto;
