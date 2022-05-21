@@ -21,7 +21,6 @@
                 localStorage.setItem("modelId", m);
                 localStorage.setItem("modelTexturesId", c);
                 show();
-
             });
             $('.kbz2').click(function () {
                 show();
@@ -29,7 +28,9 @@
                 localStorage.removeItem("modelTexturesId");
                 localStorage.removeItem("waifu-display");
                 show();
-
+            });
+            $('.tk').click(function () {
+                alert($('html').html());
             });
             /*
             modelId = 1; // 模型 ID
@@ -58,8 +59,22 @@
     <div style="display: none;" class="t">
         <input type="text" size="2" id="mx">
         <input type="text" size="2" id="cz">
+        <br>
         <button class="kbz">自定义看板娘（模型，材质）</button>
-        <button class="kbz2">初始化看板娘记录</button>
+        <button class="kbz2">清空看板娘记录</button>
+        <button class="tk">弹出此页面信息</button>
+        <br>
+        <p>
+            无任何内容：您的网络无法连接至<b> fastly.jsdelivr.net 和 cdn.jsdelivr.net </b>除改变网络环境外没有办法。
+            <br>
+            无法手动选人：您的网络无法连接至<b> cdn.jsdelivr.net </b>，已帮您自动切换到<b> fastly.jsdelivr.net </b> ,功能受限且人物皮肤较少。
+            <br>
+            有对话但没人：可能原因为网络环境改变导致换源加载，尝试点击<b> 清空看板娘记录 </b>并手动刷新页面。
+            <br>
+            若您有相关知识可打开控制台自行调试。
+            <br><br>
+            原理：原程序使用cdn.jsdelivr.net加载组件，使用live2d.fghrsh.net后台处理跳转cdn.jsdelivr.net加载模型，若cdn.jsdelivr.net无法访问将导致跳转失败，只能切换至fastly.jsdelivr.net，因没有后台处理所以皮肤较少。
+        </p>
     </div>
 </body>
 

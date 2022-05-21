@@ -1,5 +1,6 @@
 // 注意：live2d_path 参数应使用绝对路径
-const live2d_path = "https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
+var live2d_path = "https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
+var n = 1;
 //const live2d_path = "/live2d-widget/";
 
 // 封装异步加载资源的方法
@@ -25,23 +26,47 @@ function loadExternalResource(url, type) {
 }
 
 // 加载 waifu.css live2d.min.js waifu-tips.js
-if (screen.width >= 330) {
-	Promise.all([
-		loadExternalResource("waifu.css", "css"),
-		loadExternalResource(live2d_path + "live2d.min.js", "js"),
-		loadExternalResource("waifu-tips.js", "js")
-	]).then(() => {
-		initWidget({
-			waifuPath: live2d_path + "waifu-tips.json",
-			apiPath: "https://live2d.fghrsh.net/api/",
-			//cdnPath: "https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/"
-			//https://github.com/stevenjoezhang/live2d-widget/issues/46
+try {
+	if (screen.width >= 330) {
+		Promise.all([
+			loadExternalResource("waifu.css", "css"),
+			loadExternalResource(live2d_path + "live2d.min.js", "js"),
+			loadExternalResource("waifu-tips.js", "js")
+		]).then(() => {
+			initWidget({
+				waifuPath: live2d_path + "waifu-tips.json",
+				apiPath: "https://live2d.fghrsh.net/api/",
+				//cdnPath: "https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/"
+				//https://github.com/stevenjoezhang/live2d-widget/issues/46
+			});
 		});
-	});
+	}
+	// initWidget 第一个参数为 waifu-tips.json 的路径，第二个参数为 API 地址
+	// API 后端可自行搭建，参考 https://github.com/fghrsh/live2d_api
+	// 初始化看板娘会自动加载指定目录下的 waifu-tips.json
 }
-// initWidget 第一个参数为 waifu-tips.json 的路径，第二个参数为 API 地址
-// API 后端可自行搭建，参考 https://github.com/fghrsh/live2d_api
-// 初始化看板娘会自动加载指定目录下的 waifu-tips.json
+catch (error) {
+	console.log(error.name);  //访问错误类型
+	console.log(error.message);  //访问错误详细信息
+	//如果不行只能使用cdn了，皮肤较少
+	live2d_path = "https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
+	n++;
+	if (n < 3) {
+		Promise.all([
+			loadExternalResource("waifu.css", "css"),
+			loadExternalResource(live2d_path + "live2d.min.js", "js"),
+			loadExternalResource("waifu-tips.js", "js")
+		]).then(() => {
+			console.log("api已改为cdn");
+			initWidget({
+				waifuPath: live2d_path + "waifu-tips.json",
+				//apiPath: "https://live2d.fghrsh.net/api/",
+				cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/"
+				//https://github.com/stevenjoezhang/live2d-widget/issues/46
+			});
+		});
+	}
+}
 
 console.log(`
   く__,.ヘヽ.        /  ,ー､ 〉

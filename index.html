@@ -13,16 +13,34 @@
 			margin: 0;
 			display: flex;
 			height: 100%;
+			background-color: #F0F0F0;
 		}
 
 		/*
 			height: 100%;
 			width: 17.2vw;*/
-		iframe {
+		#_nav_pane,
+		#_moe {
 			height: 99.5%;
 			width: 17.8vw;
 		}
 
+		#_item_content {
+			height: 99.5%;
+			width: 64vw;
+		}
+
+		@media screen and (max-width: 1760px) {
+
+			#_nav_pane,
+			#_moe {
+				width: 23.3vw;
+			}
+
+			#_item_content {
+				width: 51vw;
+			}
+		}
 
 		.tackle {
 			width: 200px;
@@ -122,11 +140,11 @@
 		}
 
 		.tbc {
-			transform: rotate(45deg);
+			transform: rotate(45deg) translateX(40px) translateY(-40px);
 		}
 
 		.tbc:hover {
-			transform: rotate(45deg) scale(1.15);
+			transform: rotate(45deg) scale(1.15) translateX(35px) translateY(-35px);
 		}
 
 		.db {
@@ -136,7 +154,8 @@
 			right: 0;
 			top: 0;
 		}
-		.db *{
+
+		.db * {
 			display: none;
 		}
 	</style>
@@ -173,30 +192,30 @@
 				$('.db *').show();
 			})
 			$('.sb').click(function () {
-				alert(navigator.userAgent + '\n' + 'Cookie= ' + navigator.cookieEnabled + '\n' + 'clientWidth= ' + document.documentElement.clientWidth + '\n' + 'clientHeight= ' + document.documentElement.clientHeight + '\n' +'screenwidth= ' + window.screen.width + '\n' + 'screenheight= ' + window.screen.height + '\n' + 'devicePixelRatio= ' + window.devicePixelRatio);
+				alert(navigator.userAgent + '\n' + 'Cookie= ' + navigator.cookieEnabled + '\n' + 'clientWidth= ' + document.documentElement.clientWidth + '\n' + 'clientHeight= ' + document.documentElement.clientHeight + '\n' + 'screenwidth= ' + window.screen.width + '\n' + 'screenheight= ' + window.screen.height + '\n' + 'devicePixelRatio= ' + window.devicePixelRatio);
 			})
 			$('.kb0').click(function () {
-				$('#_moe').attr('src','moe/moe.html');
+				$('#_moe').attr('src', 'moe/moe.html');
 			})
 			$('.kb1').click(function () {
-				$('#_moe').attr('src','moe/moe1.html');
+				$('#_moe').attr('src', 'moe/moe1.html');
 			})
 			$('.kb2').click(function () {
-				$('#_moe').attr('src','moe2/moe.html');
+				$('#_moe').attr('src', 'moe/moe2.html');
 			})/*
 			$('.kbz').click(function () {
 				var m=$('.mx').val();
 				var c=$('.cz').val();
 				console.log(m+c);*/
-				
-				
+
+
 		});
 	</script>
 </head>
 
 <body>
 	<iframe name="_nav_pane" id="_nav_pane" src="nav.html"></iframe>
-	<iframe name="_item_content" id="_item_content" style="width: 64vw;" src="pages/index_page.html"></iframe>
+	<iframe name="_item_content" id="_item_content" src="pages/index_page.html"></iframe>
 	<iframe name="_moe" id="_moe" src="moe/moe.html"></iframe>
 
 	<div class="tackle">
@@ -240,7 +259,7 @@
 		<button class="sb">设备信息</button>
 		<button class="kb0">看板娘0：旧</button>
 		<button class="kb1">看板娘1：云端</button>
-		<button class="kb2">看板娘2：新</button>
+		<button class="kb2">看板娘2：测试</button>
 	</div>
 </body>
 

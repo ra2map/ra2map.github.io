@@ -168,6 +168,14 @@ function loadWidget(config) {
 			modelId = 1; // 模型 ID
 			modelTexturesId = 53; // 材质 ID
 			///cdn原来从0开始
+			///自动刷新一次，防止网速过慢显示失败
+			try {
+				$('#waifu').hide();
+				setTimeout(function () {
+					window.location.reload();
+				}, 3000)
+			}
+			catch { }
 		}
 		loadModel(modelId, modelTexturesId);
 		fetch(waifuPath)
@@ -233,7 +241,7 @@ function loadWidget(config) {
 		if (useCDN) {
 			if (!modelList) await loadModelList();
 			console.log(modelId);
-			const target = randomSelection(modelList.models[modelId - 1]);
+			const target = randomSelection(modelList.models[modelId]);
 			console.log(target);
 			loadlive2d("live2d", `${cdnPath}model/${target}/index.json`);
 			showMessage("我的新衣服好看嘛？", 4000, 10);

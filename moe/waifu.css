@@ -82,8 +82,15 @@
 	opacity: 0;
 	position: absolute;
 	right: -10px;
-    top: 55px;
+	top: 55px;
 	transition: opacity 1s;
+}
+
+@media screen and (max-width: 300px) {
+	#waifu-tool {
+		right: unset;
+		left: 3px;
+	}
 }
 
 #waifu:hover #waifu-tool {
@@ -100,7 +107,8 @@
 }
 
 #waifu-tool .fa-lg:hover {
-	color: #0684bd; /* #34495e */
+	color: #0684bd;
+	/* #34495e */
 }
 
 @keyframes shake {
@@ -300,7 +308,8 @@
 		transform: translate(-1.5px, -1.5px) rotate(-.5deg);
 	}
 
-	0%, 100% {
+	0%,
+	100% {
 		transform: translate(0, 0) rotate(0);
 	}
 }
