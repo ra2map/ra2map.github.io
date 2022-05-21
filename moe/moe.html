@@ -5,7 +5,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script src="autoload.js"></script>
+    <script src="../new/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $('.b').click(function () {
+                $('.t').show();
+            });
+            $('.kbz').click(function () {
+                var m = parseInt($('#mx').val());
+                var c = parseInt($('#cz').val());
+                console.log(m + ',' + c);
+                show();
+                localStorage.setItem("modelId", m);
+                localStorage.setItem("modelTexturesId", c);
+                show();
+
+            });
+            $('.kbz2').click(function () {
+                show();
+                localStorage.removeItem("modelId");
+                localStorage.removeItem("modelTexturesId");
+                localStorage.removeItem("waifu-display");
+                show();
+
+            });
+            /*
+            modelId = 1; // 模型 ID
+            modelTexturesId = 53; // 材质 ID
+            */
+            function show() {
+                console.log('');
+                console.log(localStorage.getItem("modelId"));
+                console.log(localStorage.getItem("modelTexturesId"));
+                console.log(localStorage.getItem("waifu-display"));
+            }
+
+        });
+
+    </script>
     <title>红警地图指导</title>
     <style>
         body {
@@ -15,7 +54,13 @@
 </head>
 
 <body>
-    <script src="autoload.js"></script>
+    <div style="width: 30px;height:30px;" class='b'></div>
+    <div style="display: none;" class="t">
+        <input type="text" size="2" id="mx">
+        <input type="text" size="2" id="cz">
+        <button class="kbz">自定义看板娘（模型，材质）</button>
+        <button class="kbz2">初始化看板娘记录</button>
+    </div>
 </body>
 
 </html>

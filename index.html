@@ -26,9 +26,9 @@
 
 		.tackle {
 			width: 200px;
-			height: 330px;
+			/*height: 330px;*/
 			position: fixed;
-			top: 23%;
+			top: 30%;
 			right: 20px;
 		}
 
@@ -51,6 +51,7 @@
 			overflow: hidden;
 			transition: transform 500ms;
 			transform: rotate(0deg);
+			transition: 0.4s;
 		}
 
 		.tSmaCircle {
@@ -59,6 +60,7 @@
 			border-radius: 30px;
 			position: absolute;
 			overflow: hidden;
+			transition: 0.4s;
 		}
 
 		.tsc1 {
@@ -116,7 +118,7 @@
 		.tBigCircle:hover,
 		.tSmaCircle:hover {
 			transform: scale(1.15);
-			transition: 0.5s;
+			transition: 0.4s;
 		}
 
 		.tbc {
@@ -125,6 +127,17 @@
 
 		.tbc:hover {
 			transform: rotate(45deg) scale(1.15);
+		}
+
+		.db {
+			width: 130px;
+			height: 30px;
+			position: fixed;
+			right: 0;
+			top: 0;
+		}
+		.db *{
+			display: none;
 		}
 	</style>
 	<script type="text/javascript" language="javascript" src="new/jquery-3.6.0.min.js"></script>
@@ -156,6 +169,27 @@
 				$('.lock').fadeOut();
 				$('.zcw').fadeOut();
 			})
+			$('.db').click(function () {
+				$('.db *').show();
+			})
+			$('.sb').click(function () {
+				alert(navigator.userAgent + '\n' + 'Cookie= ' + navigator.cookieEnabled + '\n' + 'clientWidth= ' + document.documentElement.clientWidth + '\n' + 'clientHeight= ' + document.documentElement.clientHeight + '\n' +'screenwidth= ' + window.screen.width + '\n' + 'screenheight= ' + window.screen.height + '\n' + 'devicePixelRatio= ' + window.devicePixelRatio);
+			})
+			$('.kb0').click(function () {
+				$('#_moe').attr('src','moe/moe.html');
+			})
+			$('.kb1').click(function () {
+				$('#_moe').attr('src','moe/moe1.html');
+			})
+			$('.kb2').click(function () {
+				$('#_moe').attr('src','moe2/moe.html');
+			})/*
+			$('.kbz').click(function () {
+				var m=$('.mx').val();
+				var c=$('.cz').val();
+				console.log(m+c);*/
+				
+				
 		});
 	</script>
 </head>
@@ -202,7 +236,12 @@
 				href="https://qtqz.github.io" target="_blank">个人主页</a>。
 		</p>
 	</div>
-
+	<div class="db">
+		<button class="sb">设备信息</button>
+		<button class="kb0">看板娘0：旧</button>
+		<button class="kb1">看板娘1：云端</button>
+		<button class="kb2">看板娘2：新</button>
+	</div>
 </body>
 
 <!--

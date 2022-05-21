@@ -1,4 +1,5 @@
 # ra2map.github.io
+## 说明
 这是一个红警地图教程网站的GitHub存储仓库，如果您想浏览此教程，可访问[ra2map.github.io](ra2map.github.io)；如果您想提供建议，可在issues提交；如果您想参与合作，可从社交平台联系@轻稚天雪，也可以发邮件至qzqz7@qq.com。
 
 关于开发计划，现在咱没有太多的时间和精力维护这个项目，很多显而易见的改进咱也没空去做。不过如果您确实有想法，咱还是有时间也愿意一起讨论的。
@@ -17,3 +18,8 @@
 友情链接：[https://github.com/revengenowstudio/map_tutorial](https://github.com/revengenowstudio/map_tutorial)
 
 欢迎⭐Star 和 👀Watch 此存储库哦。
+
+## 许可证
+此项目（不含文章）使用 GNU General Public License v3 许可证。
+
+注意，授权范围仅包含文章以外的内容。此项目使用的文章（包括图文、附件）沿用它们原来的CC-BY-NC-SA 4.0协议。

@@ -12,6 +12,9 @@
 		"selector": "#waifu-tool .fa-user-circle",
 		"text": ["你是不是不爱人家了呀，呜呜呜～", "要见见我的姐姐嘛？", "想要看我妹妹嘛？", "要切换看板娘吗？"]
 	}, {
+		"selector": "#waifu-tool .fa-id-badge",
+		"text": ["要手动换装吗？", "今天你想看谁呢？"]
+	}, {
 		"selector": "#waifu-tool .fa-street-view",
 		"text": ["喜欢换装 PLAY 吗？", "这次要扮演什么呢？", "变装！", "让我们看看接下来会发生什么！"]
 	}, {
