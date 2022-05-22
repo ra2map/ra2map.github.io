@@ -48,6 +48,7 @@
 			position: fixed;
 			top: 30%;
 			right: 20px;
+			transition: 0.4s;
 		}
 
 		.tCenter {
@@ -140,11 +141,15 @@
 		}
 
 		.tbc {
-			transform: rotate(45deg) translateX(40px) translateY(-40px);
+			transform: rotate(45deg);
 		}
 
 		.tbc:hover {
-			transform: rotate(45deg) scale(1.15) translateX(35px) translateY(-35px);
+			transform: rotate(45deg) scale(1.15);
+		}
+
+		.tr {
+			transform: translateX(60px);
 		}
 
 		.db {
@@ -174,10 +179,12 @@
 		function sq() {
 			$(".tBigCircle").toggleClass("tbc").parent().attr({ href: 'javascript:zk();', title: "展开" });
 			$(".tSmaCircle").parent().fadeOut();
+			$(".tackle").toggleClass("tr");
 		}
 		function zk() {
 			$(".tBigCircle").toggleClass("tbc").parent().attr({ href: 'javascript:sq();', title: "收起" });
 			$(".tSmaCircle").parent().fadeIn();
+			$(".tackle").toggleClass("tr");
 		}
 		$(function () {
 			$('.tsc8').click(function () {
@@ -202,12 +209,7 @@
 			})
 			$('.kb2').click(function () {
 				$('#_moe').attr('src', 'moe/moe2.html');
-			})/*
-			$('.kbz').click(function () {
-				var m=$('.mx').val();
-				var c=$('.cz').val();
-				console.log(m+c);*/
-
+			})
 
 		});
 	</script>

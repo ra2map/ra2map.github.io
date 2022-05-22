@@ -31,7 +31,7 @@ if (screen.width >= 330) {
 	Promise.all([
 		loadExternalResource("waifu.css", "css"),
 		loadExternalResource(live2d_path + "live2d.min.js", "js"),
-		loadExternalResource("waifu-tips.js", "js")
+		loadExternalResource("waifu-tips2.js", "js")
 	]).then(() => {
 		initWidget({
 			waifuPath: live2d_path + "waifu-tips.json",
@@ -47,7 +47,7 @@ if (screen.width >= 330) {
 		Promise.all([
 			loadExternalResource("waifu.css", "css"),
 			loadExternalResource(live2d_path + "live2d.min.js", "js"),
-			loadExternalResource("waifu-tips.js", "js")
+			loadExternalResource("waifu-tips2.js", "js")
 		]).then(() => {
 			console.log("api已改为cdn");
 			initWidget({
