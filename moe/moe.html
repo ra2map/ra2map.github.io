@@ -35,6 +35,9 @@
             $('.to').click(function () {
                 alert(o);
             });
+            $('.tc').click(function () {
+                alert(localStorage.getItem("modelId") + ',' + localStorage.getItem("modelTexturesId"));
+            });
             /*
             modelId = 1; // 模型 ID
             modelTexturesId = 53; // 材质 ID
@@ -63,10 +66,11 @@
         <input type="text" size="2" id="mx">
         <input type="text" size="2" id="cz">
         <br>
-        <button class="kbz">自定义看板娘（模型，材质）</button>
-        <button class="kbz2">清空看板娘记录</button>
-        <button class="ta">弹出此页面信息</button>
-        <button class="to">弹出当前源</button>
+        <button class="kbz">自定义看板娘（模型，材质）</button><br>
+        <button class="kbz2">清空看板娘记录</button><br>
+        <button class="ta">弹出此页面信息</button><br>
+        <button class="to">弹出当前源</button><br>
+        <button class="tc">弹出当前模型材质</button>
         <br>
         <p>
             无任何内容：您的网络无法连接至<b> fastly.jsdelivr.net 和 cdn.jsdelivr.net </b>除改变网络环境外没有办法。

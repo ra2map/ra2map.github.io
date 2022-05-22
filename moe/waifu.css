@@ -87,9 +87,14 @@
 }
 
 @media screen and (max-width: 300px) {
+	#waifu {
+		bottom: -1000px;
+		left: -20px;
+	}
+
 	#waifu-tool {
 		right: unset;
-		left: 3px;
+		left: 23px;
 	}
 }
 
