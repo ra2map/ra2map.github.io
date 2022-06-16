@@ -163,24 +163,39 @@ function loadWidget(config) {
 	(function initModel() {
 		let modelId = localStorage.getItem("modelId"),
 			modelTexturesId = localStorage.getItem("modelTexturesId");
+		if (!useCDN && modelId == 0) modelId = 1;
 		if (modelId === null) {
 			// 首次访问加载 指定模型 的 指定材质
 			modelId = 1; // 模型 ID
 			modelTexturesId = 53; // 材质 ID
-			///cdn原来从0开始
-			///自动刷新一次，防止网速过慢显示失败
-			try {
-				$('#waifu').hide();
-				setTimeout(function () {
-					window.location.reload();
-				}, 3000)
+			///cdn从0开始
+			if (useCDN) {
+				modelId = 0;
+				var reld = '1';
+				///自动刷新一次，防止网速过慢显示失败
+				try {
+					document.getElementById("waifu").style.display = 'none';
+					var re = setTimeout(function () {
+						window.location.reload();
+					}, 3000);
+					console.log('准备刷新');
+				}
+				catch { }
 			}
-			catch { }
 		}
 		loadModel(modelId, modelTexturesId);
 		fetch(waifuPath)
 			.then(response => response.json())
 			.then(result => {
+				///网速快就不需要刷新了
+				try {
+					if (typeof reld == 'string') {
+						console.log('尝试取消刷新');
+						clearTimeout(re);
+						console.log('取消刷新完成');
+					}
+				}
+				catch { }
 				window.addEventListener("mouseover", event => {
 					for (let { selector, text } of result.mouseover) {
 						if (!event.target.matches(selector)) continue;

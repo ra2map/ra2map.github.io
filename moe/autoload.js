@@ -44,12 +44,12 @@ if (screen.width >= 330) {
 		///先换组件源，再换模型源
 		live2d_path = "https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
 		o = 'cdn';
+		console.log("api已改为cdn");
 		Promise.all([
 			loadExternalResource("waifu.css", "css"),
 			loadExternalResource(live2d_path + "live2d.min.js", "js"),
 			loadExternalResource("waifu-tips.js", "js")
 		]).then(() => {
-			console.log("api已改为cdn");
 			initWidget({
 				waifuPath: live2d_path + "waifu-tips.json",
 				//apiPath: "https://live2d.fghrsh.net/api/",
