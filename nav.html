@@ -154,10 +154,12 @@
 				if (nowHash.substr(0, 6) == 'pages/') {
 					nowHash = encodeURI(nowHash.slice(6, -5));
 					parent.location.href = 'https://' + parent.location.host + "/#" + nowHash;
-					//上线时将'http:'改为'https:'
+					//测试时不可用https
 				}
-
-			});/*
+				//修改标题
+				parent.document.title = $(this).text()+' - 红警地图指导 - ra2map.github.io';
+			});
+			/*
 					console.log(parent.location.href);
 					console.log(parent.location.host);
 					console.log('222');*/
@@ -428,7 +430,8 @@
 						</li>
 						<li><a href="pages/4b3b069c_e3801144_0.html" target="_item_content"
 								class="bro CLS_Indent2">修改地形，地形对象，覆盖图等（待修改）</a></li>
-						<li><img src="icon_plus.gif"><span class="CLS_NoJump bro CLS_Indent1">如何修改INI代码以及用新素材（待修改）</span>
+						<li><img src="icon_plus.gif"><span
+								class="CLS_NoJump bro CLS_Indent1">如何修改INI代码以及用新素材（待修改）</span>
 							<ul style="display: none;">
 								<li><a href="pages/mk.html" target="_item_content"
 										class="bro CLS_Indent2">MK2019年版教程附最新版代码词典</a>
@@ -599,7 +602,7 @@
 				</li>
 			</ul>
 		</div>
-		<a style="width: 20px;height: 20px;display: block;"href="javascript:$('#ID_Workspace a').off('click')"></a>
+		<a style="width: 20px;height: 20px;display: block;" href="javascript:$('#ID_Workspace a').off('click')"></a>
 	</div>
 
 </body>
