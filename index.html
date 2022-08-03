@@ -165,6 +165,34 @@
 		.db * {
 			display: none;
 		}
+		
+		.loading-bar {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 99999;
+			opacity: 0;
+			transition: opacity .4s linear;
+		}
+
+		.progress {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 3px;
+			background-color: #4da0ff;
+			box-shadow: 0 0 10px rgba(119, 182, 255, .7);
+		}
+
+		.loading-bar.loading {
+			opacity: 1;
+			transition: none;
+		}
+
+		.loading-bar.loading .progress {
+			transition: width .4s ease;
+		}
 	</style>
 	<script type="text/javascript" language="javascript" src="new/jquery-3.6.0.min.js"></script>
 	<script>
@@ -222,6 +250,10 @@
 </head>
 
 <body>
+    <div class="loading-bar">
+        <div class="progress"></div>
+    </div>
+
 	<iframe name="_nav_pane" id="_nav_pane" title="_nav_pane" src="nav.html"></iframe>
 	<iframe name="_item_content" id="_item_content" title="_item_content" src="pages/index_page.html"></iframe>
 	<iframe name="_moe" id="_moe" title="_moe" src="moe/moe.html"></iframe>

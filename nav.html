@@ -141,14 +141,33 @@
 					btn.attr('src', sImg.replace(/minus/i, 'plus'));
 				}
 			});
-			//开始时接收
+			//开始时接收hash
 			var pastHash = decodeURI(parent.location.hash).substr(1);
 			if (pastHash != '') {
 				var pastHref = 'pages/' + pastHash + '.html';
 				var cf = parent.document.getElementById('_item_content');
 				$(cf).attr('src', pastHref);
 			}
-			//点击时添加
+
+			//点击链接时的操作
+			var loadingBar = parent.document.querySelector(".loading-bar");
+			var progress = parent.document.querySelector(".loading-bar .progress");
+			var MID_LOADING_WIDTH = 58;
+			// 进度条的最大增加宽度
+			var MAX_LOADING_WIDTH = 95;
+			var timer = null;
+			var iframe = parent.document.querySelector("#_item_content");
+			// Pjax 完成之后执行的函数
+			//document.addEventListener("pjax:complete", function () {
+			iframe.onload = function () {
+				//console.log('完成之后执行的函数');
+				clearInterval(timer);
+				progress.style.width = "100%";
+				loadingBar.classList.remove("loading");
+				setTimeout(function () {
+					progress.style.width = 0;
+				}, 400);
+			};
 			$("#ID_Workspace a").on("click", function () {
 				var nowHash = $(this).attr('href');
 				if (nowHash.substr(0, 6) == 'pages/') {
@@ -156,8 +175,38 @@
 					parent.location.href = 'https://' + parent.location.host + "/#" + nowHash;
 					//测试时不可用https
 				}
+
 				//修改标题
 				parent.document.title = $(this).text() + ' - 红警地图指导 - ra2map.github.io';
+
+				//加载进度条
+				// Pjax 开始时执行的函数
+				//document.addEventListener("pjax:send", function () {
+				//console.log('开始时执行的函数');
+				// 进度条默认已经加载 20%
+				var loadingBarWidth = 20;
+				// 显示进度条
+				loadingBar.classList.add("loading");
+				// 初始化进度条的宽度
+				progress.style.width = loadingBarWidth + "%";
+
+				clearInterval(timer);
+				timer = setInterval(function () {
+					// 进度条的增加速度（可以改为一个随机值，显得更加真实）
+					// 先快后慢
+					if (loadingBarWidth < MID_LOADING_WIDTH) {
+						loadingBarWidth += 5;
+					} else {
+						loadingBarWidth += 2.5;
+					}
+
+					// 当进度条到达 95% 后停止增加
+					if (loadingBarWidth > MAX_LOADING_WIDTH) {
+						loadingBarWidth = MAX_LOADING_WIDTH;
+					}
+
+					progress.style.width = loadingBarWidth + "%";
+				}, 900);
 			});
 			/*
 					console.log(parent.location.href);
@@ -171,6 +220,7 @@
 	<div id='ID_AppSafeFrame'>
 		<div id='ID_Workspace'>
 			<ul>
+				<li><a href="http://google.com" target="_item_content" class="CLS_Indent2">主页</a></li>
 				<li><a href="pages/index_page.html" target="_item_content" class="CLS_Indent2">主页</a></li>
 				<li><a href="pages/repair.html" target="_item_content" class="pin CLS_Indent2">调试游戏及故障解决</a></li>
 				<li><img src="icon_minus.gif"><a href="javascript:alert('这里提供一些关于地图制作的观点、心法及忠告。');"
