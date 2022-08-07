@@ -183,12 +183,14 @@
 					progress.style.width = 0;
 				}, 400);
 			};
+			function tp() {
+				ht = 'http://';
+			}
 			$("#ID_Workspace a").on("click", function () {
 				var nowHash = $(this).attr('href');
 				if (nowHash.substr(0, 6) == 'pages/') {
 					nowHash = encodeURI(nowHash.slice(6, -5));
-					parent.location.href = 'https://' + parent.location.host + "/#" + nowHash;
-					//测试时不可用https
+					parent.location.href = h + parent.location.host + "/#" + nowHash;
 				}
 
 				//修改标题
@@ -223,11 +225,14 @@
 					progress.style.width = loadingBarWidth + "%";
 				}, 900);
 			});
-			/*
-					console.log(parent.location.href);
-					console.log(parent.location.host);
-					console.log('222');*/
 		});
+		//测试时不可用https
+		var h = 'https://';
+			/*
+				console.log(parent.location.href);
+				console.log(parent.location.host);
+				console.log('222');*/
+		
 	</script>
 
 	<!--红警地图指导V1.184 By轻稚 bbs.ra2diy.com@旌旌葳琰 2022/5/15-->
@@ -298,10 +303,10 @@
 								class="red CLS_Indent2">红警任务简明制作教程（新手进阶篇）</a></li>
 						<li><a href="pages/4b3d069f_9aca17c7_0.html" target="_item_content"
 								class="red CLS_Indent2">一个非常完整的任务教程</a></li>
-						<li><a href="pages/zfmap.html" target="_item_content"
-								class="red CLS_Indent2">Zero Fanker的红色警戒2地图制作分享（已更新）</a></li>
-						<li><a href="pages/spjc.html" target="_item_content"
-								class="red CLS_Indent2">地编视频教程收集（已更新）</a></li>
+						<li><a href="pages/zfmap.html" target="_item_content" class="red CLS_Indent2">Zero
+								Fanker的红色警戒2地图制作分享（已更新）</a></li>
+						<li><a href="pages/spjc.html" target="_item_content" class="red CLS_Indent2">地编视频教程收集（已更新）</a>
+						</li>
 						<li><a href="pages/heli_tutorial.html" target="_item_content"
 								class="red CLS_Indent2">竹蜻蜓（Heli）系列教程收集</a></li>
 						<li><a href="pages/4b4106a1_9c411806_0.html" target="_item_content"
@@ -320,8 +325,8 @@
 								class="gre CLS_Indent2">在两个小时内做一张好看的红警地图</a></li>
 						<li><a href="pages/521606d5_e7b819cb_0.html" target="_item_content"
 								class="gre CLS_Indent2">红警地图美化细化基础教程</a></li>
-						<li><a href="pages/copy.md.html" target="_item_content"
-								class="gre CLS_Indent2">复制、粘贴地形的几种运用</a></li>
+						<li><a href="pages/copy.md.html" target="_item_content" class="gre CLS_Indent2">复制、粘贴地形的几种运用</a>
+						</li>
 						<li><a href="pages/5acb077f_7a430ca3_0.html" target="_item_content"
 								class="gre CLS_Indent2">悬崖视频教程</a></li>
 						<li><a href="pages/521206d3_de071162_0.html" target="_item_content"
@@ -652,7 +657,7 @@
 			</li>
 			</ul>
 		</div>
-		<a style="width: 20px;height: 20px;display: block;" href="javascript:$('#ID_Workspace a').off('click')"></a>
+		<a style="width: 20px;height: 20px;display: block;" href="javascript:var h='http://';"></a>
 	</div>
 
 </body>
