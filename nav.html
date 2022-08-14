@@ -7,7 +7,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<style>
 		body {
-			width: 400px;
+			width: max-content;
 			margin: 0;
 			padding: 0;
 			color: black;
@@ -188,51 +188,53 @@
 			}
 			$("#ID_Workspace a").on("click", function () {
 				var nowHash = $(this).attr('href');
+				// 是文章时才操作
 				if (nowHash.substr(0, 6) == 'pages/') {
 					nowHash = encodeURI(nowHash.slice(6, -5));
 					parent.location.href = h + parent.location.host + "/#" + nowHash;
-				}
 
-				//修改标题
-				parent.document.title = $(this).text() + ' - 红警地图指导 - ra2map.github.io';
+					//修改标题
+					parent.document.title = $(this).text() + ' - 红警地图指导 - ra2map.github.io';
 
-				//加载进度条
-				// Pjax 开始时执行的函数
-				//document.addEventListener("pjax:send", function () {
-				//console.log('开始时执行的函数');
-				// 进度条默认已经加载 20%
-				var loadingBarWidth = 20;
-				// 显示进度条
-				loadingBar.classList.add("loading");
-				// 初始化进度条的宽度
-				progress.style.width = loadingBarWidth + "%";
-
-				clearInterval(timer);
-				timer = setInterval(function () {
-					// 进度条的增加速度（可以改为一个随机值，显得更加真实）
-					// 先快后慢
-					if (loadingBarWidth < MID_LOADING_WIDTH) {
-						loadingBarWidth += 5;
-					} else {
-						loadingBarWidth += 2.5;
-					}
-
-					// 当进度条到达 95% 后停止增加
-					if (loadingBarWidth > MAX_LOADING_WIDTH) {
-						loadingBarWidth = MAX_LOADING_WIDTH;
-					}
-
+					//加载进度条
+					// Pjax 开始时执行的函数
+					//document.addEventListener("pjax:send", function () {
+					//console.log('开始时执行的函数');
+					// 进度条默认已经加载 20%
+					var loadingBarWidth = 20;
+					// 显示进度条
+					loadingBar.classList.add("loading");
+					// 初始化进度条的宽度
 					progress.style.width = loadingBarWidth + "%";
-				}, 900);
+
+					clearInterval(timer);
+					timer = setInterval(function () {
+						// 进度条的增加速度（可以改为一个随机值，显得更加真实）
+						// 先快后慢
+						if (loadingBarWidth < MID_LOADING_WIDTH) {
+							loadingBarWidth += 5;
+						} else {
+							loadingBarWidth += 2.5;
+						}
+
+						// 当进度条到达 95% 后停止增加
+						if (loadingBarWidth > MAX_LOADING_WIDTH) {
+							loadingBarWidth = MAX_LOADING_WIDTH;
+						}
+
+						progress.style.width = loadingBarWidth + "%";
+					}, 900);
+
+				}
 			});
 		});
 		//测试时不可用https
 		var h = 'https://';
 			/*
-				console.log(parent.location.href);
-				console.log(parent.location.host);
-				console.log('222');*/
-		
+			console.log(parent.location.href);
+			console.log(parent.location.host);
+			console.log('222');*/
+
 	</script>
 
 	<!--红警地图指导V1.184 By轻稚 bbs.ra2diy.com@旌旌葳琰 2022/5/15-->
