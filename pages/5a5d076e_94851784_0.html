@@ -11,11 +11,11 @@
 	</head>
 	<body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space; ">
 		<div style="widows: 1;">
-			<div><span style="font-family: Tahoma">文本颜色：盟军阵营DarkBlue，苏军阵营DarkRed，第三阵营LightBlue</span>
+			<div><span style="font-family: Tahoma">任务文本信息的颜色：盟军阵营DarkBlue，苏军阵营DarkRed，第三阵营DarkSky</span>
 			</div>
 			<div><span style="font-family: Tahoma"><br /></span>
 			</div>
-			<div><span style="font-family: Tahoma">如果你想改盟军阵营的文本颜色，</span><span style="font-family: Tahoma; ">原版平台需要改DarkBlue这个颜色的RGB值，</span>
+			<div><span style="font-family: Tahoma">如果你想改盟军阵营的文本颜色，</span><span style="font-family: Tahoma; ">原版平台需要改DarkBlue这个颜色的值，</span>
 			</div>
 			<div><span style="font-family: Tahoma; "><br /></span>
 			</div>
@@ -24,9 +24,12 @@
 		</div>
 		<div><span style="font-family: Tahoma">你找一个其它的颜色代替DarkBlue作为盟军蓝就行了</span>
 		</div>
-		<div><span style="font-family: Tahoma"><br /></span>
+		<div><span style="font-family: Tahoma">玩家操作产生的文本还会是国家的颜色，如“选取部队跨越地图”</span>
 		</div>
-		<div><span style="font-family: Tahoma">玩家操作产生的文本还会是阵营色，如“选取部队跨越地图”</span>
+		<div><span style="font-family: Tahoma">比如林德拉克计划任务中，盟军的任务文本是浅蓝，单位颜色是深蓝，是因为在rulesmd中的[Colors]，
+			对调了DarkBlue与LightBlue的值，然后将地图玩家所属方的颜色设为LightBlue（显示为深蓝）</span>
+		</div>
+		<div><span style="font-family: Tahoma">颜色值为HSV，参见https://ppmforums.com/topic-44057/westwood-color-conversion-utility/ ，https://modenc.renegadeprojects.com/Colors</span>
 		</div>
 	
 <script type="text/javascript" language="javascript" src="jquery.js"></script>

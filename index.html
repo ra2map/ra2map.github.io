@@ -7,7 +7,184 @@
 	<meta name="keywords" content="红色警戒,红色警戒2,红警,红警地图,红警地图制作,任务地图,红警地图指导,红警地图教程,ra2map,轻稚">
 	<meta name="author" content="轻稚">
 	<title>红警地图指导 - ra2map.github.io</title>
+	<style type="text/css">
+		.deng-box {
+			position: fixed;
+			top: -40px;
+			right: 12vw;
+			z-index: 999;
+		}
+
+		.deng-box1 {
+			position: fixed;
+			top: -30px;
+			right: 15vw;
+			z-index: 999;
+		}
+
+		.deng-box1 .deng {
+			position: relative;
+			width: 120px;
+			height: 90px;
+			margin: 50px;
+			background: #d8000f;
+			background: rgba(216, 0, 15, 0.8);
+			border-radius: 50% 50%;
+			-webkit-transform-origin: 50% -100px;
+			-webkit-animation: swing 5s infinite ease-in-out;
+			box-shadow: -5px 5px 30px 4px rgba(252, 144, 61, 1);
+		}
+
+		.deng {
+			position: relative;
+			width: 120px;
+			height: 90px;
+			margin: 50px;
+			background: #d8000f;
+			background: rgba(216, 0, 15, 0.8);
+			border-radius: 50% 50%;
+			-webkit-transform-origin: 50% -100px;
+			-webkit-animation: swing 3s infinite ease-in-out;
+			box-shadow: -5px 5px 50px 4px rgba(250, 108, 0, 1);
+		}
+
+		.deng-a {
+			width: 100px;
+			height: 90px;
+			background: #d8000f;
+			background: rgba(216, 0, 15, 0.1);
+			margin: 12px 8px 8px 8px;
+			border-radius: 50% 50%;
+			border: 2px solid #dc8f03;
+		}
+
+		.deng-b {
+			width: 45px;
+			height: 90px;
+			background: #d8000f;
+			background: rgba(216, 0, 15, 0.1);
+			margin: -4px 8px 8px 26px;
+			border-radius: 50% 50%;
+			border: 2px solid #dc8f03;
+		}
+
+		.xian {
+			position: absolute;
+			top: -20px;
+			left: 60px;
+			width: 2px;
+			height: 20px;
+			background: #dc8f03;
+		}
+
+		.shui-a {
+			position: relative;
+			width: 5px;
+			height: 20px;
+			margin: -5px 0 0 59px;
+			-webkit-animation: swing 4s infinite ease-in-out;
+			-webkit-transform-origin: 50% -45px;
+			background: #ffa500;
+			border-radius: 0 0 5px 5px;
+		}
+
+		.shui-b {
+			position: absolute;
+			top: 14px;
+			left: -2px;
+			width: 10px;
+			height: 10px;
+			background: #dc8f03;
+			border-radius: 50%;
+		}
+
+		.shui-c {
+			position: absolute;
+			top: 18px;
+			left: -2px;
+			width: 10px;
+			height: 35px;
+			background: #ffa500;
+			border-radius: 0 0 0 5px;
+		}
+
+		.deng:before {
+			position: absolute;
+			top: -7px;
+			left: 29px;
+			height: 12px;
+			width: 60px;
+			content: " ";
+			display: block;
+			z-index: 999;
+			border-radius: 5px 5px 0 0;
+			border: solid 1px #dc8f03;
+			background: #ffa500;
+			background: linear-gradient(to right, #dc8f03, #ffa500, #dc8f03, #ffa500, #dc8f03);
+		}
+
+		.deng:after {
+			position: absolute;
+			bottom: -7px;
+			left: 10px;
+			height: 12px;
+			width: 60px;
+			content: " ";
+			display: block;
+			margin-left: 20px;
+			border-radius: 0 0 5px 5px;
+			border: solid 1px #dc8f03;
+			background: #ffa500;
+			background: linear-gradient(to right, #dc8f03, #ffa500, #dc8f03, #ffa500, #dc8f03);
+		}
+
+		.deng-t {
+			font-family: 华文行楷, Arial, Lucida Grande, Tahoma, sans-serif;
+			font-size: 3.2rem;
+			color: #dc8f03;
+			font-weight: bold;
+			line-height: 85px;
+			text-align: center;
+		}
+
+		.night .deng-t,
+		.night .deng-box,
+		.night .deng-box1 {
+			background: transparent !important;
+		}
+
+		@-moz-keyframes swing {
+			0% {
+				-moz-transform: rotate(-10deg)
+			}
+
+			50% {
+				-moz-transform: rotate(10deg)
+			}
+
+			100% {
+				-moz-transform: rotate(-10deg)
+			}
+		}
+
+		@-webkit-keyframes swing {
+			0% {
+				-webkit-transform: rotate(-10deg)
+			}
+
+			50% {
+				-webkit-transform: rotate(10deg)
+			}
+
+			100% {
+				-webkit-transform: rotate(-10deg)
+			}
+		}
+	</style>
 	<style>
+		.dl{
+			display: none;
+		}
 		body {
 			min-height: 100vh;
 			margin: 0;
@@ -225,7 +402,7 @@
 				$(n).find('a:eq(0)')[0].click();
 				var co=document.getElementById('_item_content').contentWindow.document;
 				$(co).children('html,body').animate({scrollTop: 2000});*/
-				$('#_item_content').attr({ src: 'pages/index_page.html#联系我们'});
+				$('#_item_content').attr({ src: 'pages/index_page.html#联系我们' });
 			});
 			$('.tsc2').click(function () {
 				$('.lock').fadeIn();
@@ -259,7 +436,38 @@
 	<div class="loading-bar">
 		<div class="progress"></div>
 	</div>
-
+	<div class="" id="dl">
+		<!-- 给你的网站添加灯笼特效！ - 荼蘼博客https://blog.tomys.top/2021-02/2021newyear/  灯笼1 -->
+		<div class="deng-box">
+			<div class="deng">
+				<div class="xian"></div>
+				<div class="deng-a">
+					<div class="deng-b">
+						<div class="deng-t">节</div>
+					</div>
+				</div>
+				<div class="shui shui-a">
+					<div class="shui-c"></div>
+					<div class="shui-b"></div>
+				</div>
+			</div>
+		</div>
+		<!-- 灯笼2 -->
+		<div class="deng-box1">
+			<div class="deng">
+				<div class="xian"></div>
+				<div class="deng-a">
+					<div class="deng-b">
+						<div class="deng-t">春</div>
+					</div>
+				</div>
+				<div class="shui shui-a">
+					<div class="shui-c"></div>
+					<div class="shui-b"></div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<iframe name="_nav_pane" id="_nav_pane" title="_nav_pane" src="nav.html"></iframe>
 	<iframe name="_item_content" id="_item_content" title="_item_content" src="pages/index_page.html"></iframe>
 	<iframe name="_moe" id="_moe" title="_moe" src="moe/moe.html"></iframe>
@@ -270,7 +478,7 @@
 				<img class="tBigCircle"
 					src="data:image/png;base64,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">
 			</a>
-			<a href="javascript:;" title="夜间模式（暂不支持）">
+			<a href="javascript:$('#dl').toggleClass('dl');" title="开关灯笼-原夜间模式（暂不支持）">
 				<img class="tSmaCircle tsc1"
 					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAEMUlEQVR4nO2bWUhUURjHv0IfJnCk5Sk1s9I0U8v2yBalTUmyzEyznYJ68aGFHiKK6KWXaLFooQUkoyiILFtBimizTbPE6iWzHlodUaqH8rvhUHFnmJnvfOfcge8Hwyz33u9/5jdn5t5z75kev7oAIWR6mm5AuCMCiYhAIiKQiAgkIgKJiEAiIpCICCQiAomIQCIikIgIJCICiYhAIiKQSITpBnTz4+dPqG9ohHsP6qD59RvweNrB095u3bujosDtjrLuR2akwajMDEhOSjTdZIseps9If/3WBlVnzkHt7TvwretxoMTG9IfsqVmQnzcLerlcjC30j1GBN2tvdck7Dy3vWkOuERcbY0nMmzVdYcsCx5jAikPH4OLlK8rqZU0cD5s3lCurFyhGBG7eugOePmtQXrdf375w8sh+5XX9oX0vvHvfQRZ5yMdPn2Bt+UaW2r7Q2gNrrt2APRWH/a6TOSIdEgYOgIT4+D/3A+OhsuosVJ4+G3DOvPw8WLW8jNrcgNAmEA9Ptu3c5XedZYuLoWj+XNtluQXFQeWtW7NSy45F21f4QnWNz2UpyUlw7tRxW3kdHZ1WDwwlr6OzM+jtgkXLgfT1m7Xw+Gm97TK7vScKa2lttQ5v8Pb9+4+gM9+2vLMkFhcWhNTmQNEisLrmms9l68vX/fN805bt1ohEBfjBcQtk/wo3Nb+ybnagvMjISO9z/J1TJQ9pff8BnimsZwe7wLv362xfxzFt9pQs7/O9B/zvnUPl4aMnLHW7YRfoq0cNiIv1PsbfvMtXb7DkN75oYqnbDbvANo/H9vW/BeIOQ3e+KvgFttm/gcTBCd7HlJMJoearwlgPHDJ4kHX/+fMXXoHh3gOjo922r3cfHONvXyjHedR8VbAfB0a73bYnSnFsG8z4lpLPibEeqAvufHaBmRnp3BFG89kFJg81e/GHO59dYNKQQdCnT2/uGFswF/M5YRfocrlg9vQc7hhbMNfFfMVOy/nA2TNytPdCzMNcbrQIxDdTurBQR5QXzNPxoWk7I429Ye6cXC1ZmKOj9yFar8qtXrEEMtJSWTOwPuboQvtlzbJFRRARwTMAwrpYXyfaBQ5LGQplJTxvEutifZ0Ymd62oCAfxo0ZpbQm1sO6ujE2P7CkaL6j6wWKMYGJXSOEyZMmKKmFdRKZRxy+MDpDNXemmpkDquqEglGB6cOHWTcKaQpqUDA+R7qEOELRPcL5H+NTfMMd4z0w3BGBRBzxN4dg5/79zaXzVQpbEjzSA4mIQCIikIgjBOIsVZ3bqcQRAvG/bzq3U4kjBM7ImQbjx44OahtcH7czjSMEIoUFc1jX58JRQ7nnL17C0ROV8LKp2ec6ONNg5dJSSE1J1tgy3zhKYDjimK9wuCICiYhAIiKQiAgkIgKJiEAiIpCICCQiAomIQCIikIgIJCICifwGlSEx1Pi5b90AAAAASUVORK5CYII=">
 			</a>

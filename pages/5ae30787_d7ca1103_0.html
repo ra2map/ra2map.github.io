@@ -42,6 +42,84 @@
 </head>
 
 <body>
+	<div class="bigCardBox">
+		<div class="bigCardHead">
+			<div class="bigCardText">
+				<p class="bigCardTitle">【教程】“MultiplayPassive=true”在任务中的妙用</p>
+				<a class="bigCardSrc" href="http://www.pkuit.com/forum.php?mod=viewthread&tid=205376&extra="
+					target="_blank">http://www.pkuit.com/forum.php?mod=viewthread&tid=205376&extra=</a>
+				<p class="bigCardStatus"><span><i class="fas fa-user"></i><span>韓方序</span></span><span><i
+							class="fas fa-clock"></i><span>2022-12-24</span></span></p>
+			</div>
+			<div class="bigCardImg">
+			</div>
+		</div>
+		<p class="bigCardBrief">我在任务中想做出这样一个效果：
+			盟军突袭了莫斯科，将军同志需要从城外赶到克里姆林宫，尝试与那里的守军建立联系，并接管防御
+			在这样一个设定中，玩家和克宫守军之间肯定是需要结盟的，但是玩家却不应该拥有守军的视野，否则就展现不出“建立联系”这样一个过程了。
+			一个比较粗糙的解决方法是，玩家与守军单向结盟，同时在玩家进入守军射程之前，就把守军归属为玩家。这样玩家选中守军不会出现攻击符号，同时也不会出现守军攻击玩家的情况。但是这样做，表现效果也不如“玩家进入守军基地内，才获得指挥权”，而且如果守军有乱跑的巡逻小队的话，控制“玩家进入守军射程”也很复杂。
+			第二种方法是用触发结盟，这样双方是互相结盟的，同时“B有A视野 而A无B视野”。但是只要守军的单位动一下，还是会出现视野。
+			
+			新的方法是给守军国家加上“MultiplayPassive=true”，注意是国家而不是所属方
+			下面的代码中，[Vladimir1]是国家，而[Vladimir1 House]是所属方。我们要把代码加到[Vladimir1]中。
+			
+			这个代码在原版中只有平和治安使用，有如下特性：
+			1、遭遇战中不会出现在可选国家列表中
+			2、无视AI和基地节点
+			3、即使玩家与之双向结盟，也不会获得其视野
+			4、其拥有的超级武器，不会在右下角显示倒计时
+			
+			结论：这些特性，特别适合于作为“等待玩家接收的基地”使用
+		</p>
+	</div>
+	<div class="bigCardBox">
+		<div class="bigCardHead">
+			<div class="bigCardText">
+				<p class="bigCardTitle">【教程】平台限制导致的结盟bug</p>
+				<a class="bigCardSrc" href="http://www.pkuit.com/forum.php?mod=viewthread&tid=205375&extra="
+					target="_blank">http://www.pkuit.com/forum.php?mod=viewthread&tid=205375&extra=</a>
+				<p class="bigCardStatus"><span><i class="fas fa-user"></i><span>韓方序</span></span><span><i
+							class="fas fa-clock"></i><span>2022-12-24</span></span></p>
+			</div>
+			<div class="bigCardImg">
+			</div>
+		</div>
+		<p class="bigCardBrief">任务里结盟有两种做法：所属方里填写，和触发结盟。这两种方法有微妙的区别，比如说所属方中填写的是单向结盟，而触发则是双向结盟；触发中如果是A结盟B，则B有A视野，而A无B视野。有的任务规模较大，有很多所属方，此时可能会出现这种情况，即所属方中填写的结盟部分失效。其原因是原版平台的每行ini只能读取128个字符，超出部分会直接无视掉。所以当所属方中的盟友填的过多，就会有部分失效。
+			解决方法是，正常的双向结盟使用触发建立，仅在需要特殊的单向结盟时，才在所属方中填写。当然如果不超过128个字符，那随便怎么写都行。
+			
+			以下是一个示例地图，中间有一个中立的碉堡，他的结盟设置是：
+			Allies=Alliance House,French House,Germans House,British House,Africans House,Arabs House,Confederation House,Russians House,YuriCountry House,Special House,Americans House
+			进游戏会发现，碉堡会主动攻击YuriCountry House,Special House,Americans House三个所属方的工程师，说明结盟失败了。
+			另外ares修复了这个限制，最大能读取512个字符，所以如果使用ares开启任务的话，会发现碉堡谁也不攻击。
+			
+			链接: https://pan.baidu.com/s/10XLSx_jn5QFW-wbACXTldA?pwd=qp1z 提取码: qp1z 复制这段内容后打开百度网盘手机App，操作更方便哦
+		</p>
+	</div>
+	<div class="cardBox">
+		<a class="cardInside" href="http://www.pkuit.com/forum.php?mod=viewthread&tid=205309" target="_blank">
+			<div class="cardText">
+				<p class="cardTitle">【教程】改变任务流程、支线（隐藏）关卡的实现方法 - 红警任务之家</p>
+				<p class="cardBrief">这个方法在modenc上面有讲，以下是实现方法：
+					1、修改mapselmd.ini
+					从ra2md.mix->localmd.mix里面提取出该文件，找到自己要制作分支关卡的位置
+					[ALL01]
+					Scenario=ALL01umd.MAP
+					Description=768
+					VoiceOver=GDI-01.AUD
+					MapVQ=GDIMAP01.VQA
+					Overlays=RG02A.SHP,RN02A.SHP
+					Targets=1,180,80
+					ClickMap=GDICLK01.PCX
+					2=ALL02</p>
+				<p class="cardSrc">http://www.pkuit.com/forum.php?mod=viewthread&tid=205309</p>
+				<p class="cardStatus"><span><i class="fas fa-user"></i><span>韓方序</span></span><span><i
+							class="fas fa-clock"></i><span>2022-11-17</span></span></p>
+			</div>
+			<div class="cardImg">
+
+			</div>
+		</a>
+	</div>
 	<div class="cardBox">
 		<a class="cardInside" href="https://www.bilibili.com/read/readlist/rl371774" target="_blank">
 			<div class="cardText">
@@ -49,7 +127,7 @@
 				<p class="cardBrief">主要与PVP对战地图有关</p>
 				<p class="cardSrc">https://www.bilibili.com/read/readlist/rl371774</p>
 				<p class="cardStatus"><span><i class="fas fa-user"></i><span>屑之初雪</span></span><span><i
-							class="fas fa-clock"></i><span>8-3更新</span></span></p>
+							class="fas fa-clock"></i><span>2022-8-3更新</span></span></p>
 			</div>
 			<div class="cardImg">
 
