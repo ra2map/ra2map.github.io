@@ -155,15 +155,21 @@
 					btn.attr('src', sImg.replace(/minus/i, 'plus'));
 				}
 			});
+
 			//开始时接收hash
 			var pastHash = decodeURI(parent.location.hash).substr(1);
 			if (pastHash != '') {
 				var pastHref = 'pages/' + pastHash + '.html';
 				var cf = parent.document.getElementById('_item_content');
 				$(cf).attr('src', pastHref);
+				// 2023.1.4 访问带#链接时修改为对应的标题
+				var serchHref = 'pages/' + pastHash + '.html';
+				var serchStr = `'` + serchHref + `'`;
+				var nowTitleNode = $("#ID_Workspace a[href=" + serchStr + "]");
+				parent.document.title = nowTitleNode.text() + ' - 红警地图指导 - ra2map.github.io';
 			}
 
-			//点击链接时的操作
+			//加载进度条，定义
 			//by https://liuyib.github.io/2019/09/24/use-pjax-to-your-site/#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8
 			var loadingBar = parent.document.querySelector(".loading-bar");
 			var progress = parent.document.querySelector(".loading-bar .progress");
@@ -183,6 +189,8 @@
 					progress.style.width = 0;
 				}, 400);
 			};
+
+			// 点击链接时的操作
 			function tp() {
 				ht = 'http://';
 			}
@@ -196,7 +204,7 @@
 					//修改标题
 					parent.document.title = $(this).text() + ' - 红警地图指导 - ra2map.github.io';
 
-					//加载进度条
+					//加载进度条，执行
 					// Pjax 开始时执行的函数
 					//document.addEventListener("pjax:send", function () {
 					//console.log('开始时执行的函数');
@@ -231,9 +239,9 @@
 		//测试时不可用https
 		var h = 'https://';
 			/*
-			console.log(parent.location.href);
-			console.log(parent.location.host);
-			console.log('222');*/
+		console.log(parent.location.href);
+		console.log(parent.location.host);
+		console.log('222');*/
 
 	</script>
 
@@ -327,7 +335,8 @@
 								class="gre CLS_Indent2">在两个小时内做一张好看的红警地图</a></li>
 						<li><a href="pages/521606d5_e7b819cb_0.html" target="_item_content"
 								class="gre CLS_Indent2">红警地图美化细化基础教程</a></li>
-						<li><a href="pages/copy.md.html" target="_item_content" class="gre CLS_Indent2">复制、粘贴地形的几种运用（已更新）</a>
+						<li><a href="pages/copy.md.html" target="_item_content"
+								class="gre CLS_Indent2">复制、粘贴地形的几种运用（已更新）</a>
 						</li>
 						<li><a href="pages/5acb077f_7a430ca3_0.html" target="_item_content"
 								class="gre CLS_Indent2">悬崖视频教程</a></li>
@@ -497,7 +506,8 @@
 					</ul>
 				</li>
 
-				<li><img src="icon_minus.gif"><a href="javascript:alert('关于代码、TX地形与素材的教程，更多内容见RA2DIY以及在B站搜索相关内容');" class="CLS_Indent1">自定义游戏资源</a>
+				<li><img src="icon_minus.gif"><a href="javascript:alert('关于代码、TX地形与素材的教程，更多内容见RA2DIY以及在B站搜索相关内容');"
+						class="CLS_Indent1">自定义游戏资源</a>
 					<ul>
 						<li><a href="javascript:;" class="bro CLS_Indent2">从地图到mod——mod向任务的制作（待修改）</a>
 						</li>
