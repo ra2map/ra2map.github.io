@@ -95,26 +95,7 @@
             padding-right: 8px;
         }
 
-        body.typora-export {
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-
-        .typora-export .footnote-line,
-        .typora-export li,
-        .typora-export p {
-            white-space: normal;
-        }
-
-        .typora-export .task-list-item input {
-            pointer-events: none;
-        }
-
         @media screen and (max-width: 500px) {
-            body.typora-export {
-                padding-left: 0px;
-                padding-right: 0px;
-            }
 
             #write {
                 padding-left: 20px;
@@ -490,25 +471,10 @@
                 border-color: transparent !important;
             }
 
-            .typora-export * {
-                -webkit-print-color-adjust: exact;
-            }
-
-            .typora-export #write {
-                break-after: avoid;
-            }
-
-            .typora-export #write::after {
-                height: 0px;
-            }
-
             .is-mac table {
                 break-inside: avoid;
             }
 
-            .typora-export-show-outline .typora-export-sidebar {
-                display: none;
-            }
         }
 
         .footnote-line {
@@ -832,49 +798,6 @@
             background: inherit;
         }
 
-        .typora-export-show-outline .typora-export-content {
-            max-width: 1440px;
-            margin: auto;
-            display: flex;
-            flex-direction: row;
-        }
-
-        .typora-export-sidebar {
-            width: 300px;
-            font-size: 0.8rem;
-            margin-top: 80px;
-            margin-right: 18px;
-        }
-
-        .typora-export-show-outline #write {
-            --webkit-flex: 2;
-            flex: 2 1 0%;
-        }
-
-        .typora-export-sidebar .outline-content {
-            position: fixed;
-            top: 0px;
-            max-height: 100%;
-            overflow: hidden auto;
-            padding-bottom: 30px;
-            padding-top: 60px;
-            width: 300px;
-        }
-
-        @media screen and (max-width: 1024px) {
-
-            .typora-export-sidebar,
-            .typora-export-sidebar .outline-content {
-                width: 240px;
-            }
-        }
-
-        @media screen and (max-width: 800px) {
-            .typora-export-sidebar {
-                display: none;
-            }
-        }
-
         .outline-content li,
         .outline-content ul {
             margin-left: 0px;
@@ -1039,8 +962,6 @@
             --control-text-color: #777;
         }
 
-        @include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
-
         /* open-sans-regular - latin-ext_latin */
         /* open-sans-italic - latin-ext_latin */
         /* open-sans-700 - latin-ext_latin */
@@ -1148,23 +1069,6 @@
             line-height: 1.225;
             border-bottom: 1px solid #eee;
         }
-
-        /*@media print {
-    .typora-export h1,
-    .typora-export h2 {
-        border-bottom: none;
-        padding-bottom: initial;
-    }
-
-    .typora-export h1::after,
-    .typora-export h2::after {
-        content: "";
-        display: block;
-        height: 100px;
-        margin-top: -96px;
-        border-top: 1px solid #eee;
-    }
-}*/
 
         h3 {
             font-size: 1.5em;
@@ -1314,21 +1218,6 @@
             margin-left: -1.3em;
         }
 
-        @media print {
-            html {
-                font-size: 13px;
-            }
-
-            table,
-            pre {
-                page-break-inside: avoid;
-            }
-
-            pre {
-                word-wrap: break-word;
-            }
-        }
-
         .md-fences {
             background-color: #f8f8f8;
         }
@@ -1463,8 +1352,8 @@
     <title>简介</title>
 </head>
 
-<body class='typora-export os-windows'>
-    <div class='typora-export-content'>
+<body>
+    <div>
         <div id='write' class='' style="
     border-radius: 30px;
 	box-shadow: 0px 0px 30px #aaaaaa;
@@ -1473,9 +1362,9 @@
     max-width: 960px;">
             <h1 id='红警地图指导'><span>红警地图指导</span></h1>
             <div class="update">
-                <p>在线版V1.337（2023.2.18）
+                <p>在线版V1.345（2023.3.9）
             </div>
-            <!--V1.334（2023.1.16）V1.321（2022.8.31）V1.281（2022.7.13）V1.201（2022.6.16）V1.199（2022.5.28）-->
+            <!--V1.337（2023.2.18）V1.334（2023.1.16）V1.321（2022.8.31）V1.281（2022.7.13）V1.201（2022.6.16）V1.199（2022.5.28）-->
             <h2 id='简介'><span>简介</span></h2>
             <p><span>「红警地图指导」是一份红色警戒 2
                     地图教程大全，收集了红警地图制作相关的各种工具，教程等内容。此教程集通过精选的工具与教程，帮你逐渐掌握地图制作的方法，让你能够制作出好玩的地图，体验到创作的乐趣。</span></p>
@@ -1489,7 +1378,7 @@
             <ul>
                 <li><span>持续更新</span></li>
                 <li><span>访问方便</span></li>
-                <li><span>访问速度较慢</span></li>
+                <li><span>新增了大量内容和功能</span></li>
                 <li style="white-space: unset;"><span>附件下载较慢（建议从</span><a href='https://wwi.lanzoul.com/b0ca5qq5a'
                         target="_blank"><span>蓝奏云下载（密码:cipx）</span></a><span>而非从附件列表下载）</span>
                 </li>
@@ -1499,7 +1388,11 @@
             </p>
             <p><span>近期更新内容：</span></p><!---->
             <ul>
-                <li><span>完成2.0设计</span></li>
+                <li><span>✨重构了任务集锦板块，现在它成为相对独立的一个页面</span></li>
+                <li><span>默认关闭了春节灯笼（按灯泡打开）😥</span></li>
+                <li><span>视频教程，新增4个内容</span></li>
+                <li><span>装备仓库-其他工具，新增1个内容</span></li>
+                <li><span>🎨完成2.0设计</span></li>
                 <li><span>修改样式</span></li>
                 <li><span>地图忠告，新增1篇教程</span></li>
                 <li><span>任务集锦，新增1个任务</span></li>

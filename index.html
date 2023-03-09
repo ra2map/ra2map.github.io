@@ -31,6 +31,8 @@
 			background: rgba(216, 0, 15, 0.8);
 			border-radius: 50% 50%;
 			-webkit-transform-origin: 50% -100px;
+			transform-origin: 50% -100px;
+			animation: swing 5s infinite ease-in-out;
 			-webkit-animation: swing 5s infinite ease-in-out;
 			box-shadow: -5px 5px 30px 4px rgba(252, 144, 61, 1);
 		}
@@ -43,8 +45,10 @@
 			background: #d8000f;
 			background: rgba(216, 0, 15, 0.8);
 			border-radius: 50% 50%;
+			transform-origin: 50% -100px;
 			-webkit-transform-origin: 50% -100px;
 			-webkit-animation: swing 3s infinite ease-in-out;
+			animation: swing 3s infinite ease-in-out;
 			box-shadow: -5px 5px 50px 4px rgba(250, 108, 0, 1);
 		}
 
@@ -83,7 +87,9 @@
 			height: 20px;
 			margin: -5px 0 0 59px;
 			-webkit-animation: swing 4s infinite ease-in-out;
+			animation: swing 4s infinite ease-in-out;
 			-webkit-transform-origin: 50% -45px;
+			transform-origin: 50% -45px;
 			background: #ffa500;
 			border-radius: 0 0 5px 5px;
 		}
@@ -153,6 +159,20 @@
 			background: transparent !important;
 		}
 
+		@keyframes swing {
+			0% {
+				transform: rotate(-10deg)
+			}
+
+			50% {
+				transform: rotate(10deg)
+			}
+
+			100% {
+				transform: rotate(-10deg)
+			}
+		}
+
 		@-moz-keyframes swing {
 			0% {
 				-moz-transform: rotate(-10deg)
@@ -182,9 +202,10 @@
 		}
 	</style>
 	<style>
-		.dl{
+		.dl {
 			display: none;
 		}
+
 		body {
 			min-height: 100vh;
 			margin: 0;
@@ -436,7 +457,7 @@
 	<div class="loading-bar">
 		<div class="progress"></div>
 	</div>
-	<div class="" id="dl">
+	<div class="dl" id="dl">
 		<!-- 给你的网站添加灯笼特效！ - 荼蘼博客https://blog.tomys.top/2021-02/2021newyear/  灯笼1 -->
 		<div class="deng-box">
 			<div class="deng">
