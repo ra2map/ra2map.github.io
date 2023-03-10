@@ -40,6 +40,11 @@
             box-shadow: 2px 2px 30px #aaaaaa;
             padding: 15px;
             margin: 50px auto;
+            transition: box-shadow 0.5s;
+        }
+        
+        .cardBox:hover {
+            box-shadow: 2px 2px 50px #777;
         }
 
         .cardInside {

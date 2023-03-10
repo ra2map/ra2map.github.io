@@ -1,0 +1,1576 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>歧途文档系统</title>
+<!--JQuery-->
+<script src="./jquery1.7.2.js"></script>
+<!--Inner Script-->
+<script>
+"use strict";
+// Fullscreen Images
+$(function() {
+    $('.img_big').click(function() {
+        $('#fullscreen_pic').attr('src',$(this).attr('src'));
+        $('#fullscreen').fadeIn(100);
+        let top = $(document).scrollTop();
+        $(document).bind("scroll", function() {
+            $(document).scrollTop(top); 
+        });
+    });
+    $('#fullscreen').click(function() {
+        $('#fullscreen').fadeOut(100);
+        $(document).unbind("scroll");
+    });
+});
+// Pages
+$(function() {
+    $('.nav_li').click(function() {
+        $('.nav_li').removeClass('nav_li_selected');
+        $(this).addClass('nav_li_selected');
+        $('section').hide();
+        $('#sec_' + $(this).attr('page')).show();
+        $(document).scrollTop(0);
+    });
+});
+// Top
+$(function() {
+    $("#top").click(function() {
+        $(document).scrollTop(0);
+    });
+});
+// Initialization
+$(function() {
+    $('.fullscreen').attr('style', 'background: rgba(0, 0, 0, 0.5);');
+    $('.fullscreen').hide();
+    $('.nav_li')[0].click();
+});
+</script>
+<!--Inner Stylesheet-->
+<style>
+/* Layout */
+html {
+    font-family: "Microsoft YaHei UI", "Microsoft YaHei", "SimSun", "Calibri", sans-serif;
+}
+body {
+    margin: 0;
+    background-color: #777;
+}
+.wrapper {
+    max-width: 880px;
+    margin: auto;
+    position: relative;
+}
+.nav {
+    position: fixed;
+    top: 20vh;
+    left: 0;
+    background: transparent;
+    z-index: 25;
+}
+.nav_ul {
+    padding: 0;
+    margin: 0;
+    display: block;
+    background: transparent;
+}
+.nav_li {
+    display: block;
+    padding: 0.5em 1em 0.5em 1em;
+    text-align: center;
+    background: black;
+    color: white;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    min-width: 100px;
+    max-width: 100px;
+    -webkit-transition: min-width 0.2s;
+    -moz-transition: min-width 0.2s;
+    -ms-transition: min-width 0.2s;
+    transition: min-width 0.2s;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.nav_li:hover {
+    min-width: 120px;
+}
+.nav_li_selected {
+    background: rgb(0, 141, 141);
+    background: linear-gradient(135deg, transparent 0, rgb(0, 141, 141) 0) top left, 
+                linear-gradient(-135deg, transparent 15px, rgb(0, 141, 141) 0) top right, 
+                linear-gradient(-45deg, transparent 15px, rgb(0, 141, 141) 0) bottom right, 
+                linear-gradient(45deg, transparent 0, rgb(0, 141, 141) 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    color: white;
+    min-width: 140px;
+}
+.nav_li_selected:hover {
+    background: rgb(0, 141, 141);
+    background: linear-gradient(135deg, transparent 0, rgb(0, 141, 141) 0) top left, 
+                linear-gradient(-135deg, transparent 15px, rgb(0, 141, 141) 0) top right, 
+                linear-gradient(-45deg, transparent 15px, rgb(0, 141, 141) 0) bottom right, 
+                linear-gradient(45deg, transparent 0, rgb(0, 141, 141) 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    color: white;
+    min-width: 140px;
+}
+.main {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: white;
+    color: #222;
+    min-height: 20em;
+    margin-top: 4em;
+    padding-top: 2em;
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    box-shadow: 0 0 40px #000000;
+}
+section {
+    margin-bottom: 3em;
+    line-height: 1.8em;
+}
+h1 {
+    font-weight: 500;
+    font-size: 1.8em;
+    line-height: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+p {
+    text-indent: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+hr {
+    border: 0;
+    height: 3px;
+    background: rgb(0, 141, 141);
+}
+ul {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.img_big {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+a:link {
+    color: rgb(0, 141, 141);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: rgb(0, 141, 141);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: rgb(0, 141, 141);
+    text-decoration: none;
+}
+
+a:active {
+    color: rgb(0, 141, 141);
+    text-decoration: underline;
+}
+
+.footer {
+    font-family: Consolas, monospace;
+    font-size: 0.8em;
+    color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 2em;
+    text-align: right;
+    line-height: 1.5em;
+}
+.top_button {
+    position: fixed;
+    z-index: 30;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    background: transparent;
+    transition: background-color 0.2s, color 0.2s;
+    color: transparent;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.top_button:hover {
+    background: rgb(0, 141, 141);
+    color: white;
+}
+.fullscreen {
+    position: fixed;
+    background: transparent;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 50;
+    cursor: pointer;
+}
+.fullscreen_pic {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    margin: auto;
+    top: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+}
+/* Styles */
+.hint {
+    margin-top: -0.5em;
+    font-size: 0.8em;
+    color: #888888;
+    text-indent: 0;
+}
+.code {
+    font-family: Consolas, monospace;
+    display: block;
+    background-color: rgb(247, 247, 247);
+    color: black;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 3px;
+    line-height: 1.5em;
+    margin: 0.5em;
+    padding: 1em;
+    white-space: pre;
+    text-indent: 0;
+}
+.bar {
+    border-left: 5px solid rgb(0, 141, 141);
+    padding-left: 1em;
+    text-indent: 0;
+}
+.box {
+    font-family: Consolas, monospace;
+    display: inline-block;
+    background-color: rgb(247, 247, 247);
+    color: rgb(0, 141, 141);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 3px;
+    line-height: 1.5em;
+    padding: 0 0.2em 0 0.2em;
+    margin: 0 0.2em 0 0.2em;
+    white-space: pre;
+    text-indent: 0;
+}
+.colored {
+    color: rgb(0, 141, 141);
+}
+.card {
+    padding: 1em;
+    margin: 1em;
+    display: block;
+    text-indent: 0;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.big {
+    font-size: 1.5em;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+    <nav class="nav">
+        <ul class="nav_ul">
+            <li class="nav_li" page="welcome" id="welcome">欢迎</li>
+            <li class="nav_li" page="usage" id="usage">使用说明</li>
+            <li class="nav_li" page="compatibility" id="compatibility">兼容性设置</li>
+            <li class="nav_li" page="brief" id="brief">任务简报</li>
+            <li class="nav_li" page="data" id="data">单位档案</li>
+            <li class="nav_li" page="tips" id="tips">通关提示</li>
+            <li class="nav_li" page="problem" id="problem">Bug维护</li>
+            <li class="nav_li" page="about" id="about">关于</li>
+        </ul>
+    </nav>
+    <main class="main">
+        <section id="sec_test">
+            <div class="bar">
+                <h1>需要允许JavaScript脚本</h1>
+                <span class="hint">只有JavaScript没被允许的时候才会被显示出来的章节</span>
+            </div>
+            <p>
+                如果你看到了这个章节（内部编码为<span class="box">sec_test</span>）的话，说明你没有允许JavaScript脚本。请允许本页面内的JavaScript脚本以获得最佳浏览体验。
+            </p>
+        </section>
+        <section id="sec_welcome">
+            <div class="bar">
+                <h1>《歧途》第三季：「丧尸军团」 V1.2</h1>
+                <span class="hint">一款Mod向生化主题生存任务</span>
+            </div>
+            <p>
+                欢迎来到《歧途》的世界！
+            </p>
+            <p>
+                这里是《歧途》第三季：「丧尸军团」 V1.2 的玩家手册。希望这篇文档能够帮助你解答游戏中遇到的绝大多数问题。祝游戏愉快！
+            </p>
+
+            <img class="img_big" src="./img/cover.jpg" />
+            <div class="code">任务名称：《歧途》第三季：「丧尸军团」
+适用版本：尤里复仇1.000/1.001版本
+任务类别：Mod型生存任务
+任务关数：15（第一季5关+第二季5关+第三季5关）
+任务难度：适中（有难度分级）
+任务制作：竹蜻蜓</div>
+            <p>
+                这是《歧途》第三季：「丧尸军团」的V1.2版本。和2018年2月发布的V1.0版本的主要区别是：
+                <ul>
+                <li>在一个月的时间中，修复了大量Bug。一个月前放出V1.0版本的时候我还是一个严重生病的状态，基本上是做不下去了才发布的……现在转眼想想，我还是希望这个任务可以做到完美的，于是就进行了繁琐的修复Bug与测试工作。不知大家玩起来体验怎么样了。</li>
+                <li>提升了第一季、第二季一些老任务的难度。由于历史遗留原因，我曾经在第一季与第二季之间大幅度削弱僵尸的数据，导致第二季以后，第一季的难度大幅度下降了。现在它们变回了应有的难度。</li>
+                <li>部分任务在使用外挂的情况下也不会导致完全无法过关了。当然，有些任务也增加了反作弊措施。</li>
+                </ul>
+            </p>
+            <p>
+                更多有关Bug修复的信息可以参见<a href="javascript:$('#problem').click();">Bug维护</a>页面。
+            </p>
+            <p>
+                免责声明：使用外挂（<strong>尤其是清除黑幕</strong>，跳关倒无所谓）或者<strong>自行涂改地图</strong>而引起的任务的种种异常和我都没关系哈……我也没有办法负责……
+            </p>
+            <br>
+            <p>
+                <center class="colored" style="font-family: Consolas, monospace; font-size: 1.5em;">"Establishing battle field control, stand by..."</center>
+            </p>
+        </section>
+        <section id="sec_usage">
+            <p>
+                这部分是有关任务使用方法的章节。如果你是新人，请<span class="colored">严格的按照此章节列出的步骤来使用</span>；即使你是老鸟，也稍稍瞅一眼，没有什么坏处。在任务安装出现问题的时候，到这里来寻找也是明智的选择。
+            </p>
+            <p>
+                本章节中，你能找到下面的内容：
+            </p>
+            <p>
+                <ul>
+                    <li><a href="#sec_usage_1">我该怎样安装这个任务包？</a></li>
+                    <li><a href="#sec_usage_2">这个任务包中包含哪些文件？</a></li>
+                    <li><a href="#sec_usage_3">任务包中附带的“清理工具”怎么用？</a></li>
+                </ul>
+            </p>
+            <br>
+            <div class="bar" id="sec_usage_1">
+                <h1>安装任务包</h1>
+                <span class="hint">我该怎样安装这个任务包</span>
+            </div>
+            <p>
+                装载本任务包之前，你需要做好如下准备：
+            </p>
+            <ul>
+                <li><span class="colored">一个能够正常运行的红色警戒2尤里的复仇1.000/1.001版本游戏</span>。最好是干净的原版，没有安装过其它任务包的。如果你能够确保你把以前的任务包清除干净，那也是可以的。</li>
+                <li><span class="colored">《歧途》第三季：「丧尸军团」的全部任务包文件</span>。你可以对比在本节末尾的附录“文件列表”来检查你的任务包是否缺少文件。如果发现任务包文件损坏，请前往红警任务之家或者红警之家重新下载。</li>
+            </ul>
+            <p>
+                做好了这些准备，你就可以进行下一步的安装步骤了。
+            </p>
+            <p>
+                安装过程很简单：把任务包中的<span class="colored"><strong>全部</strong>文件</span>复制粘贴到红色警戒2尤里的复仇的安装文件夹（也就是<span class="box">gamemd.exe</span>所在的文件夹）中。
+            </p>
+            <p>
+                注意：如果你面对的是一个干净的原版尤里的复仇的话，此时不应该产生任何文件重名冲突；如果产生了文件重名冲突，可能是因为安装文件夹中含有其它任务包的残留文件，为了《歧途》能够正常运行，请选择覆盖。无法保证其它任务包的残留文件不干扰正常游戏。你也可以试图使用附带的清理工具进行清理。
+            </p>
+            <p>
+                这时运行游戏。如果发现游戏启动画面出现了变化（如本文档欢迎页那样的），基本可以确定安装完成，可以进行游戏了。在新任务的界面可以看到前两季和第三季的任务入口，前两季在上（原美军入口的位置），第三季在下（原苏军入口的位置）。本任务包有难度分级的区别，建议选择困难难度以获得最佳游戏体验。推荐使用1024x768甚至更高的分辨率进行游戏。分辨率的调节方法见<a href="javascript:$('#compatibility').click();">兼容性设置</a>章节。
+            </p>
+            <p>
+                另：你也可以使用“红色警戒2MOD管理器”等MOD管理工具装载本任务包，这里不做赘述。
+            </p>
+            <div class="bar" id="sec_usage_2">
+                <h1>文件列表</h1>
+                <span class="hint">这个任务包一共包含哪些文件</span>
+            </div>
+            <p>
+                下面列出这个任务包中包含的全部文件，以便出现问题时自查。一旦发现文件缺失，建议重新下载本任务包。
+            </p>
+            <div class="code">artmd.ini
+evamd.ini
+rulesmd.ini
+battlemd.ini
+mapselmd.ini
+missionmd.ini
+ra2md.csf
+game.fnt
+expand02.mix
+expandmd02.mix
+qt01.map
+qt02.map
+qt03.map
+qt04.map
+qt05.map
+qt06.map
+qt07.map
+qt08.map
+qt09.map
+qt10.map
+qt11.map
+qt12.map
+qt13.map
+qt14.map
+qt15.map
+清理工具.bat</div>
+            <div class="bar" id="sec_usage_3">
+                <h1>清理工具</h1>
+                <span class="hint">任务包中附带的“清理工具”怎么用</span>
+            </div>
+            <p>
+                在“任务”文件夹下有一个<span class="box">清理工具.bat</span>。下面简述它的用途。
+            </p>
+            <p>
+                首先，它必须在游戏的安装文件夹下运行才能生效。在游戏安装文件夹之外的地方运行（实际上是找不到<span class="box">gamemd.exe</span>），它会什么也不会做，以免误删有用的文件。
+            </p>
+            <p>
+                在游戏的安装文件夹下运行以后并按任意键继续，它能够干净的删除大部分基于原版平台的任务包或者未深度定制的MOD，得到一个干净的原版。它能够完全删除《歧途》任务包。
+            </p>
+            <p>
+                想要退出清理工具，单纯的关闭它的窗口即可。
+            </p>
+            <p>
+                在未安装《歧途》任务包之前，还可以先把它复制粘贴过去清理一下，这是另外一种用途。
+            </p>
+            <p>
+                它无法干净的清理基于NPatch、NPExt、ARES等拓展平台的MOD，也不要用它来清理这些MOD。
+            </p>
+        </section>
+        <section id="sec_compatibility">
+            <p>
+                这部分是有关游戏的兼容性设置的章节。本来，此部分内容与任务包无关，但还有少部分玩家在Windows 10下始终没有办法痛快的运行游戏（比如进游戏后黑屏，只有声音）。本着为玩家着想的原则，我也把这部分写了出来，希望能够帮到大家。
+            </p>
+            <p>
+                本章节中，你能找到下面的内容：
+            </p>
+            <p>
+                <ul>
+                    <li><a href="#sec_compatibility_1">Windows 7及以下版本的Windows该如何设置兼容性？</a></li>
+                    <li><a href="#sec_compatibility_2">Windows 8/Windows 10如何通过打兼容性补丁的方式运行游戏？</a></li>
+                    <li><a href="#sec_compatibility_3">Windows 8/Windows 10如何通过窗口化的方式运行游戏？</a></li>
+                    <li><a href="#sec_compatibility_4">如何任意更改游戏的显示分辨率？</a></li>
+                    <li><a href="#sec_compatibility_5">如何调节任务中的游戏速度？</a></li>
+                    <li><a href="#sec_compatibility_6">防卡代码应该加在哪儿？</a></li>
+                </ul>
+            </p>
+            <p>
+                关闭显卡3D加速的兼容性设置方法由于已经落后，不再赘述。
+            </p>
+            <br>
+            <div class="bar" id="sec_compatibility_1">
+                <h1>Windows 7及以下：直接设置兼容性</h1>
+                <span class="hint">Windows 7及以下版本的Windows该如何设置兼容性</span>
+            </div>
+            <p>
+                需要更改兼容性的程序有3个：<span class="box">gamemd.exe</span>、<span class="box">ra2md.exe</span>和<span class="box">YURI.exe</span>，都位于游戏安装文件夹下。下面分别列出更改方法:
+            </p>
+            <p>
+                在<span class="box">gamemd.exe</span>的“兼容性”选项卡做如下的设置：
+            </p>
+            <ul>
+                <li>勾选“<span class="colored">以兼容模式运行这个程序</span>”，并选择“<span class="colored">Windows 95</span>”。</li>
+                <li>勾选“<span class="colored">简化的颜色模式</span>”，并选择“<span class="colored">16位(65536色)</span>”。（如果没有此选项请忽略）</li>
+            </ul>
+            <p>
+                如下图所示：
+            </p>
+            <img class="img_big" src="./img/compatibility_01.jpg" />
+            <p>
+                点击“确定”并退出。
+            </p>
+            <p>
+                在<span class="box">ra2md.exe</span>和<span class="box">YURI.exe</span>的“兼容性”选项卡做如下的设置：
+            </p>
+            <ul>
+                <li>勾选“<span class="colored">以兼容模式运行这个程序</span>”，并选择“<span class="colored">Windows 98/Windows Me</span>”。</li>
+                <li>勾选“<span class="colored">简化的颜色模式</span>”，并选择“<span class="colored">16位(65536色)</span>”。（如果没有此选项请忽略）</li>
+            </ul>
+            <p>
+                如下图所示：
+            </p>
+            <img class="img_big" src="./img/compatibility_02.jpg" />
+            <p>
+                点击“确定”并退出。
+            </p>
+            <p>
+                此时Windows 7 及更低版本Windows的用户就可以正常进行游戏了。
+            </p>
+            <div class="bar" id="sec_compatibility_2">
+                <h1>Windows 8/10：兼容性补丁</h1>
+                <span class="hint">Windows 8/Windows 10如何通过打兼容性补丁的方式运行游戏</span>
+            </div>
+            <p>
+                使用<span class="box">ddwrapper</span>补丁是最为推荐的方法。这是在Windows 10下全屏运行最完美的方法，唯一的缺点是进入了游戏以后用<span class="box">Alt+TAB</span>键无法切出游戏，用<span class="box">Win</span>键呼出开始菜单可以切出但是分辨率没有恢复。值得欣慰的是不会出现黑屏（相比关闭DirectDraw 3D加速的方法来说）。如果有不断切来切去的需求，可以看下一条窗口化的方法。
+            </p>
+            <p>
+                补丁下载地址（官方）：<a target="_blank" href="http://bitpatch.com/downloads/ie-ddrawfix.zip">ddwrapper下载链接</a>
+            </p>
+            <p>
+                下载完毕后解压，不必安装，直接把把<span class="box">ddrawfix/wined3d</span>文件夹里的<span class="box">wined3d.dll</span>、<span class="box">libwine.dll</span>、<span class="box">ddraw.dll</span>三个文件复制粘贴到游戏的安装文件夹下，接下来，按照前文Windows 7及以下版本的方法设置兼容性，运行游戏即可。游戏时能做到全屏流畅运行，效果比较完美。
+            </p>
+            <p>
+                附：ddwrapper官网（英文）：<a target="_blank" href="http://www.bitpatch.com/ddwrapper.html">ddwrapper官网</a>
+            </p>
+            <div class="bar" id="sec_compatibility_3">
+                <h1>Windows 8/10：窗口化</h1>
+                <span class="hint">Windows 8/Windows 10如何通过窗口化的方式运行游戏</span>
+            </div>
+            <p>
+                在Windows 8 以及更高版本中，窗口化运行也是可以正常游戏的。
+            </p>
+            <p>
+                进入游戏安装文件夹，找到<span class="box">ra2md.exe</span>，建立一个它的快捷方式。当然如果你在已有的快捷方式上进行操作也是可以的。
+            </p>
+            <p>
+                右键单击刚刚的快捷方式，选择“属性”,切换到“快捷方式”选项卡，在“目标”一栏的文件路径后面加上<span class="box"> -win</span>。注意“-”之前有一个空格。如果原来的路径是在引号里面的，那这个<span class="box"> -win</span>要加在引号外面。如下图：
+            </p>
+            <img class="img_big" src="./img/compatibility_03.jpg" />
+            <p>
+                然后在“兼容性”选项卡勾选“<span class="colored">简化的颜色模式</span>”，并选择“<span class="colored">16位(65536色)</span>”；勾选“<span class="colored">以兼容模式运行这个程序</span>”，并选择“<span class="colored">Windows XP(Service Pack 2)</span>”。
+            </p>
+            <p>
+                点击“确定”并退出。以后就可以通过这个快捷方式进行窗口化运行游戏了。如果想调整窗口的大小，请继续看下面章节：“分辨率设置”。
+            </p>
+            <div class="bar" id="sec_compatibility_4">
+                <h1>分辨率设置</h1>
+                <span class="hint">如何任意更改游戏的显示分辨率</span>
+            </div>
+            <p>
+                原版尤里复仇支持最大分辨率就是<span class="box">1024x768</span>，对大屏用户不太友好。实际上《歧途》系列任务是推荐使用<span class="box">1024x768</span>甚至更高分辨率来玩的（比如作者的电脑就是<span class="box">1366x768</span>）。窗口化以后也有让窗口满屏的需求，这就需要我们手工调节游戏分辨率。
+            </p>
+            <p>
+                找到游戏安装文件夹下的<span class="box">ra2md.ini</span>（文件名可能是大写字母），使用记事本打开，在其中查找<span class="box">[Video]</span>，可以看到类似的内容：
+            </p>
+            <div class="code">[Video]
+ScreenWidth=1024
+ScreenHeight=768
+StretchMovies=no</div>
+            <p>
+                这里的<span class="box">ScreenWidth=</span>指定了宽度，<span class="box">ScreenHeight=</span>指定了高度，比如上面那段代码就确定游戏分辨率为1024x768。如果是全屏运行，设为自己的屏幕分辨率刚刚好；但是在窗口化运行时，要注意，不能简单的把这个分辨率设为你的屏幕分辨率，纵向要减去窗口标题栏高度（一般为26）、任务栏高度（Windows 10一般为40）、下边框宽度（3），横向要减去窗口左右边框宽度（各为3）才行。比如我的笔记本电脑屏幕分辨率是1366x768的，我需要设置的分辨率就是：
+            </p>
+            <p>
+                宽度：屏幕宽度1366-2x窗口边框宽度3=1360
+            </p>
+            <p>
+                高度：屏幕宽度768-窗口标题栏高度26-任务栏高度40-下边框宽度3=699
+            </p>
+            <p>
+                所以我应该把<span class="box">ScreenWidth=</span>设为1360，<span class="box">ScreenHeight=</span>设为699。改完记得保存。
+            </p>
+            <div style="border: 1px solid #DDDDDD; margin: 0.5em; padding: 0.5em; padding-left: 2.5em;">
+                窗口化分辨率计算器<br>
+                屏幕宽度：<input class="cal_input" id="cal_width" type="number" min="800" value="1366" max="9999" style="ime-mode:disabled; width: 5em;" /><br>
+                屏幕高度：<input class="cal_input" id="cal_height" type="number" min="600" value="768" max="9999" style="ime-mode:disabled; width: 5em;" /><br>
+                计算结果：<span id="cal_result"><span class="box">ScreenWidth=1360</span>, <span class="box">ScreenHeight=699</span></span>
+                <script>
+                    $(function() {
+                        $('.cal_input').on('input propertychange', function() {
+                            $("#cal_result").html('<span class="box">ScreenWidth=' + (parseInt($('#cal_width').val()) - 6) + '</span>, <span class="box">ScreenHeight=' + (parseInt($('#cal_height').val()) - 69) + "</span>");
+                        });
+                    });
+                </script>
+            </div>
+            <div class="bar" id="sec_compatibility_5">
+                <h1>游戏调速</h1>
+                <span class="hint">如何调节任务中的游戏速度</span>
+            </div>
+            <p>
+                和窗口化类似，同样在游戏的快捷方式中进行设置。
+            </p>
+            <p>
+                右键单击游戏快捷方式，选择“属性”,切换到“快捷方式”选项卡，在“目标”一栏的文件路径后面加上<span class="box"> -speedcontrol</span>。注意“-”之前有一个空格。如果原来的路径是在引号里面的，那这个<span class="box"> -speedcontrol</span>要加在引号外面。
+            </p>
+            <p>
+                此时运行游戏，就能在任务进行的时候通过游戏设置调节游戏进行的速度了。
+            </p>
+            <p>
+                <span class="colored">本任务细节较多，不推荐使用调速的方式进行。</span>
+            </p>
+            <div class="bar" id="sec_compatibility_6">
+                <h1>防卡代码</h1>
+                <span class="hint">防卡代码应该加在哪儿</span>
+            </div>
+            <p>
+                这里列出著名的“防卡代码”，能够部分提高游戏流畅度。下面简述添加方法。
+            </p>
+            <p>
+                找到游戏安装文件夹下的<span class="box">ra2md.ini</span>（文件名可能是大写字母），使用记事本打开，在其中查找<span class="box">[Video]</span>，可以看到类似的内容：
+            </p>
+            <div class="code">[Video]
+ScreenWidth=1024
+ScreenHeight=768
+StretchMovies=no</div>
+            <p>
+                在<span class="box">[Video]</span>后面添加三行：
+            </p>
+            <div class="code">VideoBackBuffer=no
+AllowHiResModes=yes
+AllowVRAMSidebar=no</div>
+            <p>
+                保存，收工。
+            </p>
+        </section>
+        <section id="sec_brief">
+            <p>
+                这部分是任务简报，在游戏中同样能看到，是关于各个任务背景故事、任务目标的简介。
+            </p>
+            <p>
+                本章节中，你能找到下面的内容：
+            </p>
+            <p>
+                <ul>
+                    <li><a href="#sec_brief_1">歧途第一季的任务简报</a></li>
+                    <li><a href="#sec_brief_2">歧途第二季的任务简报</a></li>
+                    <li><a href="#sec_brief_3">歧途第三季的任务简报</a></li>
+                </ul>
+            </p>
+            <br>
+            <h1>01-生化实验平台</h1>
+            <p>地点：浣熊市东南方，生化实验平台</p>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201803/26/234725gqpsj44pbgyqi3b7.jpg"/>
+            <p>浣熊市的僵尸已经无法控制！所有飞机一旦起飞就会被不明力量击落。美国军方不得不完全封锁整个浣熊市，尽管一些探员和许多平民仍困在那里。僵尸已经不可避免的冲入生化实验平台......谭雅和鲍里斯已经赶往生化实验平台。他们能否控制局势？这仍是一个悬念。此时布鲁克林上尉正被困在生化实验平台中心。与外界的通讯完全中断。他会做出怎样的选择？我们还是先会一会布鲁克林吧。</p>
+            <p>任务目标一：进入生化实验平台的核心区域。</p>
+            <p>任务目标二：与这里的长官对话，接受下一步任务。</p>
+            <h1>02-僵尸城市</h1>
+            <p>地点：浣熊市</p>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201803/26/234726stewt5e6kz6qkzet.jpg"/>
+            <p>听从布鲁克林的指挥，谭雅和鲍里斯冒险进入浣熊市营救其中的幸存者并对生化实验设施进行爆破。布鲁克林相信这样就能中断僵尸的来源。可是这次危机是普普通通的病毒泄露导致的吗？不排除有幕后黑手的可能？这一切尚未定论，只有在冒险中寻找答案了。</p>
+            <p>任务目标一：搜索整个浣熊市，寻找幸存者，并摧毁每一座生化实验设施。</p>
+            <p>任务目标二：搜索浣熊市的北部。</p>
+            <h1>03-向下，再向下</h1>
+            <p>地点：浣熊市地下实验区域</p>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201803/26/234727fumjzj30i2okz6h3.jpg"/>
+            <p>谭雅、鲍里斯和罗伯特布鲁斯进入了浣熊市北部的竖井。竖井里隐藏着什么？我们不得而知。或许又是一个圈套。与此同时，在生化实验平台中苦苦支撑的布鲁克林也有些力不从心了。在大批僵尸的威胁下，他决定全体撤离这个地方。接下来该怎么办？只有凭勇气，才能战胜这一切！</p>
+            <p>任务目标一：搜索浣熊市地下试验区域。</p>
+            <p>任务目标二：打通通往地面的道路。</p>
+            <h1>04-塞博格计划</h1>
+            <p>地点：峡谷要塞</p>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201803/26/234728i4o44xaj6fkazkow.jpg"/>
+            <p>峡谷要塞虽然有苏军部队帮忙把守，但是这里并不是绝对安全……苏军部队研发出了一种对付僵尸的新武器，但这种武器的应用需要先把罗伯特布鲁斯改装成半机械人（Cyborg）。僵尸已经包围了峡谷要塞。希望武器的研究能成功吗？这仍是一个疑问……</p>
+            <p>任务目标一：死守峡谷要塞实验室。</p>
+            <p>任务目标二：消灭残余的僵尸部队。</p>
+            <h1>05-金门的卫兵</h1>
+            <p>地点：旧金山</p>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201803/26/234729yptmm0uvttlkevkq.jpg"/>
+            <p>僵尸还在蔓延，已经彻底失去了控制。虽然人类一方有新式武器的加入，但仍难以扭转局势，可是还有最后一种方法——时间机器！它还在旧金山！按照原定计划，谭雅和布鲁克林已经先赶到了旧金山，鲍里斯和布鲁克林随后赶往。时间机器能正常启动吗？改变过去真的能扭转败局吗？这要等接下来的战役才能告诉我们……</p>
+            <p>任务目标一：为时间机器收集到充足的电力。</p>
+            <p>任务目标二：保证电力供应，直到时间机器充能完毕。</p>
+            <div class="bar">
+                <h1>第二季：「时间穿梭者」</h1>
+                <span class="hint">歧途第二季的任务简报</span>
+            </div>
+            <h1>06-时间穿梭者</h1>
+            <p>地点：旧金山</p>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201803/26/234730j3umdcjcbb0ljw7z.jpg"/>
+            <p>罗伯特布鲁斯回到了过去的旧金山。在这个时间点上，尤里在魔鬼岛的心灵控制器还正在部署，苏联还在试图进攻旧金山北部与南部，三股势力在这个海滨城市混战。根据历史资料，僵尸病毒的第一个感染者，我们称其为“零号病人”，就在旧金山北部的医院里接受治疗，然而这座医院目前掌握在尤里手中。如果我们能在混战中抢出零号病人，对于僵尸病毒的研究一定很有帮助。这便是布鲁克林给罗伯特布鲁斯的第一个任务。</p>
+            <p>任务目标一：抢在苏联炸平旧金山北部之前，占领旧金山北部的医院。</p>
+            <p>任务目标二：护送载有零号病人的救护车到时间机器旁。</p>
+            <h1>07-断头谷</h1>
+            <p>地点：弗吉尼亚州，断头谷</p>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201803/26/234730ec7fz7ehke5fgm7x.jpg"/>
+            <p>美国的国土上战火纷飞之时，布鲁克林意外收到了从弗吉尼亚州断头谷发来的苏联最高级别的求救信号。虽然此时苏联人对于他来说是侵略者，但是他感觉这个信号很可能来自于鲍里斯——他在另一个时间轴的战友。虽然断头谷有很多恐怖的传说，但是他还是希望能去闯一闯。</p>
+            <p>任务目标一：调查求救信号的来源。</p>
+            <p>任务目标二：活着走出断头谷。</p>
+            <h1>08-无法原谅</h1>
+            <p>地点：弗吉尼亚州</p>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201803/26/234731mmi5m6gz6mmgm2wz.jpg"/>
+            <p>正当盟军和苏军打算共同面对僵尸危机的时候，弗吉尼亚州的苏军却遭到尤里的突袭，差点被赶下水。沃尔科夫已经以他最快的速度赶来，却已经无法挽回滩头阵地的崩溃。这里课是战略要冲，阻止这里的僵尸蔓延非常重要，但是苏军在这里的残兵败将没法同有完善军事设施的尤里相抗衡，因此沃尔科夫打算使用非常规战术……</p>
+            <p>任务目标一：封锁三处谷口和一处桥梁。</p>
+            <p>任务目标二：消灭此地区的尤里势力。</p>
+            <h1>09-似曾相识</h1>
+            <p>地点：浣熊市</p>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201803/26/234732mnv4sd5ahynruduu.jpg"/>
+            <p>沃尔科夫在弗吉尼亚州的行动有效的拖延了僵尸蔓延的时间，但是该来的总会来的。浣熊市仍然笼罩在灾难的阴影之中。罗伯特布鲁斯还是来到了浣熊市，他熟悉的浣熊市。他曾在这里差点落入僵尸口中，如今时光倒流，他有了一次纠正错误的机会。</p>
+            <p>任务目标一：在浣熊市建立防御。</p>
+            <p>任务目标二：掩护平民的撤离，保护每一个平民。</p>
+            <p>任务目标三：搜索浣熊市北部区域。</p>
+            <h1>10-银洞</h1>
+            <p>地点：浣熊市北部山区</p>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201803/26/234732p6o1s1q3ik63t139.jpg"/>
+            <p>布鲁克林不知道罗伯特布鲁斯去了哪里——只知道他在鲁莽的一个人搜索浣熊市北部山区的时候失踪了，很可能是中了什么圈套。虽然浣熊市北部山区已经被僵尸踏平，但是为了寻找罗伯特布鲁斯，布鲁克林决定在这里重新建立一座基地，同时呼叫鲍里斯和沃尔科夫带领苏军部队参与搜救。</p>
+            <p>任务目标一：建立一座盟军空指部，联系鲍里斯。</p>
+            <p>任务目标二：寻找失踪的罗伯特布鲁斯。</p>
+            <p>任务目标三：把罗伯特布鲁斯带到北部基地。</p>
+            <div class="bar">
+                <h1>第三季：「丧尸军团」</h1>
+                <span class="hint">歧途第三季的任务简报</span>
+            </div>
+            <h1>11-丧尸军团</h1>
+            <p>地点：浣熊市地下试验区域/圣路易斯</p>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201803/26/234920yj5o5hs5bsjzs2cv.jpg"/>
+            <p>拉恩在浣熊市地下区域做好了埋伏，等待前来调查的人们上钩。</p>
+            <p>没想到鲍里斯识破了拉恩的诡计（其实是，他们已经在时光倒流之前经历过了一次[03-向下，再向下]）。作为对策，鲍里斯打算在浣熊市的下水管线中派出大量步兵以人海战术快速解决战斗。然而这里狭窄的环境并不适合大军团的展开，又有多少冤魂要在浣熊市地下长眠呢。</p>
+            <p>盟军已经在圣路易斯建立了牢固的防御，而拉恩希望攻破这里，让僵尸病毒能够进一步扩散入加拿大。盟军已经严阵以待，但是他们不会想到，这回拉恩会亲自上阵，散播死亡与恐惧……</p>
+            <p>任务目标一：清理浣熊市地下实验区域。</p>
+            <p>任务目标二：与生化基地会合。</p>
+            <p>任务目标三：杀死谭雅和鲍里斯。</p>
+            <p>提示：在把敌方步兵变异为僵尸时，会得到现金奖励。</p>
+            <h1>12-天眼</h1>
+            <p>地点：圣路易斯</p>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201803/26/234921cuq0vja11cgmqvuq.jpg"/>
+            <p>布鲁克林得知谭雅和鲍里斯阵亡的消息十分震惊。</p>
+            <p>悲痛之余，布鲁克林认识到，圣路易斯是非常重要的战略要地，必须被夺回。而且布鲁克林敏感的发现，圣路易斯的电力尚未中断，电网仍然高负荷的运行着：一定有某种大功率设备在运作着——说不定又是拉恩的诡计。果然，侦查发现，圣路易斯市中心有一座巨大的不明设施……不管它是什么，必须把它拿下！</p>
+            <p>任务目标一：调查飞行器坠毁的原因。</p>
+            <p>警告：布鲁克林不能阵亡。</p>
+            <p>提示：请使用反坦克武器对付巨型僵尸。海豹部队的突击步枪无法有效杀伤皮糙肉厚的巨型僵尸。</p>
+            <h1>13-燃烧的导火索</h1>
+            <p>地点：布里奇波特</p>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201803/26/234922pfhs22z96fr00fgu.jpg"/>
+            <p>对零号病人的研究取得了阶段性成果，然而布鲁克林对成果的内容守口如瓶，他决定先把研究资料和科研人员转移到一个更加安全的地方，再来公布研究成果。</p>
+            <p>于是布鲁克林分配了一列火车把零号病人、生化方面的专家以及大量研究资料通过布里奇波特港转移，并派沃尔科夫全程护送。</p>
+            <p>任务目标一：护送火车安全通过这个区域。</p>
+            <p>警告：火车会碾掉任何挡道的玩意儿，包括自己人。</p>
+            <p>警告：必须至少保留三节车厢。</p>
+            <h1>14-死亡派对</h1>
+            <p>地点：阿巴拉契亚山区</p>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201803/26/234923effioxx54oa7xwf7.jpg"/>
+            <p>拉恩偶然发现了阿巴拉契亚山区的各国领导人庇护所，他自然不能错过这个机会。他决定亲自来攻击这个地方。盟苏联合部队被迫仓促回防。双方都赌上了老本，一场恶战在所难免。</p>
+            <p>任务目标一：在原地部署一辆MCV。</p>
+            <p>任务目标二：在庇护所部署另一辆MCV。</p>
+            <p>任务目标三：保护庇护所，直到苏联核弹支援到达。</p>
+            <p>提示：阿巴拉契亚山区仍然处于天眼的控制范围之内，所以你仍然无法使用空军。</p>
+            <h1>15-追风行动</h1>
+            <p>地点：加拿大，纽芬兰</p>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201803/26/234923hdppuq7n60yqd937.jpg"/>
+            <p>上一战中，拉恩虽然没有被核弹直接命中，仍然受伤严重，正在纽芬兰生化基地中的医院接收治疗。布鲁克林敏锐的意识到，这是抓捕拉恩的好机会！而且要抓活的！也许这场危机就结束于此了。</p>
+            <p>任务目标一：切断城市的电力供应。</p>
+            <p>任务目标二：摧毁医院，抓捕拉恩。</p>
+            <p>任务目标三：把拉恩带到安全区。</p>
+            <p>提示：可以摧毁城市中的生化实验罐，避免源源不断的僵尸涌出。</p>
+        </section>
+        <section id="sec_data">
+            <p>
+                这部分是单位档案，是关于《歧途》中相比原版新增的单位的记录。一些平衡性数据和补充背景资料可以从这里查阅。
+            </p>
+            <p>
+                本章节中，你能找到下面的内容：
+            </p>
+            <p>
+                <ul>
+                    <li><a href="#sec_data_1">有关英雄单位的资料</a></li>
+                    <li><a href="#sec_data_2">有关人类新增普通单位的资料</a></li>
+                    <li><a href="#sec_data_3">有关僵尸阵营单位的资料</a></li>
+                </ul>
+            </p>
+            <p>
+                《歧途》系列中，新增单位的数值平衡是认真调节过的，基本不会出现“某种新增的单位特别IMBA碾压全部原版单位”的状况（当然英雄另当别论）。新增的单位基本都是为了补位，让游戏方式更加丰富。部分单位对于僵尸十分有效只是因为，它们处于“反步兵”的位置上……
+            </p>
+            <br>
+            <div class="bar" id="sec_data_1">
+                <h1>英雄名录</h1>
+                <span class="hint">有关英雄单位的资料</span>
+            </div>
+            <p class="card">
+                <span class="colored big">谭雅</span><br>
+                来自盟军的女突击队员，红色警戒中永远的女主角，象征着智慧与机敏，使用两把光子镭射手枪快速射杀僵尸。<br>
+                攻击力：125<br>
+                射程：8<br>
+                攻击速度：极快（ROF=10）
+            </p>
+            <p class="card">
+                <span class="colored big">鲍里斯</span><br>
+                来自苏联的精英战士，正义与勇气的化身，使用能够对坦克造成威胁的镭射突击步枪。<br>
+                攻击力：250<br>
+                射程：8<br>
+                攻击速度：快（谭雅的1/2）
+            </p>
+            <p class="card">
+                <span class="colored big">罗伯特布鲁斯</span><br>
+                布鲁克林手下的得力助手，热爱使用火箭筒武器的鲁莽突击队员。<br>
+                攻击力：262.5<br>
+                射程：7<br>
+                攻击速度：较慢（谭雅的2/9）<br>
+                杀伤半径：0.9
+            </p>
+            <p class="card">
+                <span class="colored big">罗伯特布鲁斯（半机械形态）</span><br>
+                罗伯特布鲁斯接受半机械改造以后，使用能造成大范围伤害的中子火箭。<br>
+                攻击力：262.5（虽然攻击伤害相比通常形态没有变，但是杀伤半径大幅度增加了）<br>
+                射程：7<br>
+                攻击速度：较慢（谭雅的2/9）<br>
+                杀伤半径：1.8
+            </p>
+            <p class="card">
+                <span class="colored big">布鲁克林</span><br>
+                热爱荣誉、富有责任感的将军，在僵尸危机中扮演核心指挥地位。虽然身居高位，但是在公民的安全受到威胁的时候也会拿起机枪，亲自上火线。<br>
+                攻击力：90x4<br>
+                射程：7<br>
+                攻击速度：慢（谭雅的1/5）<br>
+                杀伤半径：0.7
+            </p>
+            <p class="card">
+                <span class="colored big">沃尔科夫</span><br>
+                鲍里斯的副手，科学家，特斯拉线圈的狂热爱好者，或许是苏军磁暴科技的下一代的继承者和开拓者。能够随手磁化身边的金属塔架，把它们变成巨型磁暴线圈。<br>
+                攻击力：390（还有分散电弧攻击）<br>
+                射程：7<br>
+                攻击速度：慢（谭雅的1/5）
+            </p>
+            <p class="card">
+                <span class="colored big">拉恩</span><br>
+                可能是僵尸的领导者，我们对他的资料知之甚少。他持有能把人类变异为僵尸的轨道狙击枪，非常危险。<br>
+                攻击力：150<br>
+                射程：12<br>
+                攻击速度：极慢（谭雅的1/8）
+            </p>
+            <p>
+                Tip：数值上，谭雅、鲍里斯的输出能力相同；沃尔科夫的输出值很高，但是要注意伤害溢出（很高的伤害作用于一个残血的单位导致伤害被浪费）；布鲁克林的实际输出能力比数值上的高，因为如果4次攻击没用完就杀死了目标，他会马上对另一个目标接上4次攻击（即卡攻速）；罗伯特布鲁斯具有范围伤害，虽然对单体目标的输出不如谭雅，但是如果按地上站满了人来计算，罗伯特布鲁斯的输出能达到谭雅的2倍还多；拉恩是个狙击型角色。
+            </p>
+            <br>
+            <div class="bar" id="sec_data_2">
+                <h1>单位资料夹</h1>
+                <span class="hint">有关人类新增普通单位的资料</span>
+            </div>
+            <p class="card">
+                <span class="colored big">镭射车</span><br>
+                僵尸危机爆发初期，人们对于僵尸的攻击手足无措，武器装备很快在突袭中损失殆尽。美国政府不得不征用一些民用越野车装上镭射武器来专门对付僵尸。征用的标准很低：能装上镭射炮，能跑，就合格。这样就生产出了这种速度飞快、被击中就顷刻爆炸的小车。虽然在军团作战中这简直就是开玩笑，但是在对僵尸的作战中，这种简陋的突击车还是创造了很多奇迹。<br>
+                攻击力：35<br>
+                射程：5<br>
+                攻击速度：中等<br>
+                特点：数值上，镭射车的输出伤害能力等同于一个部署的美国大兵，但是它能够快速移动而且移动中攻击。主要用于对僵尸的风筝战术。要注意镭射车很不耐打，尽量避免和敌人硬碰硬，打不过就跑才是它的逻辑。
+            </p>
+            <p class="card">
+                <span class="colored big">粉碎火炮</span><br>
+                布鲁克林都没有想到，这种古董武器居然还能够有机会被再次拉上战场。作为早期自行火炮的代表，这种榴弹炮除了射程远几乎没有什么突出特点——但是在僵尸压到家门口的时候，这种低科技的武器体现出了很大的战术价值。<br>
+                攻击力：75<br>
+                射程：11<br>
+                攻击速度：慢<br>
+                特点：粉碎火炮和光棱坦克相比稍微强韧些，但是它的弹道容易受到地形或者围墙的阻碍，转向瞄准也慢半拍，可以说是各有优劣。低科技下不失为远程攻击的一种选择。
+            </p>
+            <p class="card">
+                <span class="colored big">军用推土机</span><br>
+                路过的工程车辆，除了可以用来拆毁各种建筑，还可以碾压僵尸。<br>
+                攻击力：很高（几乎秒杀）<br>
+                射程：近身/碾压<br>
+                特点：专业暴力拆迁……
+            </p>
+            <p class="card">
+                <span class="colored big">闪电链坦克</span><br>
+                这是沃尔科夫对苏军磁暴武器做的革命性改进，经过他改装的磁暴武器，电弧可以形成更多分裂，从而造成大面积破坏。<br>
+                攻击力：120<br>
+                射程：5<br>
+                攻击速度：慢<br>
+                特点：电流在目标之间传递，传递越远威力越大。适合近距离和僵尸缠斗。在树林中战斗时，由于电流大多击中树木，因此威力受限。
+            </p>
+            <p class="card">
+                <span class="colored big">喀秋莎</span><br>
+                这种二战中名声大噪的火箭炮在僵尸危机中被重新拉出来使用。作为一种大范围杀伤性武器，它往往能够在僵尸群中形成一片火海。<br>
+                攻击力：45x8<br>
+                射程：12<br>
+                攻击速度：快（刚开始）/慢（稳定时）<br>
+                特点：装满弹药后能打出猛烈的一波攻击，弹药打光以后攻击速度为较慢的装弹速度。适合打击突然一波集中的敌人，不适合持续输出。注意喀秋莎不能攻击离自己很近的敌人，这是操作难点之一。
+            </p>
+            <p class="card">
+                <span class="colored big">海撬</span><br>
+                虽然雷鸣潜艇有着无与伦比的性能，但是其高造价和较慢的航速让尤里的海军有点吃不消，他们需要一种简单的快速突击舰艇。于是在拉恩的研发下，就有了这一款装备1具鱼雷发射管的轻型船舰。它们往往集群行动，像蜜蜂一样对盟军形成骚扰。<br>
+                攻击力：100<br>
+                射程：7<br>
+                攻击速度：慢<br>
+                特点：快速廉价，耐用好用，强力的海上骚扰、突击单位。
+            </p>
+            <p class="card">
+                <span class="colored big">布鲁克林号战列舰</span><br>
+                以布鲁克林将军的名字命名的战列舰，虽然是上个世纪海战思想的产物，但是代表强大毁灭力量的两门大口径主炮仍然让人不寒而栗。<br>
+                攻击力：150x2<br>
+                射程：15<br>
+                攻击速度：极慢<br>
+                杀伤半径：1.1<br>
+                特点：强大的海上大杀器，超远射程超高威力的重型轰炸舰。其实应该算是英雄单位了。
+            </p>
+            <p class="card">
+                <span class="colored big">莫洛托夫突击车</span><br>
+                装有莫洛托夫鸡尾酒的轻型突击车。虽然也是土法上马，但苏联人的勇敢无畏在面对僵尸时仍然能够表现的淋漓尽致。一旦命中目标，会形成燃烧区域，对步兵造成致命伤害。<br>
+                攻击力：80<br>
+                射程：6<br>
+                攻击速度：较慢<br>
+                杀伤半径：0.9<br>
+                特点：和镭射车处于同一科技位的轻型反步兵突击单位。虽然对单体目标的效果不如镭射车，也不能移动中攻击，但是形成燃烧后能造成有效的群体伤害，最多5倍伤害。另外它是砍树神器……
+            </p>
+            <br>
+            <div class="bar" id="sec_data_3">
+                <h1>僵尸图鉴</h1>
+                <span class="hint">有关僵尸阵营单位的资料</span>
+            </div>
+            <p class="card">
+                <span class="colored big">普通僵尸</span><br>
+                僵尸，不需要解释。<br>
+                生命值：500<br>
+                移动速度：中
+            </p>
+            <p class="card">
+                <span class="colored big">狂怒僵尸</span><br>
+                不知是什么原因导致了他们的暴怒，这也使得它们可以更快的冲向敌人，也使得他们变得更脆弱。<br>
+                生命值：375<br>
+                移动速度：快
+            </p>
+            <p class="card">
+                <span class="colored big">不死僵尸</span><br>
+                这种僵尸有强大的生命力。在纽约，有人曾经看到过中了几十枪的僵尸还在四处疯狂的寻找活人，而芝加哥的那次大规模使用凝固汽油弹的战斗中，身上熊熊火焰燃烧但是仍然能够蹒跚向人类防线逼近的它们简直就是死亡的象征。难道这是传说中的不死之身？<br>
+                生命值：1000<br>
+                移动速度：慢
+            </p>
+            <p class="card">
+                <span class="colored big">胖子僵尸</span><br>
+                这些体型较胖的僵尸可不是因为生前吃多了，他们的身体充满了僵尸病毒的培养液。一旦这个躯壳破裂，里面的病毒就会喷涌而出，吞噬周围的人。<br>
+                生命值：200<br>
+                移动速度：中<br>
+                特点：会自爆，造成大量伤害。自爆时还会引起周围的正常人变异为僵尸。<br>
+                高度危险，不要让他们接近，请使用远程武器优先解决。
+            </p>
+            <p class="card">
+                <span class="colored big">复仇者僵尸</span><br>
+                僵尸危机中格斗专家总结出的和僵尸近身格斗的要领中，砍头是排在第一位的。可是面对一种本来就没有头的僵尸，我们该怎么砍头？<br>
+                生命值：500<br>
+                移动速度：快<br>
+                特点：攻击力很高，能对建筑和坦克造成有效伤害。不会成群出现。<br>
+                很危险，对于装甲部队，请优先对付它。
+            </p>
+            <p class="card">
+                <span class="colored big">巨型僵尸</span><br>
+                拥有铜墙铁壁一般的皮肤和强大的破坏力、令人恐惧的巨大怪物。这已经不能用自然的病毒来解释了，一定是有人刻意创造了它们。<br>
+                生命值：550<br>
+                移动速度：中<br>
+                特点：反步兵武器无法对它造成有效伤害，需要使用反坦克武器来对付。<br>
+                谭雅、海豹突击队和狙击手对这种僵尸束手无策，辐射工兵的污染也无法对它造成有效伤害。相反，天启坦克几炮就能把它轰飞。
+            </p>
+            <p class="card">
+                <span class="colored big">生化战士</span><br>
+                严格来说他们并不是僵尸，他们是武装到牙齿的人类。他们为拉恩卖命，他们用自己的便携式轨道枪传播僵尸病毒，他们破坏，他们毁灭一切，他们是生化战士。<br>
+                生命值：125<br>
+                移动速度：中<br>
+                射程：5<br>
+                特点：在僵尸阵营中能够进行远程攻击，这已经需要足够重视了。<br>
+                当你集中火力对付他们的时候，他们很脆弱，但是千万不要只专注于打近在眼前的僵尸而忽视了他们。
+            </p>
+        </section>
+        <section id="sec_tips">
+            <p>
+                这部分是通关提示，过关感到困难时再来看哦。
+            </p>
+            <p>
+                平心而论，《歧途》并不是一个很难的任务。即使是最高难度，玩家可能会被一些初见杀坑死若干次，但是普通玩家只要多存档，最后都是能顺利通关的。看到有的玩家在B站弹幕中说“歧途没有坑向触发”的时候我是很欣慰的，我希望大家玩这套任务的时候非常舒服，偶尔可能会有些小惊讶和小紧张。
+            </p>
+            <br>
+            <h1>01-生化实验平台</h1>
+            <p>
+                这是一个教学任务，主要目的是让玩家体验歧途系列的一些与众不同的脑回路。
+            </p>
+            <p>
+                最初的拆路障推进阶段是小队生存的教学。我方部队只要站位集中且反应及时，是能够和僵尸大军正面对抗的，完全不怂。3海豹+2英雄+2狙击，这样的豪华阵容要很久以后才能再次出现。操作要点：重装拆路障，其余步兵都是打僵尸的能手。在看到僵尸后，应当立刻命令部队停止前进（键盘快捷键“S”）马上开火，而不要再与僵尸拉近距离了。
+            </p>
+            <p>
+                到基地以后是一个防守和进攻的教学。左上和右下两个口都使用大兵进行防守，利用路障作为掩护，在初始部队的基础上再添一些，防御就很稳固了。修复基地边上的桥可以得到坦克工厂，但是本关钱很少，要节省着用。进攻时，使用装载英雄或者海豹的多功能步兵车进行快速推进，拆路障拆到洞口即可。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>开始位置的上方，有一个加防御的箱子。</li>
+                    <li>第二个拐弯处有一个明显的箱子。这是一个钱箱子，但是拿起来需要拆路障，比较费事。</li>
+                    <li>堵车处，广告牌旁的箱子是升级箱子。尽量给重装大兵吃，这样后半程拆路障可以更加迅速。</li>
+                    <li>基地中有一个损坏的爱国者飞弹，用工程师维修可以得到升级箱子。</li>
+                    <li>派部队前往港口，可以得到一船粉碎火炮。</li>
+                    <li>拆掉港口左下方的路障，可以得到1个多功能步兵车+1个海豹部队+1个狙击手+2个美国大兵。</li>
+                    <li>靠近洞口附近，有一个损坏的光棱塔，用工程师维修可以得到钱箱子。</li>
+                    <li>光棱塔的下方有一处兵营和矿石精炼厂可以修复。</li>
+                </ul>
+            </p>
+            <h1>02-僵尸城市</h1>
+            <p>
+                这是一个城市搜索任务，要完成任务目标，基本上要探开全部地图。
+            </p>
+            <p>
+                操作要点和上一关的最初阶段类似，发现敌人及时停下开火。只不过这一关的地形更为开放，好在都是小规模作战，没有大队敌人。注意优先锁定会自爆的胖子僵尸，它靠近了就晚了。
+            </p>
+            <p>
+                在搜索的过程中会找到一辆镭射车和新英雄罗伯特布鲁斯。镭射车是脆皮的反步兵突击车，可以在移动中攻击，用来探路和遛僵尸都很好用。这是一种操作空间很大的新单位，后面的任务中可以生产，是初期反僵尸的选择之一。罗伯特布鲁斯使用火箭筒进行攻击，有一点群体杀伤的效果，但是现阶段不是很强。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>到达浣熊市左上方入口后，会有两辆盟友的幻影坦克来把守门口。</li>
+                    <li>浣熊市右上方入口的军营中有一个升级箱子。</li>
+                    <li>拓展地图后，到达右上方的山口，会有一队盟友的镭射车来清理僵尸。</li>
+                    <li>拓展地图后，到达左上方的斜坡，会有一队盟友的美国大兵+灰熊坦克来把守斜坡。</li>
+                </ul>
+            </p>
+            <h1>03-向下，再向下</h1>
+            <p>
+                这是一个解谜生存任务，有一个地方初见时不太好想到怎么过。
+            </p>
+            <p>
+                三个英雄的组合是很稳的。按照流程走即可。
+            </p>
+            <p>
+                谭雅在清水路段过河后应当向左上沿下水道的边沿走，能发现一辆坦克和一些兵。接下来用坦克堵住左上方的下水道边沿，迎击一波僵尸。接下来用坦克隔着水打破对面的铁丝网，就能继续前进了。
+            </p>
+            <p>
+                注意防空步兵是有友伤的（原版如此），混战中记得把他们拉远。其余都是小队生存任务的要点了。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>如果没有去触碰第一个笼子处的生化病毒机关，直接去找坦克的话，这个机关将不再会被触发，也就是说这个笼子中的步兵可以被解救。</li>
+                    <li>第一个笼子的右下角的弹药箱，炸掉会有升级箱子。</li>
+                    <li>地下洞穴的路障附近有医疗箱子。</li>
+                    <li>获得运输船以后，沿着管道走的时候，右下方有一个支路，进入可以获得3个磁暴步兵。这3个磁暴步兵可以继承到下一阶段任务中。</li>
+                    <li>更换场景后，废弃的军营中，有一个医疗箱子。</li>
+                </ul>
+            </p>
+            <h1>04-塞博格计划</h1>
+            <p>
+                这是一个死守任务，准备面对尸潮的进攻吧。
+            </p>
+            <p>
+                建议基地车原地展开，补1辆矿车，在矿石精炼厂附近建造战斗碉堡与僵尸鏖战。可以使用防空车或者磁暴线圈辅助输出。
+            </p>
+            <p>
+                靠谱的盟友会派美国大兵、坦克顶在前面，也会出一些火炮远程帮忙。对碉堡威胁最大的是自爆的胖子僵尸，如果盟友没能帮你引爆他们，记得派出预备的坦克部队去引爆。
+            </p>
+            <p>
+                玩自爆卡车的时候千万别玩过火把自己炸了……
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>最初矿石精炼厂附近的疯狂伊万，可以进入盟友在谷口的多功能步兵车，在第一波僵尸到来的时候制造一个核爆。</li>
+                    <li>左上方的山脉向右摸索会有一个山谷，在其中能得到3辆莫洛托夫突击车（脆皮群伤反步兵车辆，后续任务中可以建造）。</li>
+                    <li>简单难度，右下角会给一些辐射工兵，辐射工兵部署+战斗碉堡就无敌了……</li>
+                    <li>左下方破口以后，往左下方探路，能得到铁幕装置。</li>
+                </ul>
+            </p>
+            <h1>05-金门的卫兵</h1>
+            <p>
+                这是一个资源采集任务，需要在资源受限的状况下作战。
+            </p>
+            <p>
+                本关可以生产新单位镭射车和粉碎火炮了。镭射车在对付小股僵尸时可以移动攻击的优势显露无疑。
+            </p>
+            <p>
+                主要靠部署美国大兵和驻军楼房配合建立静态防御，灰熊坦克可以用来辅助抗伤害，僵尸对于坦克的伤害很低（但是一辆坦克被僵尸围起来打也是九死一生）。罗伯特布鲁斯放到多功能步兵车中，他的新式武器有着高群伤，对付大波僵尸很有效。
+            </p>
+            <p>
+                还是以占领科技电厂为主，因为能建造的发电厂提供的电力太少了。电力充足以后僵尸会最后疯狂一回，一定提前做好准备。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>右下角的停车场处，能得到一辆油罐车。类似自爆卡车。</li>
+                    <li>右下角的喷泉旁有一处钱箱子。</li>
+                    <li>派登陆部队登陆魔鬼岛，在心灵控制器旁，经过一段对话，能得到钱箱子。</li>
+                </ul>
+            </p>
+            <h1>06-时间穿梭者</h1>
+            <p>
+                这是一个限时的抢夺-护送任务，以海战为主。
+            </p>
+            <p>
+                开局补矿车，出4个多功能步兵车，2艘神盾，多点一些驱逐舰，出作战实验室，然后把已有的舰队先拉到心灵控制器附近，消灭苏联舰队，得到布鲁克林号战列舰。用布鲁克林战列舰的火炮轰掉心灵控制器。也可以用航母从右侧炸。
+            </p>
+            <p>
+                敌人的进攻很少能够直接把你的基地推掉的，顶多是给推进造成困难。如果觉得舰队生产速度不够可以出双船厂。2神盾+若干海豚+少量航母+若干驱逐的混合舰队是不错的选择。困难难度可以选择走左边捷径直接登陆作战。注意拆掉尤里的防空以后，苏军的基洛夫空艇可能会炸掉医院。
+            </p>
+            <p>
+                获得救护车以后赶紧运回来，然后等着看核平旧金山吧。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>摧毁心灵控制器可以获得钱箱子。</li>
+                </ul>
+            </p>
+            <h1>07-断头谷</h1>
+            <p>
+                这是一个小队生存任务，完全没有难度。
+            </p>
+            <p>
+                完全没有难度那还要什么通关提示（（（
+            </p>
+            <p>
+                尤里的走狗们，感受5英雄战斗要塞的愤怒吧！
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>向右下方探索可以获得2辆推土机，可以快速拆除路障。</li>
+                </ul>
+            </p>
+            <h1>08-无法原谅</h1>
+            <p>
+                这是一个杂技任务，以辐射工兵部署为核心机制。
+            </p>
+            <p>
+                本关的僵尸数量太多，只能使用辐射工兵部署进行大范围杀伤。辐射工兵和矿车作为前队，其余作为后队，之间拉开一定的距离，防止辐射杀伤自己人，慢慢向前推进即可。
+            </p>
+            <p>
+                手残党这关可能会有些难度……多存档。后半部分有基地就轻松了。莫洛托夫突击车在此关可以生产，但是没什么显著的用途。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>左上角可以得到额外的辐射工兵和犀牛坦克。</li>
+                </ul>
+            </p>
+            <h1>09-似曾相识</h1>
+            <p>
+                这是一个多目标死守任务，需要在准备时间内建立完整的防线来顶住僵尸。
+            </p>
+            <p>
+                速出坦克工厂，出大量的美国大兵占据楼房，补矿车，出作战实验室，然后补战斗要塞。第二个基地车就地部署，用于接兵和采矿。罗伯特布鲁斯可以用来支援中路或者右边路的防守。战斗要塞足够以后开始补光棱坦克或者粉碎火炮。
+            </p>
+            <p>
+                防线的完整性是关键，任何地方的漏防都有可能导致僵尸冲进来杀死平民。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>地图右下角有额外的油井可以占领。</li>
+                </ul>
+            </p>
+            <h1>10-银洞</h1>
+            <p>
+                这是一个双线生存任务，一线防守，另一线推进。
+            </p>
+            <p>
+                开局爆美国大兵，出镭射车，用操作来弥补伤害。注意把受到攻击的矿车拉回来（关键操作，非常重要）。左边的防御可以依托加油站，右边造几个机枪碉堡。
+            </p>
+            <p>
+                建造空指部以后开南线。南线先不着急推进，因为北边基地还没有得到科技机器商店的情况下南线非常难打。攀高科，补战斗要塞，修复机器商店以后，南线可以推进了。
+            </p>
+            <p>
+                南线中除了鲍里斯以外，喀秋莎和闪电链坦克都能抵抗相当的伤害，尤其是有机器商店以后，放心大胆的让闪电链坦克和僵尸近身缠斗吧。喀秋莎不能攻击很近的僵尸，拉远一点让它远程输出即可。
+            </p>
+            <p>
+                随着南线的推进，北线的进攻会越来越猛烈，注意补防御。南线沿路能拿许多钱箱子，这算是南线支援北线了。
+            </p>
+            <p>
+                北线右侧的断桥初始是没法维修的，在救出罗伯特以后变得可以维修了。这时最好是派一支坦克部队来接罗伯特和鲍里斯。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>南线下斜破前废弃军营处有钱箱子。</li>
+                    <li>南线电厂旁有钱箱子。</li>
+                    <li>南线靶场打掉三个训练靶得到钱箱子。</li>
+                    <li>南线竖井旁有钱箱子。</li>
+                </ul>
+            </p>
+            <h1>11-丧尸军团</h1>
+            <p>
+                这是一个单兵生存任务，多存档即可通关。
+            </p>
+            <p>
+                下水道部分基本是教学+剧情补充，几乎无难度。记得不要拉恩单枪匹马去怼装有磁能坦克的运输艇，先等僵尸来打它，拉恩再跟上即可。
+            </p>
+            <p>
+                地面部分，利用拉恩的射程优势，慢慢推进就行。不过拉恩的射速很慢，最好有一批生化步兵在左右做临时防卫。右边的巨炮用狂怒僵尸拆；左边的巨炮可以暂时不管，攻起来代价比加大，可以放到最后。杀死谭雅和鲍里斯直接用射程即可完成，相当于狙死的……
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>下水道中，左上的生化管子处有钱箱子。</li>
+                    <li>下水道中，右下的磁暴步兵处有钱箱子。</li>
+                    <li>地面，机场中有钱箱子。</li>
+                    <li>地面，地图右上角平民聚集处有钱箱子。</li>
+                </ul>
+            </p>
+            <h1>12-天眼</h1>
+            <p>
+                防守/进攻战役，容错率比较高，前期运营迅速就没有难度。
+            </p>
+            <p>
+                初期防守，快出海豹部队。海豹部队+多功能步兵车极其有效，配合驻军楼房（主要打巨型僵尸）就能挡住大部分僵尸了。有生化步兵出现一定手动点掉，别让他们远程输出。战斗要塞主要进美国大兵，作为移动的房屋使用，可以和海豹多功能步兵车+一种远程单位（光棱/火炮）配合推进。
+            </p>
+            <p>
+                天眼装置爆灰熊干掉就行了。
+            </p>
+            <p>
+                往后面就是陆军守住，空军单方面轰炸了，随便玩吧。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>地图左下方有一辆油罐车。</li>
+                    <li>公路桥右下角的生化塔，摧毁以后有钱箱子。</li>
+                    <li>地图拓展后，左上角有一个辐射工兵。</li>
+                    <li>地图拓展后，右下角会有一波米斯蒂娅的基洛夫部队。</li>
+                </ul>
+            </p>
+            <h1>13-燃烧的导火索</h1>
+            <p>
+                护送任务，而且被护送对象不可被玩家操纵。
+            </p>
+            <p>
+                短小精悍但是非常坑的一个任务，对手残极不友好，场景混乱（盟友僵尸混战），容错率极低，大部分的崩盘开始于自己的坦克被火车碾过去，作者本人测试时都经常翻车。……多存档……
+            </p>
+            <p>
+                喀秋莎火箭炮和沃尔科夫是主要输出，但是火箭炮丢了一个其实也能正常完成任务。火箭炮的另外作用是利用射程优势拆房子，房子的位置是固定的，记住，提前拆掉即可。天启坦克殿后，天启坦克是能和巨型僵尸一对一正面对刚的，如果打巨型僵尸练级岂不是美滋滋。
+            </p>
+            <p>
+                没有彩蛋，别盼了。
+            </p>
+            <h1>14-死亡派对</h1>
+            <p>
+                每季的第四关都是死守任务……所以就死守吧！
+            </p>
+            <p>
+                敌人进攻计时是从游戏刚开始就开始的，不像某些关卡是随着玩家的科技发展开始逐渐解锁，所以僵尸不等人，初期的第一要务是：快！
+            </p>
+            <p>
+                此任务中除了空军海军以外几乎拥有苏军盟军全部科技树，带来了相当多的打法。可以使用海豹部队强行顶住，也可以用辐射工兵部署化解大规模的进攻，也可以自爆卡车流，也可以堆房子……这关是丝毫没有卡钱的意图的，你钱不够是因为你不补矿车（笑）
+            </p>
+            <p>
+                重要的事情是不要漏防。前线基地部署的位置尽量往前顶。大后方的防法，辐射工兵+防御塔是最省事的。拉恩第一次现身以后上方开始刷兵，记得补上方的防御。拉恩可以用狙击手，或者直接用铁幕罩死。
+            </p>
+            <p>
+                这关的进攻还是相当的猛烈的，虽然有几乎全科技，但是万万不可轻敌。余钱太多不是好现象，小心下一波被捅穿。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>地图左下方牛棚有钱箱子。</li>
+                    <li>地图中部的灯塔，修复有钱箱子。</li>
+                    <li>地图的上面水域，用一个海豹部队过去能得到一船闪电链坦克。</li>
+                </ul>
+            </p>
+            <h1>15-追风行动</h1>
+            <p>
+                杂技生存任务，手残不友好。
+            </p>
+            <p>
+                与原版操作的不同之处是：超时空伊万的炸弹可以双击引爆。另外炸弹的爆炸威力增强了（要不然毛都炸不死），但是小心别伤到自己人啊。
+            </p>
+            <p>
+                超时空突击队主要负责杀普通僵尸和狂怒僵尸，巨型僵尸用超时空军团兵手动点。超时空伊万可以在没有仇恨的时候瞬移上去安炸弹然后瞬移回来，满脑子的骚操作……有一个旁边有油桶的电厂伊万操作不好容易自杀（不过自杀了也无所谓，也能炸掉），其余三座电厂都慢慢靠近推掉即可。
+            </p>
+            <p>
+                任务目标基本上是扫地图，除了驻军的楼房和防御塔以外该炸的都炸了，断电以后防御塔也可以炸。多存档即可过关。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>右下角的雕像处有升级箱子。</li>
+                </ul>
+            </p>
+        </section>
+        <section id="sec_problem">
+            <p>
+                这部分是相对于前一版本的bug修复记录。这里“前一版本”指的是《歧途》第三季：「丧尸军团」。
+            </p>
+            <br>
+            <div class="bar">
+                <h1>全局</h1>
+            </div>
+            <p>
+                <ul>
+                    <li>适当削弱了狙击手。（上一版本的狙击手一枪1200血，让不让人活啦）</li>
+                    <li>取消了莫洛托夫突击车的友军伤害。</li>
+                    <li>修复了僵尸素材偏移的bug。</li>
+                    <li>修复三级超时空兵无法穿墙攻击的bug。</li>
+                    <li>为新单位重新绘制中文图标。</li>
+                    <li>计算了各关的标准通关时间。</li>
+                    <li>为各关添加了难度提示触发。</li>
+                </ul>
+            </p>
+            <div class="bar">
+                <h1>01-生化实验平台</h1>
+            </div>
+            <p>
+                <ul>
+                    <li>路障爆炸的时候，一次会炸掉一排，防止堵兵。</li>
+                    <li>修复桥梁处铁丝网的地形错误。</li>
+                    <li>布鲁克林改为三级。</li>
+                </ul>
+            </p>
+            <div class="bar">
+                <h1>02-僵尸城市</h1>
+            </div>
+            <p>
+                <ul>
+                    <li>修复了僵尸之间会互相攻击的bug。</li>
+                    <li>修复了会莫名其妙出现“Our Ally is Under Attack”语音的bug。</li>
+                    <li>修复了无法过关的bug。</li>
+                </ul>
+            </p>
+            <div class="bar">
+                <h1>03-向下，再向下</h1>
+            </div>
+            <p>
+                <ul>
+                    <li>提升了一些难度。</li>
+                    <li>所有出现的友军都是可能被解救的。</li>
+                    <li>修复了由于单元标记没放满导致一些事件可以被绕过的bug。</li>
+                </ul>
+            </p>
+            <div class="bar">
+                <h1>04-塞博格计划</h1>
+            </div>
+            <p>
+                <ul>
+                    <li>防守时间改为35分钟。</li>
+                    <li>允许自爆卡车和T3科技。</li>
+                    <li>增加了僵尸进攻的强度。</li>
+                    <li>铁幕已经可以无限次的使用。</li>
+                    <li>增加了盟友支援的强度。此版本中盟友的爆兵是不会停的。</li>
+                    <li>修复了炸毁建筑以后出来美国大兵的bug。</li>
+                    <li>修复了鲍里斯进多功能步兵车以后武器错误的bug。</li>
+                </ul>
+            </p>
+            <div class="bar">
+                <h1>05-金门的卫兵</h1>
+            </div>
+            <p>
+                <ul>
+                    <li>增加了初始部队。</li>
+                    <li>减少了地图上的资源量。</li>
+                    <li>增加了僵尸进攻的强度。</li>
+                    <li>心灵控制器现在无法炸毁（然而它只是一个摆设）。</li>
+                    <li>修复了超时空事件导致下一关没有声音的bug。</li>
+                </ul>
+            </p>
+            <div class="bar">
+                <h1>06-时间穿梭者</h1>
+            </div>
+            <p>
+                <ul>
+                    <li>困难难度减少了时间。</li>
+                    <li>苏军登陆以后，登陆艇会拉回去。</li>
+                    <li>解救救护车以后增加基洛夫进攻。</li>
+                    <li>修复了核弹显示为盟军所属色的bug。（暂停学核弹2333）</li>
+                    <li>修复了突然冒出来原版影片的bug。</li>
+                </ul>
+            </p>
+            <div class="bar">
+                <h1>07-断头谷</h1>
+            </div>
+            <p>
+                <ul>
+                    <li>修复了僵尸打路障的bug。</li>
+                    <li>僵尸不会主动去惹尤里部队的麻烦了，现在它们会追着玩家打。</li>
+                    <li>修复了复仇者僵尸第一次亮相时的效果bug。</li>
+                </ul>
+            </p>
+            <div class="bar">
+                <h1>08-无法原谅</h1>
+            </div>
+            <p>
+                <ul>
+                    <li>修复几处语音错误。</li>
+                    <li>增加了尤里部队进攻的烈度。</li>
+                    <li>修复了永久辐射区辐射能量过高导致过亮的bug。</li>
+                    <li>修复了炸毁建筑以后出来美国大兵的bug。</li>
+                    <li>修复了开场动员兵去送死的bug。</li>
+                    <li>修复了开场不能及时触发剧情的bug。</li>
+                </ul>
+            </p>
+            <div class="bar">
+                <h1>09-似曾相识</h1>
+            </div>
+            <p>
+                <ul>
+                    <li>减少平民装船的总时间。</li>
+                    <li>增加了僵尸部队进攻的烈度。</li>
+                    <li>优化了平民受攻击提示触发，现在玩家可以知道是哪里的平民在受攻击了。</li>
+                    <li>平民的装船过程不会因为玩家的挡路而失败了，即使你把平民的集结点堵住，平民照样撤离。换言之，本关卡关的概率更小了。（这个改动相当大了）</li>
+                </ul>
+            </p>
+            <div class="bar">
+                <h1>10-银洞</h1>
+            </div>
+            <p>
+                <ul>
+                    <li>使用外挂清除黑幕不会导致发现罗伯特处卡关了。</li>
+                    <li>罗伯特也能正常触发生化步兵了。</li>
+                    <li>生化步兵由红色改为紫色。</li>
+                    <li>优化了巨型僵尸第一次亮相时的效果。</li>
+                    <li>减少了卡兵现象。</li>
+                    <li>修复了鲍里斯进入多功能步兵车后武器错误的bug。</li>
+                    <li>修复了极少数情况下无法胜利的bug。</li>
+                </ul>
+            </p>
+            <div class="bar">
+                <h1>11-丧尸军团</h1>
+            </div>
+            <p>
+                <ul>
+                    <li>修复了拉恩能从上方绕过水管的bug。</li>
+                    <li>修复了第一阶段雷达框继承到第二阶段的bug。</li>
+                    <li>修复了在提示巨炮之前提示谭雅和鲍里斯的bug。</li>
+                    <li>彻底修复了卡顿Bug。现在可以流畅的进行游戏。</li>
+                </ul>
+            </p>
+            <div class="bar">
+                <h1>12-天眼</h1>
+            </div>
+            <p>
+                <ul>
+                    <li>修复了罐子不算生化建筑的bug。</li>
+                    <li>不再允许占领敌方兵营。</li>
+                    <li>修改了辐射工兵的彩蛋。</li>
+                </ul>
+            </p>
+            <div class="bar">
+                <h1>13-燃烧的导火索</h1>
+            </div>
+            <p>
+                <ul>
+                    <li>修复了油罐车不爆炸的bug。</li>
+                    <li>修复了火车脱节的bug。（但是被击毁一节以后还是会原力拉车）</li>
+                </ul>
+            </p>
+            <div class="bar">
+                <h1>14-死亡派对</h1>
+            </div>
+            <p>
+                <ul>
+                    <li>防守时间缩短为45分钟。</li>
+                    <li>加强了后方的进攻。</li>
+                    <li>修复了控制中心可以拓展建筑范围的bug。</li>
+                    <li>修复了核弹显示为盟军的bug。</li>
+                </ul>
+            </p>
+            <div class="bar">
+                <h1>15-追风行动</h1>
+            </div>
+            <p>
+                <ul>
+                    <li>加强了逃亡阶段的进攻。</li>
+                    <li>修复了拉恩出场以后立刻会攻击的bug。现在拉恩刚出场的时候会与所有作战方为盟友。</li>
+                </ul>
+            </p>
+        </section>
+        <section id="sec_about">
+            <p>
+                这部分是有关此任务包作者、测试人员等的章节。如果你玩的很爽的话，可以在心里面感谢这些人；如果你玩完想打死作者的话，也可以从这里找到作者的联系方式。
+            </p>
+            <p>
+                本章节中，你能找到下面的内容：
+            </p>
+            <p>
+                <ul>
+                    <li><a href="#sec_about_1">有哪些人员参与了任务包的制作？</a></li>
+                    <li><a href="#sec_about_2">哪些任务地图是用别人的地图魔改而来的？</a></li>
+                    <li><a href="#sec_about_3">此任务包在什么地方发布？</a></li>
+                    <li><a href="#sec_about_4">我该怎么联系作者？</a></li>
+                </ul>
+            </p>
+            <br>
+            <div class="bar" id="sec_about_1">
+                <h1>制作及测试人员</h1>
+                <span class="hint">有哪些人员参与了任务包的制作</span>
+            </div>
+            <p>
+                《歧途》第三季：「丧尸军团」由任务制作者<span class="colored">竹蜻蜓</span>制作。
+            </p>
+            <p>
+                感谢参与任务测试的朋友：（按照id由短到长排序）（满足强迫症）
+            </p>
+            <ul>
+                <li><span class="colored">断绳伞兵</span></li>
+                <li><span class="colored">WC_Host</span></li>
+                <li><span class="colored">SmartBear</span></li>
+                <li><span class="colored">晴川铃空vow～</span></li>
+                <li><span class="colored">米斯蒂娅脆骨君</span></li>
+            </ul>
+            <div class="bar" id="sec_about_2">
+                <h1>部分地图出处</h1>
+                <span class="hint">部分地图是由哪些地图魔改而来的</span>
+            </div>
+            <p>
+                《歧途》系列中的部分任务地图是修改了别人的地图制作而成的，虽然可能已经改得亲妈都不认识了……在此感谢原地图作者……
+            </p>
+            <ul>
+                <li><span class="colored">05-金门的卫兵</span>的地图改编自原版尤里的复仇<span class="colored">苏军01-时空转移</span>。（补了南部一块）</li>
+                <li><span class="colored">06-时间穿梭者</span>的地图改编自原版尤里的复仇<span class="colored">盟军01-光阴似箭</span>。（补了北部一大块）</li>
+                <li><span class="colored">12-天眼</span>的地图改编自遭遇战地图<span class="colored">Sky of swords：war</span>（东南角和西南角改的面目全非了）</li>
+                <li><span class="colored">15-追风行动</span>的地图改编自<span class="colored">0402yjl</span>的任务包<span class="colored">黯然行动</span>中的<span class="colored">盟军02-内部暴乱</span>。</li>
+            </ul>
+            <p>
+                其余图都为原创，欢迎魔改来做自己的任务，注明出处即可~
+            </p>
+            <div class="bar" id="sec_about_3">
+                <h1>相关链接</h1>
+                <span class="hint">此任务包在什么地方发布</span>
+            </div>
+            <p>
+                本任务首发于<a target="_blank" href="http://www.pkuit.com/">红警任务之家</a>，前往<a target="_blank" href="http://www.pkuit.com/forum.php?mod=viewthread&tid=129345&extra=page%3D3">作者的任务主页</a>可以找到作者的其它任务。
+            </p>
+            <p>
+                本任务还同时向<a target="_blank" href="http://www.uc129.com">红警之家</a>进行了投稿。
+            </p>
+            <div class="bar" id="sec_about_4">
+                <h1>联系方式</h1>
+                <span class="hint">我该怎么联系作者</span>
+            </div>
+            <p>
+                联系作者<span class="colored">竹蜻蜓</span>可以使用邮箱：<a href="mailto:sxy997626@163.com">sxy997626@163.com</a>。
+            </p>
+            <p>
+                由于和主播<span class="colored">米斯蒂娅脆骨君</span>的合作关系，作者在米斯蒂娅脆骨君的直播QQ群<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=4BALdjV">好玩的脆骨同好会</a>（245797659）中常驻。喜爱红警视频的朋友也可以关注<a target="_blank" href="https://space.bilibili.com/27170">米斯蒂娅脆骨君的bilibili投稿视频</a>,他的日常红警直播于<a target="_blank" href="http://live.bilibili.com/5098">米斯蒂娅脆骨君的直播间</a>进行。
+            </p>
+            <br>
+            <p>
+                <center style="font-size: 1.5em;">“最后，向《歧途》的最初灵感来源<span class="colored">秒你小动动</span>致以崇高的敬意！”</center>
+            </p>
+        </section>
+    </main>
+    <footer class="footer">
+        《歧途》第三季：丧尸军团 V1.2 玩家手册<br>
+        Powered By Heli, 2018.3第一次定稿<br>
+        使用JQuery v1.7.2
+    </footer>
+</div>
+<div id="top" class="top_button">回到顶部</div>
+<div id="fullscreen" class="fullscreen">
+    <img id="fullscreen_pic" class="fullscreen_pic"/>
+</div>
+</body>
+</html>

@@ -1,0 +1,1331 @@
+<!doctype html>
+<html id="top">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>「林德拉克计划」说明文档</title>
+<!--JQuery-->
+<script src="./jquery1.7.2.js"></script>
+<!--Inner Script-->
+<script>
+"use strict";
+// Fullscreen Images
+$(function() {
+    $('.img_big').click(function() {
+        $('#fullscreen_pic').attr('src',$(this).attr('src'));
+        $('#fullscreen').fadeIn(100);
+        let top = $(document).scrollTop();
+        $(document).bind("scroll", function() {
+            $(document).scrollTop(top); 
+        });
+    });
+    $('#fullscreen').click(function() {
+        $('#fullscreen').fadeOut(100);
+        $(document).unbind("scroll");
+    });
+});
+// Pages
+$(function() {
+    $('.nav_li').click(function() {
+        $('.nav_li').removeClass('nav_li_selected');
+        $(this).addClass('nav_li_selected');
+        $('section').hide();
+        $('#sec_' + $(this).attr('page')).show();
+        $(document).scrollTop(0);
+    });
+});
+// Initialization
+$(function() {
+    $('.fullscreen').attr('style', 'background: rgba(0, 0, 0, 0.5);');
+    $('.fullscreen').hide();
+    $('nav').show();
+    $('.nav_li')[0].click();
+});
+// Offline Handling
+$(function() {
+    if (!navigator.onLine) {
+        $('.top_hint').show();
+        setTimeout(function() {
+            $('.top_hint').fadeOut(2000);
+        }, 5000);
+    }
+    $('.img_big').error(function() {
+        $('.top_hint').show();
+        setTimeout(function() {
+            $('.top_hint').fadeOut(2000);
+        }, 5000);
+        $(this).addClass('img_error');
+    });
+})
+</script>
+<!--Inner Stylesheet-->
+<style>
+/* Layout */
+html {
+    font-family: "Microsoft YaHei UI", "Microsoft YaHei", "SimSun", "Calibri", sans-serif;
+}
+body {
+    margin: 0;
+    background-color: #777;
+}
+.wrapper {
+    max-width: 880px;
+    margin: auto;
+    position: relative;
+}
+
+.top_hint {
+    position: fixed;
+    color: white;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    width: 100%;
+    top: 0;
+    height: 5em;
+    line-height: 3em;
+    text-align: center;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.nav {
+    position: fixed;
+    top: 20vh;
+    left: 0;
+    background: transparent;
+    z-index: 25;
+    display: none;
+}
+.nav_ul {
+    padding: 0;
+    margin: 0;
+    display: block;
+    background: transparent;
+}
+.nav_li {
+    display: block;
+    padding: 0.5em 1em 0.5em 1em;
+    text-align: center;
+    background: black;
+    color: white;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    min-width: 100px;
+    max-width: 100px;
+    -webkit-transition: min-width 0.2s;
+    -moz-transition: min-width 0.2s;
+    -ms-transition: min-width 0.2s;
+    transition: min-width 0.2s;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.nav_li:hover {
+    min-width: 120px;
+}
+.nav_li_selected {
+    background: rgb(0, 179, 141);
+    background: linear-gradient(135deg, transparent 0, rgb(163, 0, 0) 0) top left, 
+                linear-gradient(-135deg, transparent 15px, rgb(163,0,0) 0) top right, 
+                linear-gradient(-45deg, transparent 15px, rgb(163,0,0) 0) bottom right, 
+                linear-gradient(45deg, transparent 0, rgb(163,0,0) 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    min-width: 140px;
+}
+.nav_li_selected:hover {
+    background: rgb(0, 179, 141);
+    background: linear-gradient(135deg, transparent 0, rgb(163,0,0) 0) top left, 
+                linear-gradient(-135deg, transparent 15px, rgb(163,0,0) 0) top right, 
+                linear-gradient(-45deg, transparent 15px, rgb(163,0,0) 0) bottom right, 
+                linear-gradient(45deg, transparent 0, rgb(163,0,0) 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    min-width: 140px;
+}
+.main {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: white;
+    color: #222;
+    min-height: 20em;
+    margin-top: 4em;
+    padding-top: 2em;
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    box-shadow: 0 0 40px #000000;
+}
+section {
+    margin-bottom: 3em;
+    line-height: 1.8em;
+}
+h1 {
+    font-weight: 500;
+    font-size: 1.8em;
+    line-height: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+h2 {
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+p {
+    text-indent: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+hr {
+    border: 0;
+    height: 3px;
+    background: rgb(163,0,0);
+}
+ul {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.img_big {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.img_error {
+    visibility: hidden;
+}
+
+.img_error::after {
+    display: block;
+    visibility: visible;
+    content: '图片加载失败';
+    text-align: center;
+    border: 5px solid rgb(163,0,0);
+    height: 50vh;
+    line-height: 50vh;
+    font-size: 2em;
+    color: #777;
+    background-color: #CCC;
+    z-index: 200;
+}
+a:link {
+    color: rgb(163,0,0);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: rgb(163,0,0);
+}
+
+a:hover {
+    color: rgb(163,0,0);
+    text-decoration: none;
+}
+
+a:active {
+    color: rgb(163,0,0);
+    text-decoration: underline;
+}
+
+.footer {
+    font-family: Consolas, monospace;
+    font-size: 0.8em;
+    color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 2em;
+    text-align: right;
+    line-height: 1.5em;
+}
+.top_button {
+    position: fixed;
+    display: block;
+    z-index: 30;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4em;
+    line-height: 2em;
+    text-align: center;
+    color: transparent;
+    background: transparent;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.top_button:link {
+    color: transparent;
+}
+.top_button:hover {
+    color: white;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+.fullscreen {
+    position: fixed;
+    display: none;
+    background: transparent;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 50;
+    cursor: pointer;
+}
+.fullscreen_pic {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    margin: auto;
+    top: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+}
+.musicBox {
+    position: fixed;
+    display: block;
+    width: 25vw;
+    min-Width: 480px;
+    height: 35vh;
+    bottom: 0;
+    z-index: 50;
+    right: 0;
+}
+/* Styles */
+.hint {
+    margin-top: -0.5em;
+    font-size: 0.8em;
+    color: #888888;
+    text-indent: 0;
+}
+.code {
+    font-family: Consolas, monospace;
+    display: block;
+    background-color: rgb(247, 247, 247);
+    color: black;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 3px;
+    line-height: 1.5em;
+    margin: 0.5em;
+    padding: 1em;
+    white-space: pre-wrap;
+    text-indent: 0;
+    word-wrap: break-word;
+}
+.bar {
+    border-left: 5px solid rgb(163,0,0);
+    padding-left: 1em;
+    text-indent: 0;
+}
+.bar2 {
+    padding-top: 0.5em;
+    border-right: 5px solid rgb(163,0,0);
+    padding-left: 1em;
+    text-indent: 0;
+}
+.box {
+    font-family: Consolas, monospace;
+    display: inline-block;
+    background-color: rgb(247, 247, 247);
+    color: rgb(163,0,0);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 3px;
+    line-height: 1.5em;
+    padding: 0 0.2em 0 0.2em;
+    margin: 0 0.2em 0 0.2em;
+    white-space: pre;
+    text-indent: 0;
+}
+.colored {
+    color: rgb(163,0,0);
+}
+.card {
+    padding: 1em;
+    margin: 1em;
+    display: block;
+    text-indent: 0;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.big {
+    font-size: 1.5em;
+}
+.noblank {
+
+}
+</style>
+</head>
+<body>
+<div class="top_hint" style="display: none">
+    <div class="wrapper">
+        部分图片由于网络问题无法显示。请检查网络连接，然后刷新页面获得更佳阅读体验。
+    </div>
+</div>
+<div class="wrapper">
+    <nav class="nav">
+        <ul class="nav_ul">
+            <li class="nav_li" page="basic">欢迎</li>
+            <li class="nav_li" page="usage">使用说明</li>
+            <li class="nav_li" page="music">音乐包</li>
+            <li class="nav_li" page="brief">任务简报</li>
+            <li class="nav_li" page="tips">通关提示</li>
+            <li class="nav_li" page="about">关于</li>
+        </ul>
+    </nav>
+    <main class="main">
+        <section id="sec_test">
+            <div class="bar">
+                <h1>需要允许JavaScript脚本</h1>
+                <span class="hint">只有JavaScript没被允许的时候才会被显示出来的章节</span>
+            </div>
+            <p>
+                如果你看到了这个章节（内部编码为<span class="box">sec_test</span>）的话，说明你没有允许JavaScript脚本。请允许本页面内的JavaScript脚本以获得最佳浏览体验。
+            </p>
+        </section>
+        <section id="sec_basic">
+            <div class="bar">
+                <h1>「林德拉克计划」</h1>
+                <span class="hint">心灵奴役之下的欧洲战场</span>
+            </div>
+            <br>
+<div class="code">任务名称：「林德拉克计划」
+适用版本：尤里复仇1.000/1.001版本
+任务类别：常规盟军/苏军战略任务
+任务关数：7关盟军任务+7关苏军任务+2关隐藏场景=共16关
+任务难度：有显著的难度分级；普通玩家请选择正常（即中等）难度
+任务制作：竹蜻蜓
+任务测试：迷失、茉莉花、妖妖酱、断绳伞兵、WC_Host、SmartBear、CokoUp天影羽、米斯蒂娅脆骨君
+附加事项：推荐安装配套的音乐包；推荐使用较大的屏幕分辨率进行游戏</div>
+            <br>
+            <img class="img_big" src="http://pkuit.com/data/attachment/album/201807/21/163544f00djdtcangduzdv.png" />
+            <br>
+            <p>大家好，我是竹蜻蜓，制作「歧途」的那个竹蜻蜓。</p>
+            
+            <p>转眼间加入红警任务圈6年了。2012年「时空游戏」发布，2014年开始「歧途」的大坑，如今2018年了还在填，这期间给大家带来的任务寥寥无几……也真是惭愧，毕竟我不把自己不是特别满意的东西发布出去，手里攒了一堆未发布作品。</p>
+            
+            <p>「林德拉克计划」的想法开始于「歧途」第三季：《丧尸军团》发布后。当时因为身体原因几乎无法继续做图，就突然想把自己早期从没发布过的任务打个包发布水一水。自己把这些任务翻出来一看，哇，真是惨不忍睹。于是我就把重制这些任务提上了日程。</p>
+            
+            <p>可是我重制着重制着就来上了劲，索性把「歧途」第四季的制作先搁置了，全心重制，而且是脱胎换骨那种重制。</p>
+            
+            <p>另一个重要原因也是很令人心痛的：红警这个圈子在不可避免的走向衰败。圈内dalao们可以做出各种优秀的MOD在撑着场面，而非著名任务制作者能做的，自然就是做出更好的任务啦。</p>
+            
+            <p><span class="colored big">我感觉，我应该担起这份责任。</span></p>
+
+            <br>
+
+            <p>“制作一款任务要比通关一款任务多花上百倍的努力。”</p>
+
+            <p>虽然是<span class="colored big">常规战略任务</span>，猎奇程度肯定不如「歧途」，但还是希望大家享受这款任务！</p>
+            
+            <p>这是一款<span class="colored big">原汁原味</span>的任务，不会有任何可建造单位的平衡性属性的修改。但我会尽力在每关都带给大家新的东西！</p>
+
+            <p>这是一款注重<span class="colored big">大场面</span>塑造的任务，<span class="colored big">大战场</span>、<span class="colored big">大军团</span>、<span class="colored big">大城市</span>、<span class="colored big">大海战</span>，保证过瘾。</p>
+
+            <p>总之……希望各位新老玩家们喜欢，嘿嘿</p>
+
+        </section>
+        <section id="sec_usage">
+            <p>
+                这部分是有关任务使用方法的章节。如果你是新人，请<span class="colored">严格的按照此章节列出的步骤来使用</span>；即使你是老鸟，也稍稍看一眼，没有什么坏处。在任务安装出现问题的时候，到这里来寻找解决方法也是明智的选择。
+            </p>
+            <p>
+                本章节中，你能找到下面的内容：
+            </p>
+            <ul>
+                <li><a href="#sec_usage_1">该怎样安装这个任务包？</a></li>
+                <li><a href="#sec_usage_2">这个任务包中包含哪些文件？</a></li>
+                <li><a href="#sec_usage_3">任务包中附带的“清除任务包”怎么用？</a></li>
+            </ul>
+            <br>
+            <div id="sec_usage_1" class="bar">
+                <h1>安装任务包</h1>
+                <span class="hint">该怎样安装这个任务包</span>
+            </div>
+            <p>
+                装载本任务包之前，你需要做好如下准备：
+            </p>
+            <ul>
+                <li><span class="colored">一个能够正常运行的红色警戒2尤里的复仇1.000/1.001版本游戏</span>。最好是干净的原版，没有安装过其它任务包的。如果你能够确保你把以前的任务包清除干净（可以使用附带的清除任务包工具），那也是可以的。</li>
+                <li><span class="colored">「林德拉克计划」的全部任务包文件</span>。你可以对比在本节末尾的附录“文件列表”来检查你的任务包是否缺少文件。如果发现任务包文件损坏，请前往<a target="_blank" href="http://www.pkuit.com">红警任务之家</a>、<a target="_blank" href="http://www.uc129.com">红警之家</a>或者我的<a target="_blank" href="http://helilab.ys168.com">永硕E盘</a>重新下载。</li>
+            </ul>
+            <p>
+                做好了这些准备，你就可以进行下一步的安装步骤了。
+            </p>
+            <p>
+                安装过程很简单：把任务包中的<span class="colored big">全部文件</span>复制粘贴到红色警戒2尤里的复仇的安装文件夹（也就是<span class="box">gamemd.exe</span>所在的文件夹）中。
+            </p>
+            <p>
+                注意：如果你面对的是一个干净的原版尤里的复仇的话，此时不应该产生任何文件重名冲突。文件重名冲突可能是因为安装文件夹中含有其它任务包的残留文件，为了「林德拉克计划」能够正常运行，请选择<span class="colored big">覆盖</span>。无法保证其它任务包的残留文件不干扰正常游戏。<span class="colored">你也可以使用附带的“清除任务包工具”进行预先清理</span>。
+            </p>
+            <p>
+                在新任务的界面可以看到，盟军和苏军任务的入口名字发生了变化，这样基本可以确定安装完成，可以进行游戏了。<span class="colored">建议先进行盟军任务，再进行苏军任务</span>，因为二者在剧情上有前后衔接关系。
+            </p>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201811/10/224722ag2hm7aadpm27wzq.png"/>
+            <p>
+                <span class="colored">本任务包有难度分级的区别，而且有明显的难度梯度</span>，打法甚至都有不同的选择。简单难度为休闲玩家准备，中等难度是正常的难度，困难难度为挑战者准备。<span class="colored">普通玩家请选择中等难度</span>。
+            </p>
+            <p>
+                由于战场规模较大，<span class="colored">推荐使用<span class="box">1024x768</span>甚至更高的分辨率进行游戏</span>，推荐使用16:9宽屏分辨率进行游戏。
+            </p>
+            <p>
+                分辨率调节方法见：<a target="_blank" href="http://www.pkuit.com/home.php?mod=space&uid=179447&do=blog&id=135797">【玩家教程】如何调节红色警戒游戏运行分辨率？</a>
+            </p>
+            <br>
+            <div id="sec_usage_2" class="bar">
+                <h1>文件列表</h1>
+                <span class="hint">这个任务包一共包含哪些文件</span>
+            </div>
+            <p>
+                下面列出这个任务包中包含的全部文件，以便出现问题时自查。一旦发现文件缺失，建议重新下载本任务包。
+            </p>
+            <div class="code">all01umd.map
+all02umd.map
+all03umd.map
+all04dmd.map
+all05umd.map
+all06umd.map
+all07smd.map
+artmd.ini
+expand98.mix
+expandmd98.mix
+evamd.ini
+game.fnt
+glslmd.shp
+glsmd.pal
+ra2md.csf
+rulesmd.ini
+sov01umd.map
+sov02smd.map
+sov03umd.map
+sov04dmd.map
+sov05umd.map
+sov06lmd.map
+sov07tmd.map
+清除任务包.bat</div>
+            <br>
+            <div id="sec_usage_3" class="bar">
+                <h1>清除任务包工具</h1>
+                <span class="hint">任务包中附带的“清除任务包”怎么用</span>
+            </div>
+            <p>
+                在“任务”文件夹下有一个<span class="box">清除任务包.bat</span>。下面简述它的用途。
+            </p>
+            <p>
+                首先，它必须在游戏的安装文件夹下运行才能生效。在游戏安装文件夹之外的地方运行（实际上是找不到<span class="box">gamemd.exe</span>），它会什么也不会做，以免误删有用的文件。
+            </p>
+            <p>
+                在游戏的安装文件夹下运行以后并按任意键继续，它能够干净的删除大部分基于原版平台的任务包或者未深度定制的MOD，得到一个干净的原版。它能够完全删除本任务包。
+            </p>
+            <p>
+                想要退出清理工具，单纯的关闭它的窗口即可。
+            </p>
+            <p>
+                在未安装本任务包之前，还可以先把它复制粘贴过去清理一下，这是另外一种用途。
+            </p>
+            <p>
+                它无法干净的清理基于NPatch、NPExt、ARES等拓展平台的MOD，也不要用它来清理这些MOD。
+            </p>
+        </section>
+        <section id="sec_music">
+            <p>
+                这部分是配套音乐包的说明。
+            </p>
+            <p>
+                本章节中，你能找到下面的内容：
+            </p>
+            <ul>
+                <li><a href="#sec_music_1">能在哪里找到这个音乐包？</a></li>
+                <li><a href="#sec_music_2">该如何使用这个音乐包？</a></li>
+            </ul>
+            <br>
+            <div id="sec_music_1" class="bar">
+                <h1>音乐包获取</h1>
+                <span class="hint">能在哪里找到这个音乐包？</span>
+            </div>
+            <p>
+                「林德拉克计划」包含了一个配套的音乐包，这样每一个任务都有自己的背景音乐。但是由于这个音乐包占空间很大（346.37MB），又不是想玩任务所必须的，就和任务包分开下载了。
+            </p>
+            <p>
+                下载地址：<a target="_blank" href="https://pan.baidu.com/s/1rm-voP2WtdeohWyC8Aoj_A">百度网盘下载</a>（346.37MB）
+            </p>
+            <p>
+                你也可以在网易云音乐中获取这个音乐包的在线歌单（<a target="_blank" href="http://music.163.com/playlist/2287786596/">歌单：「林德拉克计划」</a>），或者直接在下面播放。
+            </p>
+            <iframe id="musicBox" frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=450 src="http://music.163.com/outchain/player?type=0&id=2287786596&auto=0&height=430"></iframe>
+            <br>
+            <br>
+            <div id="sec_music_2" class="bar">
+                <h1>音乐包安装</h1>
+                <span class="hint">该如何使用这个音乐包？</span>
+            </div>
+            <p>和任务包的安装一样，只需要把音乐包解压缩得到的所有文件（包含<span class="box">thememd.ini</span>和一堆<span class="box">.wav</span>格式的音频文件）放到游戏文件夹下即可使用。没有打包成mix是出于通用性考虑。</p>
+            <p>你也可以在其它任务包中使用这个音乐包。</p>
+        </section>
+        <section id="sec_brief">
+            <p>
+                这部分是任务简报，在游戏中同样能看到，是关于各个任务背景故事、任务目标的简介。
+            </p>
+            <br>
+            <div class="big" style="margin-bottom: 0.5em">
+                盟军篇：自由世界的最后火种
+            </div>
+            <ul>
+                <li><a href="#sec_brief_01">欧盟 01 - 海狮与翠鸟</a> - 地点：英国，朴茨茅斯</li>
+                <li><a href="#sec_brief_02">欧盟 02 - 完美假日</a> - 地点：法国，嘎纳</li>
+                <li><a href="#sec_brief_03">欧盟 03 - 政治家行动</a> - 地点：埃及，塞得港</li>
+                <li><a href="#sec_brief_04">欧盟 04 - 天际线</a> - 地点：埃及，吉萨</li>
+                <li><a href="#sec_brief_05">欧盟 05 - 和平主义</a> - 地点：比利时，布鲁塞尔</li>
+                <li><a href="#sec_brief_06">欧盟 06 - 冻洋</a> - 地点：北海</li>
+                <li><a href="#sec_brief_07">欧盟 Ex - 维京火祭</a> - 地点：北大西洋，法罗群岛</li>
+                <li><a href="#sec_brief_08">欧盟 07 - 铜墙铁幕（上）</a> - 地点：乌克兰，敖德萨</li>
+            </ul>
+            <br>
+            <div class="big" style="margin-bottom: 0.5em">
+                苏军篇：林德拉克铁幕计划
+            </div>
+            <ul>
+                <li><a href="#sec_brief_09">苏联 08 - 铜墙铁幕（下）</a> - 地点：乌克兰，敖德萨</li>
+                <li><a href="#sec_brief_10">苏联 09 - 拜占庭商人</a> - 地点：土耳其，伊斯坦布尔</li>
+                <li><a href="#sec_brief_11">苏联 Ex - 喧闹的春天</a> - 地点：捷克斯洛伐克，布拉格</li>
+                <li><a href="#sec_brief_12">苏联 10 - 冰点</a> - 地点：苏联，莫斯科</li>
+                <li><a href="#sec_brief_13">苏联 11 - 太阳鸟</a> - 地点：中国，哈尔滨</li>
+                <li><a href="#sec_brief_14">苏联 12 - 樱之陨落</a> - 地点：日本，东京</li>
+                <li><a href="#sec_brief_15">苏联 13 - 天问</a> - 地点：中国，西昌卫星发射中心</li>
+                <li><a href="#sec_brief_16">苏联 14 - 时间之握</a> - 地点：月球，风暴洋</li>
+            </ul>
+            <br>
+            <h1>盟军篇：自由世界的最后火种</h1>
+            <hr>
+            <p>
+                指挥官，红色苏维埃已经打败了我们最强大、最可靠的盟友——美国。虽然美国有强大的军事实力，但仍然败在了一种似乎能够彻底让人失去心智的秘密武器之下。我们没有关于那种武器的任何情报，但我们没有功夫管这些了。整个欧洲已经被钢铁洪流碾过，苏联的舰队已经从法国启程，准备执行代号为“海狮”的跨越英吉利海峡攻击大不列颠的计划。为此，女王召集紧急御前会议，准备实施代号为“翠鸟”的防守反攻计划……
+            </p>
+            <br>
+            <div id="sec_brief_01" class="bar">
+                <h1>欧盟 01 - 海狮与翠鸟</h1>
+                <span class="hint">地点：英国，朴茨茅斯</span>
+            </div>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201806/24/163805nudyybbk8qvd8pdv.png"/>
+            <div class="bar2">
+                <p>苏维埃的铁蹄已经践踏了整个欧洲大陆，不列颠也许是整个自由世界最后的希望。警报终于在整个大不列颠上空鸣响。我们知道他们会来，但没想到来得这么快。</p>
+                <p>我们的最后堡垒——伦敦要塞需要更多的时间来准备，你负责把进攻的苏军拖在朴茨茅斯港。</p>
+                <p>任务目标一：至少保留一座建造厂，直到伦敦要塞准备完毕。</p>
+                <p>任务目标二：继续战斗，直到流尽最后一滴血。</p>
+            </div>
+            <br>
+            <div id="sec_brief_02" class="bar">
+                <h1>欧盟 02 - 完美假日</h1>
+                <span class="hint">地点：法国，嘎纳</span>
+            </div>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201806/16/194730tuag6smsz04zs0ly.png"/>
+            <div class="bar2">
+                <p>我们在朴茨茅斯的防御行动使苏联不得不暂时放弃进攻英国的计划。为此我们得到了喘息的机会，并可以趁机反攻欧洲大陆。</p>
+                <p>据可靠消息，苏联的罗曼诺夫总理正在法国嘎纳度假。如果我们能够劫持他，说不定能起到事半功倍的效果。</p>
+                <p>任务目标一：潜入并劫持罗曼诺夫。</p>
+                <p>任务目标二：摧毁控制罗曼诺夫的心灵信标。</p>
+                <p>任务目标三：让罗曼诺夫总理登上直升机并撤离。</p>
+                <p>任务目标四：消灭嘎纳的全部敌对势力。</p>
+                <p>提示：虽然苏联人对我们抱有敌意，但是他们不会攻击自己的总理。</p>
+            </div>
+            <br>
+            <div id="sec_brief_03" class="bar">
+                <h1>欧盟 03 - 政治家行动</h1>
+                <span class="hint">地点：埃及，塞得港</span>
+            </div>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201806/18/094916zw8iww3fiorzeifm.png"/>
+            <div class="bar2">
+                <p>幕后黑手已经十分明确，是有心灵控制超能力的尤里在背后操纵着一切。这个野心家先是蒙骗了苏联人，又踏平了美国，现在又试图占据整个欧洲。</p>
+                <p>根据罗曼诺夫提供的情报，尤里正在把一批研制成功的基因武器从苏伊士运河转运到地中海，进而送进欧洲。我们绝不能允许这种灾难性的事情发生。可是我们在北非没有任何成型的军事力量。一切只能靠盟军最好的特工——谭雅了。</p>
+                <p>任务目标一：摧毁威胁谭雅的基因突变器。</p>
+                <p>任务目标二：击沉塞得港内剩余的货轮。</p>
+                <p>任务目标三：不能让任何一艘货轮离开塞得港。</p>
+                <p>任务目标四：谭雅不能阵亡。</p>
+            </div>
+            <br>
+            <div id="sec_brief_04" class="bar">
+                <h1>欧盟 04 - 天际线</h1>
+                <span class="hint">地点：埃及，吉萨</span>
+            </div>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201806/28/215401zcmz4u6f4mpsmmx7.png"/>
+            <div class="bar2">
+                <p>我们在塞得港的成功行动可以使我们在北非进行更加冒险的计划，比如说，拯救一种可能扭转战争局势的秘密武器。</p>
+                <p>盟军北非军团已经被心灵信标控制。位于吉萨的起源科技实验室在检测到了心灵波影响后开启了自毁程序。我们的突击小队如果能及时赶到阻止它的自毁，就能重新启用起源科技实验室中的秘密武器。</p>
+                <p>任务目标一：护送基地车靠近实验室，解除其自毁指令。</p>
+                <p>任务目标二：不能让任何一个尤里部队靠近实验室。</p>
+                <p>任务目标三：消灭所有尤里在吉萨的部队。</p>
+            </div>
+            <br>
+            <div id="sec_brief_05" class="bar">
+                <h1>欧盟 05 - 和平主义</h1>
+                <span class="hint">地点：比利时，布鲁塞尔</span>
+            </div>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201807/13/181602dxxweu3bu33nu3vb.png"/>
+            <div class="bar2">
+                <p>尤里的部队已经撤出北非，我们可以以北非为基地反攻欧洲。</p>
+                <p>我们已经重新启用布鲁塞尔的军事基地，然而尤里在这里部署了核武器，这对我们造成了极大威胁。</p>
+                <p>任务目标一：在核攻击中保护原子球。</p>
+                <p>任务目标二：解除布鲁塞尔的核威胁。</p>
+                <p>提示：你可能需要使用力场护盾来在核弹之下保护原子球。</p>
+            </div>
+            <br>
+            <div id="sec_brief_06" class="bar">
+                <h1>欧盟 06 - 冻洋</h1>
+                <span class="hint">地点：北海</span>
+            </div>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201808/13/184559fs6hnshj8cehc8ah.png"/>
+            <div class="bar2">
+                <p>尤里已经控制整个欧洲大陆。欧洲联盟军被迫撤到海上。</p>
+                <p>通过对布鲁塞尔心灵信标所发出信号的分析，我们已经确定了整个欧洲的心灵控制网络的中枢在敖德萨。如果有超时空传送器的话，我们就可以立即对那里发动突袭了。</p>
+                <p>所以，我们需要一座超时空传送器。</p>
+                <p>任务目标一：寻找合适的登陆地点。</p>
+                <p>任务目标二：建立并保护超时空传送器。</p>
+                <p>任务目标三：解除周围海军基地的造成的威胁。</p>
+            </div>
+            <br>
+            <div id="sec_brief_07" class="bar">
+                    <h1>欧盟 Ex - 维京火祭</h1>
+                    <span class="hint">地点：北大西洋，法罗群岛</span>
+                </div>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201807/31/235946arcikvfvi67j4ccr.png"/>
+            <div class="bar2">
+                <p>通过对布鲁塞尔心灵信标的分析，我们发现北大西洋还有一座心灵信标与之连接。</p>
+                <p>我们需要渗透那座心灵信标，以确定覆盖全欧洲的心灵控制网络的中枢位置。</p>
+                <p>任务目标一：原地待命并保护直升机。</p>
+                <p>任务目标二：用间谍渗透心灵信标。</p>
+                <p>任务目标三：摧毁心灵信标。</p>
+            </div>
+            <br>
+            <div id="sec_brief_08" class="bar">
+                <h1>欧盟 07 - 铜墙铁幕（上）</h1>
+                <span class="hint">地点：乌克兰，敖德萨</span>
+            </div>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201808/06/174926so2no9ocwayn47ma.png"/>
+            <div class="bar2">
+                <p>我们终于来到了敖德萨。在这里，被心灵控制的苏联铁幕项目负责人林德拉克正在研制最新的科技。</p>
+                <p>我们虽然不知道那种科技是什么，但是我们必须把它弄到手，因为它不论落到谁手中，都可能是最后的王牌。</p>
+                <p>任务目标一：占领并保护四座铁幕装置。</p>
+                <p>任务目标二：在心灵控制增幅器启动前，摧毁它。</p>
+                <p>任务目标三：苏联建造厂不能被摧毁。</p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <h1>苏军篇：林德拉克铁幕计划</h1>
+            <hr>
+            <p>
+                谢天谢地，同志，我们被靠谱的欧洲联盟朋友们从尤里的心灵奴役中解救了出来。非常感谢他们不计前嫌的帮助，可是我们现在需要共同面对更强大的敌人。虽然我们手头也有一些军队，但敖德萨仍然是尤里势力海洋之中的一片孤岛，随时都有倾覆的危险。还好我们这里有负责铁幕项目的首席科学家林德拉克，他也许能提供我们需要的强力武器。
+            </p>
+            <br>
+            <div id="sec_brief_09" class="bar">
+                <h1>苏联 08 - 铜墙铁幕（下）</h1>
+                <span class="hint">地点：乌克兰，敖德萨</span>
+            </div>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201808/14/084553do3eosdocr53bzst.png"/>
+            <div class="bar2">
+                <p>在欧洲盟友的帮助下，在敖德萨进行铁幕科技研究的苏军部队脱离了尤里的心灵控制。但是，尤里的镇压部队正在赶来。虽然罗曼诺夫已经前往黑海重新召集舰队，敖德萨仍然处于危险的包围之中。</p>
+                <p>林德拉克决定，先测试手头的铁幕武器。实战就是最好的测试，对吧？</p>
+                <p>任务目标一：保护四座铁幕装置。不能损失任何一座。</p>
+                <p>任务目标二：消灭被心灵控制的欧洲联盟友军。</p>
+            </div>
+            <br>
+            <div id="sec_brief_10" class="bar">
+                <h1>苏联 09 - 拜占庭商人</h1>
+                <span class="hint">地点：土耳其，伊斯坦布尔</span>
+            </div>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201808/28/202942jzjtlotd9m37umjx.png"/>
+            <div>
+                <p>由于心灵控制器的影响，敖德萨不宜久留。林德拉克已经带领全部还没有被控制的苏军部队撤出敖德萨。</p>
+                <p>至于下一步去哪里，情况是显然的：苏军的黑海舰队将全军攻击土耳其的伊斯坦布尔要塞。在这里，也许能找到下一步该怎么做的答案。</p>
+                <p>任务目标一：等待黑海舰队在博斯普鲁斯海峡集结。</p>
+                <p>任务目标二：清除超时空传送器周围的卫队。</p>
+                <p>任务目标三：林德拉克不能阵亡。</p>
+            </div>
+            <br>
+            <div id="sec_brief_11" class="bar">
+                <h1>苏联 Ex - 喧闹的春天</h1>
+                <span class="hint">地点：捷克斯洛伐克，布拉格</span>
+            </div>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201810/04/212537ip4c5pdtvdpbv6pn.png"/>
+            <div class="bar2">
+                <p>通过对敖德萨心灵信标的分析，我们检测到有一座心灵控制器在布拉格。一些欧盟部队正被这座心灵控制器控制着。</p>
+                <p>如果我们能解救他们，我们就能利用他们手中的超时空传送技术直接突袭莫斯科。</p>
+                <p>我们在布拉格没有多少部队，但我们可以让刚刚改进完的铁幕武器小试一下牛刀。</p>
+                <p>任务目标一：护送基洛夫空艇炸毁心灵控制器。</p>
+            </div>
+            <br>
+            <div id="sec_brief_12" class="bar">
+                <h1>苏联 10 - 冰点</h1>
+                <span class="hint">地点：苏联，莫斯科</span>
+            </div>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201809/15/131740nvf8znf5jf04h8df.png"/>
+            <div class="bar2">
+                <p>是时候再进行一次红色革命了，指挥官。</p>
+                <p>人民的叛徒，那个欺骗了所有人的叛徒——尤里，正躲藏在克里姆林宫中，让我们看看他还能在这个位子上坐多久吧！</p>
+                <p>任务目标一：占领克里姆林宫。</p>
+                <p>提示：在本战役中，你可以建造并使用4座铁幕装置。</p>
+            </div>
+            <br>
+            <div id="sec_brief_13" class="bar">
+                <h1>苏联 11 - 太阳鸟</h1>
+                <span class="hint">地点：中国，哈尔滨</span>
+            </div>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201809/20/001959deswpgcdwtl1d0me.png"/>
+            <div class="bar2">
+                <p>尤里从克里姆林宫逃走了，我们不知道他去了哪里，但是一定不会去欧洲，那里到处都是我们的朋友。所以我们推测尤里可能逃往远东，或者亚洲。</p>
+                <p>正好，我们接到来自中国的特工——天枢的紧急情况报告：他发现哈尔滨有一座心灵信标。我们有必要去看一看那里是什么情况。</p>
+                <p>任务目标一：破坏太阳岛上的心灵信标。</p>
+                <p>任务目标二：使用天枢骇入心灵控制器。</p>
+                <p>任务目标三：天枢不能阵亡。</p>
+                <p>提示：天枢可以使用静滞射线使敌人车辆寸步难行，或者近距离骇入敌方建筑使其为我们所用。</p>
+            </div>
+            <br>
+            <div id="sec_brief_14" class="bar">
+                <h1>苏联 12 - 樱之陨落</h1>
+                <span class="hint">地点：日本，东京</span>
+            </div>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201810/12/102131trurujvc8thv6h8v.png"/>
+            <div class="bar2">
+                <p>天枢骇入了哈尔滨的心灵控制器，追查到心灵控制器的后台控制程序在东京。我们推测尤里就躲藏在这里。</p>
+                <p>东京港戒备森严，以我们目前的军力去贸然进攻并不是很稳妥。但是，如果我们能把东京塔变成一座巨大的磁暴线圈的话……</p>
+                <p>任务目标一：使用磁暴步兵磁化东京塔。</p>
+                <p>任务目标二：在指定地点建立基地。</p>
+                <p>任务目标三：消灭东京湾的所有敌人。</p>
+                <p>提示：东京塔必须时刻有磁暴步兵为其充能，才会发挥作用。</p>
+            </div>
+            <br>
+            <div id="sec_brief_15" class="bar">
+                <h1>苏联 13 - 天问</h1>
+                <span class="hint">地点：中国，西昌卫星发射中心</span>
+            </div>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201811/08/181134fsrojotkdobdowoa.png"/>
+            <div class="bar2">
+                <p>我们被骗了！尤里已经通过东京的超时空传送器逃离，此时尤里已经从中国西昌乘坐登月火箭逃往月球。在西昌卫星发射中心，还有更多的登月火箭等待发射，准备向月球输送更多的武器与科技。还好天枢的情报网络发现了尤里诡计的端倪。</p>
+                <p>林德拉克和天枢这次会并肩作战，一同阻止尤里那疯狂的计划。</p>
+                <p>任务目标一：不能让任何一座登月火箭发射。</p>
+                <p>任务目标二：至少夺取一座火箭发射台。</p>
+                <p>任务目标三：林德拉克和天枢必须存活。</p>
+                <p>提示：摧毁、使用工程师占领、或者使用天枢骇入火箭发射台，都会阻止火箭的发射。</p>
+                <p>提示：需要至少使用工程师占领或者使用天枢骇入一座火箭发射台，并保护它直到任务完成。</p>
+            </div>
+            <br>
+            <div id="sec_brief_16" class="bar">
+                <h1>苏联 14 - 时间之握</h1>
+                <span class="hint">地点：月球，风暴洋</span>
+            </div>
+            <img class="img_big" src="http://www.pkuit.com/data/attachment/album/201811/10/211338d8i5gx8wx9gde88p.png"/>
+            <div class="bar2">
+                <p>终于来到最后的战场了。尤里在月球的防御非常坚固，完全是末日避难所等级的，我们不能掉以轻心。另外我们还在这里发现了在起源科技实验室中曾经提到的时间科技，不知尤里是从哪里搞到的它……但是这一切都快结束了！夺回这项科技，让叛徒得到应有的归宿吧！</p>
+                <p>任务目标一：寻找合适的位置以传送基地车。</p>
+                <p>任务目标二：占领时间机器。</p>
+                <p>任务目标三：保护时间机器，直到时间轴纠正。</p>
+            </div>
+        </section>
+        <section id="sec_tips">
+            <p>
+                这部分是通关提示，感到困难时再来看哦。
+            </p>
+            <p>
+                挑战难度的通关是较为困难的。<span class="colored">以下所有通关提示适用于挑战难度</span>，简单和中等难度下可能有更优的打法。
+            </p>
+            <br>
+            <h1>欧盟 01 - 海狮与翠鸟</h1>
+            <p>难度：★★★★☆</p>
+            <hr>
+            <p>
+                这是一个死守任务，而且资源很难支撑稳定防守。你需要想尽各种方法来拖延时间。
+            </p>
+            <p>
+                开局卖船厂，把所有海军拉到三角帆塔（地标建筑物）下面的区域，可以暂时抵挡登陆。不要想着打海战了，挑战难度海战是完全打不动的。迅速出兵占领楼房，抵挡伞兵与登陆部队的进攻。可以暂时派坦克在敌人的登陆点把守，击沉运输船以获得经验，但是，无畏级战舰来的时候一定要赶紧逃命（会有2次警告），否则会被炸得亲妈都不认识。科技机器商店和医院都在无畏级战舰的威胁范围内，都会很快陷落，不要试图在那里固守，否则损失巨大。
+            </p>
+            <p>
+                开局一定要先出矿石精炼器，并放在间谍卫星附近，能有效改善资金的尴尬。第二辆基地车来了以后也要拉到间谍卫星附近，这里会是固守的最后堡垒。
+            </p>
+            <p>
+                防御的主力是幻影坦克、海豹部队、进兵楼房、IFV和战斗要塞。注意敌人步兵也会抢占楼房，周围的楼房要么占住要么炸掉，被敌人强占非常麻烦。幻影坦克时刻注意必须有防空护卫，武装直升机非常容易发现幻影坦克。没星IFV对武装直升机的火力不足，适当使用装载重装大兵的战斗要塞进行火力压制。精英IFV可以注重练一下，只是不要仗着自己是精英就冲到武装直升机堆里面，毕竟IFV是脆皮。
+            </p>
+            <p>
+                前线守不住了应该果断撤到后方基地，以空间换时间继续重新组织防线进行防御，不要等战损太大的时候再后撤！后撤的同时用变卖建筑得到的美国大兵进入楼房，拖慢敌人的进攻。
+            </p>
+            <p>
+                提示就这些，其余的都是基本功了。虽然有通关提示，本关仍然很难。
+            </p>
+            <br>
+            <h1>欧盟 02 - 完美假日</h1>
+            <p>难度：★★☆☆☆</p>
+            <hr>
+            <p>
+                这个任务前半部分为潜入阶段，中间为生存阶段，最后为混战阶段。
+            </p>
+            <p>
+                潜入阶段，幻影坦克的练级很重要，最主要的是精英幻影坦克能回血。打的时候一定要沉得住气，而且要时刻记得你是在潜入，不是在拆迁！尽量少破坏苏联的防御，它们会在下一阶段帮你阻挡尤里的进攻。
+            </p>
+            <p>
+                有几个地方必须使用间谍：第1个间谍送进开始位置附近的磁能反应炉，切断苏联的电力，幻影坦克打掉磁暴步兵以后冲过去。注意可以使用间谍把敌人的狗引过来，用幻影坦克安全的打掉。第2个间谍是在摧毁心灵信标处，如果想做到0损失必须用掉一个间谍去切断电力。其余5个间谍尽量全都进入苏军矿石精炼厂窃取资金，这对后面的混战阶段很重要。
+            </p>
+            <p>
+                生存阶段从摧毁心灵信标以后开始。迅速操纵罗曼诺夫躲到整个军事基地最左边有两个磁暴线圈的角落，那里是较为安全的，尤里的飞碟、坦克和病毒狙击手都无法威胁到他。幻影坦克原路下山。这时尤里一支坦克部队正在攻击苏联防御，用幻影坦克从侧面攻击尤里的坦克，尽可能帮助苏联部队（虽然苏联部队与我们为敌，但是苏联部队不会攻击罗曼诺夫）。幻影坦克掩护罗曼诺夫沿着地图上边界摸到左上方的苏军基地，在那里罗曼诺夫是绝对安全的。
+            </p>
+            <p>
+                然后可以调动直升机小队了。推进时一定要大兵先占住楼房，直升机先探路看看有没有防空或者狙击手，然后再做出相应的对策。注意直升机在楼群中飞行的时候尽量让它沿着路飞，爬楼会影响它遇到危险的逃脱速度。在苏联基地外与罗曼诺夫会合，赶紧把他带到地图左下角。
+            </p>
+            <p>
+                撤离罗曼诺夫以后进入混战阶段。苏联和尤里光顾着互相打，很少分兵管玩家。挑战难度注意苏军的武装直升机海和尤里的磁电坦克威胁较大，但是进攻烈度总体还是很低的，可以安定的发展并推全图。进攻时记得避开苏军和尤里的交战区域，从侧面进攻，否则你的进攻部队会受到两面夹击，极易被吃掉。进攻的主力是光棱坦克、幻影坦克（主要反磁电坦克）和装载重装大兵的战斗要塞（主要防武装直升机）。推进过程中会遇到非常激烈的城市巷战，光棱坦克数量一定要足。
+            </p>
+            <p>
+                本关难度适中，沉得住气即可。
+            </p>
+            <br>
+            <h1>欧盟 03 - 政治家行动</h1>
+            <p>难度：★★★☆☆</p>
+            <hr>
+            <p>
+                这是一个单兵多线限时任务，挑战难度的操作较难，容错率极低。
+            </p>
+            <p>
+                正常难度、休闲难度与挑战难度中，敌人的进攻基本没有差异，差异在于各艘船出港和基因突变器的时间：挑战难度的时间限制卡的非常紧。切忌战术发呆！
+            </p>
+            <p>
+                第1艘船：快速选择谭雅直接上港口，不理会巡逻的步兵，顺手把路边那个防空炮和维修厂（连同里面的坦克）一起炸了。继续沿小路往左下走，清理杂兵，炸掉闸门旁边的哨戒炮，炸掉广告牌旁边的防空炮，向右下方下港口，刚好和第一艘船会合，炸沉之。然后赶紧上岸，会有两个飞碟过来封住路找谭雅的麻烦。
+            </p>
+            <p>
+                第2艘船：先清理港口区域，炸掉几个碍眼的防空炮（让飞机能够起飞）和部队回收厂（有钱箱子拿）。注意控制谭雅的血量。然后左上去找机场。找到机场以后2架飞机立刻起飞去炸船，刚好炸到第2艘船。
+            </p>
+            <p>
+                前2艘船被炸沉以后，后面的所有船都可以用飞机在港口的位置炸沉，只要时刻留意，且保持有2架飞机有子弹就可以。接下来的主要操作是操作谭雅，飞机提供火力支援。对飞机编队进行多线轰炸是本关操作的核心。
+            </p>
+            <p>
+                谭雅先从机场门口向左下走进攻兵营。记得飞机探路。炸磁暴线圈需要5架飞机，如果飞机同时发弹不给电脑维修的机会的话，则只需要4架。谭雅的血线不稳的话，哨戒炮也可以用飞机炸，一次需要3架飞机。谭雅炸掉兵营以后，北岸就没有源源不断的杂兵了。
+            </p>
+            <p>
+                谭雅沿着河岸走，和飞机配合推进。谭雅炸桥，把桥上的4个巡逻的盖特机炮坦克一起送下去。注意左下角部队回收厂附近有一个病毒狙击手，可以避开，也可以用飞机炸掉。从这里可以下河，避开尤里雕像（它的射程相当于一门巨炮），从桥穿过游到对岸。飞机炸掉港口一座进兵的房子，然后谭雅沿着河岸向基因突变器摸就可以了。谭雅在等飞机炸房子时，也可以去炸一下中间分水坝上的防空炮。这阶段时间充裕，极限操作能余出8分多钟的时间。
+            </p>
+            <p>
+                炸掉基因突变器周围的防空炮，然后飞机开围墙谭雅炸，限时阶段就结束了。后面会得到一波空降部队，占领埃及军队的战车工厂，然后就是步（盟军步兵）坦（苏军坦克）协同时间了。注意威胁谭雅的病毒狙击手（挑战难度限定）即可。V3作为唯一远程攻城单位还是很有用的。
+            </p>
+            <p>
+                本关难在多线和限时，尤其是前2艘船，时间卡的很死。
+            </p>
+            <br>
+            <h1>欧盟 04 - 天际线</h1>
+            <p>难度：★★★☆☆</p>
+            <hr>
+            <p>
+                这个任务分为护送、防守、反攻三个阶段。这是整个欧盟篇规模最大、场面最大的陆地战斗，难度可想而知。
+            </p>
+            <p>
+                开局单位：4辆灰熊坦克，2辆坦克杀手，2辆IFV（其中一个进了工程师，另一个进了狙击手），2辆幻影坦克，1辆战斗要塞（进了2个美国大兵，2个重装大兵和1个超时空军团兵），3辆光棱坦克。
+            </p>
+            <p>
+                灰熊坦克和坦克杀手都是炮灰，需要混战的时候优先派他们上。其余，光棱坦克至少留1辆，战斗要塞必须留下，IFV必须全留。
+            </p>
+            <p>
+                IFV的操作很关键，一个是换车：狙击手IFV练成精英以后立刻把狙击手IFV和维修IFV互换（但是要注意是在周围没有狙击手的情况下）；另一个是，面对路口的精神控制车的时候，如果想0伤亡，需要把战斗要塞中的超时空军团兵换到IFV中，精神控制车一出现就把它定住。其实这个精神控制车你可以直接全军rush（战斗要塞除外，因为战斗要塞是会乱打人）的方式打掉（切勿使用移动攻击指令，而是锁定攻击），操作的好能只有伤没有亡，用维修IFV就能很快恢复。正常及以下难度没有精神控制车，就少了个难点……后面遇到的磁电坦克用战斗要塞打掉，毕竟战斗要塞是唯一一个被磁电坦克吸起来的时候还能攻击的。
+            </p>
+            <p>
+                当然也可以不走精神控制车那一路，而是贴地图边缘往上去破幻影阵。这路的操作就很常规。
+            </p>
+            <p>
+                杀出重围一路冲上斜坡就好。基地车跑过去的那段时间别忘了派IFV四处探探地图，找找矿源。
+            </p>
+            <p>
+                完成任务目标一以后，我建议的基地车部署位置是右侧大金字塔前面，相当于基地前拉。毕竟是敌人靠近实验室就失败，基地车后拉缓冲余地比较小，尤其是面对飞碟。迅速占油井，注意左边的两个油井旁边有一个幻影坦克。速起T2爆重装大兵、狙击手，架巨炮阵。注意狙击手主要用途是：防止反坦克单位被敌人步兵分散火力，兼为IFV练级。T3倒是不着急，幻影坦克在初期战损非常大。不过各种单位的战损都是非常大的……坦克杀手虽然不需要出，但是初始给的几个一定要用好。虽然坦杀经常被对战玩家吐槽鸡肋，但是敲起尤里的脆皮坦克还是很舒服的。
+            </p>
+            <p>
+                基地车后拉也是可以的，借助两座大金字塔把尤里部队堵在一个狭小的口里面，但是就要小心飞碟冲过封锁线了。
+            </p>
+            <p>
+                虽然初期离敌人的矿区太远（间谍都不知道去哪儿偷），但是本关资源非常丰富，矿物和油井的储量是足以支撑城市化爆兵的。后期找到敌人的奴隶矿场就能偷钱，一个间谍能偷到1w左右，虽然没有到花不完的程度，但偷起来还是很值的。
+            </p>
+            <p>
+                拿到第一波静滞力场以后立刻释放，这里会看到静滞力场瞬间击落敌方所有飞碟的场景。静滞力场的范围是全图，会导致敌方建筑停电、生产停止、坦克不能移动（还能攻击，不过已经成为光棱坦克或者巨炮的靶子了）、飞行器全部坠毁，步兵不受影响。静滞力场的用途有三个：第一，击落敌方大量空军；第二，防守时获得1分多钟的喘息时间；第三，辅助光棱坦克进攻。
+            </p>
+            <p>
+                可以看出，进攻时推荐使用的方式为纯光棱坦克海。因为静滞力场能让所有对光棱坦克有威胁的东西失去作用。但是，即便如此，战损仍然非常大，做好心理准备。
+            </p>
+            <p>
+                本关初期护送难在盟军综合兵种配合，中期难在防守，后期是攻坚。
+            </p>
+            <br>
+            <h1>欧盟 05 - 和平主义</h1>
+            <p>难度：★★★★☆</p>
+            <hr>
+            <p>
+                这是一个大型消耗战，也是欧盟篇最大规模的海陆混合消耗战。
+            </p>
+            <p>
+                本关的核心机制是：续护盾。由于核弹砸原子球是二连发，没有什么东西抗一下是必然会崩溃的。初期只能使用力场护盾。挑战难度尤里会出第三个核弹，这时候记得出第二个作战实验室进行备份，保证即使被核弹砸中作战实验室，力场护盾也不能断。当然你也可以使用超时空军团兵暂时锁定原子球来应急，但是每次这样都要消耗1500金钱，还是力场护盾划算。
+            </p>
+            <p>
+                挑战难度的第三颗核弹砸哪儿完全看心情，可能是建造厂，可能是作战实验室，可能是战车工厂，也可能是海军舰队、海豚群等，也可能是砸盟友。需要充分利用空间，合理布局基地。
+            </p>
+            <p>
+                盟友是很给力的，盟友会尽职尽责的用幻影坦克、战斗要塞、美国大兵、重装大兵堵住所有敌人进攻的入口，成型以后，只要补一些狙击手（针对尤里的病毒狙击手，非常重要）和幻影坦克（应急用），防线就很牢固。
+            </p>
+            <p>
+                前期你的大部分操作都在海上。海军没有顶住的话，无畏级战舰长驱直入轰炸，基洛夫空艇和飞碟没人制裁，陆地防线就会很快崩溃。海军至关重要。
+            </p>
+            <p>
+                神盾巡洋舰需要至少保证3个，不管是打基洛夫空艇、武装直升机、飞碟还是拦截无畏级战舰的导弹都非常重要。
+            </p>
+            <p>
+                敌人的无畏级战舰是非常恶心的，会利用最大射程进行轰炸，而且我方舰队一旦后撤到港内，无畏级战舰就会轰炸陆地，对地面防御造成极大威胁。建议使用神盾巡洋舰（冲到阵型最前面拦截导弹）和航母（远程对轰）对付无畏级战舰，不要轻易过桥（无准备的过桥会引来一大堆潜艇的仇恨）。想要减少战损就需要不停的操作，要么舰队不停的移动躲导弹，要么把神盾巡洋舰拉到阵型最前面去拦截导弹。
+            </p>
+            <p>
+                海军打赢了就可以推进了，可以选择从地图最左边的港口发起登陆去进攻苏军，抢苏军的科技；或者出一群幻影坦克去夺取中路下方的比利时银行，解决钱的问题。抢苏军科技以后海军会好打得多。通过打海战能够把两个靠海的尤里敌人全都打残，不多说。
+            </p>
+            <p>
+                右下角尤里最后的基地可以使用光棱坦克来攻坚（记得从上面的入口进入），也可以使用入侵者战机群直接炸掉核弹发射井。
+            </p>
+            <p>
+                本关难在陆海两线操作和与盟友配合防守。
+            </p>
+            <br>
+            <h1>欧盟 06 - 冻洋</h1>
+            <p>难度：★★★★★</p>
+            <hr>
+            <p>
+                这是一个大海战任务，我方位与小岛上，没有直接的陆路与敌人相连。这可能是盟军篇最难的一个任务了。
+            </p>
+            <p>
+                唯有舰队才能压制舰队！缩在小岛上必死。在敌人的航母面前，没有什么稳固防御。需要生产出自己的舰队（遥控坦克是海军哟），在外海与敌人舰队交战。
+            </p>
+            <p>
+                坦克杀手轰驱逐舰意外的好用。巨炮也可以起，但是注意巨炮不能防航母。狙击手也有大用，防海豹部队偷船很好用。
+            </p>
+            <p></p>
+                开局的4航母一定要保住，这是初期主要的支援火力。船厂开局，海军爆起来。进攻的时候就是海军对A，单位配合一定不能缺：驱逐反潜、航母轰船、海豚飞行兵遥控坦克快速针对一下敌方航母、神盾防空。建议起高科以后立刻先去打正右方的海军基地，虽然不能把他们炸平，也至少把他们的舰队压制在港口内，这样可以有效减轻自己小岛的压力。攻下敌人的任何一个岛，都可以获得充足的矿石资源。
+            </p>
+            <p>
+                本关对海军操作的要求比较高。
+            </p>
+            <br>
+            <h1>欧盟 07 - 铜墙铁幕（上）</h1>
+            <p>难度：★★★☆☆</p>
+            <hr>
+            <p>
+                这是一个计时进攻任务。非挑战难度的时间十分充裕，但是光棱坦克的溅射极易损毁需要保护的目标，因此需要多存档。
+            </p>
+            <p>
+                敌人的进攻几乎只是象征性的，防守很容易。但是武装直升机和精神控制车对进攻坦克部队的威胁很大，记得使用战斗要塞来针对。
+            </p>
+            <p>
+                一旦一波进攻部队被全吃掉，攻击节奏就会完全崩掉，建议读档或者重开。
+            </p>
+            <p>
+                第一波静滞力场就可以怼掉或者抢到正下方那个尤里基地，如果没发展起来，就空开静滞力场，等第二波进攻。从攻下那个尤里基地以后，进攻不要停。左上的尤里基地可以不去管，专注于完成任务目标去占领铁幕即可。占领以后并不需要重兵保护，稍微注意一下即可，因为敌人更专注防守而不是进攻。
+            </p>
+            <p>
+                本关难点在进攻节奏上。虽然时间充裕，但如果被死死拖住、进攻部队被一波一波的吃掉，还是可能超时失败的。
+            </p>
+            <br>
+            <h1>苏联 08 - 铜墙铁幕（下）</h1>
+            <p>难度：★★★★★</p>
+            <hr>
+            <p>
+                这是一个多线防守任务。此任务是整个林德拉克计划名字的来源，最核心、最高潮的关卡。其难度也十分劝退……
+            </p>
+            <p>
+                本关难点在于四处漏防，四个铁幕都要守。左路铁幕需要依托平民建筑，利用防空炮和防空车拦截飞碟；右路铁幕同样利用平民建筑，同时还要用犀牛坦克时刻盯着有没有光棱坦克来，手工打掉；下路铁幕只需要守第一波登陆，修复并进驻碉堡即可。最难受的是上路铁幕，无险可守，还要承受最猛烈的坦克攻击——没有铁幕打个毛线啊！
+            </p>
+            <p>
+                上路每一波大规模进攻都需要放铁幕来顶。准备一批犀牛坦克，在敌人坦克冲过来的时候使用铁幕。尽量留一个角给铁幕装置，使它也获得无敌效果，防止混战中被毁。看到哪里快撑不住了赶紧放铁幕！铁幕有的是！！
+            </p>
+            <p>
+                新英雄林德拉克待在上路为最好，用于大量清兵。但是尽量放在防线后头，暴露在前方容易乱军中死于不明AOE，或者被病毒狙击手狙死。
+            </p>
+            <p>
+                开局速出工业工厂，然后在上左右三个铁幕处放兵营，下方铁幕位置可以补一个矿厂；防御方面一刻不停的插塔就行了；开局的那些兵去下铁幕的碉堡，然后步兵迅速在左右铁幕修复抢占楼房；坦克出一些矿车，出一些防空车，然后迅速在上路补犀牛坦克即可。生产线不要停，才能勉强顶住。
+            </p>
+            <p>
+                盟友会在第三个铁幕上线以后不久被心控，记得在此之前稍微清理一下友军……可以用辐射工兵（先进反队友）来快速清理……
+            </p>
+            <p>
+                黑海舰队到达以后，会得到大量的坦克登陆部队和大量的钱，利用4个铁幕直接rush即可过关。
+            </p>
+            <p>
+                本关难在多线操作，以及铁幕的使用。别看有四个铁幕，本关仍然是整个系列最难的关卡，没有之一。
+            </p>
+            <br>
+            <h1>苏联 09 - 拜占庭商人</h1>
+            <p>难度：★★☆☆☆</p>
+            <hr>
+            <p>
+                这是一个登陆作战的生存任务。部队数量有限，损失一点少一点，越拖越不利。
+            </p>
+            <p>
+                先用乌贼尽可能多的缠住敌人的舰队。乌贼不要闲着，看到船就缠。避免海蝎和直升机的损失。
+            </p>
+            <p>
+                无畏到达以后会有黑鹰战机起飞，尽快炸掉机场，同时海蝎防守小心飞行兵偷船。乌贼继续游走阻止敌人的驱逐舰和航母靠近。潜艇不要去贸然打，容易全军覆没；无畏清完机场以后清理一下岸防巨炮。
+            </p>
+            <p>
+                登陆部队和基洛夫到达以后发动海军总攻。登陆以后随便打就行了。别忘了武装直升机可以部署变成远程火炮。
+            </p>
+            <p>
+                本关核心为减少战损。但是大多数情况下是以多数欺负少数，所以难度并不高。
+            </p>
+            <br>
+            <h1>苏联 10 - 冰点</h1>
+            <p>难度：★★★☆☆</p>
+            <hr>
+            <p>
+                这是一个陆地消耗战。
+            </p>
+            <p>
+                初期应该提防20分钟后敌人的背后突袭。准备至少1个铁幕装置，出若干辆天启把桥堵住，敌人冲过来的时候放铁幕即可。注意释放铁幕可以直接清除恐怖机器人。
+            </p>
+            <p>
+                正面可以以部署的武装直升机群为核心布置防线（敌人的心控不会主动砸武装直升机），把建筑通过油井延伸到悬崖下面，和武装直升机的远程火炮形成交叉火力。附近的楼房能占尽量占，但是小心楼房被炸的一瞬间被基因突变，有闲钱一定要出兵骗AI使用基因突变。机动部队采用武装直升机+磁能坦克+犀牛坦克混合的方式。毕竟有科技机器商店的回血加成，坦克的生存能力强一些。坦克多了以后就可以完全无视掉心控了。
+            </p>
+            <p>
+                进攻时推荐采用铁幕犀牛磁能（三星的）+基洛夫武直混搭方式。4个铁幕都出来以后铁幕罩坦克的生存时间大大加长了，可以于乱军之中清理防空、清理心控单位。
+            </p>
+            <p>
+                本关难度适中。敌人进攻很少有大量坦克同时出现的状况，但是源源不断。
+            </p>
+            <br>
+            <h1>苏联 11 - 太阳鸟</h1>
+            <p>难度：★★★☆☆</p>
+            <hr>
+            <p>
+                这是一个前期潜入、中期防守、后期进攻的海陆混合任务。
+            </p>
+            <p>
+                开始有一段新英雄天枢的教学。天枢可以锁定并干扰敌方坦克（射程15），令其难以移动或者开火；可以近距离跨过围墙控制敌方建筑（射程2）；无法对付步兵。
+            </p>
+            <p>
+                注意仓库右上方铁丝网处的哨戒炮要用天枢控制，吸引犀牛的火力，炸开铁丝网。左边的电厂一定要控制而且不要变卖，后面所有的需要用电的防御建筑都需要它来供电。
+            </p>
+            <p>
+                桥头的磁暴线圈用进兵楼房吸引火力，天枢冲过去贴脸控制，接下来用于阻击中国的巡逻部队。桥对岸的防空车和辐射工兵用恐怖机器人解决——注意这里是唯一一处必须使用恐怖机器人的地方。
+            </p>
+            <p>
+                摧毁心灵信标需要从左上角突破。天枢控制左上角的磁暴线圈（需要用楼房吸引火力），用它来击破围墙。然后动员兵攻击即可。
+            </p>
+            <p>
+                接下来快速撤离到右上角，与援军会合。在桥边的那一艘无畏级战舰其实不用理会，直接冲过去即可。接下来快速建立防御。注意左下的一波（2个）基洛夫空艇，需要提前准备5个以上的防空车进行阻击。敌人的无畏级战舰可以使用防空车拦截，可以使用辐射工兵限制行动，或者用武装直升机摧毁。不建议此时发展海军，会遇到难缠的潜艇。
+            </p>
+            <p>
+                与中国结盟以后进入反攻阶段。快速出海军，出大量防空针对飞碟。中国军队会在正面完全顶住压力，防守方面几乎不用做什么，可以出大量无畏级战舰去搞事，直接炸平右上方的尤里基地。也可以出一些武装直升机协助中国盟友的陆地进攻，可以直接攻下右下方的尤里基地。如果抢科技抢来了飞碟，那就真的为所欲为为所欲为了；如果没有拿到尤里科技，纯武装直升机和基洛夫空艇也能攻下，只要和盟友地面部队密切配合。
+            </p>
+            <p>
+                左上的小岛有3个油井。
+            </p>
+            <p>
+                本关难度适中。潜入这一段有点套路，中期稍微有一些压迫感，后期完全没有压力——盟友给力！
+            </p>
+            <br>
+            <h1>苏联 12 - 樱之陨落</h1>
+            <p>难度：★★★★☆</p>
+            <hr>
+            <p>
+                这是一个海战任务。（明明有陆地的？）
+            </p>
+            <p>
+                面对盟军全科技的rush，苏军几乎无力对线，仅能缩在东京塔后面进行防御。海军才是打开局面的方式。
+            </p>
+            <p>
+                防御应当以防御塔为主，因为敌人会出大量装载重装大兵的战斗要塞，坦克防御完全占不到便宜。东京塔是防御的核心，可以在周围布置若干碉堡、磁暴线圈、防空炮、天启坦克、部署武装直升机、大量动员兵（用于分散航母和狙击手的火力）等，避免东京塔被近身。注意东京塔左下侧位于敌人航母射程之内，除非海军已经能在那里坚守，否则不要在那里准备永久性防御。
+            </p>
+            <p>
+                超时空有两个固定投放点，一个是在东京塔旁，一个是在神社旁。每次投放若干辆满载的战斗要塞和光棱坦克，威胁巨大，必须针对防守。注意超时空传来的战斗要塞中可能有狙击手，为东京塔充能的磁暴步兵会有瞬间减员，需要及时补充。在神社门口可以部署一个辐射工兵，用来快速摧毁超时空传送过来的光棱坦克。
+            </p>
+            <p>
+                闪电风暴主要仇恨是海军舰队群，注意躲避，尤其潜艇、无畏这类慢速单位。
+            </p>
+            <p>
+                用一队基洛夫空艇或者一队坦克（可能需要铁幕）沿地图左边界绕到超时空传送器后方将其偷掉，可以大大减小防守压力。
+            </p>
+            <p>
+                局势稳定以后准备大量潜艇、无畏级战舰、海蝎进行海战。用无畏级战舰一路轰过去就行了，两个盟军基地几乎都处于射程之内，不在射程之内的也可以核弹收拾。右下角的尤里基地可以选择登陆或者基洛夫炸平。
+            </p>
+            <p>
+                本关防守偏难，但是资金丰富。进攻阶段就是无脑rush。
+            </p>
+            <br>
+            <h1>苏联 13 - 天问</h1>
+            <p>难度：★★★★☆</p>
+            <hr>
+            <p>
+                这是一个多线限时任务。容错率较低，多存档。
+            </p>
+            <p>
+                林德拉克和天枢都不是能够单挑的英雄，因此应该非常注意和单位集群一起行动。林德拉克可以在用天枢控死对方的前提下干掉反步兵的敌人，但是单挑有点危险。以及，这两个英雄都很难打狗……要么用林德拉克远远的解决，要么搭配其它单位。
+            </p>
+            <p>
+                本关流程很明确，就是按照上线顺序攻击各座火箭发射平台。宗旨：发射台被偷了不用管，基洛夫骑脸不用管，坦克丢了不用管，矿厂炸了不用管，该卖的卖，能绕的绕，不用打的就不打……我们是谁？我们是苏军！我们的口号是什么？有重工就能打！！！
+            </p>
+            <p>
+                第二座发射台：从右上斜坡走，注意上面巡逻的辐射工兵。杀进小镇，在小镇里面慢慢推进。注意避开直升机，或者控好防空车的血量，去集火打直升机。然后绕开进兵楼房、战斗碉堡，直奔重工，赶紧出矿车（有矿场就出1辆）、防空车（保持3辆左右）、犀牛坦克（大量的犀牛坦克！！！）。
+            </p>
+            <p>
+                第三座发射台：出5辆左右的犀牛，林德拉克留基地防伞兵，2辆以上的犀牛留基地防自爆卡车。3犀牛+1~2辆防空车+天枢绕开驻军楼房和碉堡，从第三座发射台的右下角突入。注意用天枢控住天启/磁能，然后犀牛无伤打掉。磁暴步兵用防空车打。
+            </p>
+            <p>
+                第四座发射台：天枢回基地的过程中出2个V3火箭，稍微清一下碍眼的房子。天枢、林德拉克、2辆以上的防空车、2辆V3火箭、一堆犀牛往上进攻。天枢抽空把机场也占领。多利用天枢的控制减少战损。敌人重工旁的磁暴线圈也可以用天枢强占。
+            </p>
+            <p>
+                第五座发射台：还是那2个V3开路，坦克进攻。尤里发动进攻的时候就别推进让他们打着，打完了我们再上。
+            </p>
+            <p>
+                第六座发射台：出1架雌鹿直升机，1个工程师，直升机贴地图下边缘直接飞过去把巡逻的3个尤里打了，直接把发射台占领，然后就用不管了。
+            </p>
+            <p>
+                第七座发射台：全家老小一波流，推到面前占领就行了。之前的发射台会各种被偷被炸，只要占领最后一座就能确保任务完成。如果前面步骤完成的顺利，这里的时间相当充裕。
+            </p>
+            <p>
+                本关节奏快，容错率低。总体难度较高。
+            </p>
+            <br>
+            <h1>苏联 14 - 时间之握</h1>
+            <p>难度：★★★☆☆</p>
+            <hr>
+            <p>终于到最后的决战了。</p>
+            <p>本关敌人数量上非常多，但是比较傻，所以还是能打的。</p>
+            <p>防守阶段应当以登月火箭兵+防御塔为主，先出苏联T2出登月火箭兵，然后走盟军T3出静滞力场和超时空。利用静滞力场争取发展时间，超时空铁幕光棱突袭偷掉对面基地和超武，就好打了。</p>
+            <p>超武偷掉以后一定要慢慢打。宇航员要塞也很棒哦。</p>
+            <p>在占领时间机器之前一定一定一定要做好充足的准备！需要：所有超武出完、就绪，同时在时间机器周围堆上大量的防御：宇航员要塞、光棱坦克、登月兵、飞碟脑车等（如果偷到尤里科技的话）。接下来的进攻会在时间机器周围大量超时空刷兵。刷兵频率越来越快、越来越丧心病狂，但是别忘了你有4个铁幕和力场护盾！还剩5分钟的时候基本就可以把所有超武砸下来了，用铁幕护住时间机器，核弹控制场面也是可以的。</p>
+            <p>本关虽然敌人进攻很吓人，但是资源非常充足，总体难度适中。</p>
+        </section>
+        <section id="sec_about">
+            <p>
+                这部分是有关此任务包作者、测试人员等的章节。如果你玩的很爽的话，可以在心里面感谢这些人；如果你玩完想打死作者的话，也可以从这里找到作者的联系方式。
+            </p>
+            <p>
+                本章节中，你能找到下面的内容：
+            </p>
+            <ul>
+                <li><a href="#sec_about_01">有哪些人员参与了任务包的制作？</a></li>
+                <li><a href="#sec_about_02">如果想在自己的作品中使用这个任务包里面的一些地图或者素材，需要注意什么？</a></li>
+                <li><a href="#sec_about_03">此任务包在什么地方发布？</a></li>
+                <li><a href="#sec_about_04">该怎么联系作者？</a></li>
+            </ul>
+            <br>
+            <div id="sec_about_01" class="bar">
+                <h1>制作及测试人员</h1>
+                <span class="hint">有哪些人员参与了任务包的制作</span>
+            </div>
+            <p>
+                「林德拉克计划」由任务制作者<span class="colored">竹蜻蜓</span>独立策划及制作。
+            </p>
+            <p>
+                感谢参与任务测试的朋友：（按照id由短到长排序）（满足强迫症）
+            </p>
+            <ul>
+                <li><span class="colored">迷失</span></li>
+                <li><span class="colored">茉莉花</span></li>
+                <li><span class="colored">妖妖酱</span></li>
+                <li><span class="colored">断绳伞兵</span></li>
+                <li><span class="colored">WC_Host</span></li>
+                <li><span class="colored">SmartBear</span></li>
+                <li><span class="colored">CokoUp天影羽</span></li>
+                <li><span class="colored">米斯蒂娅脆骨君</span></li>
+            </ul>
+            <p>
+                除此之外，还特别感谢：<span class="colored">可爱大蚂蚁</span>。
+            </p>
+            <br>
+            <div id="sec_about_02" class="bar">
+                <h1>二次创作规约</h1>
+                <span class="hint">如果想在自己的作品中使用这个任务包里面的一些地图或者素材，需要注意什么</span>
+            </div>
+            <p>
+                「林德拉克计划」中所有地图均为我独立绘制。我对于地图的非商业二次创作十分宽容，不需要告知我取得授权，但是<span class="colored">必须注明来源</span>，格式如：“<span class="colored">XXX地图来自竹蜻蜓的任务「林德拉克计划」中的第XX关——XXXX（关卡名称）</span>”。
+            </p>
+            <p>
+                「林德拉克计划」中少部分素材来源于ppm公素，<span class="colored">大部分素材为自己制作</span>。全部素材<span class="colored">不需要取得授权，不需要注明来源，可以任意非商业使用</span>。
+            </p>
+            <p>
+                视频主播可以任意制作此任务包的视频或者用于直播，不受任何限制。如果是修改版，必须在醒目位置注明是修改过了的。
+            </p>
+            <p>
+                禁止对「林德拉克计划」中有关地图或素材的商业性（盈利性、商业宣传用途等）的二次创作。
+            </p>
+            <p>
+                作为原创作者，本人保留按照上述规约追责的权利。
+            </p>
+            <br>
+            <div id="sec_about_03" class="bar">
+                <h1>相关网站</h1>
+                <span class="hint">此任务包在什么地方发布</span>
+            </div>
+            <p>
+                本任务首发于 <a target="_blank" href="http://www.pkuit.com/">红警任务之家</a> 。
+            </p>
+            <p>
+                前往红警任务之家 <a target="_blank" href="http://www.pkuit.com/?179447">竹蜻蜓的红警主页</a> ，可以找到我的其它任务，也可以到任务的原发布地点去盖楼。
+            </p>
+            <p>
+                本任务还同时向 <a target="_blank" href="http://www.uc129.com">红警之家</a> 和 <a target="_blank" href="https://tieba.baidu.com/f?kw=%E7%BA%A2%E8%89%B2%E8%AD%A6%E6%88%92&fr=index">红色警戒吧 - 百度贴吧</a> 进行了投稿。
+            </p>
+            <br>
+            <div id="sec_about_04" class="bar">
+                <h1>联系方式</h1>
+                <span class="hint">该怎么联系作者</span>
+            </div>
+            <p>
+                联系我可以使用邮箱：<a href="mailto:heli_lab@foxmail.com">heli_lab@foxmail.com</a>。
+            </p>
+            <p>
+                邮件我会查看的，如果在邮件中提出了问题我会及时回复。
+            </p>
+            <br>
+            <p>
+                我的其它联系方式：
+            </p>
+            <ul>
+                <li>红警任务之家&nbsp;<a target="_blank" href="http://www.pkuit.com/?179447">@竹蜻蜓</a></li>
+                <li>bilibili&nbsp;<a target="_blank" href="https://space.bilibili.com/22435619/">@宣告春天到来的妖精</a>（UID：22435619）</li>
+                <li>百度贴吧&nbsp;<a target="_blank" href="http://tieba.baidu.com/home/main?un=%E7%BF%9412321">@一只莉莉</a>（用户名：翔12321）</li>
+                <li>永硕E盘&nbsp;<a target="_blank" href="http://helilab.ys168.com">helilab.ys168.com</a></li>
+                <li>知乎&nbsp;<a target="_blank" href="https://www.zhihu.com/people/WC_Host/">@一只莉莉</a></li>
+            </ul>
+            <br>
+            <p>
+                另外我的合作主播是<span class="colored">@米斯蒂娅脆骨君</span>，这里打一波广告ww
+            </p>
+            <p>
+                欢迎加入米斯蒂娅脆骨君的红警QQ群 - <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=5x9Kek6">挨打的脆骨同好会</a>（732575059），我也会在其中常驻。
+            </p>
+            <p>
+                他的直播场所：
+            </p>
+            <ul>
+                <li>斗鱼：&nbsp;<a target="_blank" href="https://www.douyu.com/23334">https://www.douyu.com/23334</a></li>
+                <li>bilibili：&nbsp;<a target="_blank" href="https://live.bilibili.com/5098">https://live.bilibili.com/5098</a></li>
+            </ul>
+            <p>
+                他的投稿视频：
+            </p>
+            <ul>
+                <li>bilibili：&nbsp;<a target="_blank" href="https://space.bilibili.com/27170">https://space.bilibili.com/27170</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        「林德拉克计划」说明文档<br>
+        Powered By Heli（竹蜻蜓）, 2018.11第一次定稿<br>
+        使用JQuery v1.7.2
+    </footer>
+</div>
+<a href="#top" class="top_button"><div style="position: absolute; width: 100%; bottom: 0.5em;">回到顶部</div></a>
+<div id="fullscreen" class="fullscreen">
+    <img id="fullscreen_pic" class="fullscreen_pic"/>
+</div>
+</body>
+</html>
