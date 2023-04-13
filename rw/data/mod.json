@@ -2,24 +2,24 @@
     "cid": "mod",
     "name": "天雪酱的mod集",
     "author": "轻稚天雪",
-    "desc": "只收集咱玩过且喜欢的mod，也有还未发布的mod。\n其他mod见其他数据集。",
+    "desc": "受限于咱的精力、阅历、人脉，此合集并非大合集，而是只收集资料较多且咱比较熟悉的mod，也有还未发布的mod，若信息有误请反馈。\n展示mod功能过段时间就上线",
     "type": "mod",
     "content": [
         {
-            "part": "奇迹",
+            "part": "精品",
             "img": 3,
-            "title": "心灵终结1",
+            "title": "1",
             "platform": [
                 "Ares",
                 "Phobos"
             ],
             "theme": "RA2风格",
             "num": 1,
-            "author": "Mentalmeisters",
+            "author": "Ms",
             "status": "正常更新",
             "year_s": 2000,
             "year_e": 2021,
-            "version": "3.3.6",
+            "version": "3",
             "time": "2023-1-1",
             "links": [
                 [
@@ -52,7 +52,7 @@
         {
             "part": "垃圾",
             "img": 2,
-            "title": "心灵终结2",
+            "title": "2",
             "platform": [
                 "Ares"
             ],
@@ -82,9 +82,9 @@
             ]
         },
         {
-            "part": "奇迹",
+            "part": "精品",
             "img": 1,
-            "title": "心灵终结3",
+            "title": "3",
             "platform": [
                 "Ares"
             ],
