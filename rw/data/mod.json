@@ -122,7 +122,7 @@
             ]
         },
         {
-            "part": "新兴",
+            "part": "成熟",
             "img": 8,
             "title": "世界轴承",
             "platform": [
@@ -376,7 +376,7 @@
             ],
             "description": "耗时一年半，用3d技术复刻了一套【红色警戒2】的苏联建筑并导入游戏，效果显著，很好的继承了原版暴力玩法的MOD\n【效果总结】视觉体验优化：提升了所有建筑物建造动画的流畅度，不再是原版那样卡顿的gif了，许多建筑拥有了炫酷流畅又完善的动画！蒸汽朋克的巨型手动K帧机械臂，液压千斤顶核弹发射井，发动机“活塞运动”的工业工厂，冷凝塔冒水汽的核电站烟囱等等\n模型优化：核弹发射井模型变得更霸气，苏联建筑的洋葱头惨遭舍弃，500块兵马俑变身光荣政委雕像，以及大量被重制的原版载具，原版炫酷特效（核弹爆炸）等等\n创新设计：额外设计了许多自己喜欢的建筑物和单位，如东德要塞墙、铁幕装置增幅器、T4科技苏联太空军总部、高清还原的西木废稿航母飞艇等等\n创新玩法：处于测试中的建筑物死亡反馈动画，暴力的毛式操作武装建造场，不带降落伞就着陆的老旧军备，犀牛坦克在T3阶段获得晋升通道的玩法等等",
             "tags": [
-                "科幻风格",
+                "科幻",
                 "特效"
             ]
         },
@@ -471,9 +471,7 @@
                     "VS_INI mod for C&C: Yuri's Revenge - Mod DB"
                 ]
             ],
-            "videos": [
-                []
-            ],
+            "videos": [],
             "description": "厌倦了原来尤里的复仇被动AI和单位统计？这个INI[RULES/ART/AI]MOD提供了全面的游戏重新设计和主要的AI增强",
             "tags": [
                 "原版素材复用",
@@ -556,7 +554,8 @@
             "img": 3,
             "title": "创世之刻",
             "platform": [
-                "Ares","Phobos"
+                "Ares",
+                "Phobos"
             ],
             "theme": "RA2",
             "author": "BSG无垠辰星工作室",
@@ -565,9 +564,7 @@
             "year_e": 2023,
             "version": "未知",
             "time": "2023-4-30",
-            "links": [
-                
-            ],
+            "links": [],
             "videos": [
                 [
                     "https://www.bilibili.com/video/BV1gW4y1M7EZ/",
@@ -578,6 +575,99 @@
             "tags": [
                 "单位",
                 "剧情"
+            ]
+        },
+        {
+            "part": "特殊",
+            "img": 2,
+            "title": "The Longest Day",
+            "platform": [
+                "未知"
+            ],
+            "theme": "独立世界观",
+            "author": "霍特-蒂门（山羊）",
+            "status": "未发布",
+            "year_s": "未知",
+            "year_e": 2023,
+            "version": "未知",
+            "time": "2023-6-9",
+            "links": [
+                [
+                    "https://space.bilibili.com/186603364",
+                    "霍特-蒂门的个人空间 - 哔哩哔哩"
+                ]
+            ],
+            "videos": [
+                [
+                    "https://www.bilibili.com/video/BV1TD4y177Cc/",
+                    "【红警2mod】《最长的一日》mod年末更新总结 - 哔哩哔哩"
+                ]
+            ],
+            "description": "",
+            "tags": [
+                "单位",
+                "场景",
+                "美工",
+                "写实"
+            ]
+        },
+        {
+            "part": "新兴",
+            "img": 1,
+            "title": "梦幻模拟战",
+            "platform": [
+                "Hares",
+                "DTA"
+            ],
+            "theme": "未来",
+            "author": "Catlovers",
+            "status": "未知",
+            "year_s": "未知",
+            "year_e": 2020,
+            "version": "未知",
+            "time": "2023-6-9",
+            "links": [
+                [
+                    "https://space.bilibili.com/4449900",
+                    "Catlovers_的个人空间 - 哔哩哔哩"
+                ]
+            ],
+            "videos": [],
+            "description": "",
+            "tags": [
+                "科幻","技术创新","怀旧"
+            ]
+        },
+        {
+            "part": "新兴",
+            "img": 3,
+            "title": "New Departure",
+            "platform": [
+                "Ares",
+                "DTA"
+            ],
+            "theme": "RA2",
+            "author": "ONEX",
+            "status": "正常更新",
+            "year_s": 2014,
+            "year_e": 2020,
+            "version": "1.09",
+            "time": "2023-6-9",
+            "links": [
+                [
+                    "https://space.bilibili.com/204126697",
+                    "ONEX先生的个人空间 - 哔哩哔哩"
+                ]
+            ],
+            "videos": [
+                [
+                    "https://www.bilibili.com/video/BV1Y24y1v7mP/",
+                    "New Departure 2023年宣传片 - 哔哩哔哩"
+                ]
+            ],
+            "description": "以高质量的战役为亮点的MOD，添加了海量美观的建筑素材，目前已有3个阵营大约30关战役。",
+            "tags": [
+                "战役","场景"
             ]
         }
     ]
