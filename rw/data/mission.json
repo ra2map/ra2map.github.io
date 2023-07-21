@@ -67,33 +67,6 @@
         },
         {
             "img": true,
-            "title": "歧途第三季：「丧尸军团」V1.2",
-            "num": 15,
-            "author": "竹蜻蜓（Heli）",
-            "game": "尤里的复仇",
-            "side": "多种/其他",
-            "year": 2018,
-            "links": [
-                [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=201608",
-                    "《歧途》第三季：「丧尸军团」 - 红警任务之家"
-                ],
-                [
-                    "http://helilab.ysepan.com/",
-                    "Heli的红警资源站"
-                ]
-            ],
-            "description": "浣熊市的僵尸已经无法控制！所有飞机一旦起飞就会被不明力量击落。美国军方不得不完全封锁整个浣熊市，尽管一些探员和许多平民仍困在那里。僵尸已经不可避免的冲入生化实验平台......",
-            "more": true,
-            "tags": [
-                "丧尸",
-                "新单位",
-                "精品"
-            ],
-            "time": "2023-1-1"
-        },
-        {
-            "img": true,
             "title": "梦幻世界",
             "num": 32,
             "author": "妖妖酱",
@@ -118,96 +91,6 @@
         },
         {
             "img": true,
-            "title": "忠诚或死亡",
-            "num": 4,
-            "author": "竹蜻蜓（Heli）",
-            "game": "尤里的复仇",
-            "side": "盟军",
-            "year": 2014,
-            "links": [
-                [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=164000",
-                    "忠诚或死亡（4关） - 红警任务之家"
-                ],
-                [
-                    "http://helilab.ysepan.com/",
-                    "Heli的红警资源站"
-                ]
-            ],
-            "description": "其实《忠诚或死亡》很早就开始做了，但是并没有按照计划做完……本打算和北极星一起合作14关，可是我做到了4关，计划就被迫中止了……",
-            "more": false,
-            "tags": [],
-            "time": "2023-1-1"
-        },
-        {
-            "img": true,
-            "title": "忠诚或死亡：神秘的要塞",
-            "num": 1,
-            "author": "竹蜻蜓（Heli）",
-            "game": "尤里的复仇",
-            "side": "盟军",
-            "year": 2015,
-            "links": [
-                [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=167458",
-                    "忠诚或死亡：神秘的要塞 - 红警任务之家"
-                ],
-                [
-                    "http://helilab.ysepan.com/",
-                    "Heli的红警资源站"
-                ]
-            ],
-            "description": "“神秘的要塞”这个任务原本是《忠诚或死亡》系列中的一部分（第四关），但是由于剧情接不上被我残忍裁掉（与此有相同遭遇的还有“冰雪剧场”）。不过可玩性还是有的！所以发上来给大家玩一玩，就当是个单关，剧情请大家无视……",
-            "more": false,
-            "tags": [
-                "海战"
-            ],
-            "time": "2023-1-1"
-        },
-        {
-            "img": false,
-            "title": "时空游戏",
-            "num": 14,
-            "author": "竹蜻蜓（Heli）",
-            "game": "尤里的复仇",
-            "side": "尤里",
-            "year": 2012,
-            "links": [
-                [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=129335",
-                    "尤里任务——时空游戏 - 红警任务之家"
-                ],
-                [
-                    "http://helilab.ysepan.com/",
-                    "Heli的红警资源站"
-                ]
-            ],
-            "description": "此任务包紧接尤里的复仇原版盟军剧情，讲述了尤里被抓捕后越狱逃脱，利用时间机器回到过去，一步一步统治世界，实现了他邪恶的梦想的故事。",
-            "more": false,
-            "tags": [],
-            "time": "2023-1-1"
-        },
-        {
-            "img": false,
-            "title": "罪与罚",
-            "num": 12,
-            "author": "Hero001",
-            "game": "尤里的复仇",
-            "side": "多种/其他",
-            "year": 2021,
-            "links": [
-                [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=197968&extra=page%3D1",
-                    "多关任务巨献——罪与罚（全系列12关，2021.3.27修复俄国篇第4关IE） - 红警任务之家"
-                ]
-            ],
-            "description": "系列任务的名称已经确定了——罪与罚。题解：尤里逃脱后再次对整个地球犯下罪行，他必须受到应有的惩罚！",
-            "more": false,
-            "tags": [],
-            "time": "2020-1-1"
-        },
-        {
-            "img": true,
             "title": "尤里任务共四关",
             "num": 4,
             "author": "CCJJCCJJ",
@@ -227,6 +110,33 @@
                 "精品"
             ],
             "time": "2020-1-1"
+        },
+        {
+            "img": true,
+            "title": "歧途第三季：「丧尸军团」V1.2",
+            "num": 15,
+            "author": "竹蜻蜓（Heli）",
+            "game": "尤里的复仇",
+            "side": "多种/其他",
+            "year": 2018,
+            "links": [
+                [
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=201608",
+                    "《歧途》第三季：「丧尸军团」 - 红警任务之家"
+                ],
+                [
+                    "http://helilab.ysepan.com/",
+                    "Heli的红警资源站"
+                ]
+            ],
+            "description": "浣熊市的僵尸已经无法控制！所有飞机一旦起飞就会被不明力量击落。美国军方不得不完全封锁整个浣熊市，尽管一些探员和许多平民仍困在那里。僵尸已经不可避免的冲入生化实验平台......",
+            "more": true,
+            "tags": [
+                "丧尸",
+                "新单位",
+                "精品"
+            ],
+            "time": "2023-1-1"
         },
         {
             "img": true,
@@ -302,6 +212,96 @@
                 "新单位"
             ],
             "time": "2020-1-1"
+        },
+        {
+            "img": true,
+            "title": "忠诚或死亡",
+            "num": 4,
+            "author": "竹蜻蜓（Heli）",
+            "game": "尤里的复仇",
+            "side": "盟军",
+            "year": 2014,
+            "links": [
+                [
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=164000",
+                    "忠诚或死亡（4关） - 红警任务之家"
+                ],
+                [
+                    "http://helilab.ysepan.com/",
+                    "Heli的红警资源站"
+                ]
+            ],
+            "description": "其实《忠诚或死亡》很早就开始做了，但是并没有按照计划做完……本打算和北极星一起合作14关，可是我做到了4关，计划就被迫中止了……",
+            "more": false,
+            "tags": [],
+            "time": "2023-1-1"
+        },
+        {
+            "img": true,
+            "title": "忠诚或死亡：神秘的要塞",
+            "num": 1,
+            "author": "竹蜻蜓（Heli）",
+            "game": "尤里的复仇",
+            "side": "盟军",
+            "year": 2015,
+            "links": [
+                [
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=167458",
+                    "忠诚或死亡：神秘的要塞 - 红警任务之家"
+                ],
+                [
+                    "http://helilab.ysepan.com/",
+                    "Heli的红警资源站"
+                ]
+            ],
+            "description": "“神秘的要塞”这个任务原本是《忠诚或死亡》系列中的一部分（第四关），但是由于剧情接不上被我残忍裁掉（与此有相同遭遇的还有“冰雪剧场”）。不过可玩性还是有的！所以发上来给大家玩一玩，就当是个单关，剧情请大家无视……",
+            "more": false,
+            "tags": [
+                "海战"
+            ],
+            "time": "2023-1-1"
+        },
+        {
+            "img": false,
+            "title": "罪与罚",
+            "num": 12,
+            "author": "Hero001",
+            "game": "尤里的复仇",
+            "side": "多种/其他",
+            "year": 2021,
+            "links": [
+                [
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=197968&extra=page%3D1",
+                    "多关任务巨献——罪与罚（全系列12关，2021.3.27修复俄国篇第4关IE） - 红警任务之家"
+                ]
+            ],
+            "description": "系列任务的名称已经确定了——罪与罚。题解：尤里逃脱后再次对整个地球犯下罪行，他必须受到应有的惩罚！",
+            "more": false,
+            "tags": [],
+            "time": "2020-1-1"
+        },
+        {
+            "img": false,
+            "title": "时空游戏",
+            "num": 14,
+            "author": "竹蜻蜓（Heli）",
+            "game": "尤里的复仇",
+            "side": "尤里",
+            "year": 2012,
+            "links": [
+                [
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=129335",
+                    "尤里任务——时空游戏 - 红警任务之家"
+                ],
+                [
+                    "http://helilab.ysepan.com/",
+                    "Heli的红警资源站"
+                ]
+            ],
+            "description": "此任务包紧接尤里的复仇原版盟军剧情，讲述了尤里被抓捕后越狱逃脱，利用时间机器回到过去，一步一步统治世界，实现了他邪恶的梦想的故事。",
+            "more": false,
+            "tags": [],
+            "time": "2023-1-1"
         },
         {
             "img": true,
@@ -473,7 +473,7 @@
             "links": [
                 []
             ],
-            "description": "这是一款尤里对付美苏联军的任务，共10关，每一关都是独立的",
+            "description": "这是一款尤里对付美苏联军的任务，共10关，每一关都需要单独安装",
             "more": false,
             "tags": [
                 "新单位"
@@ -549,7 +549,10 @@
             ],
             "description": "尤里找到了盟军遗落在旧金山的时间机器，利用时间机器回到过去，成功启动了心灵控制器并征服了世界，盟军和苏军被击败的溃不成军，剩余的战力也寥寥无几，为了对抗尤里，盟军不得不与苏军合作，因此，新的阵营诞生了，盟军更名为——极星，苏军更名为——隐刃，他们共同创建了新的阵营——银翼。",
             "more": false,
-            "tags": ["新单位","Ares"],
+            "tags": [
+                "新单位",
+                "Ares"
+            ],
             "time": "2023-6-9"
         },
         {
@@ -558,7 +561,7 @@
             "num": 2,
             "author": "岚雪（BlueSnow）",
             "game": "尤里的复仇",
-            "side":"盟军",
+            "side": "盟军",
             "year": 2023,
             "links": [
                 [
@@ -568,7 +571,9 @@
             ],
             "description": "尤里的阵营即将溃败，苏联和盟军打算停止战争和平相处从而发展和平的世界。但是有人不甘这种事情发生，他不愿意与曾经的敌人合作。于是开始了他的秘密复仇计划，他背叛了自己的祖国和尤里合作，打算把这个世界弄得天翻地覆，这个世界即将掀起腥风血雨",
             "more": false,
-            "tags": ["难度分级"],
+            "tags": [
+                "难度分级"
+            ],
             "time": "2023-6-9"
         },
         {
@@ -1017,7 +1022,9 @@
             ],
             "description": "战争已经持续数月，在战局上我们并不占优。情报人员认为A城是美军建造洲际导弹的地方，或许不久后导弹就将飞向我们的国土。这是绝对不能发生的！由于兵力有限和地形限制，只有两小队成功来到A城的郊区并伺机潜入。不过好消息是，盟军从此地调离了大量部队去其他城市，这应该能让我们的小队顺利潜入。为了祖国！为了人民！",
             "more": false,
-            "tags": ["单兵/小队"],
+            "tags": [
+                "单兵/小队"
+            ],
             "time": "2023-4-15"
         },
         {
