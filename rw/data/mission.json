@@ -15,7 +15,7 @@
             "year": 2018,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=203220",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=203220&fromuid=233973",
                     "林德拉克计划（16关） - 红警任务之家"
                 ],
                 [
@@ -35,6 +35,30 @@
         },
         {
             "img": true,
+            "title": "梦幻世界",
+            "num": 33,
+            "author": "妖妖酱",
+            "game": "尤里的复仇",
+            "side": "多种/其他",
+            "year": 2022,
+            "links": [
+                [
+                    "http://pkuit.com/forum.php?mod=viewthread&tid=203169&fromuid=233973",
+                    "【2023.06.06更新】RA2XP系列外传梦幻世界v0.38已发布（更新至尤里第四关）！！！ - 红警任务之家"
+                ]
+            ],
+            "description": "由于我多年没有做多关任务，因此成为了过气巨炮之王了……在爱国者的授权下，梦幻世界剧情上将作为RA2XP系列密行动的外传来发布，但是是全新的多关任务。如果说绝密行动是中国为了修复时间轴错乱的故事，那么梦幻世界就是盟军穿越时间轴后在错误的时间轴上的故事。",
+            "more": false,
+            "tags": [
+                "大场面",
+                "精品",
+                "音乐包",
+                "难度分级"
+            ],
+            "time": "2020-1-1"
+        },
+        {
+            "img": true,
             "title": "林德拉克计划2：命运之瞳",
             "num": 16,
             "author": "竹蜻蜓（Heli）",
@@ -47,7 +71,7 @@
                     "「林德拉克计划2：命运之瞳」发布帖 - 哔哩哔哩"
                 ],
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=204226",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=204226&fromuid=233973",
                     "林德拉克计划2：命运之瞳 - 红警任务之家"
                 ],
                 [
@@ -67,27 +91,39 @@
         },
         {
             "img": true,
-            "title": "梦幻世界",
-            "num": 32,
-            "author": "妖妖酱",
+            "title": "林德拉克计划3：最终意志",
+            "num": 16,
+            "author": "竹蜻蜓（Heli）",
             "game": "尤里的复仇",
             "side": "多种/其他",
-            "year": 2022,
+            "year": 2023,
             "links": [
                 [
-                    "http://pkuit.com/forum.php?mod=viewthread&tid=203169",
-                    "【2022.08.28更新】RA2XP系列外传梦幻世界v0.37已发布（更新至苏联第十一关）！！！ - 红警任务之家"
+                    "https://www.bilibili.com/read/cv25152413",
+                    "「林德拉克计划 3：最终意志」发布帖 - 哔哩哔哩"
+                ],
+                [
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=205782&extra=&fromuid=233973",
+                    "「林德拉克计划 3：最终意志」（16关） - 红警任务之家"
+                ],
+                [
+                    "https://www.bilibili.com/video/BV1zz4y147vn/",
+                    "「林德拉克计划 3：最终意志」宣传片 - 哔哩哔哩"
+                ],
+                [
+                    "http://helilab.ysepan.com/",
+                    "Heli的红警资源站"
                 ]
             ],
-            "description": "由于我多年没有做多关任务，因此成为了过气巨炮之王了……在爱国者的授权下，梦幻世界剧情上将作为RA2XP系列密行动的外传来发布，但是是全新的多关任务。如果说绝密行动是中国为了修复时间轴错乱的故事，那么梦幻世界就是盟军穿越时间轴后在错误的时间轴上的故事。",
-            "more": false,
+            "description": "如果说「林德拉克计划 2：命运之瞳」是继承林1的荣光的话，那「林德拉克计划 3：最终意志」就算是全新的尝试了。这部任务包仍然有一半多是大规模战役，同时我还在渐渐学习着去做一些单兵任务。在前半篇，我会主要试图在空军的一些玩法上取得突破，而后半篇则专注于AI盟友的设计。对了，如果喜欢这部作品的话，一定要装上音乐包！音乐包里每一首音乐都是原创的，耗费的时间精力不亚于任务本体。最后还是那句话：希望我能在与大家相处的这一段小段时间里，给大家带来快乐，这样我就满足了。",
+            "more": true,
             "tags": [
                 "大场面",
-                "精品",
                 "音乐包",
-                "难度分级"
+                "新单位",
+                "精品"
             ],
-            "time": "2020-1-1"
+            "time": "2023-7-27"
         },
         {
             "img": true,
@@ -121,7 +157,7 @@
             "year": 2018,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=201608",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=201608&fromuid=233973",
                     "《歧途》第三季：「丧尸军团」 - 红警任务之家"
                 ],
                 [
@@ -223,7 +259,7 @@
             "year": 2014,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=164000",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=164000&fromuid=233973",
                     "忠诚或死亡（4关） - 红警任务之家"
                 ],
                 [
@@ -246,7 +282,7 @@
             "year": 2015,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=167458",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=167458&fromuid=233973",
                     "忠诚或死亡：神秘的要塞 - 红警任务之家"
                 ],
                 [
@@ -271,7 +307,7 @@
             "year": 2021,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=197968&extra=page%3D1",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=197968&extra=page%3D1&fromuid=233973",
                     "多关任务巨献——罪与罚（全系列12关，2021.3.27修复俄国篇第4关IE） - 红警任务之家"
                 ]
             ],
@@ -290,7 +326,7 @@
             "year": 2012,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=129335",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=129335&fromuid=233973",
                     "尤里任务——时空游戏 - 红警任务之家"
                 ],
                 [
@@ -317,7 +353,7 @@
                     "红色警戒2任务发布——桥梁争夺战 - 哔哩哔哩"
                 ],
                 [
-                    "http://pkuit.com/forum.php?mod=viewthread&tid=204646",
+                    "http://pkuit.com/forum.php?mod=viewthread&tid=204646&fromuid=233973",
                     "任务发布——桥梁争夺战 - 红警任务之家"
                 ]
             ],
@@ -422,7 +458,7 @@
             "year": 2019,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=203418",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=203418&fromuid=233973",
                     "单关任务巨制 | 命运的莱特湾 - 红警任务之家"
                 ]
             ],
@@ -543,7 +579,7 @@
             "year": 2023,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=205643&extra=",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=205643&extra=&fromuid=233973",
                     "「逆转」v0.22（2023/5/23更新，目前更新至第二关） - 红警任务之家"
                 ]
             ],
@@ -565,7 +601,7 @@
             "year": 2023,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=205598",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=205598&fromuid=233973",
                     "RA2任务 背叛者1：罪恶启示录（测试版1.1） - 红警任务之家"
                 ]
             ],
@@ -586,7 +622,7 @@
             "year": 2023,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=205153",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=205153&fromuid=233973",
                     "《复返归途》任务（第一关第二关重新更新！） - 红警任务之家"
                 ]
             ],
@@ -605,7 +641,7 @@
             "year": 2023,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=205416",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=205416&fromuid=233973",
                     "投石问路（已更新至v1.3.14） - 红警任务之家"
                 ]
             ],
@@ -626,7 +662,7 @@
             "year": 2019,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=203017",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=203017&fromuid=233973",
                     "【任务】深山突袭V1.1 - 红警任务之家"
                 ]
             ],
@@ -638,6 +674,28 @@
                 "新单位"
             ],
             "time": "2020-1-1"
+        },
+        {
+            "img": true,
+            "title": "福额测试",
+            "num": 1,
+            "author": "妖妖酱",
+            "game": "尤里的复仇",
+            "side": "盟军",
+            "year": 2023,
+            "links": [
+                [
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=205707&extra=page%3D1&fromuid=233973",
+                    "福额测试 - 红警任务之家"
+                ]
+            ],
+            "description": "注明：本任务创作灵感来源于明日方舟的危机合约活动，可以说就是红警版的危机合约。指挥官，欢迎来到测试战场！在这里，你可以选择不同的战斗条件，以测试自己的战斗实力。选择你所需的条件，并摧毁红方基地，完成测试。任务目标一：选择条件进入战斗。任务目标二：摧毁苏联的基地。",
+            "more": false,
+            "tags": [
+                "小游戏",
+                "明日方舟"
+            ],
+            "time": "2023-7-27"
         },
         {
             "img": true,
@@ -849,7 +907,7 @@
             "year": 2016,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=132242",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=132242&fromuid=233973",
                     "【如约而至】最终决斗2第一部分——自由祭坛夏日送礼（4月28日第3关更新，可选等级） - 红警任务之家"
                 ]
             ],
@@ -870,7 +928,7 @@
             "year": 2011,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=128770",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=128770&fromuid=233973",
                     "[单人任务特典]指挥官的噩梦 - 红警任务之家"
                 ]
             ],
@@ -1016,7 +1074,7 @@
             "year": 2023,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=205563",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=205563&fromuid=233973",
                     "尤复单关任务：遥控主场 - 红警任务之家"
                 ]
             ],
@@ -1060,7 +1118,7 @@
             "year": 2016,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=171682",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=171682&fromuid=233973",
                     "镜像杀戮(苏军4图9关)(修正2A卡顿)  - 红警任务之家"
                 ],
                 [
@@ -1085,7 +1143,7 @@
             "year": 2017,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=201085",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=201085&fromuid=233973",
                     "《无尽硝烟》（盟军24关完整版） - 红警任务之家"
                 ]
             ],
@@ -1106,7 +1164,7 @@
             "year": 2015,
             "links": [
                 [
-                    "http://pkuit.com/forum.php?mod=viewthread&tid=170222",
+                    "http://pkuit.com/forum.php?mod=viewthread&tid=170222&fromuid=233973",
                     "单兵类任务——前狼后虎（1关） - 红警任务之家"
                 ]
             ],
@@ -1128,7 +1186,7 @@
             "year": 2015,
             "links": [
                 [
-                    "http://pkuit.com/forum.php?mod=viewthread&tid=170381",
+                    "http://pkuit.com/forum.php?mod=viewthread&tid=170381&fromuid=233973",
                     "哀兵必胜（添加隧道更新版） - 红警任务之家"
                 ]
             ],
@@ -1150,7 +1208,7 @@
             "year": 2015,
             "links": [
                 [
-                    "http://pkuit.com/forum.php?mod=viewthread&tid=170486",
+                    "http://pkuit.com/forum.php?mod=viewthread&tid=170486&fromuid=233973",
                     "原创任务《爱神传说》（盟军4关） - 红警任务之家"
                 ]
             ],
@@ -1171,7 +1229,7 @@
             "year": 2015,
             "links": [
                 [
-                    "http://pkuit.com/forum.php?mod=viewthread&tid=170526",
+                    "http://pkuit.com/forum.php?mod=viewthread&tid=170526&fromuid=233973",
                     "原创任务《引路少年》 - 红警任务之家"
                 ]
             ],
@@ -1193,7 +1251,7 @@
             "year": 2015,
             "links": [
                 [
-                    "http://pkuit.com/forum.php?mod=viewthread&tid=198414",
+                    "http://pkuit.com/forum.php?mod=viewthread&tid=198414&fromuid=233973",
                     "大型单兵任务：星火燎原 - 红警任务之家"
                 ]
             ],
@@ -1215,7 +1273,7 @@
             "year": 2015,
             "links": [
                 [
-                    "http://pkuit.com/forum.php?mod=viewthread&tid=170584",
+                    "http://pkuit.com/forum.php?mod=viewthread&tid=170584&fromuid=233973",
                     "单兵任务《神犬小七》 - 红警任务之家"
                 ]
             ],
@@ -1237,7 +1295,7 @@
             "year": 2016,
             "links": [
                 [
-                    "http://pkuit.com/forum.php?mod=viewthread&tid=198326",
+                    "http://pkuit.com/forum.php?mod=viewthread&tid=198326&fromuid=233973",
                     "休闲小游戏：蹩脚特工（修正版） - 红警任务之家"
                 ]
             ],
@@ -1259,7 +1317,7 @@
             "year": 2023,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=125431",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=125431&fromuid=233973",
                     "【2023.02.13更新！】猥琐之争1.3.6.788 - 红警任务之家"
                 ]
             ],
@@ -1280,7 +1338,7 @@
             "year": 2016,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=198085",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=198085&fromuid=233973",
                     "鲍里斯传奇5关+谭雅传奇5关最终版集合 - 红警任务之家"
                 ]
             ],
@@ -1301,7 +1359,7 @@
             "year": 2022,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=204870",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=204870&fromuid=233973",
                     "大型单兵任务系列《布衣挂帅之谁与争锋I&II正式版》 - 红警任务之家"
                 ]
             ],
@@ -1324,7 +1382,7 @@
             "year": 2019,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=203523&extra=page%3D1",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=203523&extra=page%3D1&fromuid=233973",
                     "尢里末日之《穷追不舍》 - 红警任务之家"
                 ]
             ],
@@ -1346,7 +1404,7 @@
             "year": 2013,
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=149891",
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=149891&fromuid=233973",
                     "原创任务“黄金眼”（22关）  - 红警任务之家"
                 ]
             ],
