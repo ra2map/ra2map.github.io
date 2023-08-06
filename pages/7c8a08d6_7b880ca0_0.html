@@ -1,156 +1,232 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<style>
-			body, table{font-family: Tahoma; font-size: 10pt}
-			table{border-collapse: collapse; border: solid gray; border-width: 2px 0 2px 0;}
-			th{border: 1px solid gray; padding: 4px; background-color: #DDD;}
-			td{border: 1px solid gray; padding: 4px;}
-			tr:nth-child(2n){background-color: #f8f8f8;}
-		</style>
-	</head>
-	<body>
-		<div><br />
+
+<head>
+	<style>
+		body,
+		table {
+			font-family: Tahoma;
+			font-size: 10pt
+		}
+
+		table {
+			border-collapse: collapse;
+			border: solid gray;
+			border-width: 2px 0 2px 0;
+		}
+
+		th {
+			border: 1px solid gray;
+			padding: 4px;
+			background-color: #DDD;
+		}
+
+		td {
+			border: 1px solid gray;
+			padding: 4px;
+		}
+
+		tr:nth-child(2n) {
+			background-color: #f8f8f8;
+		}
+	</style>
+</head>
+
+<body>
+	<div><br />
+	</div>
+	<div>
+		<div><span style="font-size: 10pt"><span>作者：NOG</span></span>
 		</div>
+		<div><span style="font-size: 10pt">用记事本打开地图，就可以往里面写INI了。。。。</span><br /><br /><br />代码词典下载&nbsp;<br /><a
+				href="http://nog.ys168.com/" target="_blank">http://nog.ys168.com/</a>&nbsp;<br />在 6.红警MOD
+			中<br /><br /><span
+				style="color: rgb(255, 0, 0); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 24px; background-color: rgb(255, 255, 255); ">特别提示：地图INI中的标点要为英文标点</span>
+			<br /><span>格式：</span><br /><br /><span>节 [section]</span><br /><span>参数 name=value</span><br /><span>注解
+				注解使用</span><span>分号</span><span>表示（;）。在分号后面的文字，直到该行结尾都全部为注解。 ; comment
+				text</span><br /><br /><span>例：找个空地输入</span><br /><span>[BFRT]</span><br /><span>Cost=4000</span><br /><br /><span>这样战斗要塞就要4000块了</span><br /><br /><span
+				style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); color: rgb(255, 0, 0); text-decoration: underline; ">如何修改桥梁生命？</span><br /><span>[CombatDamage]</span><br /><span>BridgeStrength=1500
+				;这个就是桥梁的生命，数值自己改</span><br /><span>DestroyableBridges=yes ;这个如果写成no的话桥梁就不可摧毁</span><span
+				style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">
+				<span
+					style="color: #cc99ff">【等同于直接设置（编辑=&gt;特定标识），但此设置有争议（疑似遭遇战与任务效果不同），为保险起见，还要把桥梁生命值调的很高很高】</span></span><br /><br /><span
+				style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); text-decoration: underline; color: rgb(255, 0, 0); ">如何让疯狂依文的定时炸弹可以手动引爆？</span><br /><span>[CombatDamage]</span><br /><span>CanDetonateTimeBomb=no
+				;写yes就可以手动引爆了</span><br /><span
+				style="color: #ff0000; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif"><span
+					style="line-height: 24px;"><br
+						style="box-sizing: content-box; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /></span></span><span
+				style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); text-decoration: underline; color: rgb(255, 0, 0); ">如何修改伞兵阵容？</span><br /><br /><span>【例】</span><br /><span>苏军伞兵：6动员兵，3磁暴步兵，1鲍里斯（菁英战斗兵）</span><br /><span>盟军伞兵：6美国大兵，3重装大兵，1谭雅</span><br /><span>美国伞兵：10美国大兵，5重装大兵，1海豹部队</span><br /><span>尤里伞兵：6尤里新兵，3狂兽人</span><br /><br /><span>[General]</span><br /><span>SovParaDropInf=E2,SHK,BORIS
+				;苏军伞兵阵容</span><br /><span>SovParaDropNum=6,3,1 ;苏军每一种伞兵的数量</span><br /><span>AllyParaDropInf=E1,GGI,TANY
+				;盟军伞兵阵容</span><br /><span>AllyParaDropNum=6,3,1
+				;盟军每一种兵的数量</span><br /><span>AmerParaDropInf=E1,GGI,GHOST
+				;美国伞兵阵容</span><br /><span>AmerParaDropNum=10,5,1 ;美国每一种兵的数量</span><br /><span>YuriParaDropInf=INIT,BRUTE
+				;尤里伞兵阵容</span><br /><span>YuriParaDropNum=6,3 ;尤里每一种兵的数量</span><br /><span
+				style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif"><br /></span></span><span
+				style="color: rgb(255, 0, 0); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 24px; background-color: rgb(255, 255, 255); "><strong>炮弹变核弹（太变态，不推荐使用）</strong></span>
+		</div>
+		<div><strong><span lang="EN-US"
+					style="font-size: 10.5pt; font-family: 微软雅黑; color: rgb(237, 28, 36); ">[105mm23]
+					;</span></strong><strong><span
+					style="font-size: 10.5pt; font-family: 微软雅黑; color: rgb(237, 28, 36); ">名字，也可以改现有的</span></strong>
+		</div><strong><span lang="EN-US"
+				style="font-size: 10.5pt; font-family: 微软雅黑; color: rgb(237, 28, 36); ">Damage=9999</span></strong><span
+			lang="EN-US" style="font-size: 10.5pt; font-family: 微软雅黑; ">;</span><span
+			style="font-size: 10.5pt; font-family: 微软雅黑; ">修改伤害值到最大<span
+				lang="EN-US"><br />ROF=60<br /></span></span><strong><span lang="EN-US"
+				style="font-size: 10.5pt; font-family: 微软雅黑; color: rgb(237, 28, 36); ">Range=25</span></strong><span
+			lang="EN-US" style="font-size: 10.5pt; font-family: 微软雅黑; ">;</span><span
+			style="font-size: 10.5pt; font-family: 微软雅黑; ">修改武器攻击范围为<span
+				lang="EN-US">25<br />Projectile=Cannon&nbsp;<br />Speed=40<br /></span></span><strong><span lang="EN-US"
+				style="font-size: 10.5pt; font-family: 微软雅黑; color: rgb(237, 28, 36); ">;Warhead=AP</span></strong><span
+			lang="EN-US" style="font-size: 10.5pt; font-family: 微软雅黑; ">;</span><span
+			style="font-size: 10.5pt; font-family: 微软雅黑; ">删除此行或在前加分号即可<span
+				lang="EN-US"><br /></span></span><strong><span lang="EN-US"
+				style="font-size: 10.5pt; font-family: 微软雅黑; color: rgb(237, 28, 36); ">Warhead=NUKE</span></strong><span
+			lang="EN-US" style="font-size: 10.5pt; font-family: 微软雅黑; ">;</span><span
+			style="font-size: 10.5pt; font-family: 微软雅黑; ">修改弹头变成核弹<span lang="EN-US"><br /></span></span><strong><span
+				lang="EN-US"
+				style="font-size: 10.5pt; font-family: 微软雅黑; color: rgb(237, 28, 36); ">RadLevel=500</span></strong><span
+			lang="EN-US" style="font-size: 10.5pt; font-family: 微软雅黑; ">;</span><span
+			style="font-size: 10.5pt; font-family: 微软雅黑; ">核弹残留计量<span
+				lang="EN-US"><br />Report=GrizzlyTankAttack<br />Anim=GUNFIRE<br /></span></span>
+		<div><span style="font-family: 微软雅黑; font-size: 14px; ">Bright=yes</span>
+		</div>
+	</div>
+	<div><br />
+	</div>
+	<div><br />
+	</div>
+	<div><br />
+	</div>
+	<div>详见<a href="http://tieba.baidu.com/p/3605818017">http://tieba.baidu.com/p/3605818017</a>
+	</div>
+	<div><br />
+	</div>
+	<div>
 		<div>
-			<div><span style="font-size: 10pt"><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">作者：NOG</span></span>
+			<div>最终完成地图以后别忘了用记事本之类的文本编辑器打开地图文件写入下面的代码：
 			</div>
-			<div><span style="font-size: 10pt"><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">用</span><span>记事本</span><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">打开地图，就可以往里面写INI了。。。。</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">代码词典下载&nbsp;</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><a href="http://jump.bdimg.com/safecheck/index?url=x+Z5mMbGPAtwSJTevly56cGlt7BhofC6BEfOqcQx5jVkQQcgrPHYpUcsoswAJSnvQnGDzZ91T7hKTdqBskvmeUzJ52bBmjrWfM+OCOVF+fRiECZCv+IS3HY9qHh6BM0y" target="_blank" style="box-sizing: content-box; color: rgb(45, 100, 179); text-decoration: none; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">http://nog.ys168.com/</a><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">&nbsp;</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">在 6.红警MOD 中</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(255, 0, 0); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 24px; background-color: rgb(255, 255, 255); ">特别提示：地图INI中的标点要为英文标点</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">格式：</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">节 [section]</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">参数 name=value</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">注解 注解使用</span><span>分号</span><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">表示（;）。在分号后面的文字，直到该行结尾都全部为注解。 ; comment text</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">例：找个空地输入</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">[BFRT]</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">Cost=4000</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">这样战斗要塞就要4000块了</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); color: rgb(255, 0, 0); text-decoration: underline; ">如何修改桥梁生命？</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">[CombatDamage]</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">BridgeStrength=1500 ;这个就是桥梁的生命，数值自己改</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">DestroyableBridges=yes ;这个如果写成no的话桥梁就不可摧毁</span><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); "><span style="color: #cc99ff">【等同于直接设置（编辑=&gt;特定标识），但此设置有争议（疑似遭遇战与任务效果不同），为保险起见，还要把桥梁生命值调的很高很高】</span></span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); text-decoration: underline; color: rgb(255, 0, 0); ">如何让疯狂依文的定时炸弹可以手动引爆？</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">[CombatDamage]</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">CanDetonateTimeBomb=no ;写yes就可以手动引爆了</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: #ff0000; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif"><span style="line-height: 24px;"><br style="box-sizing: content-box; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /></span></span><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); text-decoration: underline; color: rgb(255, 0, 0); ">如何修改伞兵阵容？</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">【例】</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">苏军伞兵：6动员兵，3磁暴步兵，1鲍里斯（菁英战斗兵）</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">盟军伞兵：6美国大兵，3重装大兵，1谭雅</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">美国伞兵：10美国大兵，5重装大兵，1海豹部队</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">尤里伞兵：6尤里新兵，3狂兽人</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">[General]</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">SovParaDropInf=E2,SHK,BORIS ;苏军伞兵阵容</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">SovParaDropNum=6,3,1 ;苏军每一种伞兵的数量</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">AllyParaDropInf=E1,GGI,TANY ;盟军伞兵阵容</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">AllyParaDropNum=6,3,1 ;盟军每一种兵的数量</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">AmerParaDropInf=E1,GGI,GHOST ;美国伞兵阵容</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">AmerParaDropNum=10,5,1 ;美国每一种兵的数量</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">YuriParaDropInf=INIT,BRUTE ;尤里伞兵阵容</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255); ">YuriParaDropNum=6,3 ;尤里每一种兵的数量</span><br style="box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 24px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); " /><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif"><br /></span></span><span style="color: rgb(255, 0, 0); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 24px; background-color: rgb(255, 255, 255); "><strong>炮弹变核弹（太变态，不推荐使用）</strong></span>
+			<div><br />
 			</div>
-			<div><strong><span lang="EN-US" style="font-size: 10.5pt; font-family: 微软雅黑; color: rgb(237, 28, 36); ">[105mm23] ;</span></strong><strong><span style="font-size: 10.5pt; font-family: 微软雅黑; color: rgb(237, 28, 36); ">名字，也可以改现有的</span></strong>
-			</div><strong><span lang="EN-US" style="font-size: 10.5pt; font-family: 微软雅黑; color: rgb(237, 28, 36); ">Damage=9999</span></strong><span lang="EN-US" style="font-size: 10.5pt; font-family: 微软雅黑; ">;</span><span style="font-size: 10.5pt; font-family: 微软雅黑; ">修改伤害值到最大<span lang="EN-US"><br />ROF=60<br /></span></span><strong><span lang="EN-US" style="font-size: 10.5pt; font-family: 微软雅黑; color: rgb(237, 28, 36); ">Range=25</span></strong><span lang="EN-US" style="font-size: 10.5pt; font-family: 微软雅黑; ">;</span><span style="font-size: 10.5pt; font-family: 微软雅黑; ">修改武器攻击范围为<span lang="EN-US">25<br />Projectile=Cannon&nbsp;<br />Speed=40<br /></span></span><strong><span lang="EN-US" style="font-size: 10.5pt; font-family: 微软雅黑; color: rgb(237, 28, 36); ">;Warhead=AP</span></strong><span lang="EN-US" style="font-size: 10.5pt; font-family: 微软雅黑; ">;</span><span style="font-size: 10.5pt; font-family: 微软雅黑; ">删除此行或在前加分号即可<span lang="EN-US"><br /></span></span><strong><span lang="EN-US" style="font-size: 10.5pt; font-family: 微软雅黑; color: rgb(237, 28, 36); ">Warhead=NUKE</span></strong><span lang="EN-US" style="font-size: 10.5pt; font-family: 微软雅黑; ">;</span><span style="font-size: 10.5pt; font-family: 微软雅黑; ">修改弹头变成核弹<span lang="EN-US"><br /></span></span><strong><span lang="EN-US" style="font-size: 10.5pt; font-family: 微软雅黑; color: rgb(237, 28, 36); ">RadLevel=500</span></strong><span lang="EN-US" style="font-size: 10.5pt; font-family: 微软雅黑; ">;</span><span style="font-size: 10.5pt; font-family: 微软雅黑; ">核弹残留计量<span lang="EN-US"><br />Report=GrizzlyTankAttack<br />Anim=GUNFIRE<br /></span></span>
-			<div><span style="font-family: 微软雅黑; font-size: 14px; ">Bright=yes</span>
+			<div>;修正所有地图都会产生的 bug 塔
 			</div>
-		</div>
-		<div><br />
-		</div>
-		<div><br />
-		</div>
-		<div><br />
-		</div>
-		<div>详见<a href="http://tieba.baidu.com/p/3605818017">http://tieba.baidu.com/p/3605818017</a>
-		</div>
-		<div><br />
-		</div>
-		<div>
+			<div>;调整了建造动画和 V3 火箭的参数以优化低速情况下的游戏体验
+			</div>
+			<div>;如果有其他修复码，欢迎补充
+			</div>
+			<div><br />
+			</div>
+			<div>[General]
+			</div>
+			<div>BuildupTime=.035
+			</div>
+			<div>PrismSupportModifier=150%
+			</div>
+			<div>V3RocketTiltFrames=20
+			</div>
+			<div>V3RocketAcceleration=10
+			</div>
 			<div>
-				<div>最终完成地图以后别忘了用记事本之类的文本编辑器打开地图文件写入下面的代码：
-				</div>
 				<div><br />
 				</div>
-				<div>;修正所有地图都会产生的 bug 塔
+				<div>任务制作者常用的[General]的代码
 				</div>
-				<div>;调整了建造动画和 V3 火箭的参数以优化低速情况下的游戏体验
+				<div>CampaignMoneyDeltaEasy=5000 ;简单模式设置，这样会比地图所属方里设置的多5000
 				</div>
-				<div>;如果有其他修复码，欢迎补充
+				<div>CampaignMoneyDeltaHard=-5000 ;困难模式设置，这样会比地图所属方里设置的少5000
 				</div>
-				<div><br />
+				<div>后者因前面有一个减号，当然困难模式加钱也是可以的。
 				</div>
-				<div>[General]
+				<div>BuildSpeed=.3 ;建筑建造速度，每花一千元用多少分钟。可以用来调节建造速度。
 				</div>
-				<div>BuildupTime=.035
+				<div><span style="font-family: 微软雅黑; font-size: 10pt"><span style="line-height: 19px;">
+							<hr noshade="noshade" style="height: 0px;" />
+						</span></span>
 				</div>
-				<div>PrismSupportModifier=150%
+				<div><span
+						style="font-family: 微软雅黑; line-height: 19px; background-color: rgb(255, 255, 255); font-size: small; ">建筑建造在水里：WaterBound=yes（如果要红3式水陆两栖建筑的话只能用PlaceAnywhere=yes）</span>
 				</div>
-				<div>V3RocketTiltFrames=20
-				</div>
-				<div>V3RocketAcceleration=10
+				<div><span
+						style="color: rgb(0, 0, 0); font-family: 微软雅黑; font-size: small; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;">单位下水的话是有三条语句：MovementZone=AmphibiousDestroyer，Locomotor={4A582742-9839-11d1-B709-00A024DDAFD1}，SpeedType=Hover。不过如果这个单位移动速度快的话会造成跑偏或“晃晃悠悠”以及无法转弯。</span>
 				</div>
 				<div>
+					<hr noshade="noshade" style="height: 0px;" />
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">3. 这是遭遇战模式下的玩家设置,加*的最好不要修改
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">[MultiplayerDialogSettings]
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">MinMoney=5000(可调最小资金)
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">Money=10000(默认资金)
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">MaxMoney=10000(可调最大资金,不要超过50000,否则数据有可能溢出)
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">MoneyIncrement=100
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">MinUnitCount=1(开始时最小单位数)*
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">UnitCount=10(开始时默认单位数)
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">MaxUnitCount=10(开始时最大单位数)
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">TechLevel=10*
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">GameSpeed=0*
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">AIDifficulty=0*
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">AIPlayers=0*
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">BridgeDestruction=yes(桥是否可摧毁)
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">ShadowGrow=no
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">Shroud=yes
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">Bases=yes*
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">TiberiumGrows=yes(矿石是否自然增长)
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">Crates=yes(升级工具箱)
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">CaptureTheFlag=no*
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">HarvesterTruce=no*
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">MultiEngineer=no*
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">AlliesAllowed=no(是否允许结盟)
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">ShortGame=yes(快速游戏)*
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">FogOfWar=no*
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">MCVRedeploys=yes(基地重新部署)*
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); "><br />
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">4.自然规则
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">在RULES.INI中查找下列语句
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">RepairPercent=15% (修理建筑物所耗资金与原价比例)
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">BuildSpeed=.7
+						(建造时花费1000元所用时间,默认42秒,若改为&quot;.1&quot;则只用6秒,暴快!
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">SoloCrateMoney=2000 (获得金钱升级工具箱所得资金)
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">ReloadRate=.3 (战机或反潜直升机重新装弹速度)
+					</div>
+					<div style="font-size: 12pt; color: rgb(51, 51, 153); ">GrowthRate=5 (矿石自然增长速度,该值越大越慢)
+					</div>
 					<div><br />
-					</div>
-					<div>任务制作者常用的[General]的代码
-					</div>
-					<div>CampaignMoneyDeltaEasy=5000 ;简单模式设置，这样会比地图所属方里设置的多5000
-					</div>
-					<div>CampaignMoneyDeltaHard=-5000 ;困难模式设置，这样会比地图所属方里设置的少5000
-					</div>
-					<div>后者因前面有一个减号，当然困难模式加钱也是可以的。
-					</div>
-					<div>BuildSpeed=.3 ;建筑建造速度，每花一千元用多少分钟。可以用来调节建造速度。
-					</div>
-					<div><span style="font-family: 微软雅黑; font-size: 10pt"><span style="line-height: 19px;">
-						<hr noshade="noshade" style="height: 0px;" /></span></span>
-					</div>
-					<div><span style="font-family: 微软雅黑; line-height: 19px; background-color: rgb(255, 255, 255); font-size: small; ">建筑建造在水里：WaterBound=yes（如果要红3式水陆两栖建筑的话只能用PlaceAnywhere=yes）</span>
-					</div>
-					<div><span style="color: rgb(0, 0, 0); font-family: 微软雅黑; font-size: small; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;">单位下水的话是有三条语句：MovementZone=AmphibiousDestroyer，Locomotor={4A582742-9839-11d1-B709-00A024DDAFD1}，SpeedType=Hover。不过如果这个单位移动速度快的话会造成跑偏或“晃晃悠悠”以及无法转弯。</span>
-					</div>
-					<div>
-						<hr noshade="noshade" style="height: 0px;" />
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">3. 这是遭遇战模式下的玩家设置,加*的最好不要修改
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">[MultiplayerDialogSettings]
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">MinMoney=5000(可调最小资金)
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">Money=10000(默认资金)
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">MaxMoney=10000(可调最大资金,不要超过50000,否则数据有可能溢出)
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">MoneyIncrement=100
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">MinUnitCount=1(开始时最小单位数)*
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">UnitCount=10(开始时默认单位数)
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">MaxUnitCount=10(开始时最大单位数)
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">TechLevel=10*
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">GameSpeed=0*
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">AIDifficulty=0*
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">AIPlayers=0*
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">BridgeDestruction=yes(桥是否可摧毁)
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">ShadowGrow=no
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">Shroud=yes
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">Bases=yes*
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">TiberiumGrows=yes(矿石是否自然增长)
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">Crates=yes(升级工具箱)
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">CaptureTheFlag=no*
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">HarvesterTruce=no*
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">MultiEngineer=no*
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">AlliesAllowed=no(是否允许结盟)
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">ShortGame=yes(快速游戏)*
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">FogOfWar=no*
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">MCVRedeploys=yes(基地重新部署)*
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); "><br />
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">4.自然规则
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">在RULES.INI中查找下列语句
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">RepairPercent=15% (修理建筑物所耗资金与原价比例)
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">BuildSpeed=.7 (建造时花费1000元所用时间,默认42秒,若改为&quot;.1&quot;则只用6秒,暴快!
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">SoloCrateMoney=2000 (获得金钱升级工具箱所得资金)
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">ReloadRate=.3 (战机或反潜直升机重新装弹速度)
-						</div>
-						<div style="font-size: 12pt; color: rgb(51, 51, 153); ">GrowthRate=5 (矿石自然增长速度,该值越大越慢)
-						</div>
-						<div><br />
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</body>
+	</div>
+</body>
+
 </html>
