@@ -28,6 +28,10 @@
                 [
                     "https://tieba.baidu.com/f?kw=%E5%BF%83%E7%81%B5%E7%BB%88%E7%BB%93&fr=index&fp=0&ie=utf-8",
                     "心灵终结吧-百度贴吧"
+                ],
+                [
+                    "https://moapyr.fandom.com/zh/wiki/%E5%BF%83%E7%81%B5%E7%BB%88%E7%BB%93%E4%B8%AD%E6%96%87_Wiki",
+                    "心灵终结中文 Wiki | Fandom"
                 ]
             ],
             "videos": [
@@ -687,9 +691,13 @@
             "status": "正常更新",
             "year_s": 2022,
             "year_e": 2023,
-            "version": "1.4.12",
+            "version": "1.4.13",
             "time": "2023-7-29",
             "links": [
+                [
+                    "https://raa2022.wksite.cn/",
+                    "红色警戒2重聚2023-官网首页"
+                ],
                 [
                     "https://e9c824y7pl.feishu.cn/docx/JwDLdxTotorm6bxxD8ocMkiDnvb",
                     "红色警戒 2 重聚2023 - 飞书云文档"
