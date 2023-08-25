@@ -217,7 +217,9 @@
             "platform": [
                 "Hares",
                 "Phobos",
-                "DTA"
+                "DTA",
+                "DP",
+                "ReShade"
             ],
             "theme": "未来",
             "author": "星空锻造制作组",
@@ -695,7 +697,7 @@
             "time": "2023-7-29",
             "links": [
                 [
-                    "https://raa2022.wksite.cn/",
+                    "https://www.raa2022.top/",
                     "红色警戒2重聚2023-官网首页"
                 ],
                 [
