@@ -36,7 +36,7 @@
         {
             "img": true,
             "title": "梦幻世界",
-            "num": 33,
+            "num": 35,
             "author": "妖妖酱",
             "game": "尤里的复仇",
             "side": "多种/其他",
@@ -450,6 +450,29 @@
         },
         {
             "img": true,
+            "title": "MO双光任务yr版",
+            "num": 2,
+            "author": "霈然若雨（茉莉花）",
+            "game": "尤里的复仇",
+            "side": "多种/其他",
+            "year": 2021,
+            "links": [
+                [
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=203418&fromuid=233973",
+                    "新单人任务【MO双光任务yr版】发布 - 哔哩哔哩"
+                ]
+            ],
+            "description": "作者：prry 使用方法：将所有文件解压到目录，运行盟军第一关和苏军第一关即可。 盟军第一关为心灵终结3.3.5盟军第12关曙光，苏军第一关为心灵终结3.3.5厄普西隆第12关月光",
+            "more": false,
+            "tags": [
+                "新单位",
+                "复刻",
+                "海战"
+            ],
+            "time": "2023-9-25"
+        },
+        {
+            "img": true,
             "title": "命运的莱特湾",
             "num": 1,
             "author": "EDGNEDG",
@@ -633,7 +656,8 @@
             "description": "任务名称：羊入虎口 苏俄，西伯利亚 任务简报：盟军派遣部队入侵了我们的祖国大陆，他们的行为不得原谅，既然他们敢冒犯，那我们也不会对他们好好客气了。将军，摧毁当地区域的所有盟军基地，让他们看看他们的所作所为带来的后果！ 任务目标：摧毁当地区域所有的盟军基地",
             "more": false,
             "tags": [
-                "防守反击"
+                "防守反击",
+                "高难度"
             ],
             "time": "2023-9-6"
         },
@@ -744,6 +768,25 @@
                 "高难度"
             ],
             "time": "2023-9-6"
+        },
+        {
+            "img": true,
+            "title": "雾都风云",
+            "num": 1,
+            "author": "霈然若雨（茉莉花）",
+            "game": "尤里的复仇",
+            "side": "盟军",
+            "year": 2018,
+            "links": [
+                [
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=201618&fromuid=233973",
+                    "【YR任务】雾都风云 By 茉莉花 - 红警任务之家"
+                ]
+            ],
+            "description": "我们收到了来自英国首相的求助信号，尤里和苏军正在进攻伦敦，我方已经派遣一辆基地车前往战场",
+            "more": false,
+            "tags": [],
+            "time": "2023-9-25"
         },
         {
             "img": true,
@@ -1155,6 +1198,49 @@
                 "高难度"
             ],
             "time": "2020-1-1"
+        },
+        {
+            "img": true,
+            "title": "电力解谜",
+            "num": 1,
+            "author": "霈然若雨（茉莉花）",
+            "game": "尤里的复仇",
+            "side": "尤里",
+            "year": 2022,
+            "links": [
+                [
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=205173&fromuid=233973",
+                    "【小解谜图】电力解谜 - 红警任务之家"
+                ]
+            ],
+            "description": "我们已经发现了盟军的天才科学家爱因斯坦的位置，但是他建造了一座迷宫，并且使用光棱塔和爱国者飞弹保护他的实验室，这种光棱塔和爱国者飞弹只有一格的射程，但是无法安放c4炸药摧毁。总部派出了心灵突击队和镭射幽浮来完成这次行动，使用他们破解爱因斯坦的迷宫吧！",
+            "more": false,
+            "tags": [
+                "解谜"
+            ],
+            "time": "2023-9-25"
+        },
+        {
+            "img": false,
+            "title": "天天来找茬",
+            "num": 1,
+            "author": "霈然若雨（茉莉花）",
+            "game": "尤里的复仇",
+            "side": "尤里",
+            "year": 2021,
+            "links": [
+                [
+                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=204478&fromuid=233973",
+                    "【娱乐任务】[21.3.7更新]天天来找茬 - 红警任务之家"
+                ]
+            ],
+            "description": "爱因斯坦创造了一个找不同的世界，你必须完成他的所有谜题（12组）才能从这里逃出去！ 选中神经突击车，找到3个图块中不同的那个，到其对应的箱子上即可完成选择，你只有3条命，所以还请慎重选择",
+            "more": false,
+            "tags": [
+                "解谜",
+                "小游戏"
+            ],
+            "time": "2023-9-25"
         },
         {
             "img": true,
@@ -1582,7 +1668,7 @@
             "img": false,
             "title": "黎明觉醒",
             "num": 1,
-            "author": "未知",
+            "author": "<未知>",
             "game": "尤里的复仇",
             "side": "尤里",
             "year": 2016,
@@ -1846,6 +1932,58 @@
         },
         {
             "img": true,
+            "title": "NGRE新一代RA2复刻战役",
+            "num": 6,
+            "author": "十万欧姆的斧头",
+            "game": "心灵终结",
+            "side": "多种/其他",
+            "year": 2022,
+            "links": [
+                [
+                    "https://www.bilibili.com/read/cv19238925/",
+                    "NGRE新一代RA2复刻战役v0.8先行版 - 哔哩哔哩"
+                ]
+            ],
+            "description": "整体偏简单，适合体验！剧情方面是按照原版的剧情来的。战略（整体）上一致；战术（某些关流程，细节）上稍有改动！此任务剧情里双方主角是US和RU，其余两个阵营辅助！",
+            "more": false,
+            "tags": [
+                "mod",
+                "复刻"
+            ],
+            "time": "2023-9-9"
+        },
+        {
+            "img": true,
+            "title": "几乎完美的RA2复刻战役(APRA2)",
+            "num": 20,
+            "author": "<详见链接>",
+            "game": "心灵终结",
+            "side": "多种/其他",
+            "year": 2023,
+            "links": [
+                [
+                    "https://www.bilibili.com/read/cv21768069/",
+                    "几乎完美的RA2-APRA2V0.7 算是能用汉化版v0.1 - 哔哩哔哩"
+                ],
+                [
+                    "https://space.bilibili.com/396024256",
+                    "Westland_Wyvern的个人空间 - 哔哩哔哩"
+                ],
+                [
+                    "javascript:;",
+                    "备注：此任务未完成且未汉化完，可以以后再玩"
+                ]
+            ],
+            "description": "国外一款质量很高的复刻战役，来自Discord，made by Fct，Resar，Rhosalth，Nuuk TheNotable，发布于2023.2.10",
+            "more": false,
+            "tags": [
+                "mod",
+                "复刻"
+            ],
+            "time": "2023-9-20"
+        },
+        {
+            "img": true,
             "title": "莎樱同人自制任务",
             "num": 7,
             "author": "莎樱SyaHing",
@@ -1894,7 +2032,7 @@
             "author": "甜晴",
             "game": "心灵终结",
             "side": "多种/其他",
-            "year": 2023,
+            "year": 2020,
             "links": [
                 [
                     "https://www.bilibili.com/read/cv5062238",
