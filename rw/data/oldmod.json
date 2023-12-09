@@ -2,12 +2,12 @@
     "cid": "oldmod",
     "name": "早年怀旧mod集",
     "author": "轻稚天雪",
-    "desc": "本人实在懒得考古，嫌太麻烦，又没人帮，所以只收录了很少的mod。",
+    "desc": "本人实在懒得考古，嫌太麻烦，又没人帮，所以只有这点信息了。",
     "type": "mod",
     "content": [
         {
             "part": "未分类",
-            "img": 2,
+            "img": 0,
             "title": "无敌之师",
             "platform": [
                 "未知"
@@ -18,57 +18,191 @@
             "year_s": "未知",
             "year_e": "未知",
             "version": "未知",
-            "time": "2023-8-9",
+            "time": "2023-8-17",
             "links": [
-                [
-                    "http://mentalomega.com/ch/",
-                    "心灵终结官方网站"
-                ],
-                [
-                    "https://tieba.baidu.com/f?kw=%E5%BF%83%E7%81%B5%E7%BB%88%E7%BB%93&fr=index&fp=0&ie=utf-8",
-                    "心灵终结吧-百度贴吧"
-                ]
+                []
             ],
             "videos": [
-                [
-                    "https://www.bilibili.com/video/BV1xr4y127oW/",
-                    "【心灵终结3.3.6】第二幕终章 PV - 尤里的复仇20周年 - 哔哩哔哩"
-                ]
+                []
             ],
             "description": "",
             "tags": [
-                "完成度高"
+                ""
             ]
         },
         {
             "part": "未分类",
-            "img": 1,
+            "img": 0,
             "title": "吞鲸",
             "platform": [
                 "未知"
             ],
             "theme": "RA2",
             "author": "三国樊建",
+            "status": "未知",
+            "year_s": "未知",
+            "year_e": "未知",
+            "version": "未知",
+            "time": "2023-8-17",
+            "links": [
+                []
+            ],
+            "videos": [
+                []
+            ],
+            "description": "",
+            "tags": [
+                ""
+            ]
+        },
+        {
+            "part": "未分类",
+            "img": 0,
+            "title": "心灵终结2",
+            "platform": [
+                "未知"
+            ],
+            "theme": "RA2",
+            "author": "Mentalmeisters",
+            "status": "已转世",
+            "year_s": "未知",
+            "year_e": "未知",
+            "version": "未知",
+            "time": "2023-8-17",
+            "links": [
+                []
+            ],
+            "videos": [
+                []
+            ],
+            "description": "",
+            "tags": [
+                ""
+            ]
+        },
+        {
+            "part": "未分类",
+            "img": 0,
+            "title": "兵临城下",
+            "platform": [
+                "未知"
+            ],
+            "theme": "RA2",
+            "author": "不吐皮",
+            "status": "未知",
+            "year_s": "未知",
+            "year_e": "未知",
+            "version": "未知",
+            "time": "2023-12-5",
+            "links": [
+                []
+            ],
+            "videos": [
+                []
+            ],
+            "description": "",
+            "tags": [
+                ""
+            ]
+        },
+        {
+            "part": "未分类",
+            "img": 0,
+            "title": "神龙天舞",
+            "platform": [
+                "未知"
+            ],
+            "theme": "RA2",
+            "author": "未知",
+            "status": "已转世",
+            "year_s": "未知",
+            "year_e": "未知",
+            "version": "未知",
+            "time": "2023-12-5",
+            "links": [
+                []
+            ],
+            "videos": [
+                []
+            ],
+            "description": "",
+            "tags": [
+                ""
+            ]
+        },
+        {
+            "part": "未分类",
+            "img": 0,
+            "title": "重返荣耀",
+            "platform": [
+                "未知"
+            ],
+            "theme": "RA3",
+            "author": "未知",
             "status": "已终止",
             "year_s": "未知",
             "year_e": "未知",
             "version": "未知",
-            "time": "2023-8-9",
+            "time": "2023-12-5",
             "links": [
-                [
-                    "https://space.bilibili.com/25328668",
-                    "ZeroFanker的个人空间 - 哔哩哔哩"
-                ]
+                []
             ],
             "videos": [
-                [
-                    "https://www.bilibili.com/video/BV1wJ411b7VL/",
-                    "复仇时刻 2019 宣传片 - 哔哩哔哩"
-                ]
+                []
             ],
             "description": "",
             "tags": [
-                "贴近原版YR"
+                ""
+            ]
+        },
+        {
+            "part": "未分类",
+            "img": 0,
+            "title": "未知",
+            "platform": [
+                "未知"
+            ],
+            "theme": "RA2",
+            "author": "未知",
+            "status": "已终止",
+            "year_s": "未知",
+            "year_e": "未知",
+            "version": "未知",
+            "time": "未知",
+            "links": [
+                []
+            ],
+            "videos": [
+                []
+            ],
+            "description": "",
+            "tags": [
+                ""
+            ]
+        },
+        {
+            "part": "未分类",
+            "img": 0,
+            "title": "未知",
+            "platform": [
+                "未知"
+            ],
+            "theme": "RA2",
+            "author": "未知",
+            "status": "已终止",
+            "year_s": "未知",
+            "year_e": "未知",
+            "version": "未知",
+            "time": "未知",
+            "links": [
+                []
+            ],
+            "videos": [
+                []
+            ],
+            "description": "",
+            "tags": [
+                ""
             ]
         }
     ]
