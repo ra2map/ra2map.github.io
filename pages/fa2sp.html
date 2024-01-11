@@ -14,7 +14,7 @@
     <p>FA2sp本体只有2个核心文件，<strong>CncVxlRenderText.dll和FA2sp.dll</strong>，github仓库：<a
             href="https://github.com/secsome/FA2sp" target="_blank">https://github.com/secsome/FA2sp</a>，可以在Releases页下载
     </p>
-    <p><strong>1.6.2</strong>版的国内镜像加速下载：https://mirror.ghproxy.com/https://github.com/secsome/FA2sp/releases/download/Release1.6.2/CncVxlRenderText.dll<br>https://mirror.ghproxy.com/https://github.com/secsome/FA2sp/releases/download/Release1.6.2/FA2sp.dll<br>配置说明书：https://mirror.ghproxy.com/https://raw.githubusercontent.com/secsome/FA2sp/master/DOCUMENT.md
+    <p><strong>1.6.3</strong>版的国内镜像加速下载：https://mirror.ghproxy.com/https://github.com/secsome/FA2sp/releases/download/Release1.6.3/CncVxlRenderText.dll<br>https://mirror.ghproxy.com/https://github.com/secsome/FA2sp/releases/download/Release1.6.3/FA2sp.dll<br>配置说明书：https://mirror.ghproxy.com/https://raw.githubusercontent.com/secsome/FA2sp/master/DOCUMENT.md
     </p>
     <p>你需要将它加入到一份FA2中才能使用（不能加入到联盟版和FA2Ext版中，详见后文），如果你有旧版FA2sp，也可以加入它来<strong>升级</strong></p>
     <h3>整合版FA2sp</h3>
@@ -31,44 +31,44 @@
         white-space: pre-wrap;
         text-indent: 0;
         word-wrap: break-word;">
-            [ExtConfigs]
-            BrowserRedraw=Yes                                 ; 左侧树状图重绘
-            BrowserRedraw.GuessMode=0                         ; 0（默认）使用Prerequisite，1使用第一个Owner
-            BrowserRedraw.CleanUp=Yes                         ; 自动清除无Item的分类
-            BrowserRedraw.SafeHouses=Yes                      ; 安全的所属方，但是新建后要重新读图
-            AllowIncludes=Yes                                 ; 允许[#include] 不稳定，不建议使用
-            AllowPlusEqual=Yes                                ; 允许+=，不建议使用
-            TutorialTexts.Hide=Yes                            ; 隐藏结果11的文本
-            TutorialTexts.Fix=Yes                             ; 若结果11闪退可启用 (需要Stringtables = yes)
-            Stringtables=Yes                                  ; 读取stringtableXX
-            SortByTriggerName=Yes                             ; 触发按照名字排序
-            AdjustDropdownWidth=Yes                           ; 自适应下拉框宽度
-            AdjustDropdownWidth.Factor=6                      ; 每个字符宽度
-            AdjustDropdownWidth.Max=360                       ; 最大宽度
-            CopySelectionBound.Color=0,255,0                  ; 复制框的颜色
-            CursorSelectionBound.Color=0,0,255                ; 鼠标选择框的颜色
-            HeightIndicatorColor.Color=255,0,0                ; 高度指示器的颜色
-            UseRGBHouseColor=yes                              ; 是否支持RGBColors
-            ;;;性能
-            RecentFileLimit=9                                 ; 保留多少最近打开文件（4-9）
-            UndoRedoLimit=128                                 ; 指定撤销与重做上限次数，默认16
-            ;;;路径点
-            Waypoint.Background=Yes                           ; 路径点填充背景
-            Waypoint.Background.Color=128,128,128             ; 路径点背景色
-            Waypoint.Color=255,255,0                          ; 路径点字的颜色
-            Waypoint.Text.ExtraOffset=0,0                     ; 路径点文本的额外X轴和y轴偏移量,默认为0,0
-            ExtWaypoints=Yes                                  ; 支持无限Waypoint (需要Phobos 0.2及以上版本)
-            ;;;保存
-            SaveMap=Yes                                       ; 高速保存
-            SaveMap.AutoSave=Yes                              ; 自动保存， 需要SaveMap=Yes
-            SaveMap.AutoSave.Interval=600                     ; 自动保存间隔，单位秒，默认300s，至少要填30
-            SaveMap.AutoSave.MaxCount=10                      ; 自动保存最多存档数， 填-1表示无限
-            SaveMap.OnlySaveMAP=No                            ; 只存.map
-            SaveMap.DefaultPreviewOptionMP=0                  ; 保存多人地图时是否保存新的预览图，0为总是保存新的，1为不保存新的，2为总是生成隐藏预览
-            ;;;Other
-            EnableSearch=Yes                                  ; 【未知】直译：允许搜索
-            EnableMultiSelection=No                           ; 是否允许多选
-            VerticalLayout=No                                 ; FA2是否将底部视图移至右侧 
+[ExtConfigs]
+BrowserRedraw=Yes                                 ; 左侧树状图重绘
+BrowserRedraw.GuessMode=0                         ; 0（默认）使用Prerequisite，1使用第一个Owner
+BrowserRedraw.CleanUp=Yes                         ; 自动清除无Item的分类
+BrowserRedraw.SafeHouses=Yes                      ; 安全的所属方，但是新建后要重新读图
+AllowIncludes=Yes                                 ; 允许[#include] 不稳定，不建议使用
+AllowPlusEqual=Yes                                ; 允许+=，不建议使用
+TutorialTexts.Hide=Yes                            ; 隐藏结果11的文本
+TutorialTexts.Fix=Yes                             ; 若结果11闪退可启用 (需要Stringtables = yes)
+Stringtables=Yes                                  ; 读取stringtableXX
+SortByTriggerName=Yes                             ; 触发按照名字排序
+AdjustDropdownWidth=Yes                           ; 自适应下拉框宽度
+AdjustDropdownWidth.Factor=6                      ; 每个字符宽度
+AdjustDropdownWidth.Max=360                       ; 最大宽度
+CopySelectionBound.Color=0,255,0                  ; 复制框的颜色
+CursorSelectionBound.Color=0,0,255                ; 鼠标选择框的颜色
+HeightIndicatorColor.Color=255,0,0                ; 高度指示器的颜色
+UseRGBHouseColor=yes                              ; 是否支持RGBColors
+;;;性能
+RecentFileLimit=9                                 ; 保留多少最近打开文件（4-9）
+UndoRedoLimit=128                                 ; 指定撤销与重做上限次数，默认16
+;;;路径点
+Waypoint.Background=Yes                           ; 路径点填充背景
+Waypoint.Background.Color=128,128,128             ; 路径点背景色
+Waypoint.Color=255,255,0                          ; 路径点字的颜色
+Waypoint.Text.ExtraOffset=0,0                     ; 路径点文本的额外X轴和y轴偏移量,默认为0,0
+ExtWaypoints=Yes                                  ; 支持无限Waypoint (需要Phobos 0.2及以上版本)
+;;;保存
+SaveMap=Yes                                       ; 高速保存
+SaveMap.AutoSave=Yes                              ; 自动保存， 需要SaveMap=Yes
+SaveMap.AutoSave.Interval=600                     ; 自动保存间隔，单位秒，默认300s，至少要填30
+SaveMap.AutoSave.MaxCount=10                      ; 自动保存最多存档数， 填-1表示无限
+SaveMap.OnlySaveMAP=No                            ; 只存.map
+SaveMap.DefaultPreviewOptionMP=0                  ; 保存多人地图时是否保存新的预览图，0为总是保存新的，1为不保存新的，2为总是生成隐藏预览
+;;;Other
+EnableSearch=Yes                                  ; 【未知】直译：允许搜索
+EnableMultiSelection=No                           ; 是否允许多选
+VerticalLayout=No                                 ; FA2是否将底部视图移至右侧
         </div>
     </details>
     <h3>Mo版FA2sp</h3>
