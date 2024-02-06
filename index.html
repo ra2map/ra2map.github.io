@@ -454,7 +454,7 @@
 
 		});
 	</script>
-	<script type="module">
+	<script type="module" async>
 		import { fallingCreate, fallingDestroy, version, defaultConfig } from './new/naturalfalling.min.js'
 		let conf = {
 			open: true,
@@ -463,11 +463,11 @@
 			changeShow: true,
 			changeRain: true,
 			imgSetting: ['snow', 'petal'],
-			imgNumSetting: [12, 40, 100, 60],
+			imgNumSetting: [12, 40, 80, 60],
 			showSetting: {
 				fadeIn: true,
 				fadeOut: true,
-				time: 30
+				time: 40
 			},
 			rainSetting: {
 				wind_speed: 50,
@@ -527,9 +527,9 @@
 			</div>
 		</div>
 	</div>
-	<iframe name="_nav_pane" id="_nav_pane" title="_nav_pane" src="nav.html"></iframe>
-	<iframe name="_item_content" id="_item_content" title="_item_content" src="pages/index_page.html"></iframe>
-	<iframe name="_moe" id="_moe" title="_moe" src="moe/moe.html"></iframe>
+	<iframe name="_nav_pane" id="_nav_pane" title="_nav_pane" src="nav.html" importance="high"></iframe>
+	<iframe name="_item_content" id="_item_content" title="_item_content" src="pages/index_page.html" importance="high"></iframe>
+	<iframe name="_moe" id="_moe" title="_moe" src="moe/moe.html" importance="low"></iframe>
 
 	<div class="tackle">
 		<div class="tCenter">
@@ -541,7 +541,7 @@
 				<img class="tSmaCircle tsc1"
 					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAEMUlEQVR4nO2bWUhUURjHv0IfJnCk5Sk1s9I0U8v2yBalTUmyzEyznYJ68aGFHiKK6KWXaLFooQUkoyiILFtBimizTbPE6iWzHlodUaqH8rvhUHFnmJnvfOfcge8Hwyz33u9/5jdn5t5z75kev7oAIWR6mm5AuCMCiYhAIiKQiAgkIgKJiEAiIpCICCQiAomIQCIikIgIJCICiYhAIiKQSITpBnTz4+dPqG9ohHsP6qD59RvweNrB095u3bujosDtjrLuR2akwajMDEhOSjTdZIseps9If/3WBlVnzkHt7TvwretxoMTG9IfsqVmQnzcLerlcjC30j1GBN2tvdck7Dy3vWkOuERcbY0nMmzVdYcsCx5jAikPH4OLlK8rqZU0cD5s3lCurFyhGBG7eugOePmtQXrdf375w8sh+5XX9oX0vvHvfQRZ5yMdPn2Bt+UaW2r7Q2gNrrt2APRWH/a6TOSIdEgYOgIT4+D/3A+OhsuosVJ4+G3DOvPw8WLW8jNrcgNAmEA9Ptu3c5XedZYuLoWj+XNtluQXFQeWtW7NSy45F21f4QnWNz2UpyUlw7tRxW3kdHZ1WDwwlr6OzM+jtgkXLgfT1m7Xw+Gm97TK7vScKa2lttQ5v8Pb9+4+gM9+2vLMkFhcWhNTmQNEisLrmms9l68vX/fN805bt1ohEBfjBcQtk/wo3Nb+ybnagvMjISO9z/J1TJQ9pff8BnimsZwe7wLv362xfxzFt9pQs7/O9B/zvnUPl4aMnLHW7YRfoq0cNiIv1PsbfvMtXb7DkN75oYqnbDbvANo/H9vW/BeIOQ3e+KvgFttm/gcTBCd7HlJMJoearwlgPHDJ4kHX/+fMXXoHh3gOjo922r3cfHONvXyjHedR8VbAfB0a73bYnSnFsG8z4lpLPibEeqAvufHaBmRnp3BFG89kFJg81e/GHO59dYNKQQdCnT2/uGFswF/M5YRfocrlg9vQc7hhbMNfFfMVOy/nA2TNytPdCzMNcbrQIxDdTurBQR5QXzNPxoWk7I429Ye6cXC1ZmKOj9yFar8qtXrEEMtJSWTOwPuboQvtlzbJFRRARwTMAwrpYXyfaBQ5LGQplJTxvEutifZ0Ymd62oCAfxo0ZpbQm1sO6ujE2P7CkaL6j6wWKMYGJXSOEyZMmKKmFdRKZRxy+MDpDNXemmpkDquqEglGB6cOHWTcKaQpqUDA+R7qEOELRPcL5H+NTfMMd4z0w3BGBRBzxN4dg5/79zaXzVQpbEjzSA4mIQCIikIgjBOIsVZ3bqcQRAvG/bzq3U4kjBM7ImQbjx44OahtcH7czjSMEIoUFc1jX58JRQ7nnL17C0ROV8LKp2ec6ONNg5dJSSE1J1tgy3zhKYDjimK9wuCICiYhAIiKQiAgkIgKJiEAiIpCICCQiAomIQCIikIgIJCICifwGlSEx1Pi5b90AAAAASUVORK5CYII=">
 			</a>
-			<a href="javascript:;" title="重启特效">
+			<a href="javascript:;" title="重启特效（40秒自动关闭）">
 				<img class="tSmaCircle tsc2"
 					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAFWUlEQVR4nO2bfUyVVRjAH/E2c6lcQCXTVoki4kdGSFr5ASJhIl+CNWmyomVf2NZYa85sVrO1NdukmWnk8GsmCIgYJngVrTQkMuTjqtknZKhwr6BbLqLu8266e4PrPe/7PKd773Z+2/2De855zsPv3ve+73Pe8w74xwEoDBPg7QT8HSWQiBJIRAkkogQSUQKJKIFElEAiSiARJZCIEkhECSSiBBJRAomYvJ1Af/T29oLNfgVsNrv2d1CQGYLMgRAQ4Huft88ILNlbAce+PqFJu9zRqUl0BuUNDwnWZM56eAakpyR5KVNXBvjKgurjaU/q6v956S5JmejD944JP0MJJKIEElECiXhdYGOzFd54613d43AMjvXETz//YiQtYaSdhRubWuC1VWsgfHwYJC1IgPjYOS7t9acaYP+BKjj+zUnSPDMfmg4LE+dD1LSpLu9XH66BisqDcPbceXjnzZV92rmQIvDqtWuQ9/pq+LW17eZ790+ZBDnZWTAubCzkb/wEKr+oZp1zwWPxkPv8s/DD+R+hoHAHfH+66Wbbfffeo0nEi3FupAj8IH8jVFmO9NsWOGwYXOnq4p7SY+y4ubMg75WX2Odk/w0sLd/vVh4iS56n2JYjx2BPWQX7nKwC8fDZvGUbZ0hWCgq3azlywiqw8uAhznBS4M6RTWD7xUt+IxBz5YJNIK6m+AucubKchf/q6YGUzKc48tEYMTwExoy+S3shrW2/a69LlzvY5thbtB1uM9FX81jWA1usZznCaDyzbClkpCX321ZcWg6fbt3JMg/mPHVyJDkOyyGMiSTEx5LjrH9/rVt5CLZhHyqYK4c8hPVC+uS330Fx2T443dise+yWj/MhdOQIob54Enh6ea7uOaY4pGWkLoLpDz6ge6w7pFQih49+CVt37ob29otC/V/NfQHi4+Z47uhEtaUG1uV/JNQ3NHQkLFu6BGJnP6prDhGkrMZgoncMHizUF+9z6JWH4BgcKwLmIkMeIm05q6v7qlC/UaPuNDyH6FjRXIwgTWB3d7dQv7vHjDY8h+hY0VyM4PUF1YGEe72UsVxIy2Do0CFC/fAC2SiiY0VzMYI8gUN8SKBgLkaQIvCr47Xw5/XrQn2xPMMKQy84RrS0w1wwJxmwXgc2tVihqKQcauvqdY/FCgOX+0XANb0VeSt1zxETHQWZ6ckwaWKE7rHuYBO4fsMmOFBlIcUQqUaMViHOJM6PgxUvPkeKcQOWQ7jBUbpR5SEoBisMd2AbVR6CuTYYKDf7g+Ub2NPzNyRnZnHko4EVBl4k37jO+621DS5c+EPbtcVFya5CuH3QIHIcluUsk2kgZD2RATs+K+YIp4nCl5FFCRHwPjWHPITtLJyYMI8rlHSM1N7uYBMYEhwE6SkLucJJA5eywseFscVjvQ6cN3c2Zzgp4O5WTlgF4haKnGy+eyPc4O4EzsMXYa9EFqcmaYm6IyRYbA3PCLeKjR+uX2ztQPBbiAk788jMGNj04TrYVrABsrP07YcWAWNibJwD5/ov7729mn1ORNr2Nty+tmrNWoiMmAAZaYtgRky0Szvu7du9pwzq6k+R5omOmgZLFqfC5EjX8uxEbZ2jXt4HzdYzuspEvUjdpW89cw4iJoy/ZR/8R4tKy3XfGp0YEQ6Zacl9PhgjOVBQjzkQ8f6Srp+jBBJRAokogUR85mHDl5fnQJWlBjpsNujstPV52BDBBw2DzWaPZ97/E585CzuD8jptdrDZ7QCO7MzmQG2HvYlhOxo3PinQn1C/gUSUQCJKIBElkIgSSEQJJKIEElECiSiBRJRAIkogESWQiBJIRAkkogQSUQKJ/Av2etzBxwmpdwAAAABJRU5ErkJggg==">
 			</a>
