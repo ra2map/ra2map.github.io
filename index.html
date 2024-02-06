@@ -8,18 +8,28 @@
 	<meta name="author" content="轻稚天雪">
 	<title>红警地图指导 - ra2map.github.io</title>
 	<style type="text/css">
-		.deng-box {
+		.d{
+			display: none;
+		}
+
+		.dl {
+			pointer-events: none;
 			position: fixed;
+			top: 0;
+			right: 0;
+			z-index: 99;
+		}
+
+		.deng-box {
+			position: absolute;
 			top: -40px;
-			right: 12vw;
-			z-index: 999;
+			right: 10vw;
 		}
 
 		.deng-box1 {
-			position: fixed;
+			position: absolute;
 			top: -30px;
-			right: 15vw;
-			z-index: 999;
+			right: 14vw;
 		}
 
 		.deng {
@@ -197,10 +207,6 @@
 		}
 	</style>
 	<style>
-		.dl {
-			display: none;
-		}
-
 		body {
 			min-height: 100vh;
 			margin: 0;
@@ -422,10 +428,10 @@
 				$(co).children('html,body').animate({scrollTop: 2000});*/
 				$('#_item_content').attr({ src: 'pages/index_page.html#联系我们' });
 			});
-			$('.tsc2').click(function () {
+			/*$('.tsc2').click(function () {
 				$('.lock').fadeIn();
 				$('.settings').fadeIn();
-			});
+			});*/
 			$('.lock').click(function () {
 				$('.lock').fadeOut();
 				$('.support,.settings').fadeOut();
@@ -448,13 +454,48 @@
 
 		});
 	</script>
+	<script type="module">
+		import { fallingCreate, fallingDestroy, version, defaultConfig } from './new/naturalfalling.min.js'
+		let conf = {
+			open: true,
+			custom: true,
+			changeImg: true,
+			changeShow: true,
+			changeRain: true,
+			imgSetting: ['snow', 'petal'],
+			imgNumSetting: [12, 40, 100, 60],
+			showSetting: {
+				fadeIn: true,
+				fadeOut: true,
+				time: 30
+			},
+			rainSetting: {
+				wind_speed: 50,
+				wind_deviation: 4,
+				wind_angle: 255,
+				hasBounce: true,
+				numLevel: 0.3
+			},
+			gravity: 0.163,
+			zIndex: 100,
+			imgSize: [40, 40, 4],
+			wind_x: null//-50
+		}
+		//window.onload = () => {
+		fallingCreate(conf)
+		document.querySelector('.tsc2').addEventListener('click', () => {
+			fallingDestroy()
+			fallingCreate(conf)
+		})
+		//}
+	</script>
 </head>
 
 <body>
 	<div class="loading-bar">
 		<div class="progress"></div>
 	</div>
-	<div class="dl" id="dl">
+	<div class="" id="dl" v-show="openWeatherLantern">
 		<!-- 给你的网站添加灯笼特效！ - 荼蘼博客https://blog.tomys.top/2021-02/2021newyear/  灯笼1 -->
 		<div class="deng-box">
 			<div class="deng">
@@ -496,11 +537,11 @@
 				<img class="tBigCircle"
 					src="data:image/png;base64,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">
 			</a>
-			<a href="javascript:$('#dl').toggleClass('dl');" title="开关灯笼-原夜间模式（暂不支持）">
+			<a href="javascript:$('#dl').toggleClass('d');" title="开关灯笼-原夜间模式（暂不支持）">
 				<img class="tSmaCircle tsc1"
 					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAEMUlEQVR4nO2bWUhUURjHv0IfJnCk5Sk1s9I0U8v2yBalTUmyzEyznYJ68aGFHiKK6KWXaLFooQUkoyiILFtBimizTbPE6iWzHlodUaqH8rvhUHFnmJnvfOfcge8Hwyz33u9/5jdn5t5z75kev7oAIWR6mm5AuCMCiYhAIiKQiAgkIgKJiEAiIpCICCQiAomIQCIikIgIJCICiYhAIiKQSITpBnTz4+dPqG9ohHsP6qD59RvweNrB095u3bujosDtjrLuR2akwajMDEhOSjTdZIseps9If/3WBlVnzkHt7TvwretxoMTG9IfsqVmQnzcLerlcjC30j1GBN2tvdck7Dy3vWkOuERcbY0nMmzVdYcsCx5jAikPH4OLlK8rqZU0cD5s3lCurFyhGBG7eugOePmtQXrdf375w8sh+5XX9oX0vvHvfQRZ5yMdPn2Bt+UaW2r7Q2gNrrt2APRWH/a6TOSIdEgYOgIT4+D/3A+OhsuosVJ4+G3DOvPw8WLW8jNrcgNAmEA9Ptu3c5XedZYuLoWj+XNtluQXFQeWtW7NSy45F21f4QnWNz2UpyUlw7tRxW3kdHZ1WDwwlr6OzM+jtgkXLgfT1m7Xw+Gm97TK7vScKa2lttQ5v8Pb9+4+gM9+2vLMkFhcWhNTmQNEisLrmms9l68vX/fN805bt1ohEBfjBcQtk/wo3Nb+ybnagvMjISO9z/J1TJQ9pff8BnimsZwe7wLv362xfxzFt9pQs7/O9B/zvnUPl4aMnLHW7YRfoq0cNiIv1PsbfvMtXb7DkN75oYqnbDbvANo/H9vW/BeIOQ3e+KvgFttm/gcTBCd7HlJMJoearwlgPHDJ4kHX/+fMXXoHh3gOjo922r3cfHONvXyjHedR8VbAfB0a73bYnSnFsG8z4lpLPibEeqAvufHaBmRnp3BFG89kFJg81e/GHO59dYNKQQdCnT2/uGFswF/M5YRfocrlg9vQc7hhbMNfFfMVOy/nA2TNytPdCzMNcbrQIxDdTurBQR5QXzNPxoWk7I429Ye6cXC1ZmKOj9yFar8qtXrEEMtJSWTOwPuboQvtlzbJFRRARwTMAwrpYXyfaBQ5LGQplJTxvEutifZ0Ymd62oCAfxo0ZpbQm1sO6ujE2P7CkaL6j6wWKMYGJXSOEyZMmKKmFdRKZRxy+MDpDNXemmpkDquqEglGB6cOHWTcKaQpqUDA+R7qEOELRPcL5H+NTfMMd4z0w3BGBRBzxN4dg5/79zaXzVQpbEjzSA4mIQCIikIgjBOIsVZ3bqcQRAvG/bzq3U4kjBM7ImQbjx44OahtcH7czjSMEIoUFc1jX58JRQ7nnL17C0ROV8LKp2ec6ONNg5dJSSE1J1tgy3zhKYDjimK9wuCICiYhAIiKQiAgkIgKJiEAiIpCICCQiAomIQCIikIgIJCICifwGlSEx1Pi5b90AAAAASUVORK5CYII=">
 			</a>
-			<a href="javascript:;" title="设置">
+			<a href="javascript:;" title="重启特效">
 				<img class="tSmaCircle tsc2"
 					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAFWUlEQVR4nO2bfUyVVRjAH/E2c6lcQCXTVoki4kdGSFr5ASJhIl+CNWmyomVf2NZYa85sVrO1NdukmWnk8GsmCIgYJngVrTQkMuTjqtknZKhwr6BbLqLu8266e4PrPe/7PKd773Z+2/2De855zsPv3ve+73Pe8w74xwEoDBPg7QT8HSWQiBJIRAkkogQSUQKJKIFElEAiSiARJZCIEkhECSSiBBJRAomYvJ1Af/T29oLNfgVsNrv2d1CQGYLMgRAQ4Huft88ILNlbAce+PqFJu9zRqUl0BuUNDwnWZM56eAakpyR5KVNXBvjKgurjaU/q6v956S5JmejD944JP0MJJKIEElECiXhdYGOzFd54613d43AMjvXETz//YiQtYaSdhRubWuC1VWsgfHwYJC1IgPjYOS7t9acaYP+BKjj+zUnSPDMfmg4LE+dD1LSpLu9XH66BisqDcPbceXjnzZV92rmQIvDqtWuQ9/pq+LW17eZ790+ZBDnZWTAubCzkb/wEKr+oZp1zwWPxkPv8s/DD+R+hoHAHfH+66Wbbfffeo0nEi3FupAj8IH8jVFmO9NsWOGwYXOnq4p7SY+y4ubMg75WX2Odk/w0sLd/vVh4iS56n2JYjx2BPWQX7nKwC8fDZvGUbZ0hWCgq3azlywiqw8uAhznBS4M6RTWD7xUt+IxBz5YJNIK6m+AucubKchf/q6YGUzKc48tEYMTwExoy+S3shrW2/a69LlzvY5thbtB1uM9FX81jWA1usZznCaDyzbClkpCX321ZcWg6fbt3JMg/mPHVyJDkOyyGMiSTEx5LjrH9/rVt5CLZhHyqYK4c8hPVC+uS330Fx2T443dise+yWj/MhdOQIob54Enh6ea7uOaY4pGWkLoLpDz6ge6w7pFQih49+CVt37ob29otC/V/NfQHi4+Z47uhEtaUG1uV/JNQ3NHQkLFu6BGJnP6prDhGkrMZgoncMHizUF+9z6JWH4BgcKwLmIkMeIm05q6v7qlC/UaPuNDyH6FjRXIwgTWB3d7dQv7vHjDY8h+hY0VyM4PUF1YGEe72UsVxIy2Do0CFC/fAC2SiiY0VzMYI8gUN8SKBgLkaQIvCr47Xw5/XrQn2xPMMKQy84RrS0w1wwJxmwXgc2tVihqKQcauvqdY/FCgOX+0XANb0VeSt1zxETHQWZ6ckwaWKE7rHuYBO4fsMmOFBlIcUQqUaMViHOJM6PgxUvPkeKcQOWQ7jBUbpR5SEoBisMd2AbVR6CuTYYKDf7g+Ub2NPzNyRnZnHko4EVBl4k37jO+621DS5c+EPbtcVFya5CuH3QIHIcluUsk2kgZD2RATs+K+YIp4nCl5FFCRHwPjWHPITtLJyYMI8rlHSM1N7uYBMYEhwE6SkLucJJA5eywseFscVjvQ6cN3c2Zzgp4O5WTlgF4haKnGy+eyPc4O4EzsMXYa9EFqcmaYm6IyRYbA3PCLeKjR+uX2ztQPBbiAk788jMGNj04TrYVrABsrP07YcWAWNibJwD5/ov7729mn1ORNr2Nty+tmrNWoiMmAAZaYtgRky0Szvu7du9pwzq6k+R5omOmgZLFqfC5EjX8uxEbZ2jXt4HzdYzuspEvUjdpW89cw4iJoy/ZR/8R4tKy3XfGp0YEQ6Zacl9PhgjOVBQjzkQ8f6Srp+jBBJRAokogUR85mHDl5fnQJWlBjpsNujstPV52BDBBw2DzWaPZ97/E585CzuD8jptdrDZ7QCO7MzmQG2HvYlhOxo3PinQn1C/gUSUQCJKIBElkIgSSEQJJKIEElECiSiBRJRAIkogESWQiBJIRAkkogQSUQKJ/Av2etzBxwmpdwAAAABJRU5ErkJggg==">
 			</a>

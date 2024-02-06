@@ -141,6 +141,56 @@
 <body>
     <script type="text/javascript" language="javascript" src="new/jquery-3.6.0.min.js"></script>
     <script>
+        window.open = () => { }
+        let largeDiv = document.createElement('div')
+        let largeImg = document.createElement('img')
+        let largeDiv2 = document.createElement('div')
+        largeDiv2.style = 'flex-grow: 1;'
+        let largeDiv3 = largeDiv2.cloneNode()
+        largeDiv.style = `display: none;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            z-index: 20000;
+            width: 100%;
+            overflow-y: auto;
+            height: 100%;
+            /*justify-content: center;*/
+            align-items: center;
+            background-color: rgba(0,0,0,0.5);`
+        largeImg.style = 'max-width: 100%;'
+        largeDiv.id = 'la'
+        largeDiv.prepend(largeDiv3, largeImg, largeDiv2)
+        document.querySelector('body').prepend(largeDiv)
+
+        largeImg.addEventListener('click', () => {
+            document.querySelector('#la').style.display = 'none'
+        })
+
+        document.querySelectorAll('.p_content img').forEach((i) => {
+            i.addEventListener('click', (e) => {
+                e.stopPropagation()
+                e.preventDefault()
+                let url = null
+                let im = /^https?:\/\/.*?w%3D580.*?\/([^\/\.]+)\.[a-z]{3,4}[^_]+_.*/.exec(e.target.src);
+                if (im != null) {
+                    let tid = /\/p\/(\d+)/.exec(location)[1]
+                    var xhr = new XMLHttpRequest()
+                    xhr.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            url = JSON.parse(this.responseText).data.img.original.waterurl
+                        }
+                    };
+                    xhr.open("GET", "https://tieba.baidu.com/photo/p?alt=jview&pic_id=" + im[1] + "&tid=" + tid, false)
+                    xhr.send()
+                }
+                if (url) {
+                    let i = document.querySelector('#la img')
+                    i.src = url
+                    i.parentElement.style.display = 'flex'
+                }
+            })
+        })
         $(function () {
 
             $('#ID_Workspace img').click(function () {
