@@ -8,11 +8,11 @@
 	<meta name="author" content="轻稚天雪">
 	<title>红警地图指导 - ra2map.github.io</title>
 	<style type="text/css">
-		.d{
+		.d {
 			display: none;
 		}
 
-		.dl {
+		#dl {
 			pointer-events: none;
 			position: fixed;
 			top: 0;
@@ -528,8 +528,14 @@
 		</div>
 	</div>
 	<iframe name="_nav_pane" id="_nav_pane" title="_nav_pane" src="nav.html" importance="high"></iframe>
-	<iframe name="_item_content" id="_item_content" title="_item_content" src="pages/index_page.html" importance="high"></iframe>
-	<iframe name="_moe" id="_moe" title="_moe" src="moe/moe.html" importance="low"></iframe>
+	<iframe name="_item_content" id="_item_content" title="_item_content" src="pages/index_page.html"
+		importance="high"></iframe>
+	<iframe name="_moe" id="_moe" title="_moe" src="javascript:;" importance="low"></iframe>
+	<script>
+		setTimeout(() => {
+			document.querySelector('#_moe').src = 'moe/moe.html'
+		}, 1000)
+	</script>
 
 	<div class="tackle">
 		<div class="tCenter">

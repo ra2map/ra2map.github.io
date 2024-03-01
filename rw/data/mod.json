@@ -314,8 +314,8 @@
             "author": "星辰之光制作组",
             "status": "正常更新",
             "year_s": 2018,
-            "year_e": 2022,
-            "version": "0.5",
+            "year_e": 2024,
+            "version": "0.6",
             "time": "2023-4-2",
             "links": [
                 [
@@ -323,18 +323,14 @@
                     "星辰之光制作组的个人空间 - 哔哩哔哩"
                 ],
                 [
-                    "https://www.bilibili.com/read/cv9771877",
-                    "《命令与征服:星辰之光》公开测试版本发布啦! - 哔哩哔哩"
-                ],
-                [
-                    "https://www.bilibili.com/read/cv17703050",
-                    "《命令与征服:星辰之光》v0.5版本更新 - 哔哩哔哩"
+                    "https://www.bilibili.com/read/cv31546116/",
+                    "《命令与征服:星辰之光》v0.6版本更新 - 哔哩哔哩"
                 ]
             ],
             "videos": [
                 [
-                    "https://www.bilibili.com/video/BV12Y411M7BV/",
-                    "【红色警戒2】星辰之光 Extreme Starry v0.5 宣传片 Part1 - 哔哩哔哩"
+                    "https://www.bilibili.com/video/BV16y421b7Ah/",
+                    "【红色警戒2】星辰之光 Extreme Starry v0.6 宣传片 - 哔哩哔哩"
                 ],
                 [
                     "https://www.bilibili.com/video/BV1Pz4y1U72j/",
@@ -853,6 +849,71 @@
             "tags": [
                 "场景",
                 "素材"
+            ]
+        },
+        {
+            "part": "新兴",
+            "img": 4,
+            "title": "Nano Storm",
+            "platform": [
+                "Ares",
+                "Phobos",
+                "DTA",
+                "ReShade"
+            ],
+            "theme": "未来",
+            "author": "QG, 九千天华",
+            "status": "未发布",
+            "year_s": "未知",
+            "year_e": 2024,
+            "version": "内测",
+            "time": "2024-2-11",
+            "links": [
+                [
+                    "https://www.bilibili.com/read/cv31060045/",
+                    "红色警戒2MOD：Nano Storm 前瞻 - 哔哩哔哩"
+                ]
+            ],
+            "videos": [
+                []
+            ],
+            "description": "Command&Conquer ：Nano Storm 中文全称为：命令与征服：纳米风暴\n由@QG鸽伸和@九千天华发起制作，基于YR1.001版本，使用Ares+Phobos平台制作的一款科幻风非官方模组，致力于实现一些老掉牙的自娱自乐的玩法。同时本MOD也会与前夕MOD进行一定的联动（素材、单位等）\nMOD特色：\n阵营方面：继承YR原版的盟苏尤三家，但去除了子阵营机制，仅保留了盟军，苏联，尤里三个可选阵营（据QG所说是因为他懒得做所以才全砍了），并新增了一个原创阵营：以太中枢(Aether Hub)。盟、苏、尤均可在建造各自的T3科技建筑后选择不同的科技路线\n盟军科技路线：棱镜，冷冻，时空；苏联科技路线：核能，磁能，铁幕；尤里科技路线：基因阵列，心灵之握；以太中枢：[数据删除]\n剧情方面：重新演绎YR官方剧情，并在此基础上修改和延续部分剧情，引入第四阵营参与三方混战。\n同时还有客户端：全新定制的UI Made By AERO，Reshade插件，以及战场天气：可以在遭遇战选项中选取不同的天气效果，目前只有雨，雪和樱花雨三种战场天气选项等等",
+            "tags": [
+                "场景",
+                "特效",
+                "客户端",
+                "科幻"
+            ]
+        },
+        {
+            "part": "新兴",
+            "img": 1,
+            "title": "前夕",
+            "platform": [
+                "未知",
+                "ReShade"
+            ],
+            "theme": "未来",
+            "author": "晓星残月",
+            "status": "未发布",
+            "year_s": "未知",
+            "year_e": 2024,
+            "version": "内测",
+            "time": "2024-2-11",
+            "links": [
+                []
+            ],
+            "videos": [
+                [
+                    "https://www.bilibili.com/video/BV1fU421d7Em/",
+                    "红警史上最炫酷太空大战--红警2MOD：前夕 前瞻演示 - 哔哩哔哩"
+                ]
+            ],
+            "description": "红色警戒2：前夕 是由晓星残月及其MOD制作团队制作的一款基于 红色警戒2尤里的复仇 并且以炫酷太空战斗为特色的红色警戒2MOD，该MOD有宏大的以银河系国家斗争为主要内容的架空世界设定，旨在为玩家展现一个以 命令与征服 为主题的太空歌剧故事。\n值得一提的是，前夕MOD参考复刻了大量源自eve online中的优秀舰船设计，不过前夕MOD的剧情是完全原创的，并不是连eve online的世界设定也一并复刻，希望星战前夜玩家不要产生诸如“为什么艾玛会打加达里”这类误解，尽管我评论区里这次依然会有这么问的就是了。",
+            "tags": [
+                "素材",
+                "科幻",
+                "场景"
             ]
         }
     ]
