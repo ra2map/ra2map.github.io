@@ -32,6 +32,10 @@
                 [
                     "https://moapyr.fandom.com/zh/wiki/%E5%BF%83%E7%81%B5%E7%BB%88%E7%BB%93%E4%B8%AD%E6%96%87_Wiki",
                     "心灵终结中文 Wiki | Fandom"
+                ],
+                [
+                    "https://www.moapyr.com/",
+                    "主页 | MOAPYR 资源站"
                 ]
             ],
             "videos": [
@@ -737,13 +741,13 @@
             "author": "一只小羊",
             "status": "正常更新",
             "year_s": 2021,
-            "year_e": 2023,
-            "version": "3.0.1",
+            "year_e": 2024,
+            "version": "3.0.2",
             "time": "2023-8-1",
             "links": [
                 [
-                    "http://www.pkuit.com/forum.php?mod=viewthread&tid=205795&extra=",
-                    "[枝江警戒 ZhiJiang Alert] V3.0.1 - 新任务发布区 - 红警任务之家"
+                    "https://bbs.ra2diy.com/forum.php?mod=viewthread&tid=22585",
+                    "[枝江警戒 ZhiJiang Alert] V3.0.2 更新发布~ - ra2diy"
                 ],
                 [
                     "https://www.bilibili.com/read/cv25433841",
@@ -914,6 +918,38 @@
                 "素材",
                 "科幻",
                 "场景"
+            ]
+        },
+        {
+            "part": "新兴",
+            "img": 2,
+            "title": "零点界限",
+            "platform": [
+                "未知"
+            ],
+            "theme": "RA2",
+            "author": "暴风硫",
+            "status": "未发布",
+            "year_s": "未知",
+            "year_e": 2024,
+            "version": "内测",
+            "time": "2024-5-13",
+            "links": [
+                [
+                    "https://bbs.ra2diy.com/forum.php?mod=viewthread&tid=22145&extra=page%3D1",
+                    "【YRMOD】----《零点界限》龟速制作ing - 红警DIY论坛"
+                ]
+            ],
+            "videos": [
+                [
+                    "https://space.bilibili.com/11638715",
+                    "暴风硫的个人空间-暴风硫个人主页-哔哩哔哩视频 - 哔哩哔哩"
+                ]
+            ],
+            "description": "“当那一刻到来时，我们除了面对，别无选择。”\nMOD剧情接YR2苏军战役结束后，尤里消失，世界陷入了暂时的混乱中，各势力残缺不全，一盘散沙。考虑到未来的发展，盟苏两方高层决定签署停火协议，约定彼此之间“和平发展”，共同建设这个因长时间战火而支离破碎的世界。\n“和那帮野蛮人/资本家和平共处？疯了吧？”\n尽管依旧存在分歧，但双方还是做出了同样的决定，在五角大楼举行全面停火会谈。正当大部分人都为即将到来的和平世界欢呼时，一群来自异维空间的访客打破了现有的局面，他们带着一些或原始或难以用科学解释的科技，凭空出现在世界各地，给这个原本要走向正轨的世界带来了大量不稳定性因素。同时，本应消失的人也在不知不觉中出现在众人视野。",
+            "tags": [
+                "素材",
+                "2次元"
             ]
         }
     ]

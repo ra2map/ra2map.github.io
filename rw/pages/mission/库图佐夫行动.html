@@ -1,0 +1,1558 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+bugtext {
+  font-size: 0.9rem;
+  color: grey;
+}
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+/*快速自定义配置*/
+:root {
+    --monospace: Consolas, "Source Han Sans CN"; /*代码字体*/
+    --text-font: var(--monospace); /*正文字体*/
+    --title-font: var(--monospace); /*标题字体*/
+    --latex-font: var(--monospace); /*LaTeX字体(不含英语)*/
+    --text-line-height: 1.6; /*正文行间距*/
+    --code-line-height: 1.6; /*代码块行间距*/
+    --p-spacing: 0.8rem; /*段间距*/
+    --text-size: 16px;
+}/*
+ * Copyright (C) 2018 Drake, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * GitHub https://github.com/liangjingkanji/DrakeTyporaTheme
+ */
+@import url();
+@include-when-export url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --text-color: #304455;
+    --bg-color: #ffffff;
+    --control-text-color: var(--text-color);
+    --meta-content-color: var(--text-color);
+    --active-file-border-color: var(--drake-accent);
+    --rawblock-edit-panel-bd: var(--code-block-bg-color);
+    --item-hover-bg-color: #E5E5E596;
+    --active-file-bg-color: var(--item-hover-bg-color);
+
+    --blur-text-color: rgba(48, 68, 85, 0.5);
+    --drake-accent: #31a062;
+    --drake-highlight: #d63200;
+    --a-color: var(--drake-accent);
+    --variable-color: var(--drake-highlight);
+    --outline-active-color: var(--a-color);
+    --code-block-bg-color: #f8f8f8;
+    --code-block-color: #525252;
+    --title-color: #273849;
+    --blockquote-border-color: #f66;
+    --blockquote-color: var(--text-color);
+    --blockquote-bg-color: #f8f8f8;
+    --strong-color: var(--title-color);
+    --h2-underline-color: var(--title-color);
+    --horizontal-divider-color: var(--title-color);
+    --height-light-color: var(--drake-highlight);
+    --height-light-border-color: var(--drake-highlight);
+    --yaml-color: #777777;
+    --yaml-bg-color: #f7f7f7;
+    --footnotes-bg-color: #3c3d3e;
+    --footnotes-highlight: #FFD760;
+    --table-border-color: #dfe2e5;
+    --table-header-bg-color: #f8f8f8;
+    --table-bg-color: var(--bg-color);
+    --table-n2-bg-color: #f8f8f8;
+    --input-bg-color: #f2f2f2;
+    --btn-hover-bg-color: #f2f2f2;
+    --checkbox-checked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M425.984 726.016l384-384-59.99-61.995-324.01 324.011-152.021-152.021L213.973 512zm384-598.016q36.01 0 61.013 25.984T896 213.974v596.01q0 34.005-25.003 59.99t-61.013 25.983h-596.01q-36.011 0-61.014-25.984t-25.003-59.989v-596.01q0-34.006 25.003-59.99T213.973 128h596.011z' fill='%2365b73b'/%3E%3C/svg%3E");
+    --checkbox-unchecked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M810.667 213.333v597.334H213.333V213.333h597.334m0-85.333H213.333C166.4 128 128 166.4 128 213.333v597.334C128 857.6 166.4 896 213.333 896h597.334C857.6 896 896 857.6 896 810.667V213.333C896 166.4 857.6 128 810.667 128z' fill='%23333333'/%3E%3C/svg%3E");
+}
+
+html {
+    font-size: var(--text-size);
+}
+
+body {
+    font-family: var(--text-font) !important;
+    color: var(--text-color);
+    -webkit-font-feature-settings: "liga" on, "calt" on;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+p {
+    line-height: var(--text-line-height);
+}
+
+/*code block*/
+.md-fences {
+    font-size: 1rem;
+    padding: 0.5rem !important;
+    border-radius: 2px;
+    word-wrap: normal;
+    background-color: var(--code-block-bg-color);
+    color: var(--code-block-color);
+    border: none;
+    line-height: var(--code-line-height);
+}
+
+/*inline latex*/
+.MathJax {
+    font-size: 120% !important;
+}
+.MathJax text, .MathJax use {
+    font-family: var(--latex-font);
+}
+/*math-block latex*/
+.md-math-block .MathJax {
+    font-size: 130% !important;
+}
+
+/*mermaid*/
+[id^=mermaidChart] .cluster rect {
+    fill: var(--table-n2-bg-color) !important;
+    stroke: var(--table-border-color) !important;
+}
+[id^=mermaidChart] .clusters span.nodeLabel {
+    color: var(--text-color) !important;
+    line-height: 1.8rem;
+}
+[mermaid-type="journey"] line {
+    stroke: #7a7a7a !important;
+}
+[mermaid-type="journey"] .label {
+    color: #333 !important;
+}
+[id^=mermaidChart] .relationshipLabelBox {
+    fill: var(--bg-color) !important;
+    opacity: 1 !important;
+    background-color: var(--bg-color) !important;
+}
+[id^=mermaidChart] .legend {
+    fill: var(--text-color) !important;
+}
+[id^=mermaidChart] g.label {
+    font-size: 1rem !important;
+}
+[id^=mermaidChart] line.divider {
+    stroke: var(--table-border-color) !important;
+}
+[id^=mermaidChart] span.nodeLabel {
+    color: var(--code-block-color) !important;
+    line-height: 1.8rem;
+}
+tspan {
+    color: var(--text-color)
+}
+[id^=mermaidChart] .entityLabel {
+    fill: var(--code-block-color) !important;
+}
+[id^=mermaidChart] {
+    fill: var(--text-color) !important;
+}
+[id^=mermaidChart] rect.rect {
+    fill: rgba(175, 255, 212, 0.3) !important;
+}
+.md-diagram-panel-preview text.actor > tspan { /*方块文字*/
+    fill: var(--code-block-color) !important;
+    stroke: none !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .actor, .md-diagram-panel-preview .entityBox { /*方块*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+.md-diagram-panel-preview .actor-line { /*竖线*/
+    stroke: var(--text-color) !important;
+    stroke-width: 1px;
+}
+.md-diagram-panel-preview .messageLine0 { /*横线*/
+    stroke-width: 1.5;
+    stroke-dasharray: none;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .messageLine1 { /*虚线*/
+    stroke-width: 1.5 !important;
+    stroke-dasharray: 2, 2 !important;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .messageText { /*描述文字*/
+    fill: var(--text-color) !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .activation0 { /*长方形*/
+    fill: #e6e6e6 !important;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .labelText, .md-diagram-panel-preview .labelText > tspan { /*循环标记*/
+    fill: var(--code-block-color) !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+    dominant-baseline: unset;
+    alignment-baseline: unset;
+}
+.md-diagram-panel-preview .labelBox { /*循环标记背景*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+.md-diagram-panel-preview .loopLine { /*循环标记虚线*/
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .loopText, .md-diagram-panel-preview .loopText > tspan { /*循环名称*/
+    fill: var(--text-color) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .sequenceNumber { /*序号*/
+    fill: var(--bg-color) !important;
+}
+pre.md-fences-advanced.md-focus .md-fences-adv-panel {
+    border: none;
+}
+.md-diagram-panel-preview .edgePath .path { /*箭头*/
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .edgeLabel rect { /*条件文字背景*/
+    fill: var(--bg-color) !important;
+}
+.md-diagram-panel-preview .edgeLabel span { /*条件文字*/
+    color: var(--text-color) !important;
+    background: var(--bg-color) !important;
+}
+.md-diagram-panel-preview .node rect,
+.md-diagram-panel-preview .node circle,
+.md-diagram-panel-preview .node ellipse,
+.md-diagram-panel-preview .node polygon,
+.md-diagram-panel-preview .node path { /*形状*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+#write .md-diagram-panel .md-diagram-panel-preview div { /*形状内文字*/
+    color: var(--code-block-color);
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+
+/*code snippet*/
+#write code, tt {
+    margin: 0 2px;
+    color: var(--drake-highlight);
+    background-color: #f8f8f8;
+    padding: 3px 5px;
+    border-radius: 2px;
+}
+
+/*variable*/
+var {
+    color: var(--variable-color);
+    font-weight: bold;
+}
+
+/*raw block*/
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    border-radius: 2px 0 2px 2px;
+    padding: 0.2rem !important;
+}
+.md-rawblock:hover > .md-rawblock-container {
+    background: none;
+}
+.md-rawblock-input {
+    font-size: 1rem;
+}
+.md-rawblock-tooltip-btn:hover {
+    background: none;
+}
+.md-rawblock:hover > .md-rawblock-tooltip {
+    border-radius: 2px 2px 0 0;
+    margin-bottom: 2px !important;
+}
+.md-rawblock-tooltip.md-rawblock-control {
+    border-radius: 2px 2px 0 0;
+    color: var(--code-block-color);
+}
+.md-rawblock-tooltip-name {
+    color: var(--code-block-color);
+    opacity: 1;
+}
+
+/*quote block*/
+blockquote:before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 4px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--blockquote-border-color);
+    border-radius: 2px;
+}
+
+blockquote {
+    color: var(--blockquote-color);
+    border-radius: 2px;
+    padding: 10px 16px;
+    background-color: var(--blockquote-bg-color);
+    position: relative;
+    border-left: none;
+}
+
+#write strong {
+    color: var(--strong-color);
+    font-weight: bold;
+}
+#write blockquote strong {
+    color: var(--blockquote-color);
+}
+
+/*link*/
+#write a {
+    color: var(--a-color);
+    text-decoration: underline;
+	font-weight:  bold;
+}
+[md-inline=link] a {
+    margin: 0 .2rem;
+}
+a:any-link {
+    color: var(--a-color);
+}
+
+img {
+    border-left: none;
+    border-right: none;
+    vertical-align: baseline;
+    border-radius: 2px;
+}
+
+#write {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+}
+#typora-source .CodeMirror-lines {
+    max-width: 1200px;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title-font);
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+    color: var(--title-color);
+}
+
+h3.md-focus:before, h4.md-focus:before, h5.md-focus:before, h6.md-focus:before {
+    visibility: hidden;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.on-focus-mode h2.md-end-block.md-heading:not(.md-focus):not(.md-focus-container):after {
+    background-color: var(--blur-text-color) !important;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit !important;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit !important;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit !important;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit !important;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit !important;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit !important;
+}
+
+p, blockquote, ul, ol, dl, table {
+    margin: var(--p-spacing) 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+li {
+    margin: 0.5em 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: var(--horizontal-divider-color);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul, ol {
+    padding-inline-start: 2em;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+.ty-table-edit {
+    margin-top: -1rem !important;
+}
+#write table {
+    margin-top: 1rem;
+    word-break: initial;
+    background-color: var(--table-bg-color);
+}
+table tr {
+    border-top: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 0;
+}
+table th {
+    font-weight: bold;
+    border: .1em solid var(--table-border-color);
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 6px 13px;
+}
+table thead {
+    background-color: var(--table-header-bg-color);
+}
+table tr:nth-child(2n) {
+    background-color: var(--table-n2-bg-color);
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write em {
+    padding: 0 5px 0 2px;
+}
+
+#write table thead th {
+    background-color: var(--table-header-bg-color);
+}
+
+/* height light */
+#write mark {
+    border: .1em solid var(--height-light-border-color);
+    color: var(--height-light-color);
+    background-color: transparent;
+    padding: .1rem .5rem;
+    border-radius: 2rem;
+    margin: 0 .2rem;
+    font-size: .95rem;
+}
+
+/*shortcut*/
+kbd {
+    border: .1em solid #5b5b5e;
+    background: transparent;
+    color: var(--text-color);
+    margin: 0 .4rem;
+    font-family: var(--text-font) !important;
+    font-size: .95rem;
+    padding: .3em .4em;
+    border-radius: .4em;
+    box-shadow: .1em .1em .2em rgba(0, 0, 0, 0.3);
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 12px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+/*YAML*/
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.45;
+    background-color: var(--yaml-bg-color);
+    border: 0;
+    border-radius: 2px;
+    color: var(--yaml-color);
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 2px;
+    font-family: initial;
+    padding: 2px 0 0 4px;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.typora-quick-open-item {
+    font-size: 1rem !important;
+    height: 50px;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#typora-quick-open {
+    box-shadow: 0 0 8px #00000045;
+    padding: 0;
+}
+
+.ty-quick-open-category.ty-has-prev .ty-quick-open-category-title {
+    border-top: none;
+}
+
+#typora-quick-open-input {
+    margin: 8px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+#typora-quick-open-input input {
+    font-size: 1rem;
+    box-shadow: none;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 32px;
+    max-height: 32px;
+    border: none;
+}
+
+.modal-dialog#typora-quick-open {
+    border-radius: 8px;
+}
+
+.ty-quick-open-category-title {
+    padding-left: 8px;
+    color: #BEBEBE;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.typora-quick-open-item-path {
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 1px;
+}
+
+/*search input*/
+.form-control {
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+}
+
+#md-searchpanel .btn {
+    border-radius: 2px;
+}
+
+#search-panel-replaceall-btn {
+    padding-right: 5px !important;
+    text-align: center !important;
+}
+
+#search-panel-replace-btn {
+    text-align: center !important;
+}
+
+#md-searchpanel input {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+.searchpanel-search-option-btn {
+    border-radius: 2px;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.searchpanel-search-option-btn.active {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: initial;
+}
+
+/*sidebar*/
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+.file-node-content {
+    display: flex;
+    align-items: center;
+}
+.file-node-open-state {
+    margin-right: .5rem;
+}
+.file-node-icon {
+    margin-right: .5rem;
+}
+
+#typora-sidebar {
+    font-size: inherit;
+    font-family: var(--title-font);
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+.file-list-item-summary, .file-list-item-parent-loc, .file-list-item-time, .file-list-item-summary {
+    font-size: 0.9rem !important;
+    font-family: var(--text-font);
+}
+
+.file-list-item-file-ext-part {
+    display: none;
+}
+
+.outline-item {
+    font-size: 1rem;
+}
+
+/*footnotes mark*/
+#write .md-footnote {
+    background-color: inherit;
+    color: var(--drake-highlight);
+    font-size: 0.9rem;
+    border-radius: 0.9rem;
+    padding-left: 0;
+}
+
+#write .md-footnote:before {
+    content: "[";
+}
+
+#write .md-footnote:after {
+    content: "]";
+}
+
+/*footnotes content*/
+.md-hover-tip .code-tooltip-content {
+    border-radius: 2px;
+}
+
+/*footnotes title*/
+span.md-def-name {
+    padding-right: 3ch;
+    padding-left: 0;
+    position: relative;
+    font-weight: normal;
+}
+
+/*footnotes desc*/
+.footnotes {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text-color);
+    position: relative;
+}
+
+/*footnotes tooltip text*/
+.code-tooltip-content .md-plain {
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.code-tooltip-content code {
+    padding: 0 2px;
+    font-family: inherit;
+    color: var(--footnotes-highlight);
+    background-color: inherit;
+}
+
+.code-tooltip-content a {
+    color: var(--footnotes-highlight);
+}
+
+div.code-tooltip-content {
+    box-shadow: 0 0 8px #00000045;
+    background: var(--footnotes-bg-color);
+}
+
+.footnotes {
+    opacity: 1;
+}
+
+.md-def-name:after {
+    content: ". ^";
+    color: var(--text-color);
+}
+
+.md-def-footnote .md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-content.md-url, .md-def-content.md-def-url.md-auto-disp {
+    text-decoration: none;
+    border-bottom: .1rem solid var(--text-color);
+}
+
+.CodeMirror-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.file-list-item-summary {
+    font-size: 1em;
+}
+
+.pin-outline #outline-content .outline-active strong, .pin-outline .outline-active {
+    font-weight: 500;
+    color: var(--outline-active-color);
+}
+
+.file-list-item.active {
+    border-left: 4px solid var(--drake-accent);
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+    box-shadow: none;
+    background: var(--btn-hover-bg-color);
+}
+
+/*checkbox*/
+#write input[type=checkbox] {
+    opacity: 0;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+    margin-top: 0;
+    top: 0;
+}
+
+#write .ul-list li.md-task-list-item.task-list-done::before {
+    content: "";
+    background: var(--checkbox-checked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+#write .ul-list li.md-task-list-item.task-list-not-done::before {
+    content: "";
+    background: var(--checkbox-unchecked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+.task-list-item p {
+    line-height: 1.6rem;
+}
+
+/*insert table*/
+.btn {
+    border-radius: 2px;
+}
+
+.modal-content {
+    border-radius: 8px;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--drake-highlight);
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--drake-highlight);
+}
+
+.btn-default {
+    background-color: transparent;
+}
+
+.btn:active {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+#table-insert-col, #table-insert-row {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+/*preference panel*/
+#megamenu-content {
+    background-image: none !important;
+    background-color: var(--bg-color);
+}
+#top-titlebar {
+    height: inherit;
+    background-color: var(--bg-color);
+}
+#megamenu-menu-sidebar {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.long-btn {
+    width: inherit;
+    min-width: 300px;
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+}
+.megamenu-menu-panel h1 {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+.megamenu-menu-panel h1, .megamenu-menu-panel h2 {
+    font-weight: normal;
+}
+#recent-file-panel-search-input {
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    padding-left: 8px;
+}
+#recent-file-panel-search-input::placeholder {
+    color: var(--text-color);
+    opacity: .5;
+}
+.megamenu-menu-header {
+    border-bottom: none;
+}
+#recent-file-panel-action-btn {
+    background: none;
+    border: none;
+}
+#recent-file-panel-action-btn-container {
+    float: none;
+    display: inline-block;
+}
+#top-titlebar .toolbar-icon.btn.hover, #top-titlebar .toolbar-icon.btn:hover {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--text-color);
+}
+.megamenu-menu-panel .btn:hover {
+    background-color: var(--btn-hover-bg-color) !important;
+    color: var(--text-color);
+}
+#recent-file-panel tbody tr:nth-child(2n-1),
+.megamenu-menu-panel table thead,
+.megamenu-menu-panel table tr {
+    background-color: transparent;
+}
+.megamenu-menu-panel table {
+    font-weight: normal;
+}
+#megamenu-back-btn {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.megamenu-menu-header #megamenu-menu-header-title {
+    color: var(--text-color);
+}
+header, .context-menu, .megamenu-content, footer {
+    font-family: var(--text-font);
+}
+.ty-preferences select {
+    padding-left: 2px;
+}
+.preference-item-hint {
+    font-size: 14px;
+}
+a.ty-link {
+    color: var(--a-color);
+    margin: 0 .2rem;
+}
+
+/**
+    code render
+    Name: IntelliJ IDEA light theme
+    From IntelliJ IDEA by JetBrains
+ */
+.cm-s-inner.CodeMirror {
+    background: none;
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-number {
+    color: #a32eff;
+}
+.cm-s-inner span.cm-atom {
+    color: #a32eff;
+}
+.cm-s-inner span.cm-def {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-variable {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-variable-2 {
+    color: #00627A;
+}
+.cm-s-inner span.cm-variable-3, .cm-s-inner span.cm-type {
+    color: #00627A;
+}
+.cm-s-inner span.cm-property {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-keyword {
+    color: #d63200;
+}
+.cm-s-inner span.cm-operator {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-comment {
+    color: #787878;
+}
+.cm-s-inner span.cm-string {
+    color: #31a062;
+}
+.cm-s-inner span.cm-string-2 {
+    color: #31a062;
+}
+.cm-s-inner span.cm-qualifier {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-error {
+    color: red;
+}
+.cm-s-inner span.cm-attribute {
+    color: #2973b7;
+}
+.cm-s-inner span.cm-tag {
+    color: #2973b7;
+}
+.cm-s-inner span.cm-link {
+    color: #4A86E8;
+}
+.cm-s-inner span.cm-builtin {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-bracket {
+    color: #2973b7;
+}
+.cm-s-inner .CodeMirror-gutters {
+    border-right: 1px solid rgba(120, 120, 120, 0.3);
+    background: var(--code-block-bg-color);
+}
+.cm-s-inner .CodeMirror-linenumber {
+    color: #787878;
+}
+
+
+
+</style><title>库图佐夫行动 说明文档</title>
+</head>
+<body class='typora-export os-windows typora-export-show-outline typora-export-no-collapse-outline'><div class='typora-export-content'>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#库图佐夫行动-说明文档">库图佐夫行动 说明文档</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1-目录">1. 目录</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2-使用方法">2. 使用方法</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#21-安装方法">2.1. 安装方法</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#22-隐藏场景">2.2. 隐藏场景</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#23-二周目">2.3. 二周目</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#24-成就系统">2.4. 成就系统</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#25-文件列表">2.5. 文件列表</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#26-配置要求">2.6. 配置要求</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#27-清除任务包工具">2.7. 清除任务包工具</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#28-冷场ai客户端版本">2.8. 冷场AI客户端版本</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-音乐包">3. 音乐包</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#31-音乐包获取">3.1. 音乐包获取</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#32-音乐包安装">3.2. 音乐包安装</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4-任务简报">4. 任务简报</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#41-苏联-01---莫斯科风暴">4.1. 苏联 01 - 莫斯科风暴</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#42-苏联-02---古巴红糖">4.2. 苏联 02 - 古巴红糖</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#43-苏联-03---大师球">4.3. 苏联 03 - 大师球</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#44-苏联-04---羽蛇神之怒">4.4. 苏联 04 - 羽蛇神之怒</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#45-苏联-04ex---黄金国">4.5. 苏联 04ex - 黄金国</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#46-苏联-05---西进之钥">4.6. 苏联 05 - 西进之钥</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#47-苏联-06---海滩派对">4.7. 苏联 06 - 海滩派对</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#48-苏联-06ex---深海">4.8. 苏联 06ex - 深海</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#49-苏联-07---囹圄">4.9. 苏联 07 - 囹圄</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#410-苏联-07ex---回家的诱惑">4.10. 苏联 07ex - 回家的诱惑</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#411-苏联-08---织布机">4.11. 苏联 08 - 织布机</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#412-苏联-09---铁锈">4.12. 苏联 09 - 铁锈</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#413-苏联-10---赤潮">4.13. 苏联 10 - 赤潮</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#414-苏联-11---试金石">4.14. 苏联 11 - 试金石</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#415-苏联-12---苹果派">4.15. 苏联 12 - 苹果派</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#416-苏联-13---红马">4.16. 苏联 13 - 红马</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-单位档案">5. 单位档案</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#51-苏军阵营">5.1. 苏军阵营</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#52-盟军阵营">5.2. 盟军阵营</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#53-其他阵营">5.3. 其他阵营</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#6-bug报告">6. bug报告</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#undefined">7. 选关存档</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#undefined">7.1. 选关存档获取</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#72-选关存档安装与使用">7.2. 选关存档安装与使用</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#8-更新日志">8. 更新日志</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#81-正式版v2-更新日期20240608">8.1. 正式版V2 更新日期：2024.06.08</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#82-正式版v3-更新日期20240609">8.2. 正式版V3 更新日期：2024.06.09</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#9-关于">9. 关于</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#91-制作及测试人员">9.1. 制作及测试人员</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#92-许可协议">9.2. 许可协议</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#93-素材作者">9.3. 素材作者</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#94-联系方式">9.4. 联系方式</a></div><ul class="outline-children"></ul></li></ul></li></ul></li></div></div><div id='write'  class=''><h1 id='库图佐夫行动-说明文档'><span>库图佐夫行动 说明文档</span></h1><hr /><blockquote><p><span>任务名称：</span><strong><span>库图佐夫行动：力挽狂澜之日</span></strong><span></span><br/><span>适用版本：尤里的复仇1.001版本</span><br/><span>任务类别：苏军任务</span><br/><span>任务关数：12关苏军任务+3关隐藏场景+1关剧情演示=共16关</span><br/><span>任务难度：有显著的难度分级；一般玩家请选择普通难度</span><br/><span>任务制作：韩大妈、Yugram</span><br/><span>附加事项：可以安装配套的音乐包；有选关存档</span></p></blockquote><p><img src="https://pic.imgdb.cn/item/6658b877d9c307b7e9f1ecec.png" referrerpolicy="no-referrer" alt="库图佐夫行动"></p><hr /><h2 id='1-目录'><span>1. 目录</span></h2><!-- TOC --><ul><li><p><a href='#库图佐夫行动-说明文档'><span>库图佐夫行动 说明文档</span></a></p><ul><li><p><a href='#1-目录'><span>1. 目录</span></a></p></li><li><p><a href='#2-使用方法'><span>2. 使用方法</span></a></p><ul><li><a href='#21-安装方法'><span>2.1. 安装方法</span></a></li><li><a href='#22-隐藏场景'><span>2.2. 隐藏场景</span></a></li><li><a href='#23-二周目'><span>2.3. 二周目</span></a></li><li><a href='#24-成就系统'><span>2.4. 成就系统</span></a></li><li><a href='#25-文件列表'><span>2.5. 文件列表</span></a></li><li><a href='#26-配置要求'><span>2.6. 配置要求</span></a></li><li><a href='#27-清除任务包工具'><span>2.7. 清除任务包工具</span></a></li><li><a href='#28-冷场ai客户端版本'><span>2.8. 冷场AI客户端版本</span></a></li></ul></li><li><p><a href='#3-音乐包'><span>3. 音乐包</span></a></p><ul><li><a href='#31-音乐包获取'><span>3.1. 音乐包获取</span></a></li><li><a href='#32-音乐包安装'><span>3.2. 音乐包安装</span></a></li></ul></li><li><p><a href='#4-任务简报'><span>4. 任务简报</span></a></p><ul><li><a href='#41-苏联-01---莫斯科风暴'><span>4.1. 苏联 01 - 莫斯科风暴</span></a></li><li><a href='#42-苏联-02---古巴红糖'><span>4.2. 苏联 02 - 古巴红糖</span></a></li><li><a href='#43-苏联-03---大师球'><span>4.3. 苏联 03 - 大师球</span></a></li><li><a href='#44-苏联-04---羽蛇神之怒'><span>4.4. 苏联 04 - 羽蛇神之怒</span></a></li><li><a href='#45-苏联-04ex---黄金国'><span>4.5. 苏联 04ex - 黄金国</span></a></li><li><a href='#46-苏联-05---西进之钥'><span>4.6. 苏联 05 - 西进之钥</span></a></li><li><a href='#47-苏联-06---海滩派对'><span>4.7. 苏联 06 - 海滩派对</span></a></li><li><a href='#48-苏联-06ex---深海'><span>4.8. 苏联 06ex - 深海</span></a></li><li><a href='#49-苏联-07---囹圄'><span>4.9. 苏联 07 - 囹圄</span></a></li><li><a href='#410-苏联-07ex---回家的诱惑'><span>4.10. 苏联 07ex - 回家的诱惑</span></a></li><li><a href='#411-苏联-08---织布机'><span>4.11. 苏联 08 - 织布机</span></a></li><li><a href='#412-苏联-09---铁锈'><span>4.12. 苏联 09 - 铁锈</span></a></li><li><a href='#413-苏联-10---赤潮'><span>4.13. 苏联 10 - 赤潮</span></a></li><li><a href='#414-苏联-11---试金石'><span>4.14. 苏联 11 - 试金石</span></a></li><li><a href='#415-苏联-12---苹果派'><span>4.15. 苏联 12 - 苹果派</span></a></li><li><a href='#416-苏联-13---红马'><span>4.16. 苏联 13 - 红马</span></a></li></ul></li><li><p><a href='#5-单位档案'><span>5. 单位档案</span></a></p><ul><li><a href='#51-苏军阵营'><span>5.1. 苏军阵营</span></a></li><li><a href='#52-盟军阵营'><span>5.2. 盟军阵营</span></a></li><li><a href='#53-其他阵营'><span>5.3. 其他阵营</span></a></li></ul></li><li><p><a href='#6-bug报告'><span>6. bug报告</span></a></p></li><li><p><a href='#7-选关存档'><span>7. 选关存档</span></a></p><ul><li><a href='#71-选关存档获取'><span>7.1. 选关存档获取</span></a></li><li><a href='#72-选关存档安装与使用'><span>7.2. 选关存档安装与使用</span></a></li></ul></li><li><p><a href='#8-更新日志'><span>8. 更新日志</span></a></p><ul><li><a href='#81-正式版v2-更新日期20240608'><span>8.1. 正式版V2 更新日期：2024.06.08</span></a></li><li><a href='#82-正式版v3-更新日期20240609'><span>8.2. 正式版V3 更新日期：2024.06.09</span></a></li></ul></li><li><p><a href='#9-关于'><span>9. 关于</span></a></p><ul><li><a href='#91-制作及测试人员'><span>9.1. 制作及测试人员</span></a></li><li><a href='#92-许可协议'><span>9.2. 许可协议</span></a></li><li><a href='#93-素材作者'><span>9.3. 素材作者</span></a></li><li><a href='#94-联系方式'><span>9.4. 联系方式</span></a></li></ul></li></ul></li></ul><!-- /TOC --><hr /><h2 id='2-使用方法'><span>2. 使用方法</span></h2><p>&emsp;&emsp;<span>本章节介绍了如何安装并使用本任务包。请严格遵照本章节的流程安装，否则可能会造成以下后果：无法开始任务、无法完成任务、弹窗、意料之外的bug、不可控的任务难度等。</span></p><h3 id='21-安装方法'><span>2.1. 安装方法</span></h3><p>&emsp;&emsp;<span>装载本任务包之前，你需要做好如下准备：</span></p><ul><li><span>一个能够正常运行的</span><code>红色警戒2尤里的复仇1.001版本</code><span>游戏。最好是干净的原版，没有安装过其它任务包的。如果你能够确保你把以前的任务包清除干净（也可以使用本任务包附带的</span><code>清除任务包.exe</code><span>），那也是可以的。</span></li><li><code>库图佐夫行动：力挽狂澜之日</code><span>的全部任务包文件。你可以对比在本节末尾的附录</span><a href='#25-文件列表'><span>文件列表</span></a><span>来检查你的任务包是否缺少文件。如果发现任务包文件损坏，请前往</span><a href='http://hong-jing.ysepan.com/'><span>永硕E盘</span></a><span>重新下载。</span></li></ul><p>&emsp;&emsp;<span>做好了这些准备，你就可以进行下一步的安装步骤了。</span></p><p>&emsp;&emsp;<span>安装过程很简单：把任务包中的</span><strong><span>全部文件</span></strong><span>复制粘贴到红色警戒2尤里的复仇的安装文件夹（也就是</span><code>gamemd.exe</code><span>所在的文件夹）中，不要遗漏。</span></p><p>&emsp;&emsp;<span>这样就安装完成了。</span></p><p>&emsp;&emsp;<strong><span>注意1</span></strong><span>：如果你是用的是纯净的</span><code>红色警戒2尤里的复仇1.001版本</code><span>的话，此时不应该产生任何文件重名冲突。文件重名冲突可能是因为安装文件夹中含有其它任务包或mod的残留文件，为了</span><code>库图佐夫行动：力挽狂澜之日</code><span>能够正常运行，请选择覆盖，但</span><strong><span>更推荐</span></strong><span>重新安装一份</span><code>红色警戒2尤里的复仇1.001版本</code><span>，因为无法保证其它任务包的残留文件不干扰正常游戏。</span></p><p>&emsp;&emsp;<strong><span>注意2</span></strong><span>：请确保运行游戏的是</span><code>尤里复仇1.001原版</code><span>，不要使用</span><code>Ares</code><span>、</span><code>Phobos</code><span>等拓展平台运行此任务。此任务包使用了很多原版平台的特性来达到一些效果，部分特性可能在拓展平台中被当成bug修复了。如果使用拓展平台运行游戏，则会在载入阶段弹框。</span></p><p><span id="jump1"></span></p><p>&emsp;&emsp;<strong><span>注意3</span></strong><span>：为了保护本任务的知识产权，任务包使用了一种</span><strong><span>特殊的加密手段</span></strong><span>。在安装本任务包后，此目录的尤里的复仇将</span><strong><span>无法运行任何其他官方或民间的任务、遭遇战地图，也无法读取任何已有的存档</span></strong><span>。此过程是</span><strong><span>可逆的</span></strong><span>，将本任务包删除后（你可以使用本任务包附带的</span><code>清除任务包.exe</code><span>删除本任务），上述的所有情况都将消失，</span><strong><span>但同时，本任务包的存档也将无法读取</span></strong><span>。因此，</span><strong><span>再次推荐</span></strong><span>你重新安装一份</span><code>红色警戒2尤里的复仇1.001版本</code><span>运行本任务包，并将这一份游戏</span><strong><span>专门</span></strong><span>用来游玩本任务包。</span></p><p>&emsp;&emsp;<strong><span>注意4</span></strong><span>：本任务包修改了</span><code>game.fnt</code><span>，安装时可能会提示文件冲突，请选择覆盖。</span></p><p><img src="https://pic.imgdb.cn/item/662bb3900ea9cb14038c906f.png" referrerpolicy="no-referrer" alt="新任务"></p><p>&emsp;&emsp;<span>在新任务的界面可以看到，任务的入口名字发生了变化，这样基本可以确定安装完成，可以进行游戏了。请点选苏联图示以开始库图佐夫行动。盟军战役仍为官方战役，并且由于</span><a href='#jump1'><span>前文提到的原因</span></a><span>，进入后会直接弹框。</span></p><p>&emsp;&emsp;<span>本任务包有难度分级，而且有明显的难度梯度，打法甚至都有不同的选择。在每关游戏开始时，界面左上角都会显示当前的游戏难度。</span></p><ul><li><code>休闲</code><span> - 很容易就能过关的难度。只要求玩家对尤复单位有基本的认识，部分关卡甚至可以挂机过关。</span></li><li><code>普通</code><span> - 为一般玩家准备的难度。保留了基本的游戏机制，对标官方战役困难难度。</span></li><li><code>困难</code><span> - 为挑战者准备的难度。在没有准备的情况下，攻略可能十分困难。</span></li><li><code>困难（二周目）</code><span> - 自虐级的难度。推荐玩过困难难度并仍然游刃有余的玩家攻略。如果初次游玩就选择这个难度，可能会玩到摔键盘。</span></li></ul><p>&emsp;&emsp;<strong><span>一般玩家请选择</span><code>普通</code><span>难度。</span></strong></p><p>&emsp;&emsp;<span>由于战场规模较大，推荐</span><code>1920x1080</code><span>分辨率进行游戏，本任务包的全部测试均在此分辨率下进行，使用该分辨率可以获得最佳的游戏体验。</span></p><p>&emsp;&emsp;<span>但是不推荐使用4k以上分辨率进行游戏，否则在部分关卡，屏幕显示区域可能会超过整张地图的大小。</span></p><h3 id='22-隐藏场景'><span>2.2. 隐藏场景</span></h3><p>&emsp;&emsp;<code>库图佐夫行动：力挽狂澜之日</code><span>一共有三关隐藏场景，需要在特定的关卡达成特定条件后解锁进入。在游戏中，这些隐藏场景被称为</span><code>进阶军事行动</code><span>。不同于另一款著名任务包，本系列并不是在进入到下一关后切换到隐藏场景中，而是直接加载独立的隐藏场景关卡，并在任务完成后继续进行主线关卡。简单的说，你可以在不存读档的情况下一次性游玩全部16关。</span></p><p>&emsp;&emsp;<span>通关隐藏场景可以在主线剧情中获得部分优势，并最终解锁二周目的入口。</span></p><h3 id='23-二周目'><span>2.3. 二周目</span></h3><p>&emsp;&emsp;<code>困难（二周目）</code><span>是</span><code>库图佐夫行动：力挽狂澜之日</code><span>率先为原版任务引入的新机制，旨在提升游戏的深度，同时提供更精细的难度梯度，以适应不同水平玩家的需求。二周目的游戏流程与一周目几乎完全一致，只在以下两方面存在区别：</span></p><ul><li><span>游戏难度大幅提高。</span></li><li><span>玩家可以提前使用新式军备。从第一关开始即可生产</span><a href='#unit12'><span>先进磁能坦克</span></a><span>、改进型</span><a href='#unit4'><span>V3火箭发射车</span></a><span>和</span><a href='#unit11'><span>激光直升机</span></a><span>；从第八关开始即可训练</span><a href='#unit13'><span>辐射工兵</span></a><span>。</span></li></ul><p>&emsp;&emsp;<code>困难（二周目）</code><span>需要在</span><strong><span>通关</span><code>困难</code><span>难度并且通关了全部隐藏场景</span></strong><span>后，通过结局演示关最后的选择界面进入。你也可以下载并安装本任务包的</span><a href='#7-选关存档'><span>选关存档</span></a><span>，选择其中的</span><code>选关 - 二周目 - 苏联 01 - 莫斯科风暴</code><span>进入（不推荐，除非你想自虐）。新任务界面是无法直接进入二周目的。二周目只有</span><code>困难</code><span>难度才能游玩，你可以通过一些操作在休闲/普通下进入二周目，但在进入后即会失败。</span></p><p>&emsp;&emsp;<span>由于游戏引擎的限制，在开启二周目游戏后每关</span><strong><span>开局的自动存档</span></strong><span>都会更新，如果已经存在一周目的开局存档，则会直接覆盖；反之，在拥有二周目开局存档的情况下游玩对应的一周目关卡，也会被一周目存档覆盖。这个问题只会影响开局自动存档，而不会影响玩家的手动存档。</span></p><p>&emsp;&emsp;<span>由于游戏引擎的限制，存档的默认文本并不会区分二周目或一周目，而只显示本关的任务名。这可能会造成混淆，建议玩家在存档时手动对其进行区分。</span></p><h3 id='24-成就系统'><span>2.4. 成就系统</span></h3><p>&emsp;&emsp;<code>库图佐夫行动：力挽狂澜之日</code><span>在通关之后会显示成就界面，在这里你可以查看每一关的成就名称及达成方法。成就信息跟随存档保存，比如，如果你达成了第三关的成就A，又重新开始游戏，则需要再次完成成就A才能在成就界面中显示。开启二周目会继承除了通关隐藏场景之外的已有成就。在</span><code>苏联 02 - 古巴红糖</code><span>（二周目）、</span><code>苏联 11 - 试金石</code><span>中，不是所有成就都能一次性完成，需要在一周目与二周目中分别达成。成就界面会记录通关难度，如果你中途修改难度，会显示在该界面中。</span></p><p>&emsp;&emsp;<a href='#7-选关存档'><span>选关存档</span></a><span>中包含一个成就存档，仅限于查看成就描述使用，并不能实时展示玩家的成就进度。</span></p><h3 id='25-文件列表'><span>2.5. 文件列表</span></h3><p>&emsp;&emsp;<span>下面列出这个任务包中包含的全部文件，以便出现问题时自查。一旦发现文件缺失，建议重新下载本任务包。</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.6667px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style="text-rendering: auto;"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">artmd.ini</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">battlemd.ini</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">creditsmd.txt</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">evamd.ini</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">expandmd90.mix</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">game.fnt</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">glslmd.shp</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">glsmd.pal</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">mapselmd.ini</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">missionmd.ini</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">ra2md.csf</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">rulesmd.ini</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">库图佐夫行动 说明文档.html</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">清除任务包.exe</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 355px;"></div><div class="CodeMirror-gutters" style="display: none; height: 355px;"></div></div></div></pre><h3 id='26-配置要求'><span>2.6. 配置要求</span></h3><p>&emsp;&emsp;<span>虽然尤里的复仇是一款二十多年前的游戏，但由于本任务包场景较大、较复杂，对玩家电脑的CPU仍有一定要求。</span><code>苏联 06 - 海滩派对</code><span>、</span><code>苏联 09 - 铁锈</code><span>推荐玩家拥有</span><code>6代酷睿i5</code><span>或以上等级的CPU，</span><code>苏联 12 - 苹果派</code><span>推荐玩家拥有</span><code>12代酷睿i3</code><span>或以上等级的CPU（请注意，目前的CPU均不能满足在本关全程5速运行，但随着玩家推进，本关会越来越流畅）。由于尤里的复仇是一款单核游戏，所以请玩家关注CPU的主频和单核性能。对于其他关卡，只要不是过于古老的CPU一般都能流畅运行。</span></p><p>&emsp;&emsp;<code>AMD</code><span>的CPU使用OBS/直播姬录制红警会导致游戏帧数减半，在上述三个关卡中，可能会导致游戏无法流畅运行。不建议这些玩家直播/录制这些关卡；如确有需要，可以使用Win11自带的游戏录制功能（按Win+G开启），不会导致帧数降低。</span></p><h3 id='27-清除任务包工具'><span>2.7. 清除任务包工具</span></h3><p>&emsp;&emsp;<span>在“任务”文件夹下有一个</span><code>清除任务包.exe</code><span>。下面简述它的用途。</span></p><p>&emsp;&emsp;<span>首先，它必须在游戏的安装文件夹下运行才能生效。在游戏安装文件夹之外的地方运行（实际上是找不到</span><code>gamemd.exe</code><span>），它会什么也不会做。</span></p><p>&emsp;&emsp;<span>在游戏的安装文件夹下运行以后并按任意键继续，它能够干净的清除大部分基于原版/尤复平台的任务包或者未深度定制的MOD，并将这些文件移动到</span><code>ModBackupXX</code><span>（XX为从00开始的序号）文件夹下，得到一个干净的游戏。它能够完全清除本任务包。</span></p><p>&emsp;&emsp;<span>在未安装本任务包之前，还可以先把它复制粘贴过去清理一下，这是另外一种用途。</span></p><p>&emsp;&emsp;<span>它无法干净的清理基于</span><code>NPatch系列</code><span>（含</span><code>NPExt</code><span>）、</span><code>Ares</code><span>、</span><code>Phobos</code><span>等拓展平台的MOD，也不要用它来清理这些MOD。</span></p><h3 id='28-冷场ai客户端版本'><span>2.8. 冷场AI客户端版本</span></h3><p>&emsp;&emsp;<code>库图佐夫行动：力挽狂澜之日</code><span>提供基于CnCNet客户端的版本，你可以通过下载</span><code>冷场AI客户端</code><span>游玩。如果已经拥有客户端，则在客户端内更新即可游玩。</span></p><p>&emsp;&emsp;<span>虽然被称为“冷场AI客户端版本”，但其并没有集成冷场AI，也没有使用拓展平台，在游戏体验上与普通版本几乎一致。但是，该版本的主程序包含了一些联机patch，与普通版本相比，</span><code>可以看到友军潜艇、乌贼</code><span>、</span><code>不能通过卡bug偷窃友军科技</code><span>。</span></p><hr /><h2 id='3-音乐包'><span>3. 音乐包</span></h2><p>&emsp;&emsp;<span>这部分是配套音乐包的说明。</span></p><h3 id='31-音乐包获取'><span>3.1. 音乐包获取</span></h3><p>&emsp;&emsp;<code>库图佐夫行动：力挽狂澜之日</code><span>包含了一个配套的音乐包，部分关卡的部分流程有自己专属的音乐。</span><strong><code>*强烈建议*</code></strong><span>安装音乐包游玩。但是由于这个音乐包占空间很大（110MB），又不是任务运行所必须的，就和任务包分开下载了。</span></p><p><span>下载地址：</span></p><ul><li><a href='https://pan.baidu.com/s/1Iv1YyvSMiNZJfb2PQ3iCGQ?pwd=ktzf'><span>百度网盘下载</span></a><span> 提取码：ktzf</span></li></ul><h3 id='32-音乐包安装'><span>3.2. 音乐包安装</span></h3><p>&emsp;&emsp;<span>和任务包的安装一样，只需要把音乐包解压缩得到的所有文件（包含</span><code>thememd.ini</code><span>和一堆</span><code>.wav</code><span>格式的音频文件）放到游戏文件夹下即可使用。没有打包成mix是出于通用性考虑。</span></p><p>&emsp;&emsp;<span>你也可以在其它任务包中使用这个音乐包。</span></p><hr /><h2 id='4-任务简报'><span>4. 任务简报</span></h2><p>&emsp;&emsp;<span>这部分是任务简报，在游戏中也可以看到，是关于各个任务背景故事、任务目标的简介。</span></p><ul><li><a href='#41-苏联-01---莫斯科风暴'><span>4.1. 苏联 01 - 莫斯科风暴</span></a><span> - 位置：苏俄，莫斯科</span></li><li><a href='#42-苏联-02---古巴红糖'><span>4.2. 苏联 02 - 古巴红糖</span></a><span> - 位置：佛罗里达州，基韦斯特</span></li><li><a href='#43-苏联-03---大师球'><span>4.3. 苏联 03 - 大师球</span></a><span> - 位置：德国，黑森林</span></li><li><a href='#44-苏联-04---羽蛇神之怒'><span>4.4. 苏联 04 - 羽蛇神之怒</span></a><span> - 位置：墨西哥，图鲁姆</span></li><li><a href='#45-苏联-04ex---黄金国'><span>4.5. 苏联 04ex - 黄金国</span></a><span> - 位置：墨西哥，楚卡卡夫</span></li><li><a href='#46-苏联-05---西进之钥'><span>4.6. 苏联 05 - 西进之钥</span></a><span> - 位置：密苏里州，圣路易斯</span></li><li><a href='#47-苏联-06---海滩派对'><span>4.7. 苏联 06 - 海滩派对</span></a><span> - 位置：夏威夷州，檀香山</span></li><li><a href='#48-苏联-06ex---深海'><span>4.8. 苏联 06ex - 深海</span></a><span> - 位置：阿拉斯加州，安克雷奇</span></li><li><a href='#49-苏联-07---囹圄'><span>4.9. 苏联 07 - 囹圄</span></a><span> - 位置：弗吉尼亚州，阿灵顿县/华盛顿哥伦比亚特区</span></li><li><a href='#410-苏联 08---回家的诱惑'><span>4.10. 苏联 07ex - 回家的诱惑</span></a><span> - 位置：华盛顿哥伦比亚特区</span></li><li><a href='#411-苏联 09---织布机'><span>4.11. 苏联 08 - 织布机</span></a><span> - 位置：波兰，布列斯特</span></li><li><a href='#412-苏联 10---铁锈'><span>4.12. 苏联 09 - 铁锈</span></a><span> - 位置：伊利诺伊州，外芝加哥地区</span></li><li><a href='#413-苏联 11---赤潮'><span>4.13. 苏联 10 - 赤潮</span></a><span> - 位置：美利坚社会主义联邦，斯大林尼亚特区</span></li><li><a href='#414-苏联 12---试金石'><span>4.14. 苏联 11 - 试金石</span></a><span> - 位置：美利坚社会主义联邦，科罗拉多州，科泉市北部</span></li><li><a href='#415-苏联 13---苹果派'><span>4.15. 苏联 12 - 苹果派</span></a><span> - 位置：美利坚社会主义联邦，纽约州，纽约市</span></li><li><a href='#416-苏联-13---红马'><span>4.16. 苏联 13 - 红马</span></a><span> - 位置：苏维埃社会主义共和国联盟，莫斯科市</span></li></ul><h3 id='41-苏联-01---莫斯科风暴'><span>4.1. 苏联 01 - 莫斯科风暴</span></h3><p><span>位置：苏俄，莫斯科</span></p><p><img src="https://pic.imgdb.cn/item/662bb2d40ea9cb1403893508.png" referrerpolicy="no-referrer" alt="莫斯科风暴"></p><p>&emsp;&emsp;<span>初次见面，将军同志。此前不止一次听总理说起，想见见您这位迅速稳定阿富汗局势的“战术天才”，但没想到我们会以这样的方式见面。总之很高兴以后能与您共事。</span></p><p>&emsp;&emsp;<span>盟军投入了一种名为超时空传送仪的战略武器，这种武器使他们可以隔着半个地球将部队直接投送到莫斯科。这听起来很匪夷所思，但上个月他们就借此摧毁了古巴的导弹发射基地。</span></p><p>&emsp;&emsp;<span>莫斯科市内的通讯被切断了，他们可能事先袭击了城防司令部。最后传出的讯息表明，他们搭建了数座疑似是中继站的建筑，为地球另一端的敌人提供传送坐标。他们能够如此迅速地完成这一切，恐怕有间谍提前响应。奇怪的是心灵军团未曾发出任何预警，我们也无法与其总部取得联系。</span></p><p>&emsp;&emsp;<span>鉴于您在中亚的出色表现，您已经被擢升为大将，从现在开始拥有全部武器的使用权限。此前为保卫首都而制定的库图佐夫应急方案现已生效，莫斯科军区的卫戍部队正在赶来的路上，而您现在是能响应该方案的最近的指挥官。很难想象如果今天您按原计划前往哈瓦那的话，这里的局面将会如何。</span></p><p>&emsp;&emsp;<span>我们不能重蹈二十年前的覆辙，请您尽快前往克里姆林宫。</span></p><p>&emsp;&emsp;<span>任务目标一：接管前哨站，查明城内情况。</span>
+&emsp;&emsp;<span>任务目标二：赶到克里姆林宫。</span>
+&emsp;&emsp;<span>任务目标三：坚守直到援军主力到达。</span>
+&emsp;&emsp;<span>任务目标四：清除莫斯科城内的所有敌军。</span>
+&emsp;&emsp;<span>任务目标五：克里姆林宫不能被摧毁。</span></p><p>&emsp;&emsp;<span>提示：摧毁盟军的超时空中继站即可阻止附近的超时空传送。</span></p><h3 id='42-苏联-02---古巴红糖'><span>4.2. 苏联 02 - 古巴红糖</span></h3><p><span>位置：佛罗里达州，基韦斯特</span></p><p><img src="https://pic.imgdb.cn/item/662bb2d50ea9cb1403893592.png" referrerpolicy="no-referrer" alt="古巴红糖"></p><p>&emsp;&emsp;<span>傍晚好，将军同志。欢迎来到北美战区司令部驻地哈瓦那。</span></p><p>&emsp;&emsp;<span>目前局面不容乐观。盟军投入了诸多新式武器，使我军在东欧，太平洋与北美陷入不利。中东地区同样如此。迫于欧洲战场的压力，总参谋部决定将中东的部队调回。为了避免我们的盟友无力抵挡同盟国干涉军，上面默许他们部署更多辐射武器与小型核武器。战争形势胶着，南美与非洲国家大多选择作壁上观，又或者是像南亚地区忙于内部纠纷，无暇关心前宗主国的利益。开战以来安静得如同死水的西太平洋地区，在莫斯科事件后也开始躁动。朝韩宣布暂停板门店和平统一谈判。北京方面尽管表示“亚洲不存在所谓的竹幕”“尊重各国人民的选择”，但恐怕难以安抚三八线与十七线的紧张气氛。至于心灵军团，他们称此前没有及时行动，是因为按照规定他们不得在莫斯科市内署心灵装置。谁知道呢。</span></p><p>&emsp;&emsp;<span>好消息是，一直以“反对社会帝国主义”为由拒绝参战的北京，在莫斯科事件后同意为我们提供物资援助，担当“红色国家的兵工厂”。</span></p><p>&emsp;&emsp;<span>眼下古巴暂时是安全的，工程人员甚至抢修好了一座核弹发射井。但在美国的海面封锁下，坐以待毙不是办法。北美司令部决定优先破坏掉位于佛罗里达的超时空传送仪原型机。</span></p><p>&emsp;&emsp;<span>任务目标一：清除港口上的敌军。</span>
+&emsp;&emsp;<span>任务目标二：保护古巴基地车顺利部署。</span>
+&emsp;&emsp;<span>任务目标三：摧毁超时空传送仪与所有盟军建造场。</span>
+&emsp;&emsp;<span>任务目标四：古巴建造场不能被摧毁。</span></p><h3 id='43-苏联-03---大师球'><span>4.3. 苏联 03 - 大师球</span></h3><p><span>位置：德国，黑森林</span></p><p><img src="https://pic.imgdb.cn/item/662bb2d50ea9cb14038935bd.png" referrerpolicy="no-referrer" alt="大师球"></p><p>&emsp;&emsp;<span>晚上好，将军同志。最新情况，西太平洋战争开始了。</span></p><p>&emsp;&emsp;<span>为响应美国“分散敌人注意”的部署，约8个小时前，南越盟军在北部湾制造冲突，并声称遭到袭击。随后澳大利亚，印尼等多国开始向越南地区增兵。即便北京此前多次发出警告称“盟军部队越过停火线将被视为蓄意破坏和平”“不保证其后果”。</span></p><p>&emsp;&emsp;<span>总参谋部本不想这么仓促地将您调回欧洲，但像您的这样“可靠将领”就该被投入到最关键的场合。据情报，受基韦斯特战役的影响，西欧近日开始调动部队，以避免出现“像美国人一样，把多座机动建造场集中在一起”的“低级错误”。目前盟军唯一的超时空传送仪所在的黑森林基地也在其中。但欧洲人想不到，这种仓促的安排给了我们宝贵的机会。凭借防区变动产生的疏漏，心灵军团想办法将鲍里斯同志，连同一名经过心灵训练的克格勃特工，送进了黑森林地区。</span></p><p>&emsp;&emsp;<span>另一方面，考虑到在古巴导弹基地的支援下，美国南方的战斗将变得轻松。作为唯一与这种武器交过手且取得胜利的，懂得大规模作战与小股部队渗透的优秀指挥官，您是本次行动的不二人选。</span></p><p>&emsp;&emsp;<span>任务目标一：摧毁爱因斯坦实验室的守军。</span>
+&emsp;&emsp;<span>任务目标二：让心灵特工进入爱因斯坦实验室。</span>
+&emsp;&emsp;<span>任务目标三：指挥鲍里斯、心灵特工和爱因斯坦安全撤离。</span>
+&emsp;&emsp;<span>任务目标四：鲍里斯、心灵特工和爱因斯坦不能阵亡。</span></p><p>&emsp;&emsp;<span>提示：当敌军巡逻队出现伤亡时，附近的海豹部队就会进入观察哨向敌军基地通报。敌军基地随后会通过通讯中心向整个黑森林地区广播我们的信息。接收到警报的敌军基地会生产部队搜查我们。被敌军侦测塔照射或（困难难度）敌军基地受损严重，也会触发其警报。</span></p><h3 id='44-苏联-04---羽蛇神之怒'><span>4.4. 苏联 04 - 羽蛇神之怒</span></h3><p><span>位置：墨西哥，图鲁姆</span></p><p><img src="https://pic.imgdb.cn/item/662bb2d50ea9cb14038935fd.png" referrerpolicy="no-referrer" alt="羽蛇神之怒"></p><p>&emsp;&emsp;<span>下午好，将军同志。鲍里斯一行人已经平安抵达。据说当天内务部抢在克格勃前面接走了爱因斯坦。同一时间，盟军在英国皇家海军协助下包围列宁格勒的企图失败了。现在唯一能威胁到莫斯科的，只有斯摩棱斯克方向上的德国主力师团。</span></p><p>&emsp;&emsp;<span>北美方面，我军曾在墨西哥图卢姆地区的玛雅遗址附近建立过一座研究基地，用于分析盟军的光棱技术。科研人员借鉴其原理成功获得了激光技术。但由于敌人的突击小队破坏了科研基地，激光技术还未能实现小型化，研究工作就被迫中断。随着盟军从墨西哥湾登陆，我军撤出了墨西哥，美军接管了这一地区。近日我军侦察机发现，原本的废墟不但被修缮一新，还有大量的物资卡车进出该地区。盟军还在图卢姆市修起了一座要塞。</span></p><p>&emsp;&emsp;<span>这很有意思。盟军不需要分析自己已经拥有的技术，但假设他们研究的不是光棱武器，那他们又在做什么呢？根据有限的情报，敌人似乎在这里做一些能量消耗量极大的实验。我们可以确定此地部署了一座天气控制机。但仅仅是一座天气控制机的能量需求，无论如何不能称之为巨大。</span></p><p>&emsp;&emsp;<span>我军在美国南方的攻势随着远离导弹基地的支援范围而逐渐陷入乏力，北美司令部正考虑夺回墨西哥，进而从陆上进攻德克萨斯。图卢姆将会是扫清墨西哥的第一站。</span></p><p>&emsp;&emsp;<span>任务目标一：渗透或占领盟军作战实验室。</span>
+&emsp;&emsp;<span>任务目标二：摧毁天气控制机。</span></p><p>&emsp;&emsp;<span>提示：超能力部队可以渗透敌军建筑。</span></p><h3 id='45-苏联-04ex---黄金国'><span>4.5. 苏联 04ex - 黄金国</span></h3><p><span>位置：墨西哥，楚卡卡夫</span></p><p><span>进入方式：在</span><code>苏联 04 - 羽蛇神之怒</code><span>中占领并保护所有玛雅金字塔</span></p><p><img src="https://pic.imgdb.cn/item/6658ad95d9c307b7e9e6db1c.png" referrerpolicy="no-referrer" alt="黄金国"></p><p>&emsp;&emsp;<span>中午好，将军同志。</span></p><p>&emsp;&emsp;<span>据悉苏俄最高法院已于昨日结束对爱因斯坦的审理，并以战争罪判处其终身监禁。但据说，原本由内务部负责的押送工作，在审理结束后却又由克格勃强行接手。并不是很清楚他们想要干什么。</span></p><p>&emsp;&emsp;<span>西太平洋方面，我们从莫斯科方面得到消息，约6个小时前，朝鲜人民军已越过三八线，占领开城，开始向汉城前进。</span></p><p>&emsp;&emsp;<span>欧洲方面，德国人在斯摩棱斯克一带集结了约40个师的兵力，试图一举打开通往莫斯科的大门。我军西方方面军，中央方面军与布良斯克方面军陆续进入战场阻止盟军前进。参谋部门认为，盟军在突袭莫斯科失败后仓促部署了一系列军事行动，这意味着他们可能并没有做好在东欧长期作战的准备，尤其是后勤准备。</span></p><p>&emsp;&emsp;<span>北美战区急需要有能够打开局面的战斗。不过在此之前，我们有一些准备工作要做。我们侦查到盟军在此地仍有一处还未来得及撤离的研究基地，我们紧急组织了一只特遣小队，前往夺取实验室。</span></p><p>&emsp;&emsp;<span>任务目标一：占领盟军作战实验室。</span></p><h3 id='46-苏联-05---西进之钥'><span>4.6. 苏联 05 - 西进之钥</span></h3><p><span>位置：密苏里州，圣路易斯</span></p><p><img src="https://pic.imgdb.cn/item/662bb2dc0ea9cb14038943f4.png" referrerpolicy="no-referrer" alt="西进之钥"></p><p>&emsp;&emsp;<span>上午好，将军同志。有一些新的安排需要您知悉。</span></p><p>&emsp;&emsp;<span>北美司令部经研究后同意了您的“针对西部地区，通过扩大机动建造规模，利用大规模装甲部队进行压制、对抗美军的空中与武器优势”的提议。随着深入美国腹地，我军将重新划分作战部队。经德克萨斯进入美国的部队被划分为西海岸方面军；位于佛罗里达的主力部队，连同古巴等国的协同部队，被划分为南部方面军；进军美国中西部的部队被组建为西部方面军，配备了包括机动建设车在内的更多装甲部队。</span></p><p>&emsp;&emsp;<span>欧洲的战斗还在继续。斯摩棱斯克会战结束，德军主力被击溃后被迫退出该地区，退守白俄罗斯。乌克兰方面，大量盟军装甲集团军正在逼近由西南方面军驻守的基辅，企图破坏我国的主要经济区。东欧方向，在盟军的持续进攻下，南斯拉夫方面表示难以继续战斗。经我方建议，南斯拉夫共产党同意退出主要城市，向罗马尼亚撤退和转入游击作战，保存有生力量。</span></p><p>&emsp;&emsp;<span>日前，北美的心灵军团检测到圣路易斯方向存在巨大的不明心灵能量源。这座驻扎着大量装甲部队的城市，是美国最重要的交通枢纽。我军需要从这里打开局面。</span></p><p>&emsp;&emsp;<span>另外据报告，驻韩盟军已经被朝鲜人民军击溃，大量军队开始从釜山撤离。参谋部预计西太平洋战争即将迎来高潮，北美方面要做好准备。</span></p><p>&emsp;&emsp;<span>任务目标一：向圣路易斯城区推进，查明不明心灵能量源。</span>
+&emsp;&emsp;<span>任务目标二：占领心灵信标。</span>
+&emsp;&emsp;<span>任务目标三：保护心灵信标直至启动。</span></p><h3 id='47-苏联-06---海滩派对'><span>4.7. 苏联 06 - 海滩派对</span></h3><p><span>位置：夏威夷州，檀香山</span></p><p><img src="https://pic.imgdb.cn/item/662bb2dc0ea9cb1403894434.png" referrerpolicy="no-referrer" alt="海滩派对"></p><p>&emsp;&emsp;<span>早上好，将军同志。第二次夏威夷战役开始了。</span></p><p>&emsp;&emsp;<span>对于西太平洋战争来说，夏威夷始终是一个绝对的关键节点。也许是吸取了30年前太平洋战争的教训，即使国内驻有盟军部队，东京还是“单方面”地宣布了中立。借此机会，我军太平洋舰队可以迅速穿越津轻海峡而不受日本方面阻挠。同一时间，河内于昨日宣布正式发动春节攻势，越南人民军经过中央走廊越过停火线，向南方发起了大规模进攻。</span></p><p>&emsp;&emsp;<span>但是太平洋海军并没有从上一次的失败中完全恢复过来，在同时面对驻守夏威夷的第三舰队与从菲律宾回援的第七舰队时，仍处于绝对劣势。</span></p><p>&emsp;&emsp;<span>技术部门紧急分析后得出的结论是，美军在圣路易斯与图卢姆部署的加速器，是由盟军的机器人控制中心改装而来。美军修复了心灵信标，但是部署信标仍然需要大量时间。美军将原本的激光武器改造为脉冲充能，并试用于同为能量武器的天气控制机。盟军将脆弱但灵活的遥控坦克大规模用于支援海上作战，作为太平洋海军司令部驻地的檀香山建设有大量的机器人控制中心。</span></p><p>&emsp;&emsp;<span>盟军正在从远东撤往夏威夷乃至加利福利亚，朝鲜部队在釜山港缴获了一批美军运输机并转交给了我们。在心灵军团的运作下，这批载有特遣队的特洛伊飞机骗过敌人的通讯系统，以“机械故障”为由，请求迫降檀香山国际机场。</span></p><p>&emsp;&emsp;<span>海军负责在外围进行牵制，特遣队负责保卫心灵信标直到完成部署，以上。</span></p><p>&emsp;&emsp;<span>任务目标一：保护心灵信标直至启动。</span></p><h3 id='48-苏联-06ex---深海'><span>4.8. 苏联 06ex - 深海</span></h3><p><span>位置：阿拉斯加州，安克雷奇</span></p><p><span>进入方式：在</span><code>苏联 06 - 海滩派对</code><span>中，在心灵信标启动前摧毁所有盟军建造场</span></p><p><img src="https://pic.imgdb.cn/item/6658ad94d9c307b7e9e6da9c.png" referrerpolicy="no-referrer" alt="深海"></p><p>&emsp;&emsp;<span>晚上好，将军同志。</span></p><p>&emsp;&emsp;<span>在夏威夷战役取得胜利后，我军与敌人在基辅展开的大规模会战也宣告结束。在敌人疯狂的进攻下，西南方面军遭受重创，基辅几近失守。但随着从中东以及中亚抽调的部队开始进入战场，补给不足的盟军装甲集团军付出了惨重伤亡后被迫退出基辅地区。总参谋部宣布欧洲战场开始进入战略反攻阶段，北方方面军自列宁格勒出发，开始向芬兰与波罗的海三国推进。西方方面军为首的多个方面军，展开了巴列奥略联合作战，向以明斯克为中心的白俄罗斯突出部发起进攻。</span></p><p>&emsp;&emsp;<span>我军登陆了旧金山，西部方面军也以圣路易斯为基点，向美国中西部发起进攻。为了进一步稳定北美占领区的局势，北美战区司令部决定开始将筹备已久的合作政府计划付诸实施。</span></p><p>&emsp;&emsp;<span>只是目前还有一些隐患需要消除。我军在夏威夷的行动过于猛烈，以至于诸多原本被牵制在外海的美军舰队在收到了司令部被摧毁的消息后，意识到这是声东击西的陷阱，并迅速脱离了战斗。相当一部分舰队撤往了阿拉斯加的安克雷奇港。在截获的通讯消息中，敌人反复提到了诸如“保卫”“掩护”“实验室”的字眼。</span></p><p>&emsp;&emsp;<span>总参谋部不想夜长梦多。</span></p><p>&emsp;&emsp;<span>任务目标一：摧毁至少十座盟军造船厂。</span>
+&emsp;&emsp;<span>任务目标二：摧毁安克雷奇基地。</span></p><h3 id='49-苏联-07---囹圄'><span>4.9. 苏联 07 - 囹圄</span></h3><p><span>位置：弗吉尼亚州，阿灵顿县/华盛顿哥伦比亚特区</span></p><p><img src="https://pic.imgdb.cn/item/6658ad94d9c307b7e9e6dab9.png" referrerpolicy="no-referrer" alt="囹圄"></p><p>&emsp;&emsp;<span>早上好，将军同志。</span></p><p>&emsp;&emsp;<span>最新的紧急情况，南部方面军对华盛顿的进攻失败了。</span></p><p>&emsp;&emsp;<span>日前北美战区司令部在里士满成立了美利坚社会主义联邦政府，用于稳定占领区的秩序。我们刚刚接到进一步通知，莫斯科如此急于成立傀儡政府的原因不光是维持后方秩序，还涉及到减少心灵信标的使用的调整方案。</span></p><p>&emsp;&emsp;<span>在夏威夷，美军凭借天气控制机，差点摧毁了心灵信标。但这一次我们运气不太好。在对华盛顿的第一次进攻中，先头部队参考此前檀香山与圣路易斯的做法，采用心灵信标前置战术。但这次盟军成功摧毁了心灵信标，并几乎全歼了南部方面军的先头部队。华盛顿要塞不止有美军，还有此前从欧洲赶来的各国部队。现在大量同盟国联军准备一鼓作气，南下里士满。司令部要求您与维拉迪摩将军，无论如何要将敌人拦在四英里河一带，直到后方准备完毕。</span></p><p>&emsp;&emsp;<span>随着战线推进，东南欧已基本解放，原本态度暧昧的土耳其也不得不宣布中立并开放土耳其海峡供黑海舰队进入地中海。中东的欧洲干涉军已被击溃，以伊拉克为首的阿拉伯国家，宣布对以色列发起圣战。基于上述情况，总理对于北美战区的草率举动非常不满。</span></p><p>&emsp;&emsp;<span>另外从阿拉斯加返回的情报，盟军一直在进行超时空技术的复原，但不能确定进展如何。</span></p><p>&emsp;&emsp;<span>任务目标一：阻止盟军越过防线。</span></p><h3 id='410-苏联-07ex---回家的诱惑'><span>4.10. 苏联 07ex - 回家的诱惑</span></h3><p><span>位置：华盛顿哥伦比亚特区</span></p><p><span>进入方式：在</span><code>苏联 07 - 囹圄</code><span>中，阻止维拉迪摩撤回后方，并保护他的建造场</span></p><p><img src="https://pic.imgdb.cn/item/66628eeb5e6d1bfa05c6a85e.png" referrerpolicy="no-referrer" alt="回家的诱惑"></p><p>&emsp;&emsp;<span>晚上好，将军同志。</span></p><p><span>emsp;</span>&emsp;<span>接到总参谋部通知，许多北美战区司令部指挥人员将返回欧洲。上面安排了专人暂时接替他们的工作。</span></p><p>&emsp;&emsp;<span>您和维拉迪摩将军原计划将要经华盛顿南方的港口，由大西洋海军护送，离开北美。这一带是双方势力的边缘区，两边部队相互交错。维拉迪摩将军的座驾距离港口还有一段距离，但情报被敌人截获，现在他们正在往此地派遣部队。</span></p><p>&emsp;&emsp;<span>北美战区大换血的决定并非完全空穴来风。一些内部会议纪要里出现了诸如“重新考虑心灵信标的战略战术地位”“北美战区司令部内部分将领的能力问题”“对心灵军团的重组”的描述。尽管您取得的一系列胜利有目共睹，但可能在上面看来，北美的问题依旧很大。</span></p><p>&emsp;&emsp;<span>一支侦察机队冒死确认了华盛顿内的确存在着一座超时空传送仪，疑似处于检修状态。情报部门推测，复原后的传送仪可能并不稳定，在启动一次后便宕机了；传送距离也有限，不能达到西侧的防线。</span></p><p>&emsp;&emsp;<span>卡斯卡迪亚共和国与加利福利亚共和国已经成立，西海岸已完全解放。埃及收回了西奈半岛，现在阿拉伯联军正从加沙与戈兰高地逼近耶路撒冷。还有许多工作要做，总之先掩护维拉迪摩将军离开吧。</span></p><p>&emsp;&emsp;<span>任务目标一：保护维拉迪摩将军登上指挥舰。</span></p><h3 id='411-苏联-08---织布机'><span>4.11. 苏联 08 - 织布机</span></h3><p><span>位置：波兰，布列斯特</span></p><p><img src="https://pic.imgdb.cn/item/662bb2e10ea9cb1403895228.png" referrerpolicy="no-referrer" alt="织布机"></p><p>&emsp;&emsp;<span>早安，将军同志。</span></p><p>&emsp;&emsp;<span>审查结果还没来得及具体告知您，简单来说，克里姆林宫认为您的出色表现证明了您是“不会过分依赖任何现有武器”“具有随机应变的指挥能力”的可靠将领，是北美战区“可以充分信任的出色指挥官”。小道消息，总参谋部方面正在考虑，更换北美战区司令员，您也在备选人员之列。</span></p><p>&emsp;&emsp;<span>这段时间里，受到换将的影响，北美部队暂缓了攻势，转入巩固后方局势。尽管心灵信标仍然被使用，但仅限于少数几个关键城市，且不再被投入作战任务。</span></p><p>&emsp;&emsp;<span>南斯拉夫光复了贝尔格莱德，开始解放剩余国土。阿拉伯联军占领了耶路撒冷，特拉维夫已经近在咫尺了。</span></p><p>&emsp;&emsp;<span>东欧方面，经过针对盟军控制区的十次突击后，我军解放了绝大部分斯大林时期苏维埃联盟的领土。红军在白俄罗斯方向上发起的作战进展顺利，不但光复了明斯克，更将战线推进到了布列斯特一带。这里是欧洲盟军构筑的所谓“波兰防线”的关键节点。这是一道从哥尼斯堡延伸至的利沃夫的漫长防线。但只要能够突破布列斯特要塞，我们就等于打开了前往西欧的大门。</span></p><p>&emsp;&emsp;<span>这里是您在返回美国之前需要做的最后的工作。</span></p><p>&emsp;&emsp;<span>另外总军械部提供了一些新的东西，您不妨看看。</span></p><p>&emsp;&emsp;<span>任务目标一：摧毁三座天气控制机。</span></p><h3 id='412-苏联-09---铁锈'><span>4.12. 苏联 09 - 铁锈</span></h3><p><span>位置：伊利诺伊州，外芝加哥地区</span></p><p><img src="https://pic.imgdb.cn/item/66628eeb5e6d1bfa05c6a887.png" referrerpolicy="no-referrer" alt="铁锈"></p><p>&emsp;&emsp;<span>下午好，将军同志。</span></p><p>&emsp;&emsp;<span>经研究决定，现任命您出任北美战区司令员，负责指挥北美战区事务。</span></p><p>&emsp;&emsp;<span>此前受换将影响而暂停的进攻已经重新开始。西部方面军已占领堪萨斯城，向丹佛与明尼阿波利斯推进；接连平定南方各州后，南部方面军在凤凰城与西海岸部队会师。</span></p><p>&emsp;&emsp;<span>昨日我们得到消息，在攻陷特拉维夫后，阿拉伯联军宣布第五次中东战争如预期般胜利。同时，苏维埃联盟时期的领土全部光复，重建联盟事情也被提上了日程。接连的胜利使得许多线索也得以拼凑起来。自基韦斯特与黑森林之后，盟军一刻也没有放弃对超时空技术的复原。东海岸的科研力量被转移到了相对安全的阿拉斯加，随后欧洲方面也通过北大西洋与他们汇合。在占领安克雷奇后，他们又经加拿大，抵达了芝加哥。此前华盛顿见到的那个不过是一个情急之下拿出的失败的试验品。</span></p><p>&emsp;&emsp;<span>侦查显示，此前未被核弹波及的外芝加哥地区存在着盟军最大规模的装备生产基地。自圣路易斯战役后，我军在中央平原上一度陷入苦战。红军已经逼近芝加哥，歼灭美军最大的一支有生力量的机会就在眼前。从圣路易斯到芝加哥，补给线漫长，我军疲态。敌人以逸待劳。但我们必须一鼓作气，毕其功于一役。</span></p><p>&emsp;&emsp;<span>任务目标一：摧毁全部20座盟军重型战车工厂。</span>
+&emsp;&emsp;<span>任务目标二：搜寻并摧毁超时空传送仪。</span></p><h3 id='413-苏联-10---赤潮'><span>4.13. 苏联 10 - 赤潮</span></h3><p><span>位置：美利坚社会主义联邦，斯大林尼亚特区</span></p><p><img src="https://pic.imgdb.cn/item/66628eec5e6d1bfa05c6a915.png" referrerpolicy="no-referrer" alt="赤潮"></p><p>&emsp;&emsp;<span>早安，将军同志。这里有一个好消息和一个不太好的消息。</span></p><p>&emsp;&emsp;<span>好消息是苏维埃社会主义联盟已经宣告重建。不太好的消息则是，里士满政府对于总参谋部“先西后东”的战略部署提出了反对，强烈要求我们协助其再次发起解放伪都华盛顿的进攻。</span></p><p>&emsp;&emsp;<span>尽管这并不符合我们的既定章程--毕竟部分盟军部队仍然盘踞在原北美防空司令部所驻的科罗拉多，企图凭借空军优势负隅顽抗，威胁着我军的后方--但是考虑到此役的政治意义远大于其战略意义，总理同志与国防会议同意了这一调整。</span></p><p>&emsp;&emsp;<span>此前我军在柏林会战中成功歼灭了欧洲盟军的最后一只主力部队。随着德国全境失守与意大利在西西里登陆作战后宣布投降，盟军将再也无法组织起像样的攻势。德克萨斯方面已经基本肃清，但总参谋部示意建立军事管制区，而不是原计划的德克萨斯共和国。</span></p><p>&emsp;&emsp;<span>东海岸成为了一座孤岛。随着南部方面军回援，我军稳步推进，在波托马克河西岸建立了大本营。华盛顿一旦倒下，随后便是巴尔的摩与费城，纽约将门户大开，而傀儡…呃，我是说新生的兄弟国家也能够在东海岸站稳脚跟。另外我方与里士满进行了紧急谈判，他们答应派出仆从军来增援我们。</span></p><p>&emsp;&emsp;<span>稍微问一句，您吃过饭了吗？战斗漫长，可别饿着。</span></p><p>&emsp;&emsp;<span>任务目标一：进驻白宫。</span></p><h3 id='414-苏联-11---试金石'><span>4.14. 苏联 11 - 试金石</span></h3><p><span>位置：美利坚社会主义联邦，科罗拉多州，科泉市北部</span></p><p><img src="https://pic.imgdb.cn/item/66628eeb5e6d1bfa05c6a89b.png" referrerpolicy="no-referrer" alt="试金石"></p><p>&emsp;&emsp;<span>上午好，将军同志，或者说，元帅同志。鉴于您在战争中的卓越表现，中央现已通过授予您元帅军衔的决议。您被置于提前授勋的名单中。早些时间，内务人员来取走了您的尺码，好为您订做元帅礼服。</span></p><p>&emsp;&emsp;<span>我军由于空中劣势，在穿越比荷卢地区后，战线一度僵持在索姆河一带。直到近日法国共产党在巴黎发动起义，当局被迫转移至维希后，法军拼尽全力维持的索姆河防线才宣告崩溃。</span></p><p>&emsp;&emsp;<span>但由于心灵信标使用受限，西太平洋的进展比预想的要困难。我们在印尼海域与苏哈托政权的战斗中并没能捞到什么便宜。直到联军登上达尔文港后，澳大利亚与新西兰才有所动摇。他们通过北京向我们表达了有条件投降的意愿。</span></p><p>&emsp;&emsp;<span>共产国际代表大会日前在柏林举行。大会发表了《敦促同盟国联军投降之波茨坦公告》。鉴于自开战以来我国承受的巨大消耗，莫斯科方面希望尽快结束战争，故而在北京的斡旋下，接受了与西太平洋盟军国家在吉隆坡举行谈判。</span></p><p>&emsp;&emsp;<span>至于眼下，工程技术人员在理论上完成了充能加速技术应用于铁幕，并更进一步地设计出了过载铁幕--一种充能时间极短的超级武器。它本应该在后方完成实验再被投入使用，但科罗拉多就是一处相当好的试验场。这里集结了被击溃的西部美军以及从远东撤退的盟军部队。是时候搬走这块绊脚石了。</span></p><p>&emsp;&emsp;<span>任务目标一：护送技术人员进入铁幕装置，并接管基地。</span>
+&emsp;&emsp;<span>任务目标二：摧毁两座盟军指挥中心。</span>
+&emsp;&emsp;<span>任务目标三：歼灭该地区残余美军。</span>
+&emsp;&emsp;<span>任务目标四：过载铁幕不能被摧毁。</span></p><p>&emsp;&emsp;<span>提示：过载铁幕需要消耗大量电力。</span></p><h3 id='415-苏联-12---苹果派'><span>4.15. 苏联 12 - 苹果派</span></h3><p><span>位置：美利坚社会主义联邦，纽约州，纽约市</span></p><p><img src="https://pic.imgdb.cn/item/66628eeb5e6d1bfa05c6a8b4.png" referrerpolicy="no-referrer" alt="苹果派"></p><p>&emsp;&emsp;<span>早上好，元帅同志。</span></p><p>&emsp;&emsp;<span>西太平洋战区受降仪式将于近日在堪培拉举行。同时经谈判，日本同意向我国交还南萨哈林岛与库里尔群岛。（日方称南桦太岛与千岛群岛）</span></p><p>&emsp;&emsp;<span>按照您的部署，我军自今年4月初展开对纽约的合围以来，多次重创敌军，迫使其放弃外围阵地。自4月17日起，我军不断向哈德孙河与下湾压缩，并成功取得纽约湾的控制权。截止昨日4月21日晚8点，我军完成了在东部，南部与西部海面的封锁。同时，北部地区仍处于盟军控制下，波士顿的增援部队也在朝纽约赶来。</span></p><p>&emsp;&emsp;<span>结合铁幕事故来看，盟军的底牌已经很明白了。得益于不再需要传送中继站，敌人可以高效地向我后方投送部队。尽管首都强化了保卫力量，但随着袭击范围从莫斯科扩展至各大城市，各条战线都面临着巨大压力。盟军在突袭无果后便会通过超时空传送撤离，我军疲于奔命。心灵信标不再被使用，所以西欧与北美的占领区…不，解放地区，并没有看起来那么可靠。因此战局越拖越对我们不利。</span></p><p>&emsp;&emsp;<span>莫斯科方面现决定向纽约发起总攻，我们要和时间赛跑。</span></p><p>&emsp;&emsp;<span>另外，根据中央部署，在西欧海岸上集结多日的共产国际联军也预计在同一时间跨过英吉利海峡展开进攻。</span></p><p>&emsp;&emsp;<span>这是最后的斗争，我们要尽快行动起来。</span></p><p>&emsp;&emsp;<span>任务目标一：向曼哈顿推进，占领纽约世贸中心与帝国大厦。</span></p><h3 id='416-苏联-13---红马'><span>4.16. 苏联 13 - 红马</span></h3><p><span>位置：苏维埃社会主义共和国联盟，莫斯科市</span></p><p><img src="https://pic.imgdb.cn/item/66628f765e6d1bfa05c72c8c.png" referrerpolicy="no-referrer" alt="红马"></p><p>&emsp;&emsp;<span>早上好，元帅同志。您终于从美国回来了。您说的没错，战争终于结束了。彻底结束了，我想。</span>
+&emsp;&emsp;<span>您说心灵军团吗？尤里被送去量身打造的秘密监狱了。据说监狱还是爱因斯坦设计的。至于心灵军团的技术遗产，应该是被国防部，内务部和克格勃瓜分了。总之现在大家都能安心了。</span>
+&emsp;&emsp;<span>是的，洲际导弹试射进行得很顺利。按参谋部的说法，联盟将能够对敌人发起“外科手术式的核打击”。不过好像暂时没什么敌人了，日后的工作重点将转移到防范恐怖主义上来。</span>
+&emsp;&emsp;<span>为什么美国和西欧的领导人没有亲自来？也许是国内有什么事耽误了，谁知道呢。毕竟西太平洋地区的领导人也没有来，不是吗？</span>
+&emsp;&emsp;<span>我猜那个是因为他们在新加坡没有谈拢。昨天的工作会议上，国防部还在因为这个事情指责外交部。经济计划委员会想搞…好像是叫OGAS吧，大概是把整个北美，西欧，东亚和我国的物资供需和物流网络结成统一的整体，但内务部认为当下应当先度过这段困难时期。</span>
+&emsp;&emsp;<span>很困难。根据内务部的报告，战争导致我国损失了约2500万人口。人力不足导致大部分地区的物资生产供给压力巨大，目前只有首都和列宁格勒能维持正常，更不用提庞大的重建工作。</span>
+&emsp;&emsp;<span>工业部提出了集体化控制式机器人与植入式义体的研发计划，但这种过于超前的计划当下基本指望不上。</span>
+&emsp;&emsp;<span>还是看看崭新的莫斯科吧，大概是联盟重建后，首都的修葺工作就开始了。按总理的话讲，这里将会成为“全世界无产阶级的罗马”。听起来真有意思，对吧？</span>
+&emsp;&emsp;<span>今天天气真好，要知道这种晴朗的日子在莫斯科是很难得的。阳光甚至有些太明媚了，就好像永远不会暗淡一样…</span></p><hr /><h2 id='5-单位档案'><span>5. 单位档案</span></h2><p>&emsp;&emsp;<span>这部分是单位档案。大部分新增的物品可以在这里查到相关数据和背景资料。</span></p><p>&emsp;&emsp;<span>本章节中，你能找到下面的单位/建筑/超级武器的背景资料：</span></p><table>
+  <tbody>
+    <tr>
+      <td><a href="#unit1">超能力部队</a></td>
+      <td><a href="#unit2">心灵感应器</a></td>
+      <td><a href="#unit3">鲍里斯</a></td>
+      <td><a href="#unit4">V3火箭发射车</a></td>
+    </tr>
+    <tr>
+      <td><a href="#unit5">超时空中继站</a></td>
+      <td><a href="#unit6">激光围墙</a></td>
+      <td><a href="#unit7">充能增幅器</a></td>
+      <td><a href="#unit8">玛雅金字塔</a></td>
+    </tr>
+    <tr>
+      <td><a href="#unit9">心灵信标</a></td>
+      <td><a href="#unit10">控制中心</a></td>
+      <td><a href="#unit11">激光直升机</a></td>
+      <td><a href="#unit12">先进磁能坦克</a></td>
+    </tr>
+    <tr>
+      <td><a href="#unit13">辐射工兵</a></td>
+      <td><a href="#unit14">过载铁幕</a></td>
+      <td><a href="#unit15">复制中心</a></td>
+      <td><a href="#unit16">天启改</a></td>
+    </tr>
+    <tr>
+      <td><a href="#unit17">天气控制机</a></td>
+      <td><a href="#unit18">母子垃圾车</a></td>
+      <td><a href="#unit19">韩大狗</a></td>
+      <td><a href="#unit20">卡特312C挖掘机</a></td>
+    </tr>
+  </tbody>
+</table><p>&nbsp;</p><h3 id='51-苏军阵营'><span>5.1. 苏军阵营</span></h3><p><span id="unit1"></span></p><blockquote><p><strong><span>超能力部队</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：控制单位，部署释放心灵波。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 01 - 莫斯科风暴</code><span>，及后续关卡。</span></p><p>&emsp;&emsp;<span>苏俄心灵军团训练的特殊单位。他们都是特殊的心灵能力者，可以控制一个敌军单位，或者通过部署释放心灵波杀伤附近的敌军士兵。各项属性与原版苏军的</span><code>尤里</code><span>相同，在</span><code>苏联 03 - 大师球</code><span>中，他被称作心灵特工，在</span><code>苏联 04 - 羽蛇神之怒</code><span>中，超能力部队可以渗透敌军建筑。在</span><code>苏联 03 - 大师球</code><span>、</span><code>苏联 04 - 羽蛇神之怒</code><span>、</span><code>苏联 04ex - 激光研究所</code><span>中，超能力部队拥有自动回血的能力，并且生命值有一定加强。</span></p><p><span id="unit2"></span></p><blockquote><p><strong><span>心灵感应器</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：感应敌方单位行动。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 01 - 莫斯科风暴</code><span>，及后续关卡。</span></p><p>&emsp;&emsp;<span>苏俄心灵军团的发明。可以感应移动/攻击目标在范围内的敌军单位，并使用虚线标记。</span></p><p><span id="unit3"></span></p><blockquote><p><strong><span>鲍里斯</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：苏联英雄。拥有强大的单兵作战能力。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 01 - 莫斯科风暴</code><span>、</span><code>苏联 03 - 大师球</code><span>、</span><code>苏联 06 - 海滩派对</code><span>、</span><code>苏联 12 - 苹果派</code><span>。</span></p><p>&emsp;&emsp;<span>苏联英雄。使用AKM步枪攻击步兵/坦克，并可以召唤米格战机轰炸建筑。在</span><code>苏联 03 - 大师球</code><span>中，鲍里斯不能召唤米格战机，但可以使用伊文炸弹远程攻击建筑；在</span><code>苏联 12 - 苹果派</code><span>中，鲍里斯各项属性得到大幅增强，通过空降进入战场，并且拥有特殊的军衔。</span>
+<span id="unit4"></span></p><blockquote><p><strong><span>V3火箭发射车</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：攻城武器，可以部署切换状态。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 05 - 西进之钥</code><span>，及后续关卡。</span></p><p>&emsp;&emsp;<span>苏军攻城武器。引擎、装甲、装填速度得到了强化。在部署后，可以获得射程增益，并自动攻击敌方建筑。</span>
+<span id="unit9"></span></p><blockquote><p><strong><span>心灵信标</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：强大的心灵武器。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 05 - 西进之钥</code><span>、</span><code>苏联 06 - 海滩派对</code><span>。</span></p><p>&emsp;&emsp;<span>心灵军团的杰作，充能完毕后可以控制整个战场的敌军，但需要很长时间进行充能。在盟军“自由门户”行动中，他们占领了我军在圣路易斯的心灵信标，并进行研究。在</span><code>苏联 06 - 海滩派对</code><span>中，尤里同志对其进行了改装，使其有一些额外功能。</span>
+<span id="unit11"></span></p><blockquote><p><strong><span>激光直升机</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：使用激光发射器，反步兵反坦克反空军。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 05 - 西进之钥</code><span>或</span><code>苏联 06 - 海滩派对</code><span>，及后续关卡。</span></p><p>&emsp;&emsp;<span>通过整合研究盟军及玛雅激光技术研发出的新式直升机，对各种移动目标均有十分强大的威力。如果完成了进阶军事行动</span><code>苏联 04ex - 黄金国</code><span>，则可以在</span><code>苏联 05 - 西进之钥</code><span>中使用，否则需要在</span><code>苏联 06 - 海滩派对</code><span>中才能解锁。由于激光发射器的产能十分有限，每次行动中只允许使用少量激光直升机。</span>
+<span id="unit12"></span></p><blockquote><p><strong><span>先进磁能坦克</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：使用改进型磁暴发射器，反步兵反坦克。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 08 - 织布机</code><span>，及后续关卡。</span></p><p>&emsp;&emsp;<span>总军械部收集了来自各指挥员与坦克车组的意见，改良了磁能坦克。先进磁能坦克装备了更精良的磁暴发射器，在面对步兵与坦克集群时都超越了犀牛坦克。</span>
+<span id="unit13"></span></p><blockquote><p><strong><span>辐射工兵</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：创造一片辐射区域，范围杀伤陆地单位。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 02 - 古巴红糖</code><span>、</span><code>苏联 04ex - 黄金国</code><span>、</span><code>苏联 06 - 海滩派对</code><span>、</span><code>苏联 12 - 苹果派</code></p><p>&emsp;&emsp;<span>同伊拉克盟友达成协议，少量引进的精英步兵。由于数量有限，在绝大多数情况下仅作为增援部队出现。在二周目中，</span><code>苏联 08 - 织布机</code><span>，及后续关卡可以训练辐射工兵，需求核子反应炉科技。</span>
+<span id="unit14"></span></p><blockquote><p><strong><span>过载铁幕</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：超级武器，使坦克暂时无敌。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 11 - 试金石</code><span>。</span></p><p>&emsp;&emsp;<span>在</span><code>苏联 11 - 试金石</code><span>中，工程技术人员使用充能加速技术设计出了过载铁幕原型机，并投入实战。过载铁幕启动后，将消耗大量电力，同时使铁幕的冷却时间缩短至一分钟。</span>
+<span id="unit15"></span></p><blockquote><p><strong><span>复制中心</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：生产建筑，克隆步兵。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 11 - 试金石</code><span>、</span><code>苏联 12 - 苹果派</code></p><p>&emsp;&emsp;<span>苏军最新列装的生产建筑，可以克隆兵营中训练的士兵，必要时也可以回收士兵换取资金。</span>
+<span id="unit16"></span></p><blockquote><p><strong><span>天启改</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：反所有单位，有两个载员位。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 12 - 苹果派</code></p><p>&emsp;&emsp;<span>总军械部在芝加哥开发的最新试验品，大幅增加了护甲的同时，机动性也有所提升。使用小型激光发射器应对空中敌人，并且拥有两个可对外开火的载员位。</span></p><h3 id='52-盟军阵营'><span>5.2. 盟军阵营</span></h3><p><span id="unit5"></span></p><blockquote><p><strong><span>超时空中继站</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：辅助建筑。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 01 - 莫斯科风暴</code><span>、</span><code>苏联 02 - 古巴红糖</code><span>。</span></p><p>&emsp;&emsp;<span>盟军得以实现全球战略传送的中继站。由于传送距离过远，盟军只能依靠提前修建的超时空中继站接收传送单位。如果被摧毁，则可以终止附近的传送。</span>
+<span id="unit6"></span></p><blockquote><p><strong><span>激光围墙</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：屏障建筑。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 03 - 大师球</code><span>。</span></p><p>&emsp;&emsp;<span>爱因斯坦发明的特殊围墙。在开启时会射出高能激光，阻止一切陆军单位的通过。只能被爱因斯坦本人关闭。</span>
+<span id="unit7"></span></p><blockquote><p><strong><span>充能增幅器</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：附属建筑。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 04 - 羽蛇神之怒</code><span>、</span><code>苏联 05 - 西进之钥</code><span>。</span></p><p>&emsp;&emsp;<span>盟军基于玛雅激光科技，以控制中心为基础改装的建筑。它可以加快能量武器的充能，甚至可以为心灵信标进行辅助计算。</span>
+<span id="unit8"></span></p><blockquote><p><strong><span>玛雅金字塔</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：防御建筑。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 04 - 羽蛇神之怒</code><span>、</span><code>苏联 04ex - 黄金国</code><span>。</span></p><p>&emsp;&emsp;<span>被盟军伪装成玛雅金字塔的激光发生器，可以被占领。</span>
+<span id="unit10"></span></p><blockquote><p><strong><span>控制中心</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：附属建筑。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 06 - 海滩派对</code><span>，及其他关卡。</span></p><p>&emsp;&emsp;<span>原本仅仅是用于指挥遥控坦克的建筑。但由于其强大的运算能力，被盟军进行了多种改造。在</span><code>苏联 06 - 海滩派对</code><span>中，我军也利用控制中心进行加速运算。</span>
+<span id="unit17"></span></p><blockquote><p><strong><span>天气控制机</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：超级武器、防御建筑。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 12 - 苹果派</code><span>，及其他关卡。</span></p><p>&emsp;&emsp;<span>在</span><code>苏联 12 - 苹果派</code><span>中，盟军对天气控制机进行了改进，使其成为强大的防御建筑。</span></p><h3 id='53-其他阵营'><span>5.3. 其他阵营</span></h3><p><span id="unit18"></span></p><blockquote><p><strong><span>母子垃圾车</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：垃圾箱！</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 03 - 大师球</code><span>、</span><code>苏联 11 - 试金石</code></p><p>&emsp;&emsp;<span>发出奇异闪光的垃圾车，让人忍不住想探索一番。</span>
+<span id="unit19"></span></p><blockquote><p><strong><span>韩大狗</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：呜汪！</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 03 - 大师球</code><span>、</span><code>苏联 09 - 铁锈</code></p><p>&emsp;&emsp;<span>被困在美又美大狗摊中的可怜生物，究极皮糙肉厚。</span>
+<span id="unit20"></span></p><blockquote><p><strong><span>卡特312C挖掘机</span></strong></p></blockquote><p>&emsp;&emsp;<span>属性：工程车辆。</span>
+&emsp;&emsp;<span>出场：</span><code>苏联 03 - 大师球</code><span>、</span><code>苏联 11 - 试金石</code></p><p>&emsp;&emsp;<span>可以铲除雪崩，开辟新的道路。</span></p><hr /><h2 id='6-bug报告'><span>6. bug报告</span></h2><p>&emsp;&emsp;<span>这部分是已知bug的报告章节。</span></p><p>&emsp;&emsp;<span>经过一年半的反复测试，我们已经消灭了大部分恶性的、高频率出现的bug。但是，由于现实原因，有可能由于是游戏引擎自带错误无法修复，也有可能是神出鬼没找不到原因，或者是出现概率太小了不值得去修复——在正式版本中仍然还存在着一些bug，这些已知的bug会在这个章节之中列出。</span></p><p>&emsp;<span>本任务确定没有后续，</span><em><span>也许</span></em><span>会做盟军篇（与本任务在剧情上无关）。如果有的话，会将盟军篇与本任务合并更新，同时修复一些本任务的新bug。如果你发现了新的bug，欢迎</span><a href='#94-联系方式'><span>向制作组进行报告</span></a><span>。</span></p><ul><li><span>【轻微】在</span><code>苏联 01 - 莫斯科风暴</code><span>中，玩家在取得前哨站控制权后，可以卖掉克里姆林宫基地的围墙；在</span><code>苏联 12 - 苹果派</code><span>中，玩家可以卖掉其他未选择的基地的围墙。</span>
+<bugtext><span>未修复原因：为了让玩家在基地战阶段不被围墙卡位，做出的取舍</span></bugtext></li><li><span>【严重】在部分关卡，如</span><code>苏联 03 - 大师球</code><span>中，当玩家通过间谍卫星获得全图后（或者通过作弊器开全图），部分“玩家发现XXX单位”的事件无法激活。</span>
+<bugtext><span>未修复原因：引擎固有问题/对任务流程的影响较小</span></bugtext></li><li><span>【致命】存读档次数过多时，可能会导致读档时游戏直接崩溃。</span>
+<bugtext><span>未修复原因：引擎固有问题/出现概率很低</span></bugtext></li><li><span>【严重】在</span><code>苏联 12 - 苹果派</code><span>中，如果玩家始终没有读档，并且摧毁建筑过多、游戏时间过长（一般是右下角时间到达5月3日前后时），游戏会弹框退出。读档就能避免这个bug。</span>
+<bugtext><span>未修复原因：引擎固有问题/对任务流程的影响较小</span></bugtext></li><li><span>【致命】在</span><code>苏联 03 - 大师球</code><span>中，如果玩家始终没有读档，并且摧毁建筑过多，游戏会弹框退出。读档就能避免这个bug。由于二周目限制了读档次数和时机，有可能会影响游戏体验</span>
+<bugtext><span>未修复原因：引擎固有问题</span></bugtext></li><li><span>【轻微】空降的坦克不会站在格子正中心，而是会像步兵一样站在格子的三个角落。</span>
+<bugtext><span>未修复原因：引擎固有问题</span></bugtext></li><li><span>【轻微】在部分关卡，如</span><code>苏联 05 - 西进之钥</code><span>、</span><code>苏联 12 - 苹果派</code><span>中，如果玩家在过远的地方建造矿场，矿车会横穿地图选择最远的矿场倒矿。</span>
+<bugtext><span>未修复原因：引擎固有问题</span></bugtext></li><li><span>【严重】在</span><code>苏联 03 - 大师球</code><span>中，心灵特工控制的单位会自动寻敌，需要手动操作一下才会停止。</span>
+<bugtext><span>未修复原因：引擎固有问题</span></bugtext></li><li><span>【轻微】在部分关卡，如</span><code>苏联 11 - 试金石</code><span>、</span><code>苏联 12 - 苹果派</code><span>中，如果玩家正在建造防御建筑，防御栏的部分技能无法使用。</span>
+<bugtext><span>未修复原因：原版平台限制</span></bugtext></li><li><span>【轻微】在生产</span><a href='#unit11'><span>激光直升机</span></a><span>时，部分情况下只能生产两架（在</span><code>苏联 12 - 苹果派</code><span>中为四架），最后一架需要等待前几架生产完毕后才能继续生产。</span>
+<bugtext><span>未修复原因：引擎固有问题</span></bugtext></li></ul><hr /><h2 ><span>7. 选关存档</span></h2><p>&emsp;&emsp;<span>这部分是配套选关存档的说明。</span></p><h3 ><span>7.1. 选关存档获取</span></h3><p>&emsp;&emsp;<span>由于</span><code>库图佐夫行动：力挽狂澜之日</code><span>修改了战役关卡结构，并且无法读取官方战役的存档，本任务包包含了选关存档，玩家可以读取所有15关场景和第一关（二周目），以及成就界面。但是由于这个选关存档占空间较大（5086KB），不是任务运行所必须的，同时制作组也不鼓励跳关游玩，就和任务包分开下载了。</span></p><p><span>下载地址：</span></p><ul><li><a href='http://hong-jing.ysepan.com/'><span>永硕e盘下载</span></a></li><li><a href='https://pan.baidu.com/s/1Iv1YyvSMiNZJfb2PQ3iCGQ?pwd=ktzf'><span>百度网盘下载</span></a><span> 提取码：ktzf</span></li></ul><h3 id='72-选关存档安装与使用'><span>7.2. 选关存档安装与使用</span></h3><p>&emsp;&emsp;<span>和任务包的安装一样，只需要把选关存档解压缩得到的所有文件（包含一堆</span><code>.sav</code><span>格式的文件）放到游戏文件夹下即可使用。</span></p><p>&emsp;&emsp;<span>安装好后，在载入储存游戏界面拖动到最下方，就能看到选关存档了。</span></p><p><img src="https://pic.imgdb.cn/item/662bb36e0ea9cb14038c3f81.png" referrerpolicy="no-referrer" alt="选关存档"></p><p>&emsp;&emsp;<span>存档的时间是刻意修改的，这样方便寻找，又可以保证玩家的新存档始终在前面。在载入存档后，会看到一张空白的地图，同时文本不断提示：</span><em><span>任务即将自动失败，在“确定重新执行此场任务吗？”界面选择“是”即可。</span></em><span>。重新开始后的难度取决于选项里的难度，可以在</span><code>主选单-选项-游戏选项-困难度</code><span>中修改。</span></p><p>&emsp;&emsp;<span>如果通过选关存档进入了第五关及之后的关卡，游戏会认为玩家没有通关之前的隐藏场景，也没有完成之前的任何成就。</span></p><p>&emsp;&emsp;<span>本选关存档不能为其他任务包使用。</span></p><hr /><h2 id='8-更新日志'><span>8. 更新日志</span></h2><p>&emsp;&emsp;<span>这部分是更新日志的说明。</span></p><h3 id='81-正式版v2-更新日期20240608'><span>8.1. 正式版V2 更新日期：2024.06.08</span></h3><blockquote><p><strong><span>更新方法</span></strong></p></blockquote><p>&emsp;&emsp;<span>直接将本压缩包解压后覆盖到游戏目录内即可。旧版本的游戏存档通用，成就完全保留。如果您通过自动存档（名称类似于</span><code>[苏联 08 - 织布机]</code><span>）进入新关卡，读档之后请重新开始本关。使用</span><a href='#28-冷场ai客户端版本'><span>冷场AI客户端版本</span></a><span>的用户请直接打开启动器，启动器会自动搜索更新。如果更新失败，请点击客户端右下角的版本号，会弹出客户端更新说明，遵照其说明操作即可。</span></p><blockquote><p><span>BUG修复</span></p></blockquote><ul><li><span>修复了通关S7EX后，在S13无论如何选择都会进二周目的bug</span></li><li><span>修复了S9空降的超能力部队是尤里复制人的bug</span></li><li><span>修复了S6简单难度敌人全体冲锋过早的bug</span></li><li><span>修复了S6信标第二次启动时有概率弹框的bug</span></li><li><span>修复了S2占领盟军建造场后黑森林精英援军在原地发呆的bug</span></li><li><span>修复了S4敌军有可能攻击中立玛雅金字塔的bug</span></li><li><span>修复了S12南部方面军援军有概率不能全部转为玩家指挥的bug</span></li><li><span>修复了S6盟军不造遥控坦克的bug</span></li><li><span>修复了S3车辆木箱有概率被卡掉的bug</span></li><li><span>修复了S5部分通向地图外的桥梁走上去就下不来的bug</span></li><li><span>修复了S3桥梁可以被打断的bug</span></li></ul><blockquote><p><span>体验优化</span></p></blockquote><ul><li><span>S3爱因斯坦的寻路逻辑更新，可以自动穿过并关闭开启的激光围墙</span></li><li><span>S6、S9摧毁后提供空降增援的防空阵地，增加了攻击指示</span></li><li><span>S12接管了河对岸的基地后，提示建议卖掉对岸的矿场以防止牛车乱跑</span></li><li><span>增大了S13礼炮的音量，改进了步兵队列的模型，调整了阅兵的部分流程</span></li><li><span>修改了部分特殊单位的名称</span></li><li><span>S3移除了战斗要塞科技，修改了部分海豹部队的位置</span></li><li><span>冷场客户端增加了二周目第一关和成就关的入口</span></li><li><span>优化了部分载入图</span></li><li><span>可以通过修改rulesmd.ini开启自动维修了</span></li></ul><blockquote><p><span>平衡性调整</span></p></blockquote><ul><li><span>巨炮可以被单位自动攻击了</span></li><li><span>修改V3火箭发射车。现在改进型的V3将在S5及以后关卡开始提供，血量强化、装填加快、取消加速度，部署后射程+5（正式版V1已实装），主动攻击建筑物（正式版V1为主动攻击所有敌人）</span></li></ul><h3 id='82-正式版v3-更新日期20240609'><span>8.2. 正式版V3 更新日期：2024.06.09</span></h3><blockquote><p><strong><span>更新方法</span></strong></p></blockquote><p>&emsp;&emsp;<span>直接将本压缩包解压后覆盖到游戏目录内即可。旧版本的游戏存档通用，成就完全保留。如果您通过自动存档（名称类似于</span><code>[苏联 08 - 织布机]</code><span>）进入新关卡，读档之后请重新开始本关。使用</span><a href='#28-冷场ai客户端版本'><span>冷场AI客户端版本</span></a><span>的用户请直接打开启动器，启动器会自动搜索更新。如果更新失败，请点击客户端右下角的版本号，会弹出客户端更新说明，遵照其说明操作即可。</span></p><blockquote><p><span>BUG修复</span></p></blockquote><ul><li><span>修复了S13阅兵时，国防部长有概率会停留在红场路上，导致后续阅兵队伍队形混乱的bug</span></li><li><span>修复了S11过载铁幕启动时，铁幕装置被摧毁后玩家仍然拥有铁幕超武的bug</span></li><li><span>修复了部分建筑物互相遮挡时，图层显示混乱的bug</span></li></ul><hr /><h2 id='9-关于'><span>9. 关于</span></h2><p>&emsp;&emsp;<span>这部分是有关此任务包制作组、测试人员等的章节。如果你玩的很爽的话，可以在心里面感谢这些人；如果你玩完有许多意见的话，也可以在这里找到制作组的联系方式。</span></p><h3 id='91-制作及测试人员'><span>9.1. 制作及测试人员</span></h3><p>&emsp;&emsp;<code>库图佐夫行动：力挽狂澜之日</code><span>由</span><a href='https://space.bilibili.com/2229647'><span>韩大妈</span></a><span>和</span><a href='https://space.bilibili.com/4892883'><span>Yugram</span></a><span>策划及制作。</span></p><p>&emsp;&emsp;<span>感谢参与任务测试的朋友：</span></p><ul><li><a href='https://space.bilibili.com/27170'><span>脆骨君Mystia</span></a></li><li><span>圆筒</span></li><li><span>豆沙最好看啦</span></li><li><a href='https://space.bilibili.com/621813784'><span>AuY</span></a></li><li><span>蜜蜂狼牛</span></li><li><span>SF-WZ</span></li><li><a href='https://space.bilibili.com/90334464'><span>Neues_Kapitel</span></a></li><li><a href='https://space.bilibili.com/20602965'><span>梦月绮灵</span></a></li><li><a href='https://space.bilibili.com/182101941'><span>Fly-纳西妲</span></a></li><li><a href='https://space.bilibili.com/649950765'><span>无所畏惧defender</span></a></li><li><span>韩大妈在加拿大的前妻</span></li><li><a href='https://space.bilibili.com/1509142'><span>小shine</span></a></li><li><span>4 凛绪 蕙 游</span></li><li><a href='https://space.bilibili.com/19794579'><span>焦糖肥猫</span></a></li><li><a href='https://v.douyin.com/ijjSMHVV'><span>红警大吃货</span></a></li><li><span>菜菜刺猬</span></li><li><a href='https://space.bilibili.com/41073096'><span>shuffy</span></a></li><li><span>微光</span></li><li><a href='https://space.bilibili.com/36073419'><span>制玆八拍舞风独</span></a></li><li><a href='https://space.bilibili.com/227868562?spm_id_from=333.1007.0.0'><span>梦璃</span></a></li><li><a href='https://space.bilibili.com/73992857'><span>ABCDtonser</span></a></li><li><span>土狼</span></li><li><a href='https://space.bilibili.com/327732842'><span>der 1. Panzerdivision</span></a></li><li><span>genres</span></li><li><span>赔小赔</span></li><li><span>Yuyuan</span></li><li><span>妖妖酱</span></li></ul><p>&emsp;&emsp;<span>感谢参与技术讨论的朋友：</span></p><ul><li><span>Heli</span></li><li><span>tslza</span></li><li><span>ZeroFanker</span></li><li><a href='https://space.bilibili.com/621813784'><span>AuY</span></a></li><li><a href='https://space.bilibili.com/41073096'><span>shuffy</span></a></li><li><span>烷烃</span></li><li><span>九千天华</span></li><li><span>妖妖酱</span></li><li><span>Visa600</span></li></ul><p>&emsp;&emsp;<span>特别感谢次时代地图编辑器的作者：</span></p><ul><li><a href='https://github.com/secsome/FA2sp'><span>FA2sp</span></a><span> 的作者 secsome</span></li><li><a href='https://github.com/Rampastring/WorldAlteringEditor'><span>WorldAlteringEditor</span></a><span> 的作者 Rampastring</span></li></ul><h3 id='92-许可协议'><span>9.2. 许可协议</span></h3><p>&emsp;&emsp;<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br>&emsp;&emsp;<span>本作品采用</span><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><span>知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</span></a><span>进行许可。</span></p><p>&emsp;&emsp;<span>简单地说，本任务包</span><code>禁止二次修改</code><span>、</span><code>禁止商业使用</code><span>（包括但不仅限于直接售卖任务包、整合进商业对战平台中），在保持任务包完整并署名的情况下，可以任意的分发、复制本作品。</span></p><p>&emsp;&emsp;<span>如果你是MOD作者，想将本任务包整合进你的MOD中；或者是MOD爱好者，想将其移植到别的MOD中，可以</span><a href='#94-联系方式'><span>联系制作组</span></a><span>以获得独立的许可（当然，制作组并不承诺同意所有申请），基本要求是修改后的任务包仍然保持与原作品相同级别的加密强度。</span></p><p>&emsp;&emsp;<span>制作组保留按照上述许可协议追责的权利。</span></p><h3 id='93-素材作者'><span>9.3. 素材作者</span></h3><p>&emsp;&emsp;<span>本任务中使用了部分公开素材，特别对作者表示感谢，信息如下：</span></p><ul><li><span>内燃机车 by MadHQ</span></li><li><span>集装箱 by BySc</span></li><li><span>华盛顿纪念碑、雪地古姆百货商店大门、企鹅 by 雷德克里莫</span></li><li><span>S09盟军战车工厂 by xuetianyi(Catlovers)</span></li><li><span>激光围墙 by Quiet</span></li><li><span>观察哨 by theJ</span></li><li><span>卡特312C挖掘机 by 布加迪</span></li><li><span>S06运输机 by 1437</span></li><li><span>S12闪电风暴武器代码 by 邵利仁</span></li><li><span>凯撒银行 by McPwny</span></li></ul><p>&emsp;&emsp;<span>其他没有标识作者的素材（不含音乐包），版权属于库图佐夫行动制作组。</span></p><p>&emsp;&emsp;<span>音乐包使用了大量Kevin MacLeod的音乐作品，特别感谢：</span></p><ul><li><span>At Launch、Zap Beat、The Ice Giants、Blown Away、Exciting Trailer、Exhilarate、Five Armies、Metalmania、The Whip、Clash Defiant、Failing Defense、Full On、Stormfront、All This、Hiding Your Reality、Neolith、Burn The World Waltz、Breakdown</span></li></ul><h3 id='94-联系方式'><span>9.4. 联系方式</span></h3><p>&emsp;&emsp;<span>联系制作组可以使用邮箱：</span><a href="mailto:KutuzovOperation@foxmail.com"><a href='mailto:KutuzovOperation@foxmail.com' target='_blank' class='url'>KutuzovOperation@foxmail.com</a></a></p><p>&emsp;&emsp;<span>如果在邮件中提出了问题，制作组会及时回复。</span></p><hr /><p align="right" style="font-size:0.8em">库图佐夫行动：力挽狂澜之日 说明文档</p><br><div style="position:fixed !important;bottom:5%;right:5%;text-align:center;background: rgba(255, 255, 255, .7);backdrop-filter: blur(6px);padding:8px;font-weight: 600;z-index:99999">↑<br><a href="#1-目录">返回<br>目录</a></div></div></div>
+
+<script>(function(){var e=document.body.parentElement,t=[],n=null,i=document.body.classList.contains("typora-export-collapse-outline"),r=function(e,t,n){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var i=e.target;i&&i!=this;i=i.parentNode)if(i.matches(t)){!1===n.call(i,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)};function o(){return e.scrollTop}r("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),d(),!1}),r("click",".outline-item",function(e){var t=this.querySelector(".outline-label");if(location.hash="#"+t.getAttribute("href"),i){var n=this.closest(".outline-item-wrapper").classList;n.contains("outline-item-open")||n.add("outline-item-open"),c(),n.add("outline-item-active")}});var a,s,l=function(){var e=o();n=null;for(var i=0;i<t.length&&t[i][1]-e<60;i++)n=t[i]},c=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},d=function(){if(n){c();var e=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(n[0]):n[0])+'"]');if(e)if(i){var t=e.closest(".outline-item-open>ul>.outline-item-wrapper");if(t)t.classList.add("outline-item-active");else{for(var r=(e=e.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");r;)r=(e=r).parentElement.closest(".outline-item-wrapper");e.classList.add("outline-item-active")}}else e.closest(".outline-item-wrapper").classList.add("outline-item-active")}};window.addEventListener("scroll",function(e){a&&clearTimeout(a),a=setTimeout(function(){l(),d()},300)});var u=function(){s=setTimeout(function(){!function(){t=[];var e=o();document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(n=>{var i=n.getAttribute("id");t.push([i,e+n.getBoundingClientRect().y])})}(),l(),d()},300)};window.addEventListener("resize",function(e){s&&clearTimeout(s),u()}),u()})();</script></body>
+</html>
