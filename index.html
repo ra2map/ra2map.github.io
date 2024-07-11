@@ -455,14 +455,14 @@
 		});
 	</script>
 	<script type="module" async>
-		import { fallingCreate, fallingDestroy, version, defaultConfig } from './new/naturalfalling.min.js'
+		import { fallingCreate, fallingDestroy, version, defaultConfig } from './new/naturalfalling.js'
 		let conf = {
 			open: true,
 			custom: true,
 			changeImg: true,
 			changeShow: true,
 			changeRain: true,
-			imgSetting: ['snow', 'petal'],
+			imgSetting: ['rain', 'petal'],
 			imgNumSetting: [12, 40, 80, 60],
 			showSetting: {
 				fadeIn: true,
@@ -495,7 +495,7 @@
 	<div class="loading-bar">
 		<div class="progress"></div>
 	</div>
-	<div class="" id="dl" v-show="openWeatherLantern">
+	<div class="d" id="dl" v-show="openWeatherLantern">
 		<!-- 给你的网站添加灯笼特效！ - 荼蘼博客https://blog.tomys.top/2021-02/2021newyear/  灯笼1 -->
 		<div class="deng-box">
 			<div class="deng">

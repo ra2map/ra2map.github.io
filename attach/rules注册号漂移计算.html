@@ -1,0 +1,211 @@
+<html lang="zh-cn">
+    <head>
+        <title>rules注册号漂移计算</title>
+        <style>
+            html {
+                padding: 0;
+                margin: 0;
+            }
+            input, button, select {
+                margin-bottom: 1em;
+                padding: 0.2em;
+                margin-right:  2em;
+            }
+            .right {
+                text-align: right;
+            }
+            .container {
+                margin: auto;
+                padding: 2em;
+                max-width: 800px; 
+                box-shadow: 0 0 20px #000000;
+            }
+            .panel {
+                margin-top: 1em;
+                margin-bottom: 1em;
+                line-height: 2em;
+            }
+            #resultArea {
+                width: 100%;
+                overflow-y: visible;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="panel">
+                <h1>rules注册号漂移计算</h1>
+                <p class="right">Powered By Heli, 2021.5.20</p>
+                <p>
+                    本程序用于帮助RA2/YR的mapper/modder在注册号漂移情况下，计算正确的注册号。
+                    <br>
+                    具体原理详见<a href="http://pkuit.com/forum.php?mod=viewthread&tid=204594" target="_blank">http://pkuit.com/forum.php?mod=viewthread&tid=204594</a>。
+                </p>
+            </div>
+            <hr>
+            <div class="panel">
+                <label>选择rulesmd.ini的位置：</label>
+                <input type="file" accept=".ini" id="uploadButton" />
+                <br>
+                <label>待整理的注册表名称：</label>
+                <input type="text" name="sectionName" id="sectionName" />
+                <span>←</span>
+                <select id="sectionSelection">
+                    <option value></option>
+                    <option value="BuildingTypes">BuildingTypes</option>
+                    <option value="Animations">Animations</option>
+                </select>
+                <br>
+                <button id="startButton">开始整理注册表</button>
+                <button id="downloadButton">下载整理结果</button>
+                <textarea id="resultArea" rows=30 readonly></textarea>
+            </div>
+            <hr>
+            <div class="panel">
+                <p>
+                    2021.5.22更新：修复程序会自动合并空条目的问题。现在程序不再合并空条目，与游戏内部的处理保持一致。
+                </p>
+                <p>
+                    2021.5.23更新：更改了一处错误的程序逻辑：一个物体注册多次，应该以先出现的那次为准，而非后出现的。
+                </p>
+            </div>
+        </div>
+        <script>
+            //组件关联
+            let __uploadButton = document.getElementById('uploadButton');
+            let __sectionSelection = document.getElementById('sectionSelection');
+            let __sectionName = document.getElementById('sectionName');
+            let __startButton = document.getElementById('startButton');
+            let __downloadButton = document.getElementById('downloadButton');
+            let __resultArea = document.getElementById('resultArea');
+
+            //文本处理
+            function trim(str){
+                if(str.indexOf(';') != -1){
+                    str = str.slice(0, str.indexOf(';'));
+                }
+                if(str.indexOf('[') != -1){
+                    var str1 = true;
+                    var str2 = str.slice(str.indexOf('[')+1, str.indexOf(']'));
+                } else if(str.indexOf('=') != -1){
+                    var str1 = trimSpace(str.slice(0, str.indexOf('=')));
+                    var str2 = trimSpace(str.slice(str.indexOf('=') + 1));
+                } else {
+                    var str1 = false;
+                    var str2 = undefined;
+                }
+                return Array(str1, str2);
+            }
+            function trimSpace(strx) {
+                while (strx.slice(0, 1) == ' ' || strx.slice(0, 1) == '	') {
+                    strx = strx.slice(1);
+                }
+                while (strx.slice(strx.length-1) == ' ' || strx.slice(strx.length - 1) == '	') {
+                    strx = strx.slice(0, strx.length - 1);
+                }
+                return strx;
+            }
+
+            //文件管理对象
+            function iniFile(blob) {
+                this.blob = blob;
+                this.text = '';
+                this.data = {};
+                this.sectionName = '';
+                this.parseText = (blob) => {
+                    if (blob) {
+                        this.blob = blob;
+                    }
+                    if (this.blob) {
+                        let fr = new FileReader();
+                        fr.onloadend = (e) => {
+                            this.text = e.target.result.split(/\r?\n/ig);
+                            this.sectionName = __sectionName.value;
+                            this.data = [];
+                            let i = 0;
+                            let j = 0;
+                            let currentSection = 'none';
+                            while (j < this.text.length) {
+                                let a = new Array();
+                                let s = this.text[j];
+                                a = trim(s);
+                                if (a[0] === true) {
+                                    currentSection = a[1];
+                                } else if ((currentSection == this.sectionName) && (a[0] !== false)) {
+                                    s1 = String(i);
+                                    while(s1.length < 8) {
+                                        s1 = '0' + s1;
+                                    }
+                                    let duplicate = false;
+                                    for (let k = 0; k < this.data.length; k++) {
+                                        if ((String(this.data[k]).slice(8) == a[1]) && (a[1])) {
+                                            duplicate = true;
+                                            break;
+                                        }
+                                    }
+                                    if (!duplicate) {
+                                        this.data.push(s1 + a[1]);
+                                        i ++;
+                                    }
+                                }
+                                j ++;
+                            }
+                            this.data.sort();
+                            __resultArea.innerHTML = this.output();
+                        }
+                        fr.readAsText(this.blob);
+                    }
+                }
+                this.output = () => {
+                    var lst = `[${this.sectionName}]`;
+                    for(i = 0; i < this.data.length; i++) {
+                        if(this.data[i] !== undefined){
+                            lst = `${lst}\n${i}=${String(this.data[i]).slice(8)}`;
+                        }
+                    }
+                    return lst;
+                }
+                if (this.blob) {
+                    this.parseText();
+                }
+            }
+            //选择器关联
+            __sectionSelection.addEventListener('change', () => {
+                __sectionName.value = __sectionSelection.options[__sectionSelection.selectedIndex].value;
+            });
+            //下载结果
+            var downloadTXT = function (content, filename) {
+                var eleLink = document.createElement('a');
+                eleLink.download = filename;
+                eleLink.style.display = 'none';
+                var blob = new Blob([content]);
+                eleLink.href = URL.createObjectURL(blob);
+                document.body.appendChild(eleLink);
+                eleLink.click();
+                document.body.removeChild(eleLink);
+            };
+            //按钮关联
+            __startButton.addEventListener('click', () => {
+                if (!__uploadButton.files[0]) {
+                    alert('还没有选择rules文件！');
+                    return;
+                }
+                if (!__sectionName.value) {
+                    alert('还没有选择要整理的注册列表！');
+                    return;
+                }
+                rules = new iniFile(__uploadButton.files[0]);
+            });
+            __downloadButton.addEventListener('click', () => {
+                let resultList = __resultArea.innerHTML.split(/\r?\n/ig);
+                console.log(resultList);
+                if (resultList.length > 2) {
+                    downloadTXT(__resultArea.innerHTML, `${resultList[0]}.txt`);
+                } else {
+                    alert('还没有整理结果！');
+                }
+            });
+        </script>
+    </body>
+</html>
