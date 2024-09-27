@@ -1,10 +1,10 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "Ra2 现代地图教程",
-    "home_page_url": "https://ra2map.github.io/",
-    "feed_url": "https://ra2map.github.io/feed.json",
+    "title": "RA2 现代地图教程",
+    "home_page_url": "https://ra2map.com/",
+    "feed_url": "https://ra2map.com/feed.json",
     "description": "摸鱼时长两年半的红警地图指导在线版2.0",
-    "icon": "https://ra2map.github.io/avatar.png",
+    "icon": "https://ra2map.com/avatar.png",
     "author": {
         "name": "天雪酱",
         "url": "https://valaxy.site"
@@ -12,11 +12,11 @@
     "items": [
         {
             "id": "",
-            "content_html": "<h2>Valaxy</h2>\n<p>Next Generation Static Blog Framework.</p>\n<p>Write your first post!</p>\n<h2>Usage</h2>\n<p>Modify `valaxy</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/测试",
+            "content_html": "<h2>Valaxy</h2>\n<p>Next Generation Static Blog Framework.</p>\n<p>Write your first post!</p>\n<h2>Usage</h2>\n<p>Modify `valaxy</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/测试\" target=\"_blank\">https://ra2map.com/posts/测试</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/测试",
             "title": "Hallow, Valaxy!",
-            "date_modified": "2023-08-31T16:00:00.000Z",
-            "date_published": "2024-07-09T14:32:59.096Z",
+            "date_modified": "2023-09-01T00:00:00.000Z",
+            "date_published": "2024-09-22T03:40:50.677Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -24,11 +24,11 @@
         },
         {
             "id": "",
-            "content_html": "<p>在 ra2 中，能直接实现随机的触发只有条件<code>51 随机延时</code>，现在咱将依此实现随机刷兵。虽说是刷兵，换成随机刷小木箱，设置核弹目标点之类的同理。</p>\n<p>根据需求的不同，随机刷兵也有多种方式，比如，固定时</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/random-attack/index",
-            "title": "几种随机刷兵方式解析",
-            "date_modified": "2024-02-25T16:00:00.000Z",
-            "date_published": "2024-06-26T16:00:00.000Z",
+            "content_html": "<p>用于控制任务的整体难度，或者做难度分级。</p>\n<h2>任务的总体难度</h2>\n<p>控制某一关卡的总体难度可以从以下角度入手：</p>\n<p><strong>平衡性</strong>：确保玩家和敌对势力之间的平衡。一般来说，作者总是让玩家的兵力弱于敌人，</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/difficulty-control\" target=\"_blank\">https://ra2map.com/posts/difficulty-control</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/difficulty-control",
+            "title": "【未完成】任务难度控制",
+            "date_modified": "2024-02-21T00:00:00.000Z",
+            "date_published": "2024-09-12T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -36,11 +36,11 @@
         },
         {
             "id": "",
-            "content_html": "<h2>原版</h2>\n<p><a href=\"https://tieba.baidu.com/p/2790512472\">收集的各种地图的各种风景图_红警地图吧</a></p>\n<p>原版和尤里官方地图：</p>\n<p>&lt;TxDownload size='9.</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/map-image-appreciation",
-            "title": "地图全景图欣赏",
-            "date_modified": "2021-03-04T16:00:00.000Z",
-            "date_published": "2024-06-19T16:00:00.000Z",
+            "content_html": "<p>一份好的地图，尤其是任务图，必须经过充分测试才能发布。而地图测试在绝大多数时候都是对<strong>地图触发</strong>（包括 AI 触发）的测试。目前，地图测试的重要性虽然常被提起，但一直罕有具体的理论指导，总体处于</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/map-test\" target=\"_blank\">https://ra2map.com/posts/map-test</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/map-test",
+            "title": "地图测试理论",
+            "date_modified": "2024-09-11T00:00:00.000Z",
+            "date_published": "2024-09-11T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -48,11 +48,11 @@
         },
         {
             "id": "",
-            "content_html": "<h2>未完工文章</h2>\n<p>过段时间会上传文章仓库，授权给有意者合作编辑</p>\n<blockquote>\n<p>内容一期</p>\n</blockquote>\n<p>来自旧版：</p>\n<ul>\n<li>\n<p>调试游戏与故障解决</p>\n</li>\n<li>\n<p>Zero Fanker的地图制作分享（等待恢复）</p>\n</li>\n<li>\n<p>地图出错了怎么办【正在】</p>\n</li>\n<li>\n<p>树木外形对照</p>\n</li>\n<li>\n<p>地图光照与局部灯光的控制（待修改）</p>\n</li>\n<li>\n<p>灯光建筑的使用</p>\n</li>\n<li>\n<p>灯光建筑INI编写</p>\n</li>\n<li>\n<p>海底地图效果【正在】</p>\n</li>\n<li>\n<p>昼夜循环【正在】</p>\n</li>\n<li>\n<p>自定义遭遇战地图的预览图</p>\n</li>\n<li>\n<p>战役中所属方颜色 图解说明</p>\n</li>\n<li>\n<p>[X] 给任务添加评分板评语</p>\n</li>\n<li>\n<p>基地中心单元设置的初步尝试</p>\n</li>\n<li>\n<p>零碎内容、未添加教程（待修改）</p>\n</li>\n<li>\n<p>制作多人联机任务必须注意的</p>\n</li>\n<li>\n<p>多人合作任务教程</p>\n</li>\n<li>\n<p>关于地图内部数据解析</p>\n</li>\n<li>\n<p>详细的隧道教程</p>\n</li>\n<li>\n<p>了解游戏，游戏入门，快捷键大全</p>\n</li>\n<li>\n<p>官方地图与任务</p>\n</li>\n<li>\n<p>Ra2和YR单位属性大全</p>\n</li>\n<li>\n<p>地图加密办法【正在】</p>\n</li>\n<li>\n<p>联机对战等（待修改）【暂不】</p>\n</li>\n<li>\n<p>RA3相关（已更新）【暂不】</p>\n</li>\n</ul>\n<p>新版新增：</p>\n<ul>\n<li>地图灯光【正在】</li>\n<li>地图查错【正在】</li>\n<li>地图加密【正在】</li>\n<li>地图测试【正在】</li>\n<li>难度控制【正在】</li>\n<li>空气墙【暂不】</li>\n<li>思维相关</li>\n<li>进阶美化操作</li>\n</ul>\n<h2>框架未完工</h2>\n<ul>\n<li>[X] 目录树的分类的点击行为</li>\n<li>[X] 自动滚到当前目录条目</li>\n<li>[X] 作者与打赏相关，</li>\n<li>[X] 1300-1700宽度适配</li>\n<li>[ ] 添加`</li>\n</ul>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/dev",
-            "title": "【开发者】未完工内容记录",
-            "date_modified": "2021-03-04T16:00:00.000Z",
-            "date_published": "2024-06-16T16:00:00.000Z",
+            "content_html": "<blockquote>\n<p>本文援引软件工程中软件需求与设计的相关理论和方法，对 Ra2 地图的设计进行探索。</p>\n</blockquote>\n<h2>必要性</h2>\n<p>一份地图的制作过程中，画地形和做触发虽然是主要工作，但并不是全部工作。前期的构思、设计同等重</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/map-design\" target=\"_blank\">https://ra2map.com/posts/map-design</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/map-design",
+            "title": "地图设计",
+            "date_modified": "2024-09-09T00:00:00.000Z",
+            "date_published": "2024-09-09T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -60,11 +60,59 @@
         },
         {
             "id": "",
-            "content_html": "<p>::: tip<br>\n做地图时一定要<strong>经常备份</strong>吖，免得地图报废追悔莫及。把地图文件按住<code>Ctrl</code>拖一份就行了。<br>\n:::</p>\n<p>值得注意的是，并非地图崩溃弹框才叫出错，其实所有未按预期发生的情况，都可视为</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/map-debug",
+            "content_html": "<h2>解决地图编辑器问题</h2>\n<p><strong>FA2非常卡，甚至出错无法运行？</strong></p>\n<p>将下面附件 Final Alert ddraw fix.zip 解压后将文件放入地图编辑器根目录即可【 WIN10,WIN11</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/repaire-other\" target=\"_blank\">https://ra2map.com/posts/repaire-other</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/repaire-other",
+            "title": "调试FA2与游戏",
+            "date_modified": "2023-02-01T00:00:00.000Z",
+            "date_published": "2024-09-08T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<blockquote>\n<p>Ra2map：本文转载自<a href=\"https://docs.qq.com/doc/DQnd6T293d01kblVO\">解决游戏无法运行等问题 - 腾讯文档</a></p>\n</blockquote>\n<p>::: info<br>\n前排提示：</p>\n<ul>\n<li>若你玩</li>\n</ul>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/repaire\" target=\"_blank\">https://ra2map.com/posts/repaire</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/repaire",
+            "title": "解决游戏无法运行等问题",
+            "date_modified": "2023-02-01T00:00:00.000Z",
+            "date_published": "2024-09-08T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>树木外形速查</h2>\n<p><img src=\"./imgclip_1.png\" alt=\"\"><img src=\"./imgclip.png\" alt=\"\"><img src=\"./imgclip_2.png\" alt=\"\"></p>\n<h2>战役中所属方颜色 图解说明</h2>\n<blockquote>\n<p>作者：零肆酱</p>\n</blockquote>\n<p>`</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/temp/index\" target=\"_blank\">https://ra2map.com/posts/temp/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/temp/index",
+            "title": "临时",
+            "date_modified": "2024-09-08T00:00:00.000Z",
+            "date_published": "2024-09-08T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>::: danger<br>\n此文已过时，更新的内容有待补充<br>\n:::</p>\n<h2>其他</h2>\n<p>部分内容有误，仅供参考：[警告！制作多人联机任务必须注意的 - 红警任务之家](<a href=\"http://www.pkuit.com/\">http://www.pkuit.com/</a></p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/about-multiple-map\" target=\"_blank\">https://ra2map.com/posts/about-multiple-map</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/about-multiple-map",
+            "title": "【未完成】多人地图相关",
+            "date_modified": "2011-07-09T00:00:00.000Z",
+            "date_published": "2024-08-31T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>::: tip<br>\n做地图时一定要<strong>经常备份</strong>吖<AFace face=\"nacho:16\"/>，免得地图报废追悔莫及。把地图文件按住<code>Ctrl</code>拖一份就行了。<br>\n:::</p>\n<p>值得注意的是，并非地图崩溃弹</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/map-debug\" target=\"_blank\">https://ra2map.com/posts/map-debug</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/map-debug",
             "title": "地图调试与出错补救",
-            "date_modified": "2021-03-04T16:00:00.000Z",
-            "date_published": "2024-06-16T16:00:00.000Z",
+            "date_modified": "2024-06-17T00:00:00.000Z",
+            "date_published": "2024-08-30T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -72,11 +120,11 @@
         },
         {
             "id": "",
-            "content_html": "<p>&lt;TxCard title=&quot;硬核教程：手把手教你如何在两个小时内做一张好看的红警地图&quot; url=&quot;<a href=\"https://www.bilibili.com/video/av55809332\">https://www.bilibili.com/video/av55809332</a>&quot; author</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/some-fa2-video-tutorial",
-            "title": "一些FA2视频教程收集",
-            "date_modified": "2024-02-20T16:00:00.000Z",
-            "date_published": "2024-06-16T16:00:00.000Z",
+            "content_html": "<h2>第一部分</h2>\n<p>&lt;TxCard title=&quot;高级触发系统设计-入门导引.zip&quot; url=&quot;/attach/高级触发系统设计-入门导引.zip&quot; author=&quot;邵利仁&quot; date=&quot;2021-0</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/other-map-tutorial\" target=\"_blank\">https://ra2map.com/posts/other-map-tutorial</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/other-map-tutorial",
+            "title": "【未完成】其他教程、零碎内容",
+            "date_modified": "2024-08-30T00:00:00.000Z",
+            "date_published": "2024-08-30T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -84,95 +132,11 @@
         },
         {
             "id": "",
-            "content_html": "<h2>介绍</h2>\n<p>FA2 工具脚本是一些<code>.fscript</code>类型的脚本文件，在 FA2 的<code>script</code>目录下。通过 FA2 菜单栏的工具 -- 工具脚本来使用。英文版语法说明在 FA2 的`/Help</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/fa2-script",
-            "title": "FA2工具脚本相关",
-            "date_modified": "2024-03-31T16:00:00.000Z",
-            "date_published": "2024-03-31T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<h2>网站</h2>\n<ul>\n<li>MOD 技术论坛：<a href=\"https://bbs.ra2diy.com/\">红警DIY论坛</a></li>\n<li>原创任务发布与文字攻略论坛：[红警任务之家](<a href=\"https://www.pkuit.com/\">https://www.pkuit.com/</a></li>\n</ul>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/organizations",
-            "title": "相关组织与网站",
-            "date_modified": "2024-03-30T16:00:00.000Z",
-            "date_published": "2024-03-30T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<p>[[toc]]</p>\n<h2>多关任务的命名</h2>\n<p>YR1.001平台下，多关任务默认名称为</p>\n<pre><code>     盟军          苏联\nall01umd.map | sov01umd.map\nall0</code></pre>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/fa2-basic",
-            "title": "FA2基础教程收集",
-            "date_modified": "2024-03-09T16:00:00.000Z",
-            "date_published": "2024-03-09T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<h2>使用</h2>\n<p>触发结果<code>20 播放音乐</code>可以播放指定音乐，填注册名，只要你有这首音乐就可以。重复与否取决于 ini 设置。如果你想停止播放，可以新建一个静音音乐，并用代码指定它重复播放，最后用触发调用</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/music",
-            "title": "背景音乐的使用与添加",
-            "date_modified": "2024-03-09T16:00:00.000Z",
-            "date_published": "2024-03-09T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<h2>多关任务的命名</h2>\n<p>YR1.001平台下，多关任务默认名称为</p>\n<pre><code>     盟军          苏联  \nall01umd.map | sov01umd.map\nall02umd.map</code></pre>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/multiple-mission",
-            "title": "多关任务的命名和自定义（含DTA）",
-            "date_modified": "2024-03-08T16:00:00.000Z",
-            "date_published": "2024-03-08T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<p>制作任务载入图和游戏载入图。</p>\n<h2>任务封面制作器改良版</h2>\n<p>坊间广为流传的任务封面制作器，由永恒叶改良：增加了不同方向的箭头贴图及超武图标</p>\n<p>&lt;TxDownload size='2.0MB' net</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/cover",
-            "title": "几个封面制作器",
-            "date_modified": "2019-08-27T16:00:00.000Z",
-            "date_published": "2024-03-06T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<p>游戏中出现的几乎所有文字，包括单位名称，任务剧情，任务名称等，都需要使用 RA2 语音编辑器编辑。</p>\n<p>&lt;TxDownload size='1.22MB' netdisk='' direct='语言编辑</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/csf",
-            "title": "语言编辑器",
-            "date_modified": "2018-09-30T16:00:00.000Z",
-            "date_published": "2024-03-05T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<p>其他工具软件推荐</p>\n<h2>通用</h2>\n<h3>Notepad3</h3>\n<p>小巧强大的文本编辑器，有语法高亮等功能，可用来替代系统自带的记事本。下载：<a href=\"https://www.appinn.com/notepad3/\">https://www.appinn.com/notepad3/</a></p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/other-tool",
+            "content_html": "<p>其他工具软件推荐<!--2018-10-01--></p>\n<h2>通用</h2>\n<h3>Notepad3</h3>\n<p>小巧强大的文本编辑器，有语法高亮等功能，可用来替代系统自带的记事本。下载：<a href=\"https://www.app\">https://www.app</a></p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/other-tool\" target=\"_blank\">https://ra2map.com/posts/other-tool</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/other-tool",
             "title": "其他工具",
-            "date_modified": "2018-09-30T16:00:00.000Z",
-            "date_published": "2024-03-05T16:00:00.000Z",
+            "date_modified": "2024-03-06T00:00:00.000Z",
+            "date_published": "2024-08-30T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -180,287 +144,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>The World-Altering Editor is a new map editor for the second-generation classic Command &amp; Conquer</p>\n</blockquote>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/wae",
-            "title": "WAE：新款地编",
-            "date_modified": "2024-03-05T16:00:00.000Z",
-            "date_published": "2024-03-05T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<p>可提取 mix 文件内的内容，比如 ini，地图，素材（被加密的无法提取），或是打包生成新的 mix 文件，在封装地图自带素材时会用到</p>\n<p>&lt;TxDownload size='1.04MB' netdi</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/xcc",
-            "title": "XCC：提取 MIX 中的文件",
-            "date_modified": "2020-02-20T16:00:00.000Z",
-            "date_published": "2024-03-05T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<blockquote>\n<p>参考：NOG的帖子</p>\n</blockquote>\n<p>::: tip<br>\n此文是关于 ini 的简单介绍，为地图服务，非正式教学。仅讨论<code>rulesmd.ini</code>。<br>\n:::</p>\n<p>代码（<code>rulesmd.ini</code>）规定了单位与全局的各种</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/ini-in-map",
-            "title": "修改代码并内置进地图、部分示例",
-            "date_modified": "2023-10-24T16:00:00.000Z",
-            "date_published": "2024-03-04T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<p>含金量很高的一篇教程，全文上万字，非常详细地解析了地图的内部文本数据，解析了每个小节（如所属方、<code>[Basic]、[Structures]</code>）的键值的含义、作用以及注意事项。</p>\n<p>::: info<br>\n由于</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/about-map-internal-data-analysis",
-            "title": "(重要)关于地图内部数据解析",
-            "date_modified": "2023-09-23T16:00:00.000Z",
-            "date_published": "2024-02-28T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<blockquote>\n<p>即使不做MO地图，也值得一看</p>\n</blockquote>\n<p>&lt;TxCard title=&quot;[教程向]浅谈MO任务制作&quot; url=&quot;<a href=\"https://www.bilibili.com/read/cv1018359\">https://www.bilibili.com/read/cv1018359</a>&quot; author</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/about-mo",
-            "title": "心灵终结相关内容",
-            "date_modified": "2024-02-20T16:00:00.000Z",
-            "date_published": "2024-02-20T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<p>用于控制任务的整体难度，或者做难度分级。</p>\n<blockquote>\n<p>游戏设计中的难度分级对于游戏体验至关重要。通过巧妙地设计难度，游戏可以保持玩家的兴趣和挑战性，同时也能让不同水平的玩家都能找到适合自己的游戏难度。以下是</p>\n</blockquote>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/common-ways-to-control-difficulty",
-            "title": "常用的控制难度方式",
-            "date_modified": "2024-02-20T16:00:00.000Z",
-            "date_published": "2024-02-20T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<h2>触发重复类型 1</h2>\n<blockquote>\n<p>作者：a351650226</p>\n</blockquote>\n<p>关于触发类型 1（摘录自任务核心内容制作手册，感谢Pzy 爱国者之热血 蜘蛛星云三位大师）</p>\n<p>触发类型有三种，人们所了解的大都只是两种，一个</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/some-other-triggers",
-            "title": "一些其他触发条目说明",
-            "date_modified": "2024-02-20T16:00:00.000Z",
-            "date_published": "2024-02-20T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<p>声音在<code>soundmd.ini</code>中，语音在<code>evamd.ini</code>中。如果想新加，参考添加背景音乐方法，单声道。</p>\n<blockquote>\n<p>也看：[MO 常用音效、语音和动画](<a href=\"https://www.bilibili.c\">https://www.bilibili.c</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/sound-and-speech",
-            "title": "常用的音效与语音",
-            "date_modified": "2024-02-20T16:00:00.000Z",
-            "date_published": "2024-02-20T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<p>在地图中，有很多触发条件/结果/脚本需要填入某个物件的 ID 号而非注册名，如</p>\n<ul>\n<li>19 建造特定类型的建筑...</li>\n<li>41 播放动画</li>\n<li>42 爆炸在</li>\n<li>88 粒子动画</li>\n<li>46,N - 攻击N</li>\n</ul>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/triggers-about-list",
-            "title": "需注册表触发如41动画&42爆炸解析",
-            "date_modified": "2024-02-20T16:00:00.000Z",
-            "date_published": "2024-02-20T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<h2>触发刷的载具内成员开火</h2>\n<blockquote>\n<p>由轻稚天雪提供</p>\n</blockquote>\n<p>直接刷出带兵的 IFV 或者战斗要塞时，里面的兵不会开火，你可以让它先不装载，走到蓝线内，再装载，再进攻。todo</p>\n<h2>让地图上现有的单位执行</h2>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/some-team-instance",
-            "title": "一些小队实例",
-            "date_modified": "2024-02-18T16:00:00.000Z",
-            "date_published": "2024-02-18T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<h2>关于设置科技等级的触发组应用</h2>\n<blockquote>\n<p>作者：a351650226</p>\n</blockquote>\n<p>玩过YR原版盟军第5关的同志都知道开局是造不出黑鹰的，只有当棒子的飞机炸了尤里的船厂后才能造，这里就是用到了这个触发。</p>\n<p>`1</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/some-trigger-instance",
-            "title": "一些触发实例",
-            "date_modified": "2018-09-29T16:00:00.000Z",
-            "date_published": "2024-02-18T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<p>关联触发可以<strong>给同一个物体挂上多个触发</strong>，比如，可以做到让同一个物体在 <em>41 初次受损</em>，<em>42 一半生命值</em>，<em>43 红血</em> 时，都发出警告信息（这仨事件都需要关联物体，而物体的关联框里只能填</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/how-to-associate-triggers/index",
-            "title": "如何关联触发",
-            "date_modified": "2021-08-03T16:00:00.000Z",
-            "date_published": "2024-02-17T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：取自 SpiderNebula 的地图编辑器悬崖花式画法教程</p>\n</blockquote>\n<p>FA2 里面画悬崖是个很重要的技能……如果悬崖画得太直往往就给人一直瞎眼的感觉，所以现在来说说我画悬崖的一些技巧</p>\n<p>在</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/cliff-drawing-easy/index",
-            "title": "悬崖基础画法",
-            "date_modified": "2021-03-04T16:00:00.000Z",
-            "date_published": "2023-11-30T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：转载自 绝对_孤独 搬运的红警任务之家 pkarea 的文章</p>\n</blockquote>\n<p>前言：这套教程出自任务之家 pkarea 之手,也是咱的启蒙教程,私以为很通俗易懂,适合初学者,尤其是从零开始的新人.</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/easy-mission-creation-1/index",
-            "title": "任务简明制作教程-入门篇",
-            "date_modified": "2021-03-04T16:00:00.000Z",
-            "date_published": "2023-11-30T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：转载自 绝对_孤独 搬运的红警任务之家 pkarea 的文章</p>\n</blockquote>\n<p>前言：这套教程出自任务之家 pkarea 之手,也是咱的启蒙教程,私以为很通俗易懂,适合初学者,尤其是从零开始的新人.</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/easy-mission-creation-2/index",
-            "title": "任务简明制作教程-进阶篇",
-            "date_modified": "2021-03-04T16:00:00.000Z",
-            "date_published": "2023-11-30T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<h2>全局</h2>\n<blockquote>\n<p>AuY</p>\n</blockquote>\n<p>FA2 -&gt; 编辑 -&gt; 光照设置 [Lighting]</p>\n<p>【图片】</p>\n<p>看第一栏，“环境照明”即为地图整体亮度，默认<code>1</code>（比较亮）；“光照等级”为地形高度每增加 1 级时</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/map-lighting-and-lamp/index",
-            "title": "地图的光照与灯光控制附示例",
-            "date_modified": "2021-03-04T16:00:00.000Z",
-            "date_published": "2023-11-30T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<center>——我该如何入坑地图制作？</center>\n<p>能点开阅读这篇文章，说明你对RA2地图制作有一定的兴趣，那么你该怎样开始地图制作呢？</p>\n<p>*此文章不传授具体的制作方法，而意在描绘地图制作</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/map-making-get-started/index",
-            "title": "地图制作入门引导",
-            "date_modified": "2021-03-04T16:00:00.000Z",
-            "date_published": "2023-11-30T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<p>此文章不讲RA2相关内容，而是讲电脑上的一些操作，帮你更顺畅、高效地使用电脑，也有助于RA2相关创作。</p>\n<p>这里都是简要说说，更多自己去了解，知乎B站用起来。</p>\n<p>::: danger<br>\n此文章内有不少我个</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/pc-operating-skills/index",
-            "title": "电脑相关配置",
-            "date_modified": "2023-11-30T16:00:00.000Z",
-            "date_published": "2023-11-30T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<h2>主要</h2>\n<p>很基础的教程，建议所有新学<code>ini</code>代码修改的人从序章开始看</p>\n<p>基于 Ares ，Ares 是一款扩展平台，相当于对原版的功能增强，解除了很多修改限制。</p>\n<p>&lt;TxCard title=&quot;</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/mk-ini",
-            "title": "MK的mod教程与代码词典与工具",
-            "date_modified": "2023-11-28T16:00:00.000Z",
-            "date_published": "2023-11-28T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<h2>宝典</h2>\n<p>2个宝典，包含许多教程和代码实例，有些内容已经过时。</p>\n<p><img src=\"https://ra2map.github.io/img/dict1.png\" alt=\"\"><img src=\"/img/dict2.png\" alt=\"\"></p>\n<p>&lt;TxDownload size='58.5MB'</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/other-ini-etc",
-            "title": "其他代码相关工具与教程",
-            "date_modified": "2023-11-28T16:00:00.000Z",
-            "date_published": "2023-11-28T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<p>制作地形需要 TMP Builder，具体看以下教程（主要前两个），注意新的地形只有放入 mix 文件（expandmd**.mix）中才能被地图编辑器和地图渲染器读取！</p>\n<ul>\n<li>[[注释]地形ini说</li>\n</ul>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/edit-terrain-etc",
-            "title": "修改地形，地形对象，覆盖图等",
-            "date_modified": "2023-11-27T16:00:00.000Z",
-            "date_published": "2023-11-27T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<h2>介绍</h2>\n<p>TX 地形拓展包来自国外，给原版增加了很多新的地形，比如雪地城市，城市瀑布，各种悬崖，停机坪，火车道等。使用 TX 地形扩展包制作的地图绚丽无比。</p>\n<p><img src=\"./1.webp\" alt=\"\"></p>\n<p>:::</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/tx-terrain/index",
-            "title": "使用TX地形拓展包",
-            "date_modified": "2023-11-09T16:00:00.000Z",
-            "date_published": "2023-11-09T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文为轻稚天雪对以下专栏内文章的简要概括，详情请看原文。Ra2map 不打算将专栏全文转载到这里。因为B站阅读足够好，转载只是无意义的重复劳动。</p>\n</blockquote>\n<p>&lt;TxCard title=&quot;红色</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/chaleb-art-designing-basic-tutorial",
-            "title": "ChaleB文集：RA2美工设计入门指引",
-            "date_modified": "2023-11-01T16:00:00.000Z",
-            "date_published": "2023-11-01T16:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<p>此文提供ra2地图渲染器的下载和使用方法。它可以将地图渲染生成全景图，供人参考和欣赏。</p>\n<blockquote>\n<p>部分内容参考了：[【工具教程】地图截图器](<a href=\"https://www.bilibili.com/read/c\">https://www.bilibili.com/read/c</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/map-renderer-guide/index",
+            "content_html": "<p>此文提供 ra2 地图渲染器的下载和使用方法。它可以将地图渲染生成全景图，供人参考和欣赏。</p>\n<blockquote>\n<p>部分内容参考了：[【工具教程】地图截图器](<a href=\"https://www.bilibili.com/read\">https://www.bilibili.com/read</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/map-renderer-guide/index\" target=\"_blank\">https://ra2map.com/posts/map-renderer-guide/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/map-renderer-guide/index",
             "title": "地图渲染器及其用法",
-            "date_modified": "2023-11-01T16:00:00.000Z",
-            "date_published": "2023-11-01T16:00:00.000Z",
+            "date_modified": "2023-11-02T00:00:00.000Z",
+            "date_published": "2024-07-22T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -468,11 +156,419 @@
         },
         {
             "id": "",
-            "content_html": "<h2>卡片</h2>\n<!---->\n<p>这一篇文章<br>\n&lt;TxCard title=&quot;红色警戒2地图编辑器入门基础教程&quot; url=&quot;<a href=\"https://www.bilibili.com/read/readlist/rl4\">https://www.bilibili.com/read/readlist/rl4</a></p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/jw",
+            "content_html": "<h2>未完工文章</h2>\n<p>过段时间会上传文章仓库，授权给有意者合作编辑</p>\n<blockquote>\n<p>内容一期</p>\n</blockquote>\n<p>来自旧版：</p>\n<ul>\n<li>\n<p>[X] 调试游戏与故障解决</p>\n</li>\n<li>\n<p>[X] Zero Fanker的地图制作分享（等待恢复）</p>\n</li>\n<li>\n<p>[X] 地图出错了怎么办</p>\n</li>\n<li>\n<p>[X] 树木外形对照</p>\n</li>\n<li>\n<p>[X] 地图光照与局部灯光的控制（待修改）</p>\n</li>\n<li>\n<p>[X] 灯光建筑的使用</p>\n</li>\n<li>\n<p>[X] 灯光建筑INI编写</p>\n</li>\n<li>\n<p>[X] 海底地图效果</p>\n</li>\n<li>\n<p>[X] 昼夜循环</p>\n</li>\n<li>\n<p>[X] 自定义遭遇战地图的预览图</p>\n</li>\n<li>\n<p>[X] 战役中所属方颜色 图解说明</p>\n</li>\n<li>\n<p>[X] 给任务添加评分板评语</p>\n</li>\n<li>\n<p><s>基地中心单元设置的初步尝试</s></p>\n</li>\n<li>\n<p>[X] 零碎内容、未添加教程（待修改）</p>\n</li>\n<li>\n<p>[X] 制作多人联机任务必须注意的</p>\n</li>\n<li>\n<p>[X] 多人合作任务教程</p>\n</li>\n<li>\n<p>[X] 关于地图内部数据解析</p>\n</li>\n<li>\n<p>[X] 详细的隧道教程</p>\n</li>\n<li>\n<p>[X] 了解游戏，游戏入门，快捷键大全</p>\n</li>\n<li>\n<p>[X] 官方地图与任务</p>\n</li>\n<li>\n<p>[X] Ra2和YR单位属性大全</p>\n</li>\n<li>\n<p>[X] 地图加密办法</p>\n</li>\n<li>\n<p>联机对战等（待修改）【暂不】</p>\n</li>\n<li>\n<p>RA3相关（已更新）【暂不】</p>\n</li>\n</ul>\n<blockquote>\n<p>内容二期</p>\n</blockquote>\n<p>新版新增：</p>\n<ul>\n<li>地图灯光【正在】</li>\n<li>[X] 地图查错</li>\n<li>[X] 地图加密</li>\n<li>[X] 地图测试【正在】</li>\n<li>[X] 难度控制【正在】</li>\n<li>空气墙【暂不】</li>\n<li>思维相关【暂不】</li>\n<li>进阶美化操作【暂不】</li>\n<li>[X] 地图设计【正在】</li>\n</ul>\n<h2>框架未完工</h2>\n<blockquote>\n<p>框架一期</p>\n</blockquote>\n<ul>\n<li>[X] 目录树的分类的点击行为</li>\n<li>[X] 自动滚到当前目录条目</li>\n<li>[X] 作者与打赏相关，</li>\n<li>[X] 1300-1700宽度适配</li>\n<li>[X] 打赏适配移动端</li>\n<li>[ ] 添加`</li>\n</ul>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/dev\" target=\"_blank\">https://ra2map.com/posts/dev</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/dev",
+            "title": "【开发者】未完工内容记录",
+            "date_modified": "2024-06-17T00:00:00.000Z",
+            "date_published": "2024-07-20T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>在 ra2 中，能直接实现随机的触发只有条件<code>51 随机延时</code>，现在咱将依此实现随机刷兵。虽说是刷兵，换成随机刷小木箱，设置核弹目标点之类的同理。</p>\n<p>根据需求的不同，随机刷兵也有多种方式，比如，固定时</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/random-attack/index\" target=\"_blank\">https://ra2map.com/posts/random-attack/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/random-attack/index",
+            "title": "几种随机刷兵方式解析",
+            "date_modified": "2024-02-26T00:00:00.000Z",
+            "date_published": "2024-06-27T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>原版</h2>\n<p><a href=\"https://tieba.baidu.com/p/2790512472\">收集的各种地图的各种风景图_红警地图吧</a></p>\n<p>原版和尤里官方地图：</p>\n<p>&lt;TxDownload size='9.</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/map-image-appreciation\" target=\"_blank\">https://ra2map.com/posts/map-image-appreciation</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/map-image-appreciation",
+            "title": "【未完成】地图全景图欣赏",
+            "date_modified": "2021-03-05T00:00:00.000Z",
+            "date_published": "2024-06-20T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>&lt;TxCard title=&quot;硬核教程：手把手教你如何在两个小时内做一张好看的红警地图&quot; url=&quot;<a href=\"https://www.bilibili.com/video/av55809332\">https://www.bilibili.com/video/av55809332</a>&quot; author</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/some-fa2-video-tutorial\" target=\"_blank\">https://ra2map.com/posts/some-fa2-video-tutorial</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/some-fa2-video-tutorial",
+            "title": "一些FA2视频教程收集",
+            "date_modified": "2024-02-21T00:00:00.000Z",
+            "date_published": "2024-06-17T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>介绍</h2>\n<p>FA2 工具脚本是一些<code>.fscript</code>类型的脚本文件，在 FA2 的<code>script</code>目录下。通过 FA2 菜单栏的工具 -- 工具脚本来使用。英文版语法说明在 FA2 的`/Help</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/fa2-script\" target=\"_blank\">https://ra2map.com/posts/fa2-script</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/fa2-script",
+            "title": "FA2工具脚本相关",
+            "date_modified": "2024-04-01T00:00:00.000Z",
+            "date_published": "2024-04-01T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>网站</h2>\n<ul>\n<li>RA2 技术论坛：<a href=\"https://bbs.ra2diy.com/\">红警DIY论坛</a></li>\n<li>原创任务发布与文字攻略论坛：[红警任务之家](<a href=\"https://www.pkuit.com/\">https://www.pkuit.com/</a></li>\n</ul>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/organizations\" target=\"_blank\">https://ra2map.com/posts/organizations</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/organizations",
+            "title": "相关组织与网站",
+            "date_modified": "2024-03-31T00:00:00.000Z",
+            "date_published": "2024-03-31T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>[[toc]]</p>\n<h2>多关任务的命名</h2>\n<p>YR1.001平台下，多关任务默认名称为</p>\n<pre><code>     盟军          苏联\nall01umd.map | sov01umd.map\nall0</code></pre>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/fa2-basic\" target=\"_blank\">https://ra2map.com/posts/fa2-basic</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/fa2-basic",
+            "title": "FA2基础教程收集",
+            "date_modified": "2024-03-10T00:00:00.000Z",
+            "date_published": "2024-03-10T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>使用</h2>\n<p>触发结果<code>20 播放音乐</code>可以播放指定音乐，填注册名，只要你有这首音乐就可以。重复与否取决于 ini 设置。如果你想停止播放，可以新建一个静音音乐，并用代码指定它重复播放，最后用触发调用</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/music\" target=\"_blank\">https://ra2map.com/posts/music</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/music",
+            "title": "背景音乐的使用与添加",
+            "date_modified": "2024-03-10T00:00:00.000Z",
+            "date_published": "2024-03-10T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>多关任务的命名</h2>\n<p>YR1.001平台下，多关任务默认名称为</p>\n<pre><code>     盟军          苏联  \nall01umd.map | sov01umd.map\nall02umd.map</code></pre>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/multiple-mission\" target=\"_blank\">https://ra2map.com/posts/multiple-mission</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/multiple-mission",
+            "title": "多关任务的命名和自定义（含DTA）",
+            "date_modified": "2024-03-09T00:00:00.000Z",
+            "date_published": "2024-03-09T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>制作任务载入图和游戏载入图。</p>\n<h2>任务封面制作器改良版</h2>\n<p>坊间广为流传的任务封面制作器，由永恒叶改良：增加了不同方向的箭头贴图及超武图标</p>\n<p>&lt;TxDownload size='2.0MB' net</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/cover\" target=\"_blank\">https://ra2map.com/posts/cover</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/cover",
+            "title": "几个封面制作器",
+            "date_modified": "2019-08-28T00:00:00.000Z",
+            "date_published": "2024-03-07T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>游戏中出现的几乎所有文字，包括单位名称，任务剧情，任务名称等，都需要使用 RA2 语音编辑器编辑。</p>\n<p>&lt;TxDownload size='1.22MB' netdisk='' direct='语言编辑</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/csf\" target=\"_blank\">https://ra2map.com/posts/csf</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/csf",
+            "title": "语言编辑器",
+            "date_modified": "2018-10-01T00:00:00.000Z",
+            "date_published": "2024-03-06T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<blockquote>\n<p>The World-Altering Editor is a new map editor for the second-generation classic Command &amp; Conquer</p>\n</blockquote>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/wae\" target=\"_blank\">https://ra2map.com/posts/wae</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/wae",
+            "title": "WAE：新款地编",
+            "date_modified": "2024-03-06T00:00:00.000Z",
+            "date_published": "2024-03-06T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>可提取 mix 文件内的内容，比如 ini，地图，素材（被加密的无法提取），或是打包生成新的 mix 文件，在封装地图自带素材时会用到</p>\n<p>&lt;TxDownload size='1.04MB' netdi</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/xcc\" target=\"_blank\">https://ra2map.com/posts/xcc</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/xcc",
+            "title": "XCC：提取 MIX 中的文件",
+            "date_modified": "2020-02-21T00:00:00.000Z",
+            "date_published": "2024-03-06T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<blockquote>\n<p>参考：NOG的帖子</p>\n</blockquote>\n<p>::: tip<br>\n此文是关于 ini 的简单介绍，为地图服务，非正式教学。仅讨论<code>rulesmd.ini</code>。<br>\n:::</p>\n<p>代码（<code>rulesmd.ini</code>）规定了单位与全局的各种</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/ini-in-map\" target=\"_blank\">https://ra2map.com/posts/ini-in-map</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/ini-in-map",
+            "title": "修改代码并内置进地图、部分示例",
+            "date_modified": "2023-10-25T00:00:00.000Z",
+            "date_published": "2024-03-05T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>含金量很高的一篇教程，全文上万字，非常详细地解析了地图的内部文本数据，解析了每个小节（如所属方、<code>[Basic]、[Structures]</code>）的键值的含义、作用以及注意事项。</p>\n<p>::: info<br>\n由于</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/about-map-internal-data-analysis\" target=\"_blank\">https://ra2map.com/posts/about-map-internal-data-analysis</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/about-map-internal-data-analysis",
+            "title": "(重要)关于地图内部数据解析",
+            "date_modified": "2023-09-24T00:00:00.000Z",
+            "date_published": "2024-02-29T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<blockquote>\n<p>即使不做MO地图，也值得一看</p>\n</blockquote>\n<p>&lt;TxCard title=&quot;[教程向]浅谈MO任务制作&quot; url=&quot;<a href=\"https://www.bilibili.com/read/cv1018359\">https://www.bilibili.com/read/cv1018359</a>&quot; author</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/about-mo\" target=\"_blank\">https://ra2map.com/posts/about-mo</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/about-mo",
+            "title": "心灵终结任务相关",
+            "date_modified": "2024-02-21T00:00:00.000Z",
+            "date_published": "2024-02-21T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>触发重复类型 1</h2>\n<blockquote>\n<p>作者：a351650226</p>\n</blockquote>\n<p>关于触发类型 1（摘录自任务核心内容制作手册，感谢Pzy 爱国者之热血 蜘蛛星云三位大师）</p>\n<p>触发类型有三种，人们所了解的大都只是两种，一个</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/some-other-triggers\" target=\"_blank\">https://ra2map.com/posts/some-other-triggers</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/some-other-triggers",
+            "title": "一些其他触发条目说明",
+            "date_modified": "2024-02-21T00:00:00.000Z",
+            "date_published": "2024-02-21T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>声音在<code>soundmd.ini</code>中，语音在<code>evamd.ini</code>中。如果想新加，参考添加背景音乐方法，单声道。</p>\n<blockquote>\n<p>也看：[MO 常用音效、语音和动画](<a href=\"https://www.bilibili.c\">https://www.bilibili.c</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/sound-and-speech\" target=\"_blank\">https://ra2map.com/posts/sound-and-speech</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/sound-and-speech",
+            "title": "常用的音效与语音",
+            "date_modified": "2024-02-21T00:00:00.000Z",
+            "date_published": "2024-02-21T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>在地图中，有很多触发条件/结果/脚本需要填入某个物件的 ID 号而非注册名，如</p>\n<ul>\n<li>19 建造特定类型的建筑...</li>\n<li>41 播放动画</li>\n<li>42 爆炸在</li>\n<li>88 粒子动画</li>\n<li>46,N - 攻击N</li>\n</ul>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/triggers-about-list\" target=\"_blank\">https://ra2map.com/posts/triggers-about-list</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/triggers-about-list",
+            "title": "需注册表触发如41动画&42爆炸解析",
+            "date_modified": "2024-02-21T00:00:00.000Z",
+            "date_published": "2024-02-21T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>触发刷的载具内成员开火</h2>\n<blockquote>\n<p>由轻稚天雪提供</p>\n</blockquote>\n<p>直接刷出带兵的 IFV 或者战斗要塞时，里面的兵不会开火，你可以让它先不装载，走到蓝线内，再装载，再进攻。<!--todo--></p>\n<h2>让地图上</h2>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/some-team-instance\" target=\"_blank\">https://ra2map.com/posts/some-team-instance</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/some-team-instance",
+            "title": "一些小队实例",
+            "date_modified": "2024-02-19T00:00:00.000Z",
+            "date_published": "2024-02-19T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>关于设置科技等级的触发组应用</h2>\n<blockquote>\n<p>作者：a351650226</p>\n</blockquote>\n<p>玩过YR原版盟军第5关的同志都知道开局是造不出黑鹰的，只有当棒子的飞机炸了尤里的船厂后才能造，这里就是用到了这个触发。</p>\n<p>`1</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/some-trigger-instance\" target=\"_blank\">https://ra2map.com/posts/some-trigger-instance</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/some-trigger-instance",
+            "title": "一些触发实例",
+            "date_modified": "2018-09-30T00:00:00.000Z",
+            "date_published": "2024-02-19T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>关联触发可以<strong>给同一个物体挂上多个触发</strong>，比如，可以做到让同一个物体在 <em>41 初次受损</em>，<em>42 一半生命值</em>，<em>43 红血</em> 时，都发出警告信息（这仨事件都需要关联物体，而物体的关联框里只能填</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/how-to-associate-triggers/index\" target=\"_blank\">https://ra2map.com/posts/how-to-associate-triggers/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/how-to-associate-triggers/index",
+            "title": "如何关联触发",
+            "date_modified": "2021-08-04T00:00:00.000Z",
+            "date_published": "2024-02-18T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<blockquote>\n<p>Ra2map：取自 SpiderNebula 的地图编辑器悬崖花式画法教程</p>\n</blockquote>\n<p>FA2 里面画悬崖是个很重要的技能……如果悬崖画得太直往往就给人一直瞎眼的感觉，所以现在来说说我画悬崖的一些技巧</p>\n<p>在</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/cliff-drawing-easy/index\" target=\"_blank\">https://ra2map.com/posts/cliff-drawing-easy/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/cliff-drawing-easy/index",
+            "title": "悬崖基础画法",
+            "date_modified": "2021-03-05T00:00:00.000Z",
+            "date_published": "2023-12-01T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<blockquote>\n<p>Ra2map：转载自 绝对_孤独 搬运的红警任务之家 pkarea 的文章</p>\n</blockquote>\n<p>前言：这套教程出自任务之家 pkarea 之手,也是咱的启蒙教程,私以为很通俗易懂,适合初学者,尤其是从零开始的新人.</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/easy-mission-creation-1/index\" target=\"_blank\">https://ra2map.com/posts/easy-mission-creation-1/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/easy-mission-creation-1/index",
+            "title": "任务简明制作教程-入门篇",
+            "date_modified": "2021-03-05T00:00:00.000Z",
+            "date_published": "2023-12-01T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<blockquote>\n<p>Ra2map：转载自 绝对_孤独 搬运的红警任务之家 pkarea 的文章</p>\n</blockquote>\n<p>前言：这套教程出自任务之家 pkarea 之手,也是咱的启蒙教程,私以为很通俗易懂,适合初学者,尤其是从零开始的新人.</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/easy-mission-creation-2/index\" target=\"_blank\">https://ra2map.com/posts/easy-mission-creation-2/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/easy-mission-creation-2/index",
+            "title": "任务简明制作教程-进阶篇",
+            "date_modified": "2021-03-05T00:00:00.000Z",
+            "date_published": "2023-12-01T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>全局</h2>\n<blockquote>\n<p>AuY</p>\n</blockquote>\n<p>FA2 -&gt; 编辑 -&gt; 光照设置 [Lighting]</p>\n<p>【图片】</p>\n<p>看第一栏，“环境照明”即为地图整体亮度，默认<code>1</code>（比较亮）；“光照等级”为地形高度每增加 1 级时</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/map-lighting-and-lamp/index\" target=\"_blank\">https://ra2map.com/posts/map-lighting-and-lamp/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/map-lighting-and-lamp/index",
+            "title": "【未完成】地图的光照与灯光控制附示例",
+            "date_modified": "2021-03-05T00:00:00.000Z",
+            "date_published": "2023-12-01T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<center>——我该如何入坑地图制作？</center>\n<p>能点开阅读这篇文章，说明你对 RA2 地图制作有一定的兴趣，那么你该怎样开始地图制作呢？</p>\n<p>*此文章不传授具体的制作方法，而意在描绘地图</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/map-making-get-started/index 1\" target=\"_blank\">https://ra2map.com/posts/map-making-get-started/index 1</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/map-making-get-started/index 1",
+            "title": "地图制作入门引导",
+            "date_modified": "2021-03-05T00:00:00.000Z",
+            "date_published": "2023-12-01T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<center>——我该如何入坑地图制作？</center>\n<p>能点开阅读这篇文章，说明你对RA2地图制作有一定的兴趣，那么你该怎样开始地图制作呢？</p>\n<p>*此文章不传授具体的制作方法，而意在描绘地图制作</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/map-making-get-started/index\" target=\"_blank\">https://ra2map.com/posts/map-making-get-started/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/map-making-get-started/index",
+            "title": "地图制作入门引导",
+            "date_modified": "2021-03-05T00:00:00.000Z",
+            "date_published": "2023-12-01T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>此文章不讲RA2相关内容，而是讲电脑上的一些操作，帮你更顺畅、高效地使用电脑，也有助于RA2相关创作。</p>\n<p>这里都是简要说说，更多自己去了解，知乎B站用起来。</p>\n<p>::: danger<br>\n此文章内有不少我个</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/pc-operating-skills/index\" target=\"_blank\">https://ra2map.com/posts/pc-operating-skills/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/pc-operating-skills/index",
+            "title": "电脑相关配置",
+            "date_modified": "2023-12-01T00:00:00.000Z",
+            "date_published": "2023-12-01T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>主要</h2>\n<p>很基础的教程，建议所有新学<code>ini</code>代码修改的人从序章开始看</p>\n<p>基于 Ares ，Ares 是一款扩展平台，相当于对原版的功能增强，解除了很多修改限制。</p>\n<p>&lt;TxCard title=&quot;</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/mk-ini\" target=\"_blank\">https://ra2map.com/posts/mk-ini</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/mk-ini",
+            "title": "MK的mod教程与代码词典与工具",
+            "date_modified": "2023-11-29T00:00:00.000Z",
+            "date_published": "2023-11-29T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>宝典</h2>\n<p>2个宝典，包含许多教程和代码实例，有些内容已经过时。</p>\n<p><img src=\"https://ra2map.com/img/dict1.png\" alt=\"\"><img src=\"/img/dict2.png\" alt=\"\"></p>\n<p>&lt;TxDownload size='58.5MB'</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/other-ini-etc\" target=\"_blank\">https://ra2map.com/posts/other-ini-etc</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/other-ini-etc",
+            "title": "其他代码相关工具与教程",
+            "date_modified": "2023-11-29T00:00:00.000Z",
+            "date_published": "2023-11-29T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>制作地形需要 TMP Builder，具体看以下教程（主要前两个），注意新的地形只有放入 mix 文件（expandmd**.mix）中才能被地图编辑器和地图渲染器读取！</p>\n<ul>\n<li>[[注释]地形ini说</li>\n</ul>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/edit-terrain-etc\" target=\"_blank\">https://ra2map.com/posts/edit-terrain-etc</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/edit-terrain-etc",
+            "title": "修改地形，地形对象，覆盖图等",
+            "date_modified": "2023-11-28T00:00:00.000Z",
+            "date_published": "2023-11-28T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>介绍</h2>\n<p>TX (TerraineXpansion) 地形拓展包来自国外，给原版增加了很多新的地形，比如雪地城市，城市瀑布，各种悬崖，停机坪，火车道等。使用 TX 地形扩展包制作的地图绚丽无比。</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/tx-terrain/index\" target=\"_blank\">https://ra2map.com/posts/tx-terrain/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/tx-terrain/index",
+            "title": "使用 TX 地形拓展包",
+            "date_modified": "2023-11-10T00:00:00.000Z",
+            "date_published": "2023-11-10T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<blockquote>\n<p>Ra2map：本文为轻稚天雪对以下专栏内文章的简要概括，详情请看原文。Ra2map 不打算将专栏全文转载到这里。因为 B 站阅读足够好，转载只是无意义的重复劳动。</p>\n</blockquote>\n<p>&lt;TxCard title=&quot;</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/chaleb-art-designing-basic-tutorial\" target=\"_blank\">https://ra2map.com/posts/chaleb-art-designing-basic-tutorial</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/chaleb-art-designing-basic-tutorial",
+            "title": "ChaleB文集：RA2美工设计入门指引",
+            "date_modified": "2023-11-02T00:00:00.000Z",
+            "date_published": "2023-11-02T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>卡片</h2>\n<!---->\n<p>这一篇文章<br>\n&lt;TxCard title=&quot;星空下的动员兵星空下的动员兵&quot; url=&quot;<a href=\"https://www.bilibili.com/read/readlist/rl441\">https://www.bilibili.com/read/readlist/rl441</a></p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/jw\" target=\"_blank\">https://ra2map.com/posts/jw</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/jw",
             "title": "ts",
-            "date_modified": "2023-10-31T16:00:00.000Z",
-            "date_published": "2023-10-31T16:00:00.000Z",
+            "date_modified": "2023-11-01T00:00:00.000Z",
+            "date_published": "2023-11-01T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -480,11 +576,11 @@
         },
         {
             "id": "",
-            "content_html": "<h2>地图基本要求</h2>\n<ol>\n<li>\n<p>地形无明显错误</p>\n<p>一切任务地图或者说地图最基本的要求，不要出现诸如大片错海岸、多处地表白块等错误。</p>\n</li>\n<li>\n<p>不要轻易崩溃</p>\n<p>游戏出错往往让人沮丧，可以想象玩</p>\n</li>\n</ol>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/other-thinking-and-advice-about-map",
+            "content_html": "<h2>地图基本要求</h2>\n<ol>\n<li>\n<p>地形无明显错误</p>\n<p>一切任务地图或者说地图最基本的要求，不要出现诸如大片错海岸、多处地表白块等错误。</p>\n</li>\n<li>\n<p>不要轻易崩溃</p>\n<p>游戏出错往往让人沮丧，可以想象玩</p>\n</li>\n</ol>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/other-thinking-and-advice-about-map\" target=\"_blank\">https://ra2map.com/posts/other-thinking-and-advice-about-map</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/other-thinking-and-advice-about-map",
             "title": "其他地图思想与忠告",
-            "date_modified": "2023-10-31T16:00:00.000Z",
-            "date_published": "2023-10-31T16:00:00.000Z",
+            "date_modified": "2023-11-01T00:00:00.000Z",
+            "date_published": "2023-11-01T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -492,11 +588,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文为轻稚天雪对以下专栏内文章的简要概括，详情请看原文。Ra2map 不打算将专栏全文转载到这里。因为B站阅读足够好，转载只是无意义的重复劳动。</p>\n</blockquote>\n<p>&lt;TxCard title=&quot;红色</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/chaleb-fa2-basic-tutorial",
+            "content_html": "<blockquote>\n<p>Ra2map：本文为轻稚天雪对以下专栏内文章的简要概括，详情请看原文。Ra2map 不打算将专栏全文转载到这里。因为 B 站阅读足够好，转载只是无意义的重复劳动。</p>\n</blockquote>\n<p>&lt;TxCard title=&quot;</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/chaleb-fa2-basic-tutorial\" target=\"_blank\">https://ra2map.com/posts/chaleb-fa2-basic-tutorial</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/chaleb-fa2-basic-tutorial",
             "title": "ChaleB文集：FA2入门基础教程",
-            "date_modified": "2023-10-30T16:00:00.000Z",
-            "date_published": "2023-10-30T16:00:00.000Z",
+            "date_modified": "2023-10-31T00:00:00.000Z",
+            "date_published": "2023-10-31T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -504,11 +600,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文为轻稚天雪对以下专栏内文章的简要概括，详情请看原文。Ra2map 不打算将专栏全文转载到这里。因为B站阅读足够好，转载只是无意义的重复劳动。</p>\n</blockquote>\n<p>此为ChaleB录制的触发视频教程</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/chaleb-trigger-tutorial",
+            "content_html": "<blockquote>\n<p>Ra2map：本文为轻稚天雪对以下专栏内文章的简要概括，详情请看原文。Ra2map 不打算将专栏全文转载到这里。因为 B 站阅读足够好，转载只是无意义的重复劳动。</p>\n</blockquote>\n<p>此为 ChaleB 录制的触发</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/chaleb-trigger-tutorial\" target=\"_blank\">https://ra2map.com/posts/chaleb-trigger-tutorial</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/chaleb-trigger-tutorial",
             "title": "ChaleB视频集：触发与事件",
-            "date_modified": "2023-10-30T16:00:00.000Z",
-            "date_published": "2023-10-30T16:00:00.000Z",
+            "date_modified": "2023-10-31T00:00:00.000Z",
+            "date_published": "2023-10-31T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -516,11 +612,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>心灵终结3.3.6地图编辑器萌新教程，讲解 FA2 除地形以外的内容。杂谈系列会更注重于处理一些比较具体的问题</p>\n</blockquote>\n<p>&lt;TxCard title=&quot;不会游泳的企鹅24专栏文章&quot; url=&quot;https:</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/qie-fa2-tutorial-based-mo",
+            "content_html": "<blockquote>\n<p>心灵终结3.3.6地图编辑器萌新教程，讲解 FA2 除地形以外的内容。杂谈系列会更注重于处理一些比较具体的问题</p>\n</blockquote>\n<p>&lt;TxCard title=&quot;不会游泳的企鹅24专栏文章&quot; url=&quot;https:</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/qie-fa2-tutorial-based-mo\" target=\"_blank\">https://ra2map.com/posts/qie-fa2-tutorial-based-mo</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/qie-fa2-tutorial-based-mo",
             "title": "不会游泳的企鹅：MO地编教程",
-            "date_modified": "2023-10-30T16:00:00.000Z",
-            "date_published": "2023-10-30T16:00:00.000Z",
+            "date_modified": "2023-10-31T00:00:00.000Z",
+            "date_published": "2023-10-31T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -528,11 +624,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文为轻稚天雪对以下专栏内文章的简要概括和节选，详情请看原文。不做MO也值得一看，专栏后面触发相关的内容案例很多，比较有深度，含金量很高。</p>\n</blockquote>\n<p>&lt;TxCard title=&quot;335-3</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/ymlq-fa2-tutorial-based-mo",
+            "content_html": "<blockquote>\n<p>Ra2map：本文为轻稚天雪对以下专栏内文章的简要概括和节选，详情请看原文。不做MO也值得一看，专栏后面触发相关的内容案例很多，比较有深度，含金量很高。</p>\n</blockquote>\n<p>&lt;TxCard title=&quot;335-3</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/ymlq-fa2-tutorial-based-mo\" target=\"_blank\">https://ra2map.com/posts/ymlq-fa2-tutorial-based-mo</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/ymlq-fa2-tutorial-based-mo",
             "title": "叶墨冷泉文集：MO地编教程",
-            "date_modified": "2023-10-30T16:00:00.000Z",
-            "date_published": "2023-10-30T16:00:00.000Z",
+            "date_modified": "2023-10-31T00:00:00.000Z",
+            "date_published": "2023-10-31T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -540,11 +636,11 @@
         },
         {
             "id": "",
-            "content_html": "<h2>介绍</h2>\n<blockquote>\n<p>FA2sp 是 secsome 发起的一个引擎扩展项目，旨在为 FinalAlert2 提供一组基于 FA2pp 和 Syringe 的<strong>新功能和修复程序</strong>，以允许注入代码。</p>\n</blockquote>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/fa2sp",
+            "content_html": "<h2>介绍</h2>\n<blockquote>\n<p>FA2sp 是 secsome 发起的一个引擎扩展项目，旨在为 FinalAlert2 提供一组基于 FA2pp 和 Syringe 的<strong>新功能和修复程序</strong>，以允许注入代码。虽然</p>\n</blockquote>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/fa2sp\" target=\"_blank\">https://ra2map.com/posts/fa2sp</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/fa2sp",
             "title": "FA2sp：增强版地编",
-            "date_modified": "2023-10-24T16:00:00.000Z",
-            "date_published": "2023-10-24T16:00:00.000Z",
+            "date_modified": "2023-10-25T00:00:00.000Z",
+            "date_published": "2023-10-25T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -552,11 +648,11 @@
         },
         {
             "id": "",
-            "content_html": "<p>&lt;TxCard title=&quot;关于PVP地图的创作给Modder们的一点小建议&quot; url=&quot;<a href=\"https://www.bilibili.com/read/cv21830793/\">https://www.bilibili.com/read/cv21830793/</a>&quot; author=&quot;一只不</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/some-suggestions-for-modders-on-creating-pvp-maps",
+            "content_html": "<p>&lt;TxCard title=&quot;关于PVP地图的创作给Modder们的一点小建议&quot; url=&quot;<a href=\"https://www.bilibili.com/read/cv21830793/\">https://www.bilibili.com/read/cv21830793/</a>&quot; author=&quot;一只不</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/some-suggestions-for-pvp-maps\" target=\"_blank\">https://ra2map.com/posts/some-suggestions-for-pvp-maps</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/some-suggestions-for-pvp-maps",
             "title": "关于PVP地图创作的一点小建议",
-            "date_modified": "2023-02-12T16:00:00.000Z",
-            "date_published": "2023-02-13T16:00:00.000Z",
+            "date_modified": "2023-02-13T00:00:00.000Z",
+            "date_published": "2023-02-14T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -564,11 +660,11 @@
         },
         {
             "id": "",
-            "content_html": "<p>任务文本信息的颜色使用<strong>固定的</strong>颜色名，盟军阵营颜色为 DarkBlue，苏军阵营 DarkRed，第三阵营 DarkSky。颜色在 rulesmd 的<code>[Colors]</code> 中定义。</p>\n<p>如果你想改</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/change-mission-text-color",
+            "content_html": "<p>任务文本信息的颜色使用<strong>固定的</strong>颜色名，盟军阵营颜色为 DarkBlue，苏军阵营 DarkRed，第三阵营 DarkSky。颜色在 rulesmd 的<code>[Colors]</code> 中定义。</p>\n<p>如果你想改</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/change-mission-text-color\" target=\"_blank\">https://ra2map.com/posts/change-mission-text-color</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/change-mission-text-color",
             "title": "改变任务文本信息的颜色",
-            "date_modified": "2022-12-31T16:00:00.000Z",
-            "date_published": "2022-12-31T16:00:00.000Z",
+            "date_modified": "2023-01-01T00:00:00.000Z",
+            "date_published": "2023-01-01T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -576,11 +672,11 @@
         },
         {
             "id": "",
-            "content_html": "<h2>介绍</h2>\n<p>复制粘贴地形是我们提高作图效率的好方法，通过它，我们可以快速铺设地表，或是发明许多“新地形”，实现很多地形块的兼容。</p>\n<p><img src=\"./easy.webp\" alt=\"\"></p>\n<p>按Ctrl+C开始复制，根据</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/copy-and-paste-terrain/index",
+            "content_html": "<h2>介绍</h2>\n<p>复制粘贴地形是我们提高作图效率的好方法，通过它，我们可以快速铺设地表，或是发明许多“新地形”，实现很多地形块的兼容。</p>\n<p><img src=\"./easy.webp\" alt=\"\"></p>\n<p>按Ctrl+C开始复制，根据</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/copy-and-paste-terrain/index\" target=\"_blank\">https://ra2map.com/posts/copy-and-paste-terrain/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/copy-and-paste-terrain/index",
             "title": "复制粘贴地形的几种运用",
-            "date_modified": "2021-02-27T16:00:00.000Z",
-            "date_published": "2022-08-30T16:00:00.000Z",
+            "date_modified": "2021-02-28T00:00:00.000Z",
+            "date_published": "2022-08-31T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -588,11 +684,11 @@
         },
         {
             "id": "",
-            "content_html": "<p>内含很多新兴的MOD工具和教程，持续更新，推荐使用，与此网站互补。视频介绍：红警2 modder工具箱 正式版！发布！[<a href=\"https://www.bilibili.com/video/bv1rV4y1j\">https://www.bilibili.com/video/bv1rV4y1j</a></p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/ra2-modder-toolbox",
+            "content_html": "<p>内含很多新兴的MOD工具和教程，持续更新，推荐使用，与此网站互补。视频介绍：红警2 modder工具箱 正式版！发布！[<a href=\"https://www.bilibili.com/video/bv1rV4y1j\">https://www.bilibili.com/video/bv1rV4y1j</a></p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/ra2-modder-toolbox\" target=\"_blank\">https://ra2map.com/posts/ra2-modder-toolbox</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/ra2-modder-toolbox",
             "title": "RA2Modder工具箱",
-            "date_modified": "2022-08-15T16:00:00.000Z",
-            "date_published": "2022-08-15T16:00:00.000Z",
+            "date_modified": "2022-08-16T00:00:00.000Z",
+            "date_published": "2022-08-16T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -600,11 +696,11 @@
         },
         {
             "id": "",
-            "content_html": "<p><strong>★瑞雪(20210417)★</strong></p>\n<p>&lt;TxDownload size='1.87MB' netdisk='' direct='FinalAlert2联盟版-瑞雪(20210417).7z' nam</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/fa2",
+            "content_html": "<p><strong>★瑞雪(20210417)★</strong></p>\n<p>&lt;TxDownload size='1.87MB' netdisk='' direct='FinalAlert2联盟版-瑞雪(20210417).7z' nam</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/fa2\" target=\"_blank\">https://ra2map.com/posts/fa2</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/fa2",
             "title": "FA2：联盟版地编",
-            "date_modified": "2019-08-27T16:00:00.000Z",
-            "date_published": "2022-08-03T16:00:00.000Z",
+            "date_modified": "2019-08-28T00:00:00.000Z",
+            "date_published": "2022-08-04T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -612,11 +708,11 @@
         },
         {
             "id": "",
-            "content_html": "<h2>Valaxy</h2>\n<p><AFace face=\"nacho:0\"/>Next Generation Static Blog Framework.<AFace face=\"nacho:29\"/> ww</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/hello-valaxy",
+            "content_html": "<h2>Valaxy</h2>\n<p><AFace face=\"nacho:0\"/>Next Generation Static Blog Framework.<AFace face=\"nacho:29\"/> ww</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/hello-valaxy\" target=\"_blank\">https://ra2map.com/posts/hello-valaxy</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/hello-valaxy",
             "title": "Hello, Valaxy!",
-            "date_modified": "2022-03-31T16:00:00.000Z",
-            "date_published": "2022-03-31T16:00:00.000Z",
+            "date_modified": "2022-04-01T00:00:00.000Z",
+            "date_published": "2022-04-01T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -624,11 +720,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文转载自<a href=\"http://pkuit.com/forum.php?mod=viewthread&amp;tid=204850\">【教程】AI基地车防卡（含样例地图） - 红警任务之家</a></p>\n</blockquote>\n<p>本</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/ai-mcv-anti-jamming/index",
+            "content_html": "<blockquote>\n<p>Ra2map：本文转载自<a href=\"http://pkuit.com/forum.php?mod=viewthread&amp;tid=204850\">【教程】AI基地车防卡（含样例地图） - 红警任务之家</a></p>\n</blockquote>\n<p>本</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/ai-mcv-anti-jamming/index\" target=\"_blank\">https://ra2map.com/posts/ai-mcv-anti-jamming/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/ai-mcv-anti-jamming/index",
             "title": "AI基地车防卡",
-            "date_modified": "2022-01-09T16:00:00.000Z",
-            "date_published": "2022-01-09T16:00:00.000Z",
+            "date_modified": "2022-01-10T00:00:00.000Z",
+            "date_published": "2022-01-10T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -636,11 +732,11 @@
         },
         {
             "id": "",
-            "content_html": "<p>&lt;TxCard title=&quot;MammamiaMadman专栏文章-文集-哔哩哔哩&quot; url=&quot;<a href=\"https://space.bilibili.com/29975164/article\">https://space.bilibili.com/29975164/article</a>&quot; author=</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/madman-ai-tutorial",
+            "content_html": "<p>&lt;TxCard title=&quot;MammamiaMadman专栏文章-文集-哔哩哔哩&quot; url=&quot;<a href=\"https://space.bilibili.com/29975164/article\">https://space.bilibili.com/29975164/article</a>&quot; author=</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/madman-ai-tutorial\" target=\"_blank\">https://ra2map.com/posts/madman-ai-tutorial</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/madman-ai-tutorial",
             "title": "马王神系列AI教程",
-            "date_modified": "2021-12-13T16:00:00.000Z",
-            "date_published": "2021-12-13T16:00:00.000Z",
+            "date_modified": "2021-12-14T00:00:00.000Z",
+            "date_published": "2021-12-14T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -648,11 +744,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文转载自<a href=\"http://pkuit.com/forum.php?mod=viewthread&amp;tid=204793\">【教程】局部变量教程1.0 - 红警任务之家</a></p>\n</blockquote>\n<h2>前言</h2>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/local-variables-tutorial",
+            "content_html": "<blockquote>\n<p>Ra2map：本文转载自<a href=\"http://pkuit.com/forum.php?mod=viewthread&amp;tid=204793\">【教程】局部变量教程1.0 - 红警任务之家</a></p>\n</blockquote>\n<h2>前言</h2>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/local-variables-tutorial\" target=\"_blank\">https://ra2map.com/posts/local-variables-tutorial</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/local-variables-tutorial",
             "title": "局部变量教程1.0",
-            "date_modified": "2021-12-04T16:00:00.000Z",
-            "date_published": "2021-12-04T16:00:00.000Z",
+            "date_modified": "2021-12-05T00:00:00.000Z",
+            "date_published": "2021-12-05T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -660,11 +756,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>本文转载自[<a href=\"https://github.com/revengenowstudio/AI-tutorial/blob/main/index.md\">https://github.com/revengenowstudio/AI-tutorial/blob/main/index.md</a>](<a href=\"https://github.com/reven\">https://github.com/reven</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/ts-platform-ai(md).ini-tutorial",
+            "content_html": "<blockquote>\n<p>本文转载自[<a href=\"https://github.com/revengenowstudio/AI-tutorial/blob/main/index.md\">https://github.com/revengenowstudio/AI-tutorial/blob/main/index.md</a>](<a href=\"https://github.com/reven\">https://github.com/reven</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/ts-platform-ai(md).ini-tutorial\" target=\"_blank\">https://ra2map.com/posts/ts-platform-ai(md).ini-tutorial</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/ts-platform-ai(md).ini-tutorial",
             "title": "TS平台AI(MD).ini教程（修订版）",
-            "date_modified": "2010-03-30T16:00:00.000Z",
-            "date_published": "2021-09-04T16:00:00.000Z",
+            "date_modified": "2010-03-31T00:00:00.000Z",
+            "date_published": "2021-09-05T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -672,11 +768,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文转载自[【教程】平台bug：注册号漂移 - 红警任务之家](<a href=\"http://pkuit.com/forum.php?mod=viewthread&amp;tid=204594&amp;extra=\">http://pkuit.com/forum.php?mod=viewthread&amp;tid=204594&amp;extra=</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/platform-bug-registration-number-shift/index",
+            "content_html": "<blockquote>\n<p>Ra2map：本文转载自[【教程】平台bug：注册号漂移 - 红警任务之家](<a href=\"http://pkuit.com/forum.php?mod=viewthread&amp;tid=204594&amp;extra=\">http://pkuit.com/forum.php?mod=viewthread&amp;tid=204594&amp;extra=</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/platform-bug-registration-number-shift/index\" target=\"_blank\">https://ra2map.com/posts/platform-bug-registration-number-shift/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/platform-bug-registration-number-shift/index",
             "title": "平台bug：注册号漂移",
-            "date_modified": "2021-05-15T16:00:00.000Z",
-            "date_published": "2021-05-22T16:00:00.000Z",
+            "date_modified": "2021-05-16T00:00:00.000Z",
+            "date_published": "2021-05-23T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -684,11 +780,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文转载自<a href=\"http://pkuit.com/forum.php?mod=viewthread&amp;tid=204443\">【教程】基地节点指南1.0 - 红警任务之家</a>，1.1新增了总</p>\n</blockquote>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/base-node-guide/index",
+            "content_html": "<blockquote>\n<p>Ra2map：本文转载自<a href=\"http://pkuit.com/forum.php?mod=viewthread&amp;tid=204443\">【教程】基地节点指南1.0 - 红警任务之家</a>，1.1新增了总</p>\n</blockquote>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/base-node-guide/index\" target=\"_blank\">https://ra2map.com/posts/base-node-guide/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/base-node-guide/index",
             "title": "基地节点指南1.1",
-            "date_modified": "2021-01-27T16:00:00.000Z",
-            "date_published": "2021-01-27T16:00:00.000Z",
+            "date_modified": "2021-01-28T00:00:00.000Z",
+            "date_published": "2021-01-28T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -696,11 +792,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文转载自[【教程】高级触发教程：电力连锁 - 红警任务之家](<a href=\"http://pkuit.com/forum.php?mod=viewthread&amp;tid=204435&amp;extra=\">http://pkuit.com/forum.php?mod=viewthread&amp;tid=204435&amp;extra=</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/advanced-trigger-tutorial-power-interlock",
+            "content_html": "<blockquote>\n<p>Ra2map：本文转载自[【教程】高级触发教程：电力连锁 - 红警任务之家](<a href=\"http://pkuit.com/forum.php?mod=viewthread&amp;tid=204435&amp;extra=\">http://pkuit.com/forum.php?mod=viewthread&amp;tid=204435&amp;extra=</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/advanced-trigger-tutorial-power-interlock\" target=\"_blank\">https://ra2map.com/posts/advanced-trigger-tutorial-power-interlock</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/advanced-trigger-tutorial-power-interlock",
             "title": "高级触发教程：电力连锁",
-            "date_modified": "2021-01-22T16:00:00.000Z",
-            "date_published": "2021-01-22T16:00:00.000Z",
+            "date_modified": "2021-01-23T00:00:00.000Z",
+            "date_published": "2021-01-23T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -708,11 +804,11 @@
         },
         {
             "id": "",
-            "content_html": "<p>&lt;TxCard title=&quot;红警2新人地图制作者需要有的几项觉悟&quot; url=&quot;<a href=\"https://www.bilibili.com/read/cv9263799\">https://www.bilibili.com/read/cv9263799</a>&quot; author=&quot;晓星残月&quot; date=</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/new-mapper-needs-several-awareness",
+            "content_html": "<p>&lt;TxCard title=&quot;红警2新人地图制作者需要有的几项觉悟&quot; url=&quot;<a href=\"https://www.bilibili.com/read/cv9263799\">https://www.bilibili.com/read/cv9263799</a>&quot; author=&quot;晓星残月&quot; date=</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/new-mapper-needs-several-awareness\" target=\"_blank\">https://ra2map.com/posts/new-mapper-needs-several-awareness</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/new-mapper-needs-several-awareness",
             "title": "新人地图制作者要有的几项觉悟",
-            "date_modified": "2021-01-13T16:00:00.000Z",
-            "date_published": "2021-01-13T16:00:00.000Z",
+            "date_modified": "2021-01-14T00:00:00.000Z",
+            "date_published": "2021-01-14T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -720,8 +816,8 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文转载自[【教程】高级触发教程：字幕队列 - 红警任务之家](<a href=\"http://pkuit.com/forum.php?mod=viewthread&amp;tid=204171&amp;extra=\">http://pkuit.com/forum.php?mod=viewthread&amp;tid=204171&amp;extra=</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/advanced-trigger-tutorial-subtitle-queue",
+            "content_html": "<blockquote>\n<p>Ra2map：本文转载自[【教程】高级触发教程：字幕队列 - 红警任务之家](<a href=\"http://pkuit.com/forum.php?mod=viewthread&amp;tid=204171&amp;extra=\">http://pkuit.com/forum.php?mod=viewthread&amp;tid=204171&amp;extra=</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/advanced-trigger-tutorial-subtitle-queue\" target=\"_blank\">https://ra2map.com/posts/advanced-trigger-tutorial-subtitle-queue</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/advanced-trigger-tutorial-subtitle-queue",
             "title": "高级触发教程：字幕队列",
             "date_modified": "2020-08-02T05:21:48.000Z",
             "date_published": "2020-08-02T05:21:48.000Z",
@@ -732,8 +828,8 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文转载自<a href=\"http://pkuit.com/forum.php?mod=viewthread&amp;tid=204170\">【教程】高级触发教程：帧计时 - 红警任务之家</a></p>\n</blockquote>\n<p>**警告：</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/advanced-trigger-tutorial-frame-timing",
+            "content_html": "<blockquote>\n<p>Ra2map：本文转载自<a href=\"http://pkuit.com/forum.php?mod=viewthread&amp;tid=204170\">【教程】高级触发教程：帧计时 - 红警任务之家</a></p>\n</blockquote>\n<p>**警告：</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/advanced-trigger-tutorial-frame-timing\" target=\"_blank\">https://ra2map.com/posts/advanced-trigger-tutorial-frame-timing</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/advanced-trigger-tutorial-frame-timing",
             "title": "高级触发教程：帧计时",
             "date_modified": "2020-08-02T03:59:50.000Z",
             "date_published": "2020-08-02T03:59:50.000Z",
@@ -744,11 +840,11 @@
         },
         {
             "id": "",
-            "content_html": "<p>&lt;TxDownload size='56.4KB' netdisk='' direct='特遣脚本小队AI触发全教程(by prry).docx' name='特遣脚本小队AI触发全教程(by prr</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/team-complete-tutorial",
+            "content_html": "<p>&lt;TxDownload size='56.4KB' netdisk='' direct='特遣脚本小队AI触发全教程(by prry).docx' name='特遣脚本小队AI触发全教程(by prr</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/team-complete-tutorial\" target=\"_blank\">https://ra2map.com/posts/team-complete-tutorial</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/team-complete-tutorial",
             "title": "(重要)特遣脚本小队AI触发全教程",
-            "date_modified": "2020-04-15T16:00:00.000Z",
-            "date_published": "2020-04-15T16:00:00.000Z",
+            "date_modified": "2020-04-16T00:00:00.000Z",
+            "date_published": "2020-04-16T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -756,11 +852,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文转载自作者：贴吧@a351650226的文章</p>\n</blockquote>\n<h2>地形</h2>\n<p>这个东西我想已经是被讨论烂了的东西了，贴吧的一些观点我也看过，事实上就我个人经验而言，地形在任务中的确或多或少的是一</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/some-mission-thinking",
+            "content_html": "<blockquote>\n<p>Ra2map：本文转载自作者：贴吧@a351650226的文章</p>\n</blockquote>\n<h2>地形</h2>\n<p>这个东西我想已经是被讨论烂了的东西了，贴吧的一些观点我也看过，事实上就我个人经验而言，地形在任务中的确或多或少的是一</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/some-mission-thinking\" target=\"_blank\">https://ra2map.com/posts/some-mission-thinking</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/some-mission-thinking",
             "title": "一些任务地图思想",
-            "date_modified": "2019-08-27T16:00:00.000Z",
-            "date_published": "2019-08-27T16:00:00.000Z",
+            "date_modified": "2019-08-28T00:00:00.000Z",
+            "date_published": "2019-08-28T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -768,11 +864,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文转载自<a href=\"http://www.pkuit.com/forum.php?mod=viewthread&amp;tid=203415\">【教程】战略任务设计四原则 - 红警任务之家</a></p>\n</blockquote>\n<p>首先</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/the-four-principles-of-strategic-mission-design",
+            "content_html": "<blockquote>\n<p>Ra2map：本文转载自<a href=\"http://www.pkuit.com/forum.php?mod=viewthread&amp;tid=203415\">【教程】战略任务设计四原则 - 红警任务之家</a></p>\n</blockquote>\n<p>首先</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/the-four-principles-of-strategic-mission-design\" target=\"_blank\">https://ra2map.com/posts/the-four-principles-of-strategic-mission-design</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/the-four-principles-of-strategic-mission-design",
             "title": "战略任务设计四原则",
-            "date_modified": "2019-05-19T16:00:00.000Z",
-            "date_published": "2019-05-19T16:00:00.000Z",
+            "date_modified": "2019-05-20T00:00:00.000Z",
+            "date_published": "2019-05-20T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -780,11 +876,11 @@
         },
         {
             "id": "",
-            "content_html": "<p>::: warning<br>\n本文很多内容未经测试，可能是错误或过时的<br>\n:::</p>\n<h2>任务制作细节 1</h2>\n<blockquote>\n<p>作者：未知</p>\n</blockquote>\n<p><strong>如何改变单位和建筑的属性</strong>：使用ini编辑器，新建要改变属性的单位和建筑</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/mission-tips",
+            "content_html": "<p>::: warning<br>\n本文很多内容未经测试，可能是错误或过时的<br>\n:::</p>\n<h2>任务制作细节 1</h2>\n<blockquote>\n<p>作者：未知</p>\n</blockquote>\n<p><strong>如何改变单位和建筑的属性</strong>：使用ini编辑器，新建要改变属性的单位和建筑</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/mission-tips\" target=\"_blank\">https://ra2map.com/posts/mission-tips</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/mission-tips",
             "title": "任务制作细节经验",
-            "date_modified": "2016-02-11T16:00:00.000Z",
-            "date_published": "2019-01-16T16:00:00.000Z",
+            "date_modified": "2016-02-12T00:00:00.000Z",
+            "date_published": "2019-01-17T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -792,11 +888,11 @@
         },
         {
             "id": "",
-            "content_html": "<h2>地图编辑器常见错误揭示及补救方法</h2>\n<blockquote>\n<p>Ra2map：本节转载自[CJ帝教您：地图编辑器常见错误揭示及补救方法_红色警戒吧](<a href=\"http://tieba.baidu.com/p/657117454\">http://tieba.baidu.com/p/657117454</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/some-mistake-and-bug/index",
+            "content_html": "<h2>地图编辑器常见错误揭示及补救方法</h2>\n<blockquote>\n<p>Ra2map：本节转载自[CJ帝教您：地图编辑器常见错误揭示及补救方法_红色警戒吧](<a href=\"http://tieba.baidu.com/p/657117454\">http://tieba.baidu.com/p/657117454</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/some-mistake-and-bug/index\" target=\"_blank\">https://ra2map.com/posts/some-mistake-and-bug/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/some-mistake-and-bug/index",
             "title": "一些常见错误与bug",
-            "date_modified": "2018-09-15T16:00:00.000Z",
-            "date_published": "2018-09-15T16:00:00.000Z",
+            "date_modified": "2018-09-16T00:00:00.000Z",
+            "date_published": "2018-09-16T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -804,11 +900,11 @@
         },
         {
             "id": "",
-            "content_html": "<h2>1</h2>\n<ol>\n<li>红警地图编辑器并不存在抽象数字变量的直接表达方式，均只能以抽象方式存在。</li>\n<li>抽象变量之间可以比较大小，但必须通过一定的过程进行抽象的信息转化。</li>\n<li>抽象变量可以以抽象的方式进行</li>\n</ol>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/the-theory-of-ra2-mission-variables",
+            "content_html": "<h2>1</h2>\n<ol>\n<li>红警地图编辑器并不存在抽象数字变量的直接表达方式，均只能以抽象方式存在。</li>\n<li>抽象变量之间可以比较大小，但必须通过一定的过程进行抽象的信息转化。</li>\n<li>抽象变量可以以抽象的方式进行</li>\n</ol>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/the-theory-of-ra2-mission-variables\" target=\"_blank\">https://ra2map.com/posts/the-theory-of-ra2-mission-variables</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/the-theory-of-ra2-mission-variables",
             "title": "红警任务变量论",
-            "date_modified": "2018-07-11T16:00:00.000Z",
-            "date_published": "2018-07-11T16:00:00.000Z",
+            "date_modified": "2018-07-12T00:00:00.000Z",
+            "date_published": "2018-07-12T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -816,11 +912,11 @@
         },
         {
             "id": "",
-            "content_html": "<p><em>By：MorgensternHXD</em></p>\n<p>自2000年Westwood发布RA2至今已有17载的光华春秋，在这漫漫的17年中，与其相关的DIY技术也在广大爱好者的不断研究和探索中取得了巨大的发展，优秀</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/mapper-core-thinking-guide/index",
+            "content_html": "<p><em>By：MorgensternHXD</em></p>\n<p>自2000年Westwood发布RA2至今已有17载的光华春秋，在这漫漫的17年中，与其相关的DIY技术也在广大爱好者的不断研究和探索中取得了巨大的发展，优秀</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/mapper-core-thinking-guide/index\" target=\"_blank\">https://ra2map.com/posts/mapper-core-thinking-guide/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/mapper-core-thinking-guide/index",
             "title": "mapper核心思维指导",
-            "date_modified": "2018-02-28T16:00:00.000Z",
-            "date_published": "2018-02-28T16:00:00.000Z",
+            "date_modified": "2018-03-01T00:00:00.000Z",
+            "date_published": "2018-03-01T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -828,11 +924,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文转载自[平台差异：载具移出地图边界时内部装载物的被摧毁判定 - 红警任务之家](<a href=\"http://www.pkuit.com/forum.php?mod=viewthread&amp;tid\">http://www.pkuit.com/forum.php?mod=viewthread&amp;tid</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/platform-difference-about-vehicle-leaves-map/index",
+            "content_html": "<blockquote>\n<p>Ra2map：本文转载自[平台差异：载具移出地图边界时内部装载物的被摧毁判定 - 红警任务之家](<a href=\"http://www.pkuit.com/forum.php?mod=viewthread&amp;tid\">http://www.pkuit.com/forum.php?mod=viewthread&amp;tid</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/platform-difference-about-vehicle-leaves-map/index\" target=\"_blank\">https://ra2map.com/posts/platform-difference-about-vehicle-leaves-map/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/platform-difference-about-vehicle-leaves-map/index",
             "title": "平台差异：载具离开地图时乘员的被摧毁判定",
-            "date_modified": "2017-07-26T16:00:00.000Z",
-            "date_published": "2017-07-26T16:00:00.000Z",
+            "date_modified": "2017-07-27T00:00:00.000Z",
+            "date_published": "2017-07-27T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -840,11 +936,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文转载自[【任务制作者请进】关于如何让武装直升机正常起来 - 红警任务之家](<a href=\"http://pkuit.com/forum.php?mod=viewthread&amp;tid=16999\">http://pkuit.com/forum.php?mod=viewthread&amp;tid=16999</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/how-to-make-schp-work-properly",
+            "content_html": "<blockquote>\n<p>Ra2map：本文转载自[【任务制作者请进】关于如何让武装直升机正常起来 - 红警任务之家](<a href=\"http://pkuit.com/forum.php?mod=viewthread&amp;tid=16999\">http://pkuit.com/forum.php?mod=viewthread&amp;tid=16999</a></p>\n</blockquote>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/how-to-make-schp-work-properly\" target=\"_blank\">https://ra2map.com/posts/how-to-make-schp-work-properly</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/how-to-make-schp-work-properly",
             "title": "如何让武装直升机正常起来",
-            "date_modified": "2015-07-03T16:00:00.000Z",
-            "date_published": "2015-07-03T16:00:00.000Z",
+            "date_modified": "2015-07-04T00:00:00.000Z",
+            "date_published": "2015-07-04T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -852,11 +948,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文转载自贴吧<a href=\"http://tieba.baidu.com/p/3295120644\">城市地图的详细制作教程</a>，原帖作者：无敌和谐弹</p>\n</blockquote>\n<p>我接触地图制作的时间也不短了，一直想写点能</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/city-maps-creating-detailed-tutorial/index",
+            "content_html": "<blockquote>\n<p>Ra2map：本文转载自贴吧<a href=\"http://tieba.baidu.com/p/3295120644\">城市地图的详细制作教程</a>，原帖作者：无敌和谐弹</p>\n</blockquote>\n<p>我接触地图制作的时间也不短了，一直想写点能</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/city-maps-creating-detailed-tutorial/index\" target=\"_blank\">https://ra2map.com/posts/city-maps-creating-detailed-tutorial/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/city-maps-creating-detailed-tutorial/index",
             "title": "城市地图的详细制作教程",
-            "date_modified": "2014-09-07T16:00:00.000Z",
-            "date_published": "2014-09-07T16:00:00.000Z",
+            "date_modified": "2014-09-08T00:00:00.000Z",
+            "date_published": "2014-09-08T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -864,11 +960,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文转载自贴吧<a href=\"https://tieba.baidu.com/p/3165093077\">【红警地图美化细化基础教程】By:0402yjl</a>，原帖作者：零肆酱</p>\n</blockquote>\n<p>本教程仅为新手美化</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/map-beautification-and-refinement-basic-tutorial/index",
+            "content_html": "<blockquote>\n<p>Ra2map：本文转载自贴吧<a href=\"https://tieba.baidu.com/p/3165093077\">【红警地图美化细化基础教程】By:0402yjl</a>，原帖作者：零肆酱</p>\n</blockquote>\n<p>本教程仅为新手美化</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/map-beautification-and-refinement-basic-tutorial/index\" target=\"_blank\">https://ra2map.com/posts/map-beautification-and-refinement-basic-tutorial/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/map-beautification-and-refinement-basic-tutorial/index",
             "title": "地图美化细化基础教程",
-            "date_modified": "2014-07-13T16:00:00.000Z",
-            "date_published": "2014-07-13T16:00:00.000Z",
+            "date_modified": "2014-07-14T00:00:00.000Z",
+            "date_published": "2014-07-14T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -876,11 +972,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文转载自贴吧，原帖作者：格林·斯内克</p>\n</blockquote>\n<h2>【制作城市图城区部分的基本流程】</h2>\n<p>地形→大路→小路→红色水泥→草地→细节物品</p>\n<h2>【道路是基础】</h2>\n<p>道路不仅是地表装饰，**更是</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/snake-city-maps-experience/index",
+            "content_html": "<blockquote>\n<p>Ra2map：本文转载自贴吧，原帖作者：格林·斯内克</p>\n</blockquote>\n<h2>【制作城市图城区部分的基本流程】</h2>\n<p>地形→大路→小路→红色水泥→草地→细节物品</p>\n<h2>【道路是基础】</h2>\n<p>道路不仅是地表装饰，**更是</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/snake-city-maps-experience/index\" target=\"_blank\">https://ra2map.com/posts/snake-city-maps-experience/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/snake-city-maps-experience/index",
             "title": "某斯内克的城市图经验谈",
-            "date_modified": "2013-07-22T16:00:00.000Z",
-            "date_published": "2013-07-22T16:00:00.000Z",
+            "date_modified": "2013-07-23T00:00:00.000Z",
+            "date_published": "2013-07-23T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -888,11 +984,11 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：本文转载自贴吧，作者CJ帝</p>\n</blockquote>\n<p>CJ帝教您：【地图编辑器实用触发教程】【红色警戒2地图制作技巧】（请先从选项里去除“简单模式”）</p>\n<h2>一：菜鸟初学者必看</h2>\n<p>触发：</p>\n<p>【解释： 触发</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
-            "url": "https://ra2map.github.io/posts/cj-trigger-introduction-instance-tutorial/index",
+            "content_html": "<blockquote>\n<p>Ra2map：本文转载自贴吧，作者CJ帝</p>\n</blockquote>\n<p>CJ帝教您：【地图编辑器实用触发教程】【红色警戒2地图制作技巧】（请先从选项里去除“简单模式”）</p>\n<h2>一：菜鸟初学者必看</h2>\n<p>触发：</p>\n<p>【解释： 触发</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/cj-trigger-instance-tutorial/index\" target=\"_blank\">https://ra2map.com/posts/cj-trigger-instance-tutorial/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/cj-trigger-instance-tutorial/index",
             "title": "CJ的触发入门实例教程3篇",
-            "date_modified": "2010-02-09T16:00:00.000Z",
-            "date_published": "2010-02-09T16:00:00.000Z",
+            "date_modified": "2010-02-10T00:00:00.000Z",
+            "date_published": "2010-02-10T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
