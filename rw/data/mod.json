@@ -999,6 +999,41 @@
                 "PVE",
                 "设定"
             ]
+        },
+        {
+            "part": "特殊",
+            "img": 1,
+            "title": "万世之战",
+            "platform": [
+                "未知"
+            ],
+            "theme": "RA2",
+            "author": "benuke",
+            "status": "未发布",
+            "year_s": 2024,
+            "year_e": 2024,
+            "version": "内测",
+            "time": "2024-9-28",
+            "links": [
+                [
+                    "https://ra2be.com/zh/",
+                    "万世之战 | 为红警2带来前所未有的体验"
+                ],
+                [
+                    "https://bbs.ra2diy.com/forum.php?mod=viewthread&tid=24420&extra=page%3D1",
+                    "【Mod内测预告】万世之战 - 红警DIY论坛"
+                ]
+            ],
+            "videos": [
+                []
+            ],
+            "description": "《万世之战》是命令与征服：红色警戒2尤里的复仇的一部非官方Mod。沿袭红警2的部分设定，并填充了丰富的内容与细节。时间线在20世纪50到60年代之间，用红警2的方式叙述那段充满危机的岁月。",
+            "tags": [
+                "历史",
+                "写实",
+                "怀旧",
+                "网站"
+            ]
         }
     ]
 }
