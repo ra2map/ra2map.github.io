@@ -1,0 +1,1 @@
+import{ae as o}from"./app-KTne_XA5.js";const a="/assets/none-DLM1AMsD.jpg";function n(t,s=a){const r=t.target;r.setAttribute("data-src",r.src),r.src=s}function m(t){return o(t,"yyyy-MM-dd HH:mm:ss")}export{m as f,n as o};

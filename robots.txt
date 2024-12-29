@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ra2map.github.io/sitemap.xml
+Sitemap: https://ra2map.com/sitemap.xml

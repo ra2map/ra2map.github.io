@@ -1,0 +1,1 @@
+import{e as s,q as n,c as a,s as c,l as r,o as p}from"./app-KTne_XA5.js";const u=s({__name:"[...path]",setup(f){const o=c(),e=r();return n(()=>{e.path!=="/"&&e.path.endsWith("/")&&o.replace(e.path.slice(0,-1))}),(i,l)=>(p(),a("div"))}}),t={};typeof t=="function"&&t(u);export{u as default};
