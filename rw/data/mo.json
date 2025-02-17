@@ -40,7 +40,7 @@
             "img": true,
             "title": "终结者",
             "num": 34,
-            "author": "Takitoru_",
+            "author": "Takitoru_，变成扭头人",
             "game": "心灵终结",
             "side": "多种/其他",
             "year": 2023,
@@ -605,6 +605,25 @@
                 "友链"
             ],
             "time": "2024-8-29"
+        },
+        {
+            "img": false,
+            "title": "提示",
+            "num": 0,
+            "author": "轻稚天雪",
+            "game": "心灵终结",
+            "side": "多种/其他",
+            "year": 2025,
+            "links": [
+                [
+                    "javascript:;",
+                    "欢迎通过留言反馈功能提交建议或新作品哦~，也可以赞赏支持咱的网站"
+                ]
+            ],
+            "description": "",
+            "more": false,
+            "tags": [],
+            "time": "2025-2-15"
         }
     ]
 }

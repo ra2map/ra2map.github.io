@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ra2map.com/</id>
     <title>RA2 现代地图教程</title>
-    <updated>2024-12-29T08:25:30.753Z</updated>
+    <updated>2025-02-17T03:53:54.562Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>天雪酱</name>
@@ -14,7 +14,123 @@
     <subtitle>探索现代技术与 RA2 的融合</subtitle>
     <logo>https://ra2map.com/avatar2.png</logo>
     <icon>https://ra2map.com/favicon.svg</icon>
-    <rights>CC BY-NC-SA 4.0 2024 © 天雪酱</rights>
+    <rights>CC BY-NC-SA 4.0 2025 © 天雪酱</rights>
+    <entry>
+        <title type="html"><![CDATA[FA2SP HDM Edition 地编]]></title>
+        <id>https://ra2map.com/posts/fa2-hdm</id>
+        <link href="https://ra2map.com/posts/fa2-hdm"/>
+        <updated>2025-02-11T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>简介</h2>
+<p>FA2SP HDM Edition 简称 FA2SPHE，是 Handama 基于 FA2sp 开发的<strong>新版地图编辑器</strong>，通过注入代码的方式深度扩展了官方 FinalAlert2 的</p>
+<br/><p>访问 <a href="https://ra2map.com/posts/fa2-hdm" target="_blank">https://ra2map.com/posts/fa2-hdm</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-02-11T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[其他工具]]></title>
+        <id>https://ra2map.com/posts/other-tool</id>
+        <link href="https://ra2map.com/posts/other-tool"/>
+        <updated>2024-03-06T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>其他工具软件推荐<!--2018-10-01--></p>
+<h2>通用</h2>
+<h3>Notepad3</h3>
+<p>它是记事本的全面加强版，有语法高亮、高级搜索等重要功能。可用来替代系统自带的记事本来使用（文件--右键-</p>
+<br/><p>访问 <a href="https://ra2map.com/posts/other-tool" target="_blank">https://ra2map.com/posts/other-tool</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-02-11T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[地图 INI 简介]]></title>
+        <id>https://ra2map.com/posts/ini-in-map-hdm</id>
+        <link href="https://ra2map.com/posts/ini-in-map-hdm"/>
+        <updated>2025-02-11T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>本文将简述地图 ini 与 rulesmd.ini 的合并关系与常见问题。本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可，转载请注明作者。</p>
+<p>作者：Han</p>
+</blockquote>
+<br/><p>访问 <a href="https://ra2map.com/posts/ini-in-map-hdm" target="_blank">https://ra2map.com/posts/ini-in-map-hdm</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-01-26T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[触发系统的组成和运行机制]]></title>
+        <id>https://ra2map.com/posts/trigger-system</id>
+        <link href="https://ra2map.com/posts/trigger-system"/>
+        <updated>2025-02-11T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>本文将简述触发系统的组成和运行机制，适合有一定触发基础的熟练用户阅读。本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可，转载请注明作者。</p>
+<p>作者：Handa</p>
+</blockquote>
+<br/><p>访问 <a href="https://ra2map.com/posts/trigger-system" target="_blank">https://ra2map.com/posts/trigger-system</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-01-18T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[改变任务文本信息的颜色]]></title>
+        <id>https://ra2map.com/posts/change-mission-text-color</id>
+        <link href="https://ra2map.com/posts/change-mission-text-color"/>
+        <updated>2023-01-01T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>任务文本信息的颜色使用<strong>固定的</strong>颜色名(号)所对应的颜色，盟军阵营颜色为 DarkBlue，苏军阵营 DarkRed，第三阵营 DarkSky。颜色在 rulesmd 的<code>[Colors]</code> 中定</p>
+<br/><p>访问 <a href="https://ra2map.com/posts/change-mission-text-color" target="_blank">https://ra2map.com/posts/change-mission-text-color</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-01-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FA2基础教程收集]]></title>
+        <id>https://ra2map.com/posts/fa2-basic</id>
+        <link href="https://ra2map.com/posts/fa2-basic"/>
+        <updated>2024-03-10T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>[[toc]]</p>
+<h2>多关任务的命名</h2>
+<p>YR1.001平台下，多关任务默认名称为</p>
+<pre><code>     盟军          苏联
+all01umd.map | sov01umd.map
+all0</code></pre>
+<br/><p>访问 <a href="https://ra2map.com/posts/fa2-basic" target="_blank">https://ra2map.com/posts/fa2-basic</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-01-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MK的mod教程与代码词典与工具]]></title>
+        <id>https://ra2map.com/posts/mk-ini</id>
+        <link href="https://ra2map.com/posts/mk-ini"/>
+        <updated>2023-11-29T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>主要</h2>
+<p>很基础的教程，建议所有新学<code>ini</code>代码修改的人从序章开始看。</p>
+<p>基于 Ares ，Ares 是一款扩展平台，相当于对原版的功能增强，解除了很多修改限制。</p>
+<p>&lt;TxCard title=</p>
+<br/><p>访问 <a href="https://ra2map.com/posts/mk-ini" target="_blank">https://ra2map.com/posts/mk-ini</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-01-06T00:00:00.000Z</published>
+    </entry>
     <entry>
         <title type="html"><![CDATA[解决游戏无法运行等问题]]></title>
         <id>https://ra2map.com/posts/repaire</id>
@@ -98,23 +214,6 @@
         <updated>2024-09-11T00:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>一份好的地图，尤其是任务图，必须经过充分测试才能发布。而地图测试在绝大多数时候都是对<strong>地图触发</strong>（包括 AI 触发）的测试。目前，地图测试的重要性虽然常被提起，但一直罕有具体的理论指导，总体处于</p>
 <br/><p>访问 <a href="https://ra2map.com/posts/map-test" target="_blank">https://ra2map.com/posts/map-test</a> 阅读全文。</p>]]></content>
-        <author>
-            <name>天雪酱</name>
-            <email>i@valaxy.site</email>
-            <uri>https://valaxy.site</uri>
-        </author>
-        <published>2024-11-22T00:00:00.000Z</published>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[其他工具]]></title>
-        <id>https://ra2map.com/posts/other-tool</id>
-        <link href="https://ra2map.com/posts/other-tool"/>
-        <updated>2024-03-06T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>其他工具软件推荐<!--2018-10-01--></p>
-<h2>通用</h2>
-<h3>Notepad3</h3>
-<p>小巧强大的文本编辑器，有语法高亮等功能，可用来替代系统自带的记事本。下载：<a href="https://www.app">https://www.app</a></p>
-<br/><p>访问 <a href="https://ra2map.com/posts/other-tool" target="_blank">https://ra2map.com/posts/other-tool</a> 阅读全文。</p>]]></content>
         <author>
             <name>天雪酱</name>
             <email>i@valaxy.site</email>
@@ -323,25 +422,6 @@
         <published>2024-03-31T00:00:00.000Z</published>
     </entry>
     <entry>
-        <title type="html"><![CDATA[FA2基础教程收集]]></title>
-        <id>https://ra2map.com/posts/fa2-basic</id>
-        <link href="https://ra2map.com/posts/fa2-basic"/>
-        <updated>2024-03-10T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>[[toc]]</p>
-<h2>多关任务的命名</h2>
-<p>YR1.001平台下，多关任务默认名称为</p>
-<pre><code>     盟军          苏联
-all01umd.map | sov01umd.map
-all0</code></pre>
-<br/><p>访问 <a href="https://ra2map.com/posts/fa2-basic" target="_blank">https://ra2map.com/posts/fa2-basic</a> 阅读全文。</p>]]></content>
-        <author>
-            <name>天雪酱</name>
-            <email>i@valaxy.site</email>
-            <uri>https://valaxy.site</uri>
-        </author>
-        <published>2024-03-10T00:00:00.000Z</published>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[背景音乐的使用与添加]]></title>
         <id>https://ra2map.com/posts/music</id>
         <link href="https://ra2map.com/posts/music"/>
@@ -511,13 +591,13 @@ all02umd.map</code></pre>
         <id>https://ra2map.com/posts/triggers-about-list</id>
         <link href="https://ra2map.com/posts/triggers-about-list"/>
         <updated>2024-02-21T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>在地图中，有很多触发条件/结果/脚本需要填入某个物件的 ID 号而非注册名，如</p>
+        <content type="html"><![CDATA[<h2>获取正确的注册表</h2>
+<p>在地图中，有很多触发条件/结果/脚本需要填入某个物件的 ID 号而非注册名，如</p>
 <ul>
 <li>19 建造特定类型的建筑...</li>
 <li>41 播放动画</li>
 <li>42 爆炸在</li>
 <li>88 粒子动画</li>
-<li>46,N - 攻击N</li>
 </ul>
 <br/><p>访问 <a href="https://ra2map.com/posts/triggers-about-list" target="_blank">https://ra2map.com/posts/triggers-about-list</a> 阅读全文。</p>]]></content>
         <author>
@@ -598,23 +678,6 @@ all02umd.map</code></pre>
         <published>2023-12-01T00:00:00.000Z</published>
     </entry>
     <entry>
-        <title type="html"><![CDATA[任务简明制作教程-进阶篇]]></title>
-        <id>https://ra2map.com/posts/easy-mission-creation-2/index</id>
-        <link href="https://ra2map.com/posts/easy-mission-creation-2/index"/>
-        <updated>2021-03-05T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>Ra2map：转载自 绝对_孤独 搬运的红警任务之家 pkarea 的文章</p>
-</blockquote>
-<p>前言：这套教程出自任务之家 pkarea 之手,也是咱的启蒙教程,私以为很通俗易懂,适合初学者,尤其是从零开始的新人.</p>
-<br/><p>访问 <a href="https://ra2map.com/posts/easy-mission-creation-2/index" target="_blank">https://ra2map.com/posts/easy-mission-creation-2/index</a> 阅读全文。</p>]]></content>
-        <author>
-            <name>天雪酱</name>
-            <email>i@valaxy.site</email>
-            <uri>https://valaxy.site</uri>
-        </author>
-        <published>2023-12-01T00:00:00.000Z</published>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[任务简明制作教程-入门篇]]></title>
         <id>https://ra2map.com/posts/easy-mission-creation-1/index</id>
         <link href="https://ra2map.com/posts/easy-mission-creation-1/index"/>
@@ -624,6 +687,23 @@ all02umd.map</code></pre>
 </blockquote>
 <p>前言：这套教程出自任务之家 pkarea 之手,也是咱的启蒙教程,私以为很通俗易懂,适合初学者,尤其是从零开始的新人.</p>
 <br/><p>访问 <a href="https://ra2map.com/posts/easy-mission-creation-1/index" target="_blank">https://ra2map.com/posts/easy-mission-creation-1/index</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2023-12-01T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[任务简明制作教程-进阶篇]]></title>
+        <id>https://ra2map.com/posts/easy-mission-creation-2/index</id>
+        <link href="https://ra2map.com/posts/easy-mission-creation-2/index"/>
+        <updated>2021-03-05T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>Ra2map：转载自 绝对_孤独 搬运的红警任务之家 pkarea 的文章</p>
+</blockquote>
+<p>前言：这套教程出自任务之家 pkarea 之手,也是咱的启蒙教程,私以为很通俗易懂,适合初学者,尤其是从零开始的新人.</p>
+<br/><p>访问 <a href="https://ra2map.com/posts/easy-mission-creation-2/index" target="_blank">https://ra2map.com/posts/easy-mission-creation-2/index</a> 阅读全文。</p>]]></content>
         <author>
             <name>天雪酱</name>
             <email>i@valaxy.site</email>
@@ -682,23 +762,6 @@ all02umd.map</code></pre>
             <uri>https://valaxy.site</uri>
         </author>
         <published>2023-12-01T00:00:00.000Z</published>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[MK的mod教程与代码词典与工具]]></title>
-        <id>https://ra2map.com/posts/mk-ini</id>
-        <link href="https://ra2map.com/posts/mk-ini"/>
-        <updated>2023-11-29T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<h2>主要</h2>
-<p>很基础的教程，建议所有新学<code>ini</code>代码修改的人从序章开始看</p>
-<p>基于 Ares ，Ares 是一款扩展平台，相当于对原版的功能增强，解除了很多修改限制。</p>
-<p>&lt;TxCard title=&quot;</p>
-<br/><p>访问 <a href="https://ra2map.com/posts/mk-ini" target="_blank">https://ra2map.com/posts/mk-ini</a> 阅读全文。</p>]]></content>
-        <author>
-            <name>天雪酱</name>
-            <email>i@valaxy.site</email>
-            <uri>https://valaxy.site</uri>
-        </author>
-        <published>2023-11-29T00:00:00.000Z</published>
     </entry>
     <entry>
         <title type="html"><![CDATA[其他代码相关工具与教程]]></title>
@@ -905,21 +968,6 @@ all02umd.map</code></pre>
             <uri>https://valaxy.site</uri>
         </author>
         <published>2023-02-14T00:00:00.000Z</published>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[改变任务文本信息的颜色]]></title>
-        <id>https://ra2map.com/posts/change-mission-text-color</id>
-        <link href="https://ra2map.com/posts/change-mission-text-color"/>
-        <updated>2023-01-01T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>任务文本信息的颜色使用<strong>固定的</strong>颜色名，盟军阵营颜色为 DarkBlue，苏军阵营 DarkRed，第三阵营 DarkSky。颜色在 rulesmd 的<code>[Colors]</code> 中定义。</p>
-<p>如果你想改</p>
-<br/><p>访问 <a href="https://ra2map.com/posts/change-mission-text-color" target="_blank">https://ra2map.com/posts/change-mission-text-color</a> 阅读全文。</p>]]></content>
-        <author>
-            <name>天雪酱</name>
-            <email>i@valaxy.site</email>
-            <uri>https://valaxy.site</uri>
-        </author>
-        <published>2023-01-01T00:00:00.000Z</published>
     </entry>
     <entry>
         <title type="html"><![CDATA[复制粘贴地形的几种运用]]></title>

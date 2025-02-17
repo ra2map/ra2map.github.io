@@ -12,6 +12,90 @@
     "items": [
         {
             "id": "",
+            "content_html": "<h2>简介</h2>\n<p>FA2SP HDM Edition 简称 FA2SPHE，是 Handama 基于 FA2sp 开发的<strong>新版地图编辑器</strong>，通过注入代码的方式深度扩展了官方 FinalAlert2 的</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/fa2-hdm\" target=\"_blank\">https://ra2map.com/posts/fa2-hdm</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/fa2-hdm",
+            "title": "FA2SP HDM Edition 地编",
+            "date_modified": "2025-02-11T00:00:00.000Z",
+            "date_published": "2025-02-11T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>其他工具软件推荐<!--2018-10-01--></p>\n<h2>通用</h2>\n<h3>Notepad3</h3>\n<p>它是记事本的全面加强版，有语法高亮、高级搜索等重要功能。可用来替代系统自带的记事本来使用（文件--右键-</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/other-tool\" target=\"_blank\">https://ra2map.com/posts/other-tool</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/other-tool",
+            "title": "其他工具",
+            "date_modified": "2024-03-06T00:00:00.000Z",
+            "date_published": "2025-02-11T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<blockquote>\n<p>本文将简述地图 ini 与 rulesmd.ini 的合并关系与常见问题。本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可，转载请注明作者。</p>\n<p>作者：Han</p>\n</blockquote>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/ini-in-map-hdm\" target=\"_blank\">https://ra2map.com/posts/ini-in-map-hdm</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/ini-in-map-hdm",
+            "title": "地图 INI 简介",
+            "date_modified": "2025-02-11T00:00:00.000Z",
+            "date_published": "2025-01-26T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<blockquote>\n<p>本文将简述触发系统的组成和运行机制，适合有一定触发基础的熟练用户阅读。本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可，转载请注明作者。</p>\n<p>作者：Handa</p>\n</blockquote>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/trigger-system\" target=\"_blank\">https://ra2map.com/posts/trigger-system</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/trigger-system",
+            "title": "触发系统的组成和运行机制",
+            "date_modified": "2025-02-11T00:00:00.000Z",
+            "date_published": "2025-01-18T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>任务文本信息的颜色使用<strong>固定的</strong>颜色名(号)所对应的颜色，盟军阵营颜色为 DarkBlue，苏军阵营 DarkRed，第三阵营 DarkSky。颜色在 rulesmd 的<code>[Colors]</code> 中定</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/change-mission-text-color\" target=\"_blank\">https://ra2map.com/posts/change-mission-text-color</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/change-mission-text-color",
+            "title": "改变任务文本信息的颜色",
+            "date_modified": "2023-01-01T00:00:00.000Z",
+            "date_published": "2025-01-06T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>[[toc]]</p>\n<h2>多关任务的命名</h2>\n<p>YR1.001平台下，多关任务默认名称为</p>\n<pre><code>     盟军          苏联\nall01umd.map | sov01umd.map\nall0</code></pre>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/fa2-basic\" target=\"_blank\">https://ra2map.com/posts/fa2-basic</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/fa2-basic",
+            "title": "FA2基础教程收集",
+            "date_modified": "2024-03-10T00:00:00.000Z",
+            "date_published": "2025-01-06T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>主要</h2>\n<p>很基础的教程，建议所有新学<code>ini</code>代码修改的人从序章开始看。</p>\n<p>基于 Ares ，Ares 是一款扩展平台，相当于对原版的功能增强，解除了很多修改限制。</p>\n<p>&lt;TxCard title=</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/mk-ini\" target=\"_blank\">https://ra2map.com/posts/mk-ini</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/mk-ini",
+            "title": "MK的mod教程与代码词典与工具",
+            "date_modified": "2023-11-29T00:00:00.000Z",
+            "date_published": "2025-01-06T00:00:00.000Z",
+            "author": {
+                "name": "天雪酱",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
             "content_html": "<blockquote>\n<p>Ra2map：本文转载自<a href=\"https://docs.qq.com/doc/DQnd6T293d01kblVO\">解决游戏无法运行等问题 - 腾讯文档</a></p>\n</blockquote>\n<p>::: info<br>\n前排提示：</p>\n<ul>\n<li>若你玩</li>\n</ul>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/repaire\" target=\"_blank\">https://ra2map.com/posts/repaire</a> 阅读全文。</p>",
             "url": "https://ra2map.com/posts/repaire",
             "title": "解决游戏无法运行等问题",
@@ -64,18 +148,6 @@
             "url": "https://ra2map.com/posts/map-test",
             "title": "地图测试理论",
             "date_modified": "2024-09-11T00:00:00.000Z",
-            "date_published": "2024-11-22T00:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<p>其他工具软件推荐<!--2018-10-01--></p>\n<h2>通用</h2>\n<h3>Notepad3</h3>\n<p>小巧强大的文本编辑器，有语法高亮等功能，可用来替代系统自带的记事本。下载：<a href=\"https://www.app\">https://www.app</a></p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/other-tool\" target=\"_blank\">https://ra2map.com/posts/other-tool</a> 阅读全文。</p>",
-            "url": "https://ra2map.com/posts/other-tool",
-            "title": "其他工具",
-            "date_modified": "2024-03-06T00:00:00.000Z",
             "date_published": "2024-11-22T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
@@ -228,18 +300,6 @@
         },
         {
             "id": "",
-            "content_html": "<p>[[toc]]</p>\n<h2>多关任务的命名</h2>\n<p>YR1.001平台下，多关任务默认名称为</p>\n<pre><code>     盟军          苏联\nall01umd.map | sov01umd.map\nall0</code></pre>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/fa2-basic\" target=\"_blank\">https://ra2map.com/posts/fa2-basic</a> 阅读全文。</p>",
-            "url": "https://ra2map.com/posts/fa2-basic",
-            "title": "FA2基础教程收集",
-            "date_modified": "2024-03-10T00:00:00.000Z",
-            "date_published": "2024-03-10T00:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
             "content_html": "<h2>使用</h2>\n<p>触发结果<code>20 播放音乐</code>可以播放指定音乐，填注册名，只要你有这首音乐就可以。重复与否取决于 ini 设置。如果你想停止播放，可以新建一个静音音乐，并用代码指定它重复播放，最后用触发调用</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/music\" target=\"_blank\">https://ra2map.com/posts/music</a> 阅读全文。</p>",
             "url": "https://ra2map.com/posts/music",
             "title": "背景音乐的使用与添加",
@@ -360,7 +420,7 @@
         },
         {
             "id": "",
-            "content_html": "<p>在地图中，有很多触发条件/结果/脚本需要填入某个物件的 ID 号而非注册名，如</p>\n<ul>\n<li>19 建造特定类型的建筑...</li>\n<li>41 播放动画</li>\n<li>42 爆炸在</li>\n<li>88 粒子动画</li>\n<li>46,N - 攻击N</li>\n</ul>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/triggers-about-list\" target=\"_blank\">https://ra2map.com/posts/triggers-about-list</a> 阅读全文。</p>",
+            "content_html": "<h2>获取正确的注册表</h2>\n<p>在地图中，有很多触发条件/结果/脚本需要填入某个物件的 ID 号而非注册名，如</p>\n<ul>\n<li>19 建造特定类型的建筑...</li>\n<li>41 播放动画</li>\n<li>42 爆炸在</li>\n<li>88 粒子动画</li>\n</ul>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/triggers-about-list\" target=\"_blank\">https://ra2map.com/posts/triggers-about-list</a> 阅读全文。</p>",
             "url": "https://ra2map.com/posts/triggers-about-list",
             "title": "需注册表触发如41动画&42爆炸解析",
             "date_modified": "2024-02-21T00:00:00.000Z",
@@ -420,9 +480,9 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：转载自 绝对_孤独 搬运的红警任务之家 pkarea 的文章</p>\n</blockquote>\n<p>前言：这套教程出自任务之家 pkarea 之手,也是咱的启蒙教程,私以为很通俗易懂,适合初学者,尤其是从零开始的新人.</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/easy-mission-creation-2/index\" target=\"_blank\">https://ra2map.com/posts/easy-mission-creation-2/index</a> 阅读全文。</p>",
-            "url": "https://ra2map.com/posts/easy-mission-creation-2/index",
-            "title": "任务简明制作教程-进阶篇",
+            "content_html": "<blockquote>\n<p>Ra2map：转载自 绝对_孤独 搬运的红警任务之家 pkarea 的文章</p>\n</blockquote>\n<p>前言：这套教程出自任务之家 pkarea 之手,也是咱的启蒙教程,私以为很通俗易懂,适合初学者,尤其是从零开始的新人.</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/easy-mission-creation-1/index\" target=\"_blank\">https://ra2map.com/posts/easy-mission-creation-1/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/easy-mission-creation-1/index",
+            "title": "任务简明制作教程-入门篇",
             "date_modified": "2021-03-05T00:00:00.000Z",
             "date_published": "2023-12-01T00:00:00.000Z",
             "author": {
@@ -432,9 +492,9 @@
         },
         {
             "id": "",
-            "content_html": "<blockquote>\n<p>Ra2map：转载自 绝对_孤独 搬运的红警任务之家 pkarea 的文章</p>\n</blockquote>\n<p>前言：这套教程出自任务之家 pkarea 之手,也是咱的启蒙教程,私以为很通俗易懂,适合初学者,尤其是从零开始的新人.</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/easy-mission-creation-1/index\" target=\"_blank\">https://ra2map.com/posts/easy-mission-creation-1/index</a> 阅读全文。</p>",
-            "url": "https://ra2map.com/posts/easy-mission-creation-1/index",
-            "title": "任务简明制作教程-入门篇",
+            "content_html": "<blockquote>\n<p>Ra2map：转载自 绝对_孤独 搬运的红警任务之家 pkarea 的文章</p>\n</blockquote>\n<p>前言：这套教程出自任务之家 pkarea 之手,也是咱的启蒙教程,私以为很通俗易懂,适合初学者,尤其是从零开始的新人.</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/easy-mission-creation-2/index\" target=\"_blank\">https://ra2map.com/posts/easy-mission-creation-2/index</a> 阅读全文。</p>",
+            "url": "https://ra2map.com/posts/easy-mission-creation-2/index",
+            "title": "任务简明制作教程-进阶篇",
             "date_modified": "2021-03-05T00:00:00.000Z",
             "date_published": "2023-12-01T00:00:00.000Z",
             "author": {
@@ -473,18 +533,6 @@
             "title": "电脑相关配置",
             "date_modified": "2023-12-01T00:00:00.000Z",
             "date_published": "2023-12-01T00:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<h2>主要</h2>\n<p>很基础的教程，建议所有新学<code>ini</code>代码修改的人从序章开始看</p>\n<p>基于 Ares ，Ares 是一款扩展平台，相当于对原版的功能增强，解除了很多修改限制。</p>\n<p>&lt;TxCard title=&quot;</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/mk-ini\" target=\"_blank\">https://ra2map.com/posts/mk-ini</a> 阅读全文。</p>",
-            "url": "https://ra2map.com/posts/mk-ini",
-            "title": "MK的mod教程与代码词典与工具",
-            "date_modified": "2023-11-29T00:00:00.000Z",
-            "date_published": "2023-11-29T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
@@ -629,18 +677,6 @@
             "title": "关于PVP地图创作的一点小建议",
             "date_modified": "2023-02-13T00:00:00.000Z",
             "date_published": "2023-02-14T00:00:00.000Z",
-            "author": {
-                "name": "天雪酱",
-                "url": "https://valaxy.site"
-            }
-        },
-        {
-            "id": "",
-            "content_html": "<p>任务文本信息的颜色使用<strong>固定的</strong>颜色名，盟军阵营颜色为 DarkBlue，苏军阵营 DarkRed，第三阵营 DarkSky。颜色在 rulesmd 的<code>[Colors]</code> 中定义。</p>\n<p>如果你想改</p>\n<br/><p>访问 <a href=\"https://ra2map.com/posts/change-mission-text-color\" target=\"_blank\">https://ra2map.com/posts/change-mission-text-color</a> 阅读全文。</p>",
-            "url": "https://ra2map.com/posts/change-mission-text-color",
-            "title": "改变任务文本信息的颜色",
-            "date_modified": "2023-01-01T00:00:00.000Z",
-            "date_published": "2023-01-01T00:00:00.000Z",
             "author": {
                 "name": "天雪酱",
                 "url": "https://valaxy.site"
