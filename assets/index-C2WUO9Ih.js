@@ -1,0 +1,1 @@
+import{ab as o}from"./app-CjrUvp9y.js";const a="/assets/none-DLM1AMsD.jpg";function e(t,s=a){const r=t.target;r.setAttribute("data-src",r.src),r.src=s}function m(t){return o(t,"yyyy-MM-dd HH:mm:ss")}export{m as f,e as o};

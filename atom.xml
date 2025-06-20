@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ra2map.com/</id>
     <title>RA2 现代地图教程</title>
-    <updated>2025-02-17T03:53:54.562Z</updated>
+    <updated>2025-06-20T08:13:33.586Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>天雪酱</name>
@@ -12,9 +12,169 @@
     <link rel="alternate" href="https://ra2map.com/"/>
     <link rel="self" href="https://ra2map.com/atom.xml"/>
     <subtitle>探索现代技术与 RA2 的融合</subtitle>
-    <logo>https://ra2map.com/avatar2.png</logo>
+    <logo>https://ra2map.com/avatar2.jpg</logo>
     <icon>https://ra2map.com/favicon.svg</icon>
     <rights>CC BY-NC-SA 4.0 2025 © 天雪酱</rights>
+    <entry>
+        <title type="html"><![CDATA[临时]]></title>
+        <id>https://ra2map.com/posts/temp/index</id>
+        <link href="https://ra2map.com/posts/temp/index"/>
+        <updated>2024-09-08T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>未完成</p>
+</blockquote>
+<h2>AI仇恨</h2>
+<p><a href="https://bbs.ra2diy.com/forum.php?mod=viewthread&amp;tid=23550">【教程】ai仇恨</a></p>
+<h2>树木外形速查</h2>
+<p>![</p>
+<br/><p>访问 <a href="https://ra2map.com/posts/temp/index" target="_blank">https://ra2map.com/posts/temp/index</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-06-11T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[妖妖酱的FA2特级教程系列]]></title>
+        <id>https://ra2map.com/posts/yyj-fa2-tutorial</id>
+        <link href="https://ra2map.com/posts/yyj-fa2-tutorial"/>
+        <updated>2025-05-02T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>此文是妖妖酱的红警最高难度级别的地编触发教程哦~ 包含使用编程技术来扩展平台功能、新增触发行为等内容</p>
+<p>&lt;TxCard title=&quot;FA2特级教程系列 - 哔哩哔哩文集&quot; size=&quot;large&quot;</p>
+<br/><p>访问 <a href="https://ra2map.com/posts/yyj-fa2-tutorial" target="_blank">https://ra2map.com/posts/yyj-fa2-tutorial</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-05-02T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FA2工具脚本下载与词典]]></title>
+        <id>https://ra2map.com/posts/fa2-script</id>
+        <link href="https://ra2map.com/posts/fa2-script"/>
+        <updated>2024-04-01T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>简介</h2>
+<p>FA2 工具脚本是一些<code>.fscript</code>类型的脚本文件，在 FA2 的<code>script</code>目录下。通过 FA2 菜单栏的工具 -- 工具脚本来使用。英文版语法说明在 FA2 的`/Help</p>
+<br/><p>访问 <a href="https://ra2map.com/posts/fa2-script" target="_blank">https://ra2map.com/posts/fa2-script</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-03-04T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[地图全景图欣赏]]></title>
+        <id>https://ra2map.com/posts/map-image-appreciation</id>
+        <link href="https://ra2map.com/posts/map-image-appreciation"/>
+        <updated>2024-06-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>原版</h2>
+<p><a href="https://tieba.baidu.com/p/2790512472">收集的各种地图的各种风景图_红警地图吧</a></p>
+<p>原版和尤里官方地图：</p>
+<p>&lt;TxDownload size='9.</p>
+<br/><p>访问 <a href="https://ra2map.com/posts/map-image-appreciation" target="_blank">https://ra2map.com/posts/map-image-appreciation</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-02-22T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WAE：新款地编]]></title>
+        <id>https://ra2map.com/posts/wae</id>
+        <link href="https://ra2map.com/posts/wae"/>
+        <updated>2024-03-06T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>The World-Altering Editor is a new map editor for the second-generation classic Command &amp; Conquer</p>
+</blockquote>
+<br/><p>访问 <a href="https://ra2map.com/posts/wae" target="_blank">https://ra2map.com/posts/wae</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-02-22T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[地图 INI 简介]]></title>
+        <id>https://ra2map.com/posts/ini-in-map-hdm</id>
+        <link href="https://ra2map.com/posts/ini-in-map-hdm"/>
+        <updated>2025-02-11T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>RA2MAP：本文转载自 FA2SP HDM Edition 地编内教程附件</p>
+<p>文章包括：</p>
+</blockquote>
+<pre><code>1注册表小节
+1.1漂移与重复
+1.2输出真实注册表
+1.3特殊注册表
+2ini覆盖
+</code></pre>
+<br/><p>访问 <a href="https://ra2map.com/posts/ini-in-map-hdm" target="_blank">https://ra2map.com/posts/ini-in-map-hdm</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-02-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[触发系统的组成和运行机制]]></title>
+        <id>https://ra2map.com/posts/trigger-system</id>
+        <link href="https://ra2map.com/posts/trigger-system"/>
+        <updated>2025-02-11T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>RA2MAP：本文转载自 FA2SP HDM Edition 地编内教程附件</p>
+<p>本文是业内关于 RA2 地图触发的最新理论成果。作者通过对触发相关元素的分析，参考 EA 开源的相关源代码，</p>
+</blockquote>
+<br/><p>访问 <a href="https://ra2map.com/posts/trigger-system" target="_blank">https://ra2map.com/posts/trigger-system</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-02-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[需注册表触发如41动画&42爆炸解析]]></title>
+        <id>https://ra2map.com/posts/triggers-about-list</id>
+        <link href="https://ra2map.com/posts/triggers-about-list"/>
+        <updated>2024-02-21T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>获取正确的注册表</h2>
+<p>在地图中，有很多触发条件/结果/脚本需要填入某个物件的 ID 号而非注册名，如</p>
+<ul>
+<li>19 建造特定类型的建筑...</li>
+<li>41 播放动画</li>
+<li>42 爆炸在</li>
+<li>88 粒子动画</li>
+</ul>
+<br/><p>访问 <a href="https://ra2map.com/posts/triggers-about-list" target="_blank">https://ra2map.com/posts/triggers-about-list</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-02-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[武直部署教程]]></title>
+        <id>https://ra2map.com/posts/schp</id>
+        <link href="https://ra2map.com/posts/schp"/>
+        <updated>2025-01-25T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>Ra2map：本文转载自[【新手教程】AI武直部署教程 - RA2DIY](<a href="https://bbs.ra2diy.com/forum.php?mod=viewthread&amp;tid=25201&amp;ex">https://bbs.ra2diy.com/forum.php?mod=viewthread&amp;tid=25201&amp;ex</a></p>
+</blockquote>
+<br/><p>访问 <a href="https://ra2map.com/posts/schp" target="_blank">https://ra2map.com/posts/schp</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>天雪酱</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-02-17T00:00:00.000Z</published>
+    </entry>
     <entry>
         <title type="html"><![CDATA[FA2SP HDM Edition 地编]]></title>
         <id>https://ra2map.com/posts/fa2-hdm</id>
@@ -46,40 +206,6 @@
             <uri>https://valaxy.site</uri>
         </author>
         <published>2025-02-11T00:00:00.000Z</published>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[地图 INI 简介]]></title>
-        <id>https://ra2map.com/posts/ini-in-map-hdm</id>
-        <link href="https://ra2map.com/posts/ini-in-map-hdm"/>
-        <updated>2025-02-11T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>本文将简述地图 ini 与 rulesmd.ini 的合并关系与常见问题。本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可，转载请注明作者。</p>
-<p>作者：Han</p>
-</blockquote>
-<br/><p>访问 <a href="https://ra2map.com/posts/ini-in-map-hdm" target="_blank">https://ra2map.com/posts/ini-in-map-hdm</a> 阅读全文。</p>]]></content>
-        <author>
-            <name>天雪酱</name>
-            <email>i@valaxy.site</email>
-            <uri>https://valaxy.site</uri>
-        </author>
-        <published>2025-01-26T00:00:00.000Z</published>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[触发系统的组成和运行机制]]></title>
-        <id>https://ra2map.com/posts/trigger-system</id>
-        <link href="https://ra2map.com/posts/trigger-system"/>
-        <updated>2025-02-11T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>本文将简述触发系统的组成和运行机制，适合有一定触发基础的熟练用户阅读。本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可，转载请注明作者。</p>
-<p>作者：Handa</p>
-</blockquote>
-<br/><p>访问 <a href="https://ra2map.com/posts/trigger-system" target="_blank">https://ra2map.com/posts/trigger-system</a> 阅读全文。</p>]]></content>
-        <author>
-            <name>天雪酱</name>
-            <email>i@valaxy.site</email>
-            <uri>https://valaxy.site</uri>
-        </author>
-        <published>2025-01-18T00:00:00.000Z</published>
     </entry>
     <entry>
         <title type="html"><![CDATA[改变任务文本信息的颜色]]></title>
@@ -256,26 +382,6 @@ all0</code></pre>
         <published>2024-09-08T00:00:00.000Z</published>
     </entry>
     <entry>
-        <title type="html"><![CDATA[临时]]></title>
-        <id>https://ra2map.com/posts/temp/index</id>
-        <link href="https://ra2map.com/posts/temp/index"/>
-        <updated>2024-09-08T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>未完成</p>
-</blockquote>
-<h2>AI仇恨</h2>
-<p><a href="https://bbs.ra2diy.com/forum.php?mod=viewthread&amp;tid=23550">【教程】ai仇恨</a></p>
-<h2>树木外形速查</h2>
-<p>![</p>
-<br/><p>访问 <a href="https://ra2map.com/posts/temp/index" target="_blank">https://ra2map.com/posts/temp/index</a> 阅读全文。</p>]]></content>
-        <author>
-            <name>天雪酱</name>
-            <email>i@valaxy.site</email>
-            <uri>https://valaxy.site</uri>
-        </author>
-        <published>2024-09-08T00:00:00.000Z</published>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[【未完成】多人地图相关]]></title>
         <id>https://ra2map.com/posts/about-multiple-map</id>
         <link href="https://ra2map.com/posts/about-multiple-map"/>
@@ -347,8 +453,8 @@ all0</code></pre>
         <id>https://ra2map.com/posts/random-attack/index</id>
         <link href="https://ra2map.com/posts/random-attack/index"/>
         <updated>2024-02-26T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>在 ra2 中，能直接实现随机的触发只有条件<code>51 随机延时</code>，现在咱将依此实现随机刷兵。虽说是刷兵，换成随机刷小木箱，设置核弹目标点之类的同理。</p>
-<p>根据需求的不同，随机刷兵也有多种方式，比如，固定时</p>
+        <content type="html"><![CDATA[<p>在原版 YR 中，能直接实现随机的触发只有条件<code>51 随机延时</code>，现在咱将依此实现随机刷兵。虽说是刷兵，换成随机刷小木箱，设置核弹目标点之类的同理。</p>
+<p>根据需求的不同，随机刷兵也有多种方式，比如，固定</p>
 <br/><p>访问 <a href="https://ra2map.com/posts/random-attack/index" target="_blank">https://ra2map.com/posts/random-attack/index</a> 阅读全文。</p>]]></content>
         <author>
             <name>天雪酱</name>
@@ -356,23 +462,6 @@ all0</code></pre>
             <uri>https://valaxy.site</uri>
         </author>
         <published>2024-06-27T00:00:00.000Z</published>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【未完成】地图全景图欣赏]]></title>
-        <id>https://ra2map.com/posts/map-image-appreciation</id>
-        <link href="https://ra2map.com/posts/map-image-appreciation"/>
-        <updated>2021-03-05T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<h2>原版</h2>
-<p><a href="https://tieba.baidu.com/p/2790512472">收集的各种地图的各种风景图_红警地图吧</a></p>
-<p>原版和尤里官方地图：</p>
-<p>&lt;TxDownload size='9.</p>
-<br/><p>访问 <a href="https://ra2map.com/posts/map-image-appreciation" target="_blank">https://ra2map.com/posts/map-image-appreciation</a> 阅读全文。</p>]]></content>
-        <author>
-            <name>天雪酱</name>
-            <email>i@valaxy.site</email>
-            <uri>https://valaxy.site</uri>
-        </author>
-        <published>2024-06-20T00:00:00.000Z</published>
     </entry>
     <entry>
         <title type="html"><![CDATA[一些FA2视频教程收集]]></title>
@@ -387,21 +476,6 @@ all0</code></pre>
             <uri>https://valaxy.site</uri>
         </author>
         <published>2024-06-17T00:00:00.000Z</published>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[FA2工具脚本相关]]></title>
-        <id>https://ra2map.com/posts/fa2-script</id>
-        <link href="https://ra2map.com/posts/fa2-script"/>
-        <updated>2024-04-01T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<h2>介绍</h2>
-<p>FA2 工具脚本是一些<code>.fscript</code>类型的脚本文件，在 FA2 的<code>script</code>目录下。通过 FA2 菜单栏的工具 -- 工具脚本来使用。英文版语法说明在 FA2 的`/Help</p>
-<br/><p>访问 <a href="https://ra2map.com/posts/fa2-script" target="_blank">https://ra2map.com/posts/fa2-script</a> 阅读全文。</p>]]></content>
-        <author>
-            <name>天雪酱</name>
-            <email>i@valaxy.site</email>
-            <uri>https://valaxy.site</uri>
-        </author>
-        <published>2024-04-01T00:00:00.000Z</published>
     </entry>
     <entry>
         <title type="html"><![CDATA[相关组织与网站]]></title>
@@ -487,22 +561,6 @@ all02umd.map</code></pre>
         <published>2024-03-06T00:00:00.000Z</published>
     </entry>
     <entry>
-        <title type="html"><![CDATA[WAE：新款地编]]></title>
-        <id>https://ra2map.com/posts/wae</id>
-        <link href="https://ra2map.com/posts/wae"/>
-        <updated>2024-03-06T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>The World-Altering Editor is a new map editor for the second-generation classic Command &amp; Conquer</p>
-</blockquote>
-<br/><p>访问 <a href="https://ra2map.com/posts/wae" target="_blank">https://ra2map.com/posts/wae</a> 阅读全文。</p>]]></content>
-        <author>
-            <name>天雪酱</name>
-            <email>i@valaxy.site</email>
-            <uri>https://valaxy.site</uri>
-        </author>
-        <published>2024-03-06T00:00:00.000Z</published>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[XCC：提取 MIX 中的文件]]></title>
         <id>https://ra2map.com/posts/xcc</id>
         <link href="https://ra2map.com/posts/xcc"/>
@@ -579,27 +637,6 @@ all02umd.map</code></pre>
 <p>也看：[MO 常用音效、语音和动画](<a href="https://www.bilibili.c">https://www.bilibili.c</a></p>
 </blockquote>
 <br/><p>访问 <a href="https://ra2map.com/posts/sound-and-speech" target="_blank">https://ra2map.com/posts/sound-and-speech</a> 阅读全文。</p>]]></content>
-        <author>
-            <name>天雪酱</name>
-            <email>i@valaxy.site</email>
-            <uri>https://valaxy.site</uri>
-        </author>
-        <published>2024-02-21T00:00:00.000Z</published>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[需注册表触发如41动画&42爆炸解析]]></title>
-        <id>https://ra2map.com/posts/triggers-about-list</id>
-        <link href="https://ra2map.com/posts/triggers-about-list"/>
-        <updated>2024-02-21T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<h2>获取正确的注册表</h2>
-<p>在地图中，有很多触发条件/结果/脚本需要填入某个物件的 ID 号而非注册名，如</p>
-<ul>
-<li>19 建造特定类型的建筑...</li>
-<li>41 播放动画</li>
-<li>42 爆炸在</li>
-<li>88 粒子动画</li>
-</ul>
-<br/><p>访问 <a href="https://ra2map.com/posts/triggers-about-list" target="_blank">https://ra2map.com/posts/triggers-about-list</a> 阅读全文。</p>]]></content>
         <author>
             <name>天雪酱</name>
             <email>i@valaxy.site</email>
@@ -799,12 +836,12 @@ all02umd.map</code></pre>
     </entry>
     <entry>
         <title type="html"><![CDATA[使用 TX 地形拓展包]]></title>
-        <id>https://ra2map.com/posts/tx-terrain/index</id>
-        <link href="https://ra2map.com/posts/tx-terrain/index"/>
+        <id>https://ra2map.com/posts/tx-terrain</id>
+        <link href="https://ra2map.com/posts/tx-terrain"/>
         <updated>2023-11-10T00:00:00.000Z</updated>
         <content type="html"><![CDATA[<h2>介绍</h2>
 <p>TX (TerraineXpansion) 地形拓展包来自国外，给原版增加了很多新的地形，比如雪地城市，城市瀑布，各种悬崖，停机坪，火车道等。使用 TX 地形扩展包制作的地图绚丽无比。</p>
-<br/><p>访问 <a href="https://ra2map.com/posts/tx-terrain/index" target="_blank">https://ra2map.com/posts/tx-terrain/index</a> 阅读全文。</p>]]></content>
+<br/><p>访问 <a href="https://ra2map.com/posts/tx-terrain" target="_blank">https://ra2map.com/posts/tx-terrain</a> 阅读全文。</p>]]></content>
         <author>
             <name>天雪酱</name>
             <email>i@valaxy.site</email>
@@ -1032,14 +1069,14 @@ all02umd.map</code></pre>
     </entry>
     <entry>
         <title type="html"><![CDATA[AI基地车防卡]]></title>
-        <id>https://ra2map.com/posts/ai-mcv-anti-jamming/index</id>
-        <link href="https://ra2map.com/posts/ai-mcv-anti-jamming/index"/>
+        <id>https://ra2map.com/posts/ai-mcv-anti-jamming</id>
+        <link href="https://ra2map.com/posts/ai-mcv-anti-jamming"/>
         <updated>2022-01-10T00:00:00.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
 <p>Ra2map：本文转载自<a href="http://pkuit.com/forum.php?mod=viewthread&amp;tid=204850">【教程】AI基地车防卡（含样例地图） - 红警任务之家</a></p>
 </blockquote>
 <p>本</p>
-<br/><p>访问 <a href="https://ra2map.com/posts/ai-mcv-anti-jamming/index" target="_blank">https://ra2map.com/posts/ai-mcv-anti-jamming/index</a> 阅读全文。</p>]]></content>
+<br/><p>访问 <a href="https://ra2map.com/posts/ai-mcv-anti-jamming" target="_blank">https://ra2map.com/posts/ai-mcv-anti-jamming</a> 阅读全文。</p>]]></content>
         <author>
             <name>天雪酱</name>
             <email>i@valaxy.site</email>
@@ -1096,13 +1133,13 @@ all02umd.map</code></pre>
     </entry>
     <entry>
         <title type="html"><![CDATA[平台bug：注册号漂移]]></title>
-        <id>https://ra2map.com/posts/platform-bug-registration-number-shift/index</id>
-        <link href="https://ra2map.com/posts/platform-bug-registration-number-shift/index"/>
+        <id>https://ra2map.com/posts/platform-bug-registration-number-shift</id>
+        <link href="https://ra2map.com/posts/platform-bug-registration-number-shift"/>
         <updated>2021-05-16T00:00:00.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
 <p>Ra2map：本文转载自[【教程】平台bug：注册号漂移 - 红警任务之家](<a href="http://pkuit.com/forum.php?mod=viewthread&amp;tid=204594&amp;extra=">http://pkuit.com/forum.php?mod=viewthread&amp;tid=204594&amp;extra=</a></p>
 </blockquote>
-<br/><p>访问 <a href="https://ra2map.com/posts/platform-bug-registration-number-shift/index" target="_blank">https://ra2map.com/posts/platform-bug-registration-number-shift/index</a> 阅读全文。</p>]]></content>
+<br/><p>访问 <a href="https://ra2map.com/posts/platform-bug-registration-number-shift" target="_blank">https://ra2map.com/posts/platform-bug-registration-number-shift</a> 阅读全文。</p>]]></content>
         <author>
             <name>天雪酱</name>
             <email>i@valaxy.site</email>
@@ -1261,14 +1298,14 @@ all02umd.map</code></pre>
     </entry>
     <entry>
         <title type="html"><![CDATA[一些常见错误与bug]]></title>
-        <id>https://ra2map.com/posts/some-mistake-and-bug/index</id>
-        <link href="https://ra2map.com/posts/some-mistake-and-bug/index"/>
+        <id>https://ra2map.com/posts/some-mistake-and-bug</id>
+        <link href="https://ra2map.com/posts/some-mistake-and-bug"/>
         <updated>2018-09-16T00:00:00.000Z</updated>
         <content type="html"><![CDATA[<h2>地图编辑器常见错误揭示及补救方法</h2>
 <blockquote>
 <p>Ra2map：本节转载自[CJ帝教您：地图编辑器常见错误揭示及补救方法_红色警戒吧](<a href="http://tieba.baidu.com/p/657117454">http://tieba.baidu.com/p/657117454</a></p>
 </blockquote>
-<br/><p>访问 <a href="https://ra2map.com/posts/some-mistake-and-bug/index" target="_blank">https://ra2map.com/posts/some-mistake-and-bug/index</a> 阅读全文。</p>]]></content>
+<br/><p>访问 <a href="https://ra2map.com/posts/some-mistake-and-bug" target="_blank">https://ra2map.com/posts/some-mistake-and-bug</a> 阅读全文。</p>]]></content>
         <author>
             <name>天雪酱</name>
             <email>i@valaxy.site</email>
@@ -1312,35 +1349,19 @@ all02umd.map</code></pre>
     </entry>
     <entry>
         <title type="html"><![CDATA[平台差异：载具离开地图时乘员的被摧毁判定]]></title>
-        <id>https://ra2map.com/posts/platform-difference-about-vehicle-leaves-map/index</id>
-        <link href="https://ra2map.com/posts/platform-difference-about-vehicle-leaves-map/index"/>
+        <id>https://ra2map.com/posts/platform-difference-about-vehicle-leaves-map</id>
+        <link href="https://ra2map.com/posts/platform-difference-about-vehicle-leaves-map"/>
         <updated>2017-07-27T00:00:00.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
 <p>Ra2map：本文转载自[平台差异：载具移出地图边界时内部装载物的被摧毁判定 - 红警任务之家](<a href="http://www.pkuit.com/forum.php?mod=viewthread&amp;tid">http://www.pkuit.com/forum.php?mod=viewthread&amp;tid</a></p>
 </blockquote>
-<br/><p>访问 <a href="https://ra2map.com/posts/platform-difference-about-vehicle-leaves-map/index" target="_blank">https://ra2map.com/posts/platform-difference-about-vehicle-leaves-map/index</a> 阅读全文。</p>]]></content>
+<br/><p>访问 <a href="https://ra2map.com/posts/platform-difference-about-vehicle-leaves-map" target="_blank">https://ra2map.com/posts/platform-difference-about-vehicle-leaves-map</a> 阅读全文。</p>]]></content>
         <author>
             <name>天雪酱</name>
             <email>i@valaxy.site</email>
             <uri>https://valaxy.site</uri>
         </author>
         <published>2017-07-27T00:00:00.000Z</published>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[如何让武装直升机正常起来]]></title>
-        <id>https://ra2map.com/posts/how-to-make-schp-work-properly</id>
-        <link href="https://ra2map.com/posts/how-to-make-schp-work-properly"/>
-        <updated>2015-07-04T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>Ra2map：本文转载自[【任务制作者请进】关于如何让武装直升机正常起来 - 红警任务之家](<a href="http://pkuit.com/forum.php?mod=viewthread&amp;tid=16999">http://pkuit.com/forum.php?mod=viewthread&amp;tid=16999</a></p>
-</blockquote>
-<br/><p>访问 <a href="https://ra2map.com/posts/how-to-make-schp-work-properly" target="_blank">https://ra2map.com/posts/how-to-make-schp-work-properly</a> 阅读全文。</p>]]></content>
-        <author>
-            <name>天雪酱</name>
-            <email>i@valaxy.site</email>
-            <uri>https://valaxy.site</uri>
-        </author>
-        <published>2015-07-04T00:00:00.000Z</published>
     </entry>
     <entry>
         <title type="html"><![CDATA[城市地图的详细制作教程]]></title>
